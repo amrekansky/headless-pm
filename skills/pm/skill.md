@@ -21,7 +21,8 @@ Read the user's message and do ONE of:
 |---|---|
 | discovery, interviews, research, validate, hypothesis, problem framing, new idea, should we build | `/pm-discover` |
 | cusdev, mom test, customer interview prep | `/cusdev` |
-| PRD, requirements, spec, feature doc | `/pm-prd` |
+| define, definition, PRD + epics + stories, full backlog, sign-off, ready to build | `/pm-define` |
+| PRD, requirements, spec, feature doc (standalone) | `/pm-prd` |
 | roadmap, priorities, next quarter | `/pm-roadmap` |
 | sprint planning, what to pick | `/pm-sprint-plan` |
 | standup, daily, blockers | `/pm-standup` |
