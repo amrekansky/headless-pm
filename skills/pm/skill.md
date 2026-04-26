@@ -19,7 +19,8 @@ Read the user's message and do ONE of:
 
 | User says... | Route to |
 |---|---|
-| discovery, interviews, research, validate, hypothesis | `/pm-discovery` or `/cusdev` |
+| discovery, interviews, research, validate, hypothesis, problem framing, new idea, should we build | `/pm-discover` |
+| cusdev, mom test, customer interview prep | `/cusdev` |
 | PRD, requirements, spec, feature doc | `/pm-prd` |
 | roadmap, priorities, next quarter | `/pm-roadmap` |
 | sprint planning, what to pick | `/pm-sprint-plan` |
