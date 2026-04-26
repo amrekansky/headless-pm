@@ -70,6 +70,13 @@ test('pm-plan skill file exists', async () => {
   await access(skillPath, constants.F_OK)
 })
 
+test('pm-launch skill file exists', async () => {
+  const { fileURLToPath } = await import('node:url')
+  const { dirname } = await import('node:path')
+  const skillPath = join(dirname(fileURLToPath(import.meta.url)), '..', 'skills', 'pm-launch', 'skill.md')
+  await access(skillPath, constants.F_OK)
+})
+
 test('installTools removes stale tools not in known list', async () => {
   // pre-create a stale tool
   const { mkdir, writeFile } = await import('node:fs/promises')

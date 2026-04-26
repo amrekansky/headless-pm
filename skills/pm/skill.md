@@ -31,7 +31,7 @@ Read the user's message and do ONE of:
 | story, user story, ticket | `/pm-story` |
 | epic, break down, decompose | `/pm-epic` |
 | OKR, objectives, goals | `/pm-okr` |
-| launch, ship, release | `/pm-launch` |
+| launch, go-to-market, GTM, positioning, comms plan, enablement, launch checklist | `/pm-launch` |
 | release notes, changelog | `/pm-release` |
 | competitive, competitor, market | `/pm-competitive` |
 | metrics, north star, KPI | `/pm-metrics` |
