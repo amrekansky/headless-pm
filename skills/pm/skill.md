@@ -32,6 +32,7 @@ Read the user's message and do ONE of:
 | epic, break down, decompose | `/pm-epic` |
 | OKR, objectives, goals | `/pm-okr` |
 | launch, go-to-market, GTM, positioning, comms plan, enablement, launch checklist | `/pm-launch` |
+| learn, retrospective + metrics, post-launch review, close cycle, next cycle brief | `/pm-learn` |
 | release notes, changelog | `/pm-release` |
 | competitive, competitor, market | `/pm-competitive` |
 | metrics, north star, KPI | `/pm-metrics` |
