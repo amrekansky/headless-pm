@@ -23,8 +23,9 @@ Read the user's message and do ONE of:
 | cusdev, mom test, customer interview prep | `/cusdev` |
 | define, definition, PRD + epics + stories, full backlog, sign-off, ready to build | `/pm-define` |
 | PRD, requirements, spec, feature doc (standalone) | `/pm-prd` |
-| roadmap, priorities, next quarter | `/pm-roadmap` |
-| sprint planning, what to pick | `/pm-sprint-plan` |
+| plan, planning, OKR + roadmap + sprint, quarterly planning, capacity, backlog grooming | `/pm-plan` |
+| roadmap only (standalone) | `/pm-roadmap` |
+| sprint planning only (standalone) | `/pm-sprint-plan` |
 | standup, daily, blockers | `/pm-standup` |
 | retro, retrospective | `/pm-retro` |
 | story, user story, ticket | `/pm-story` |
