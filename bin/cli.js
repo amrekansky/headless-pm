@@ -3,8 +3,10 @@ import { Command } from 'commander'
 import {
   installTools,
   installSkills,
+  installMcpServers,
   printToolSummary,
   printPathInstructions,
+  MCP_SERVERS,
 } from '../lib/installer.js'
 import { readConfig } from '../lib/config.js'
 import { readdir } from 'node:fs/promises'
@@ -116,6 +118,23 @@ program
       console.error(`Update failed: ${err.message}`)
       process.exit(1)
     }
+  })
+
+program
+  .command('mcp [servers...]')
+  .description('Register PM MCP servers (Notion, Jira, Linear, Miro) with claude CLI')
+  .option('--list', 'Show available MCP servers without installing')
+  .action(async (servers, opts) => {
+    if (opts.list) {
+      console.log('Available PM MCP servers:')
+      for (const s of MCP_SERVERS) {
+        const keys = Object.keys(s.envVars).join(', ')
+        console.log(`  ${s.name.padEnd(10)} — ${s.label} (needs: ${keys})`)
+      }
+      return
+    }
+    const names = servers.length ? servers : null
+    await installMcpServers(names)
   })
 
 if (process.argv.length === 2) program.help()
