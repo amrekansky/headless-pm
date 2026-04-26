@@ -4,6 +4,7 @@ import {
   installTools,
   installSkills,
   installMcpServers,
+  promptMcpSetup,
   printToolSummary,
   printPathInstructions,
   MCP_SERVERS,
@@ -43,6 +44,7 @@ program
         printToolSummary()
         printPathInstructions()
       }
+      await promptMcpSetup()
       console.log('\nGet the full license at: https://headlessaimode.com')
     } catch (err) {
       console.error(`Install failed: ${err.message}`)
@@ -68,6 +70,7 @@ program
         console.log('✓ License valid. Installing full toolkit...')
         await installTools()
         await installSkills(key)
+        await promptMcpSetup()
         console.log('\nFull Headless PM toolkit installed.')
       } else {
         console.error('Invalid license key.')
