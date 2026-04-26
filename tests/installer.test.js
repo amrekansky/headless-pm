@@ -100,6 +100,25 @@ test('/pm skill contains lifecycle orchestrator routing', async () => {
   assert.ok(content.includes('/pm-learn'), 'should route to pm-learn')
 })
 
+const v02Skills = [
+  'pm-incident-response',
+  'pm-nps-csat',
+  'pm-sla-slo',
+  'pm-customer-health',
+  'pm-pricing-changes',
+  'pm-sunset-deprecation',
+  'pm-feature-flags',
+]
+
+for (const skillName of v02Skills) {
+  test(`${skillName} skill file exists`, async () => {
+    const { fileURLToPath } = await import('node:url')
+    const { dirname } = await import('node:path')
+    const skillPath = join(dirname(fileURLToPath(import.meta.url)), '..', 'skills', skillName, 'skill.md')
+    await access(skillPath, constants.F_OK)
+  })
+}
+
 test('installTools removes stale tools not in known list', async () => {
   // pre-create a stale tool
   const { mkdir, writeFile } = await import('node:fs/promises')
