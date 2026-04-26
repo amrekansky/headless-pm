@@ -38,6 +38,9 @@ Read the user's message and do ONE of:
 | post-mortem, incident, what went wrong | `/pm-postmortem` |
 | portfolio, multiple products, teams | `/pm-portfolio` |
 | backlog, grooming, refinement | `/pm-backlog` |
+| smoke test, smoke, test before release | `/pm-release-lifecycle` |
+| alpha, beta, pilot, go-live, go/no-go, release candidate, RC | `/pm-release-lifecycle` |
+| готовим релиз, планируем бету, пилот, go-live, запуск | `/pm-release-lifecycle` |
 | what should I do / triage | run triage mode (see below) |
 
 ## Triage mode
