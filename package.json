@@ -1,6 +1,6 @@
 {
   "name": "headless-pm",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "AI Chief of Staff for product managers",
   "main": "lib/installer.js",
   "bin": {
