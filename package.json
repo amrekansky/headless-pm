@@ -1,6 +1,6 @@
 {
   "name": "headless-pm",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "AI Chief of Staff for product managers",
   "main": "lib/installer.js",
   "bin": {
@@ -10,6 +10,7 @@
     "test": "node --test tests/installer.test.js"
   },
   "dependencies": {
+    "@inquirer/checkbox": "^5.1.4",
     "commander": "^12.0.0"
   },
   "engines": {
