@@ -2,24 +2,30 @@
 
 AI Chief of Staff for product managers. Installs PM skills and tools into Claude Code.
 
-## Quick Start
+## Install
 
 ```bash
 npx headless-pm install
 ```
 
-This installs:
-- PM skills (`/pm`, `/cusdev`, `/pm-prd`, and 40+ paid skills) → `~/.claude/skills/`
-- PM tools (`pm-interview-prep`, `pm-sprint-brief`) → `~/.headless/pm/`
-- Prompts to connect PM tools (Notion, Linear, Jira, Miro) via MCP
+Detects Claude Code, Gemini CLI, and Codex CLI automatically. Installs skills for each one found. Prompts to register MCP servers (Notion, Linear, Jira, Miro) across all detected CLIs.
 
-Then open Claude Code in any directory:
+---
+
+## Quick Start
+
+After install, open Claude Code in any directory:
 
 ```bash
 claude
 ```
 
 Type `/pm` to start the PM lifecycle orchestrator.
+
+This installs:
+- PM skills (`/pm`, `/cusdev`, `/pm-prd`, and 40+ paid skills) → `~/.claude/skills/` (and other CLI skill directories)
+- PM tools (`pm-interview-prep`, `pm-sprint-brief`) → `~/.headless/pm/`
+- MCP servers (Notion, Linear, Jira, Miro) registered across all detected CLIs
 
 ---
 
