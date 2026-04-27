@@ -7,6 +7,7 @@ import {
   promptMcpSetup,
   printToolSummary,
   printPathInstructions,
+  detectCLIs,
   MCP_SERVERS,
 } from '../lib/installer.js'
 import { readConfig } from '../lib/config.js'
@@ -29,6 +30,13 @@ program
   .action(async (opts) => {
     console.log('Installing Headless PM...\n')
     const cfg = await readConfig()
+
+    const detectedCLIs = await detectCLIs()
+    const cliLine = ['claude', 'gemini', 'codex']
+      .map(c => `${c} ${detectedCLIs.includes(c) ? '✓' : '—'}`)
+      .join('  ')
+    console.log(`Detected CLIs: ${cliLine}\n`)
+
     try {
       if (!opts.skillsOnly) {
         console.log('Installing tools → ~/.headless/pm/')
@@ -38,13 +46,13 @@ program
         console.log('  ✓ paid tools (stubs — license required)')
       }
       if (!opts.toolsOnly) {
-        await installSkills(cfg.pmLicenseKey || null)
+        await installSkills(cfg.pmLicenseKey || null, detectedCLIs)
       }
       if (!opts.skillsOnly) {
         printToolSummary()
         printPathInstructions()
       }
-      await promptMcpSetup()
+      await promptMcpSetup(detectedCLIs)
       console.log('\nGet the full license at: https://headlessaimode.com')
     } catch (err) {
       console.error(`Install failed: ${err.message}`)
