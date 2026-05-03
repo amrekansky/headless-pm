@@ -1,6 +1,6 @@
 import { test } from 'node:test'
 import assert from 'node:assert/strict'
-import { mkdtemp, rm, readdir, access } from 'node:fs/promises'
+import { mkdtemp, rm, readdir, access, readFile, writeFile, mkdir } from 'node:fs/promises'
 import { tmpdir } from 'node:os'
 import { join } from 'node:path'
 import { constants } from 'node:fs'
@@ -200,7 +200,6 @@ test('detectCLIs only includes known cli names', async () => {
 
 // --- cross-CLI installSkills ---
 const { installSkills } = await import('../lib/installer.js')
-const { readFile } = await import('node:fs/promises')
 
 test('installSkills writes skill.md to ~/.claude/skills/', async () => {
   await installSkills(null, ['claude'])
@@ -239,4 +238,175 @@ test('installMcpServers skips gracefully when no CLIs detected', async () => {
   await assert.doesNotReject(async () => {
     await installMcpServers(['linear'], [])
   })
+})
+
+// --- v0.6.0: MCP_SERVERS expansion ---
+const { MCP_SERVERS: MCP_V060, installPrerequisiteSkills } = await import('../lib/installer.js')
+
+test('MCP_SERVERS has 8 entries in v0.6.0', () => {
+  assert.equal(MCP_V060.length, 8)
+})
+
+test('MCP_SERVERS includes google-sheets', () => {
+  assert.ok(MCP_V060.some(s => s.name === 'google-sheets'))
+})
+
+test('MCP_SERVERS includes figma', () => {
+  assert.ok(MCP_V060.some(s => s.name === 'figma'))
+})
+
+test('MCP_SERVERS includes slack', () => {
+  assert.ok(MCP_V060.some(s => s.name === 'slack'))
+})
+
+test('MCP_SERVERS includes github', () => {
+  assert.ok(MCP_V060.some(s => s.name === 'github'))
+})
+
+test('new MCP servers all use http transport', () => {
+  const newServers = ['google-sheets', 'figma', 'slack', 'github']
+  for (const name of newServers) {
+    const s = MCP_V060.find(s => s.name === name)
+    assert.ok(s, `${name} not found`)
+    assert.equal(s.transport, 'http', `${name} should use http transport`)
+  }
+})
+
+test('installPrerequisiteSkills is exported and is a function', () => {
+  assert.equal(typeof installPrerequisiteSkills, 'function')
+})
+
+// --- v0.6.0: initWorkspace ---
+const { initWorkspace, printStatusline: psLine } = await import('../lib/installer.js')
+
+test('initWorkspace creates .pm/ directory in partial mode', async () => {
+  const testDir = await mkdtemp(join(tmpdir(), 'pm-workspace-test-'))
+  // Create a .md file to trigger partial mode (non-interactive)
+  await writeFile(join(testDir, 'README.md'), '# Test project\n', 'utf8')
+
+  const origCwd = process.cwd()
+  process.chdir(testDir)
+  try {
+    await initWorkspace()
+    await access(join(testDir, '.pm'), constants.F_OK)
+  } finally {
+    process.chdir(origCwd)
+    await rm(testDir, { recursive: true, force: true })
+  }
+})
+
+test('initWorkspace writes config.json with product TODO in partial mode', async () => {
+  const testDir = await mkdtemp(join(tmpdir(), 'pm-workspace-test-'))
+  await writeFile(join(testDir, 'spec.md'), '# Spec\n', 'utf8')
+
+  const origCwd = process.cwd()
+  process.chdir(testDir)
+  try {
+    await initWorkspace()
+    const cfg = JSON.parse(await readFile(join(testDir, '.pm', 'config.json'), 'utf8'))
+    assert.equal(cfg.product, 'TODO')
+    assert.equal(cfg.phase, 'discover')
+    assert.ok(cfg.sprintAnchor, 'sprintAnchor should be set')
+    assert.equal(cfg.sprintCadence, 14)
+  } finally {
+    process.chdir(origCwd)
+    await rm(testDir, { recursive: true, force: true })
+  }
+})
+
+test('initWorkspace writes manifest.json as array', async () => {
+  const testDir = await mkdtemp(join(tmpdir(), 'pm-workspace-test-'))
+  await writeFile(join(testDir, 'notes.txt'), 'notes', 'utf8')
+
+  const origCwd = process.cwd()
+  process.chdir(testDir)
+  try {
+    await initWorkspace()
+    const manifest = JSON.parse(await readFile(join(testDir, '.pm', 'manifest.json'), 'utf8'))
+    assert.ok(Array.isArray(manifest))
+    assert.ok(manifest.some(f => f.path === 'notes.txt'))
+  } finally {
+    process.chdir(origCwd)
+    await rm(testDir, { recursive: true, force: true })
+  }
+})
+
+test('initWorkspace writes STATE.md with ## Context section', async () => {
+  const testDir = await mkdtemp(join(tmpdir(), 'pm-workspace-test-'))
+  await writeFile(join(testDir, 'prd.md'), '# PRD\n', 'utf8')
+
+  const origCwd = process.cwd()
+  process.chdir(testDir)
+  try {
+    await initWorkspace()
+    const state = await readFile(join(testDir, '.pm', 'STATE.md'), 'utf8')
+    assert.ok(state.includes('## Context'))
+    assert.ok(state.includes('## Hierarchy'))
+    assert.ok(state.includes('## Burndown'))
+    assert.ok(state.includes('## Changelog'))
+  } finally {
+    process.chdir(origCwd)
+    await rm(testDir, { recursive: true, force: true })
+  }
+})
+
+test('initWorkspace excludes node_modules from manifest', async () => {
+  const testDir = await mkdtemp(join(tmpdir(), 'pm-workspace-test-'))
+  await mkdir(join(testDir, 'node_modules', 'some-pkg'), { recursive: true })
+  await writeFile(join(testDir, 'node_modules', 'some-pkg', 'readme.md'), '# pkg', 'utf8')
+  await writeFile(join(testDir, 'real-doc.md'), '# doc', 'utf8')
+
+  const origCwd = process.cwd()
+  process.chdir(testDir)
+  try {
+    await initWorkspace()
+    const manifest = JSON.parse(await readFile(join(testDir, '.pm', 'manifest.json'), 'utf8'))
+    assert.ok(!manifest.some(f => f.path.includes('node_modules')))
+    assert.ok(manifest.some(f => f.path === 'real-doc.md'))
+  } finally {
+    process.chdir(origCwd)
+    await rm(testDir, { recursive: true, force: true })
+  }
+})
+
+test('printStatusline outputs empty string when .pm/ is absent', async () => {
+  const testDir = await mkdtemp(join(tmpdir(), 'pm-statusline-test-'))
+  const origCwd = process.cwd()
+  const origWrite = process.stdout.write.bind(process.stdout)
+  let captured = ''
+  process.stdout.write = (chunk) => { captured += chunk; return true }
+  process.chdir(testDir)
+  try {
+    await psLine()
+    assert.equal(captured, '')
+  } finally {
+    process.stdout.write = origWrite
+    process.chdir(origCwd)
+    await rm(testDir, { recursive: true, force: true })
+  }
+})
+
+test('printStatusline outputs [phase] Sprint N format when .pm/ exists', async () => {
+  const testDir = await mkdtemp(join(tmpdir(), 'pm-statusline-test-'))
+  await mkdir(join(testDir, '.pm'), { recursive: true })
+  const anchor = new Date(Date.now() - 10 * 86400000).toISOString().slice(0, 10) // 10 days ago
+  await writeFile(join(testDir, '.pm', 'config.json'), JSON.stringify({
+    product: 'Test', phase: 'plan', sprintAnchor: anchor, sprintCadence: 14
+  }), 'utf8')
+  await writeFile(join(testDir, '.pm', 'STATE.md'), `# State\n\n## Context\n- Focus: Ship auth feature\n`, 'utf8')
+
+  const origCwd = process.cwd()
+  const origWrite = process.stdout.write.bind(process.stdout)
+  let captured = ''
+  process.stdout.write = (chunk) => { captured += chunk; return true }
+  process.chdir(testDir)
+  try {
+    await psLine()
+    assert.ok(captured.startsWith('[plan] Sprint'), `expected statusline, got: "${captured}"`)
+    assert.ok(captured.includes('Ship auth feature'), `expected focus in output, got: "${captured}"`)
+  } finally {
+    process.stdout.write = origWrite
+    process.chdir(origCwd)
+    await rm(testDir, { recursive: true, force: true })
+  }
 })

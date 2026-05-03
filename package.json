@@ -1,6 +1,6 @@
 {
   "name": "headless-pm",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "description": "AI Chief of Staff for product managers",
   "main": "lib/installer.js",
   "bin": {
@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@inquirer/checkbox": "^5.1.4",
+    "@inquirer/input": "^5.1.4",
     "commander": "^12.0.0"
   },
   "engines": {
@@ -24,7 +25,7 @@
     "cli",
     "mcp"
   ],
-  "license": "UNLICENSED",
+  "license": "Proprietary",
   "type": "module",
   "repository": {
     "type": "git",

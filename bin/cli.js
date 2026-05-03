@@ -9,18 +9,26 @@ import {
   printPathInstructions,
   detectCLIs,
   MCP_SERVERS,
+  installPrerequisiteSkills,
+  initWorkspace,
+  printStatusline,
+  printInstallNextSteps,
 } from '../lib/installer.js'
 import { readConfig } from '../lib/config.js'
 import { readdir } from 'node:fs/promises'
 import { join } from 'node:path'
 import { homedir } from 'node:os'
+import { createRequire } from 'node:module'
+
+const require = createRequire(import.meta.url)
+const { version } = require('../package.json')
 
 const program = new Command()
 
 program
   .name('headless-pm')
   .description('AI Chief of Staff for product managers')
-  .version('0.1.0')
+  .version(version)
 
 program
   .command('install')
@@ -47,13 +55,14 @@ program
       }
       if (!opts.toolsOnly) {
         await installSkills(cfg.pmLicenseKey || null, detectedCLIs)
+        await installPrerequisiteSkills()
       }
       if (!opts.skillsOnly) {
         printToolSummary()
         printPathInstructions()
       }
       await promptMcpSetup(detectedCLIs)
-      console.log('\nGet the full license at: https://headlessaimode.com')
+      printInstallNextSteps()
     } catch (err) {
       console.error(`Install failed: ${err.message}`)
       process.exit(1)
@@ -128,6 +137,29 @@ program
     } catch (err) {
       console.error(`Update failed: ${err.message}`)
       process.exit(1)
+    }
+  })
+
+program
+  .command('init')
+  .description('Create .pm/ workspace in current folder')
+  .action(async () => {
+    try {
+      await initWorkspace()
+    } catch (err) {
+      console.error(`Init failed: ${err.message}`)
+      process.exit(1)
+    }
+  })
+
+program
+  .command('statusline')
+  .description('Output single-line status for Claude statusline hook')
+  .action(async () => {
+    try {
+      await printStatusline()
+    } catch {
+      process.stdout.write('')
     }
   })
 
