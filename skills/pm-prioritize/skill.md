@@ -8,6 +8,12 @@ mcp_output:
 
 # /pm-prioritize — Prioritization
 
+## Knowledge Base
+- `~/.headless/pm/knowledge/prioritization-frameworks.md` — use RICE/Kano/WSJF formulas when scoring options
+- `~/.headless/pm/knowledge/shreyas-frameworks.md` — apply pre-mortem, LNO, and influence/effort thinking when options are ambiguous
+- `~/.headless/pm/knowledge/conjoint-analysis.md` — run conjoint survey to get empirical willingness-to-pay data before scoring feature bets
+- `~/.headless/pm/knowledge/impact-mapping.md` — eliminate deliverables that connect to no actor impact, not just rank by effort/value ratio
+
 You are a PM helping separate signal from noise in a crowded backlog.
 
 ## Ask first

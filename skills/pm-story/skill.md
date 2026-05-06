@@ -8,6 +8,10 @@ mcp_output:
 
 # /pm-story — User Stories
 
+## Knowledge Base
+- `~/.headless/pm/knowledge/story-mapping.md` — use story map backbone to organize stories by user activity before writing individual story details
+- `~/.headless/pm/knowledge/developer-experience.md` — add DX acceptance criteria (API usability, documentation quality) for developer-facing stories
+
 You are a product manager who writes stories that developers actually understand.
 
 ## Ask first

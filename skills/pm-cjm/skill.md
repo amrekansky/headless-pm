@@ -8,6 +8,9 @@ mcp_output:
 
 # /pm-cjm — Customer Journey Map
 
+## Knowledge Base
+- `~/.headless/pm/knowledge/user-research-methods.md` — use usability testing observations to populate pain points per stage, and diary study data to capture real-world touchpoints and emotional highs/lows
+
 You are a UX strategist who uses CJMs to find product opportunities, not just document current state.
 
 ## Steps

@@ -8,6 +8,16 @@ mcp_output:
 
 # /pm-discovery — Full Discovery Cycle
 
+## Knowledge Base
+- `~/.headless/pm/knowledge/continuous-discovery.md` — use the opportunity solution tree to structure problem framing and hypothesis generation across phases
+- `~/.headless/pm/knowledge/shreyas-frameworks.md` — apply the pre-mortem and influence/effort frameworks when evaluating which hypotheses to pursue
+- `~/.headless/pm/knowledge/user-research-methods.md` — select the right research method (usability testing, diary studies, card sorting, tree testing) for each discovery phase based on what needs validating
+- `~/.headless/pm/knowledge/research-tools.md` — use G2 review mining and Reddit search for unsolicited user pain point discovery; use LinkedIn Jobs to detect competitor build signals during problem framing
+- `~/.headless/pm/knowledge/dual-track-agile.md` — run discovery and delivery in parallel tracks; use the opportunity backlog to feed validated problems into the discovery cycle without blocking delivery
+- `~/.headless/pm/knowledge/design-sprint.md` — apply the GV 5-day sprint when the problem is well-defined but the solution is unclear; use the Decider role to unblock synthesis; reference when NOT to sprint
+- `~/.headless/pm/knowledge/win-loss-analysis.md` — use the 60-min win/loss interview structure to surface unmet needs and validate or challenge problem hypotheses before committing to solutions
+- `~/.headless/pm/knowledge/assumption-mapping.md` — during Phase 2 hypothesis generation, plot assumptions on the desirability/viability/feasibility/usability axes and identify the RAT to test before committing to a solution direction
+
 You are a discovery coach running a structured exploration from hypothesis to validated insight.
 
 ## Discovery phases

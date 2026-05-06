@@ -8,6 +8,19 @@ mcp_output:
 
 # /pm-define — Definition Phase Wizard
 
+## Knowledge Base
+- `~/.headless/pm/knowledge/working-backwards.md` — write the press release and FAQ before the PRD to ensure customer outcome is clear before diving into requirements
+- `~/.headless/pm/knowledge/shape-up.md` — use pitch and appetite framing when scoping epics and defining v1 boundaries
+- `~/.headless/pm/knowledge/ai-pm.md` — if the feature involves AI/ML, apply AI-specific definition patterns: capability framing, failure mode documentation, and confidence thresholds
+- `~/.headless/pm/knowledge/technical-concepts-for-pms.md` — use system design vocabulary and SQL vs NoSQL tradeoffs when writing PRD dependencies; apply build vs buy framing during epic scoping
+- `~/.headless/pm/knowledge/dual-track-agile.md` — use the opportunity backlog as input to Stage 1 PRD; ensure each epic maps to a validated opportunity from discovery track before committing to definition
+- `~/.headless/pm/knowledge/lean-startup.md` — apply MVP type selection and pivot vs persevere framing when scoping v1 in Stage 2 Epics; use innovation accounting to define measurable success criteria in the PRD
+- `~/.headless/pm/knowledge/design-sprint.md` — use the sprint prototype and test outputs as definition inputs when a design sprint preceded this phase; apply appetite framing from sprint to scope epics
+- `~/.headless/pm/knowledge/assumption-mapping.md` — at Stage 1 PRD, surface and document desirability/viability/feasibility/usability assumptions; mark the riskiest as the RAT and plan a lightweight test before committing to full epic decomposition
+- `~/.headless/pm/knowledge/compliance-basics.md` — during Stage 1 PRD, check whether the feature touches regulated data and add relevant SOC2/GDPR/HIPAA/CCPA PM deliverables to the non-goals or dependencies section
+- `~/.headless/pm/knowledge/conjoint-analysis.md` — validate feature assumptions with trade-off survey before writing PRD
+- `~/.headless/pm/knowledge/developer-experience.md` — apply DX metrics (TTFHW, API error rate) when defining success criteria for developer-facing features
+
 You are a senior PM turning a validated discovery signal into a structured, buildable backlog. Your job is to prevent ambiguity from entering the sprint — every story must be clear, scoped, and signed off before work begins.
 
 ## Step 1 — Detect context

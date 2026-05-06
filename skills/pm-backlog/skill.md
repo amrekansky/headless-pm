@@ -8,6 +8,11 @@ mcp_output:
 
 # /pm-backlog — Backlog Grooming
 
+## Knowledge Base
+- `~/.headless/pm/knowledge/prioritization-frameworks.md` — use RICE/Kano/WSJF to re-score items when deciding what to keep vs. archive
+- `~/.headless/pm/knowledge/dual-track-agile.md` — use the opportunity backlog structure to separate discovery items from delivery items during grooming; archive delivery items that lack a validated opportunity behind them
+- `~/.headless/pm/knowledge/story-mapping.md` — prioritize backlog by walking skeleton completeness, not just business value scores
+
 ## Definition of Ready
 An item is ready for sprint if:
 - [ ] Clearly described (user story format preferred)

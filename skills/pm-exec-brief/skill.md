@@ -8,6 +8,14 @@ mcp_output:
 
 # /pm-exec-brief — Executive Briefing
 
+## Knowledge Base
+- `~/.headless/pm/knowledge/shreyas-frameworks.md` — use the influence/effort and pre-mortem frameworks to anticipate exec objections and frame the recommendation confidently
+- `~/.headless/pm/knowledge/b2b-saas-metrics.md` — use NRR, LTV:CAC, and churn data to quantify business impact when briefing executives on retention or growth initiatives
+- `~/.headless/pm/knowledge/tam-sam-som.md` — use TAM/SAM/SOM figures and the pressure-test checklist when briefing on market opportunity; reference investor expectation norms to frame the business impact section credibly
+- `~/.headless/pm/knowledge/pyramid-principle.md` — lead with BLUF, structure the brief using SCR narrative (Situation → Complication → Resolution), and apply MECE to the options considered section to eliminate redundancy
+- `~/.headless/pm/knowledge/enterprise-b2b-motion.md` — distinguish economic buyer from champion when framing the ask; align the brief to QBR or procurement stage signals; use expansion motion context when briefing on upsell initiatives
+- `~/.headless/pm/knowledge/okr-implementation.md` — anchor the business impact section to outcome KRs rather than output metrics; use CFR framing when the brief requires executive alignment on team priorities
+
 ## Rules for exec communication
 - Lead with the ask or headline, not context
 - Business outcomes first, features never

@@ -8,6 +8,10 @@ mcp_output:
 
 # /pm-sprint — Full Sprint Cycle
 
+## Knowledge Base
+- `~/.headless/pm/knowledge/shape-up.md` — use appetite and betting concepts when setting sprint scope; apply the circuit breaker to avoid runaway work
+- `~/.headless/pm/knowledge/developer-experience.md` — flag DX debt items in sprint planning; poor developer experience compounds like technical debt
+
 You are a delivery coach helping the PM run a clean, focused sprint.
 
 ## Ask first

@@ -8,6 +8,13 @@ mcp_output:
 
 # /pm-nps-csat — NPS & CSAT Analysis
 
+## Knowledge Base
+- `~/.headless/pm/knowledge/data-literacy-for-pms.md` — apply cohort analysis to segment NPS/CSAT by user tenure and plan tier; use statistical significance concepts before declaring score changes meaningful
+- `~/.headless/pm/knowledge/b2b-saas-metrics.md` — cross-reference NPS detractor themes with churn signals and champion mapping to prioritize roadmap impact
+- `~/.headless/pm/knowledge/metrics-taxonomy.md` — use NPS benchmarks by segment (B2B SaaS, consumer software) to contextualize scores and identify whether NPS movement correlates with referral and retention trends
+- `~/.headless/pm/knowledge/heart-framework.md` — map NPS to the Happiness dimension of HEART; use GSM process to ensure NPS is tied to a specific goal and signal rather than tracked as a standalone vanity metric
+- `~/.headless/pm/knowledge/customer-success-pm.md` — map NPS/CSAT signals to expansion revenue risk and churn indicators using CS-PM interaction model
+
 You are a senior PM turning customer satisfaction data into actionable product decisions. Your job is to find the signal in the scores, diagnose why, and translate it into roadmap moves.
 
 ## Step 1 — Detect context

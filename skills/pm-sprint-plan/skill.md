@@ -8,6 +8,12 @@ mcp_output:
 
 # /pm-sprint-plan — Sprint Planning
 
+## Knowledge Base
+- `~/.headless/pm/knowledge/prioritization-frameworks.md` — apply WSJF or RICE when choosing between competing backlog candidates
+- `~/.headless/pm/knowledge/shape-up.md` — use appetite and betting concepts when defining sprint scope and goal
+- `~/.headless/pm/knowledge/dual-track-agile.md` — pull sprint candidates from the delivery track backlog only; ensure discovery track work runs in parallel and is not mixed into sprint commitments
+- `~/.headless/pm/knowledge/story-mapping.md` — reference walking skeleton when selecting stories for end-to-end sprint coverage
+
 ## Steps
 
 ### 1. Sprint goal
