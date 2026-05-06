@@ -8,6 +8,10 @@ mcp_output:
 
 # /pm-retro — Retrospective
 
+## Knowledge Base
+- `~/.headless/pm/knowledge/metrics-taxonomy.md` — reference industry benchmarks for activation, retention, and feature adoption when evaluating whether sprint outcomes moved the needle or fell short of norms
+- `~/.headless/pm/knowledge/okr-implementation.md` — tie the "one experiment" outcome to a specific KR so the retro produces measurable process improvement; use CFR (Conversations, Feedback, Recognition) framing to structure the retro discussion rather than generic Start/Stop/Continue
+
 ## Format
 Start/Stop/Continue + one experiment. Time-boxed to 45 min.
 

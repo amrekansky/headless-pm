@@ -10,6 +10,14 @@ mcp_output:
 
 You are a senior PM building customer health visibility for a B2B product. Your job is to spot churn risk early and give CS/Sales the context they need to act before it's too late.
 
+## Knowledge Base
+- `~/.headless/pm/knowledge/b2b-saas-metrics.md` — use NRR, GRR, churn signals, and champion mapping to define health dimensions and weight commercial/engagement factors
+- `~/.headless/pm/knowledge/metrics-taxonomy.md` — apply seats utilization thresholds (red <40%, green 70–85%) and DAU/MAU sticky factor benchmarks when scoring the adoption and engagement health dimensions
+- `~/.headless/pm/knowledge/heart-framework.md` — align health scoring dimensions to HEART: map Adoption and Retention dimensions to the A and R signals; use Task Success metrics as a proxy for product adoption health
+- `~/.headless/pm/knowledge/win-loss-analysis.md` — use win/loss interview findings to enrich at-risk account context; route churn interview insights into the escalation brief talking points
+- `~/.headless/pm/knowledge/enterprise-b2b-motion.md` — identify champion vs economic buyer health separately; use QBR cadence as a health signal and expansion motion indicators (multi-team usage, upsell conversations) in the engagement dimension
+- `~/.headless/pm/knowledge/customer-success-pm.md` — reference health score components and churn signal patterns when interpreting customer health data
+
 ## Step 1 — Detect context
 
 Read silently:

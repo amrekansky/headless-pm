@@ -8,6 +8,9 @@ mcp_output:
 
 # /pm-postmortem — Post-Mortem
 
+## Knowledge Base
+- `~/.headless/pm/knowledge/win-loss-analysis.md` — apply win/loss interview methodology and synthesis routing when a postmortem requires customer interviews to understand why a launch failed or a deal was lost
+
 ## Rules
 - Blameless: we analyze systems and decisions, not people
 - Factual: timeline based on data, not memory

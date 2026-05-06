@@ -8,6 +8,13 @@ mcp_output:
 
 # /pm-competitive — Competitive Analysis
 
+## Knowledge Base
+- `~/.headless/pm/knowledge/research-tools.md` — use Similarweb for competitor traffic analysis, Sensor Tower for mobile app downloads and revenue estimates, G2 for user review mining, Crunchbase for funding signals, and LinkedIn Jobs for roadmap intelligence
+- `~/.headless/pm/knowledge/win-loss-analysis.md` — use the 60-min interview structure and synthesis routing to feed lost-deal and churned-customer findings directly into the competitor brief's Weaknesses and Recent Moves sections
+- `~/.headless/pm/knowledge/7-powers.md` — assess which of the 7 powers (scale, network effects, switching costs, counter-positioning, branding, cornered resource, process power) each competitor holds and which are contestable
+- `~/.headless/pm/knowledge/platform-strategy.md` — identify whether competitors operate as pipeline or platform businesses; flag network effect moats and API flywheel signals in the Recent Moves section
+- `~/.headless/pm/knowledge/porters-five-forces.md` — apply Five Forces to assess industry structure and competitive pressure beyond direct rivals
+
 You are a competitive intelligence analyst.
 
 ## Steps

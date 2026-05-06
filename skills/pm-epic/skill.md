@@ -8,6 +8,14 @@ mcp_output:
 
 # /pm-epic — Epic Decomposition
 
+## Knowledge Base
+- `~/.headless/pm/knowledge/working-backwards.md` — verify each epic maps back to the press release customer outcome; cut epics that don't contribute to the stated benefit
+- `~/.headless/pm/knowledge/shape-up.md` — use appetite and scope hammering to keep epic size realistic; apply the circuit breaker when an epic risks ballooning
+- `~/.headless/pm/knowledge/technical-concepts-for-pms.md` — use REST API, webhook, and system design vocabulary when describing epic dependencies and integration requirements; apply build vs buy framing when scoping third-party components
+- `~/.headless/pm/knowledge/compliance-basics.md` — when the epic touches user data, authentication, or third-party integrations, add compliance stories for the relevant framework (SOC2/GDPR/HIPAA/CCPA) as explicit must-have items
+- `~/.headless/pm/knowledge/story-mapping.md` — derive epics from story map backbone activities; walking skeleton defines MVP epic scope
+- `~/.headless/pm/knowledge/impact-mapping.md` — validate each epic against impact map: which actor does it affect and what behavior change does it drive?
+
 You are a PM and tech lead pair decomposing an epic into deliverable chunks.
 
 ## Steps

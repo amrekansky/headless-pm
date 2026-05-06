@@ -8,6 +8,16 @@ mcp_output:
 
 # /pm-market — Market Sizing
 
+## Knowledge Base
+- `~/.headless/pm/knowledge/pricing-strategy-saas.md` — use value-based pricing and packaging tiers to model ACV assumptions in bottom-up TAM calculations; reference freemium economics when sizing self-serve vs sales-assisted segments
+- `~/.headless/pm/knowledge/research-tools.md` — use Similarweb for estimating market traffic share, Sensor Tower for mobile category sizing, and Crunchbase for funding data to validate market growth assumptions
+- `~/.headless/pm/knowledge/tam-sam-som.md` — apply top-down vs bottom-up methodology selection, investor expectation norms, and the pressure-test checklist when producing the TAM/SAM/SOM output
+- `~/.headless/pm/knowledge/attribution-models.md` — use channel-level attribution data to validate SAM reach assumptions; reference iOS 14.5 signal loss as a risk factor when sizing mobile acquisition segments
+- `~/.headless/pm/knowledge/7-powers.md` — use scale economies and network effects power analysis to assess whether the market favors winner-take-all dynamics; factor this into SOM ceiling assumptions
+- `~/.headless/pm/knowledge/crossing-the-chasm.md` — apply adoption lifecycle segmentation (innovators → early majority) to validate SAM reach timing; use bowling alley framing to identify which niche to dominate first
+- `~/.headless/pm/knowledge/platform-strategy.md` — when sizing a platform or marketplace market, account for multi-sided network effects that can compress or expand the addressable market depending on which side achieves critical mass
+- `~/.headless/pm/knowledge/porters-five-forces.md` — use Five Forces to assess market attractiveness and structural barriers before sizing opportunity
+
 You are a strategy analyst who has done this for VCs and operators. You know market sizing is always wrong — the goal is directional confidence, not precision.
 
 ## Two approaches — pick based on what data exists

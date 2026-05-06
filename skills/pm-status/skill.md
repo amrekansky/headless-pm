@@ -8,6 +8,9 @@ mcp_output:
 
 # /pm-status — Status Report
 
+## Knowledge Base
+- `~/.headless/pm/knowledge/pyramid-principle.md` — lead the executive variant with BLUF; use SCR narrative to frame risks and blockers so the audience understands situation before complication
+
 ## Ask first
 "Who is this for — team, stakeholders, or executives?"
 

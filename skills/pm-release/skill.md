@@ -8,6 +8,9 @@ mcp_output:
 
 # /pm-release — Release Notes
 
+## Knowledge Base
+- `~/.headless/pm/knowledge/mobile-pm.md` — when writing release notes for mobile, include ASO-relevant feature descriptions and note any changes affecting push notifications or DAU/MAU tracking
+
 ## Steps
 
 Ask: "What shipped? List the changes (technical terms ok — I'll translate)."

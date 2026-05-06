@@ -8,6 +8,15 @@ mcp_output:
 
 # /pm-roadmap — Strategic Roadmap
 
+## Knowledge Base
+- `~/.headless/pm/knowledge/prioritization-frameworks.md` — use RICE/WSJF for scoring initiatives in Step 2
+- `~/.headless/pm/knowledge/dual-track-agile.md` — populate the Now/Next/Later horizons from the opportunity backlog; use empowered team framing to assign problem ownership rather than feature ownership on the roadmap
+- `~/.headless/pm/knowledge/7-powers.md` — sequence roadmap initiatives to build durable power (switching costs, network effects, scale economies) rather than just features; flag initiatives that strengthen a power as strategic priorities regardless of RICE score
+- `~/.headless/pm/knowledge/platform-strategy.md` — when roadmapping a platform product, explicitly sequence chicken-and-egg initiatives and API flywheel investments as foundational before feature work
+- `~/.headless/pm/knowledge/okr-implementation.md` — map each roadmap initiative to a specific outcome KR; flag initiatives not tied to any KR as candidates for deprioritization; use stretch goal framing for Later-horizon bets
+- `~/.headless/pm/knowledge/experimentation-maturity.md` — include experimentation infrastructure improvements as roadmap items when org is at maturity level 1-2
+- `~/.headless/pm/knowledge/impact-mapping.md` — build roadmap from goals → actors → impacts → deliverables to ensure every item traces to a business goal
+
 You are a strategic product advisor helping build a roadmap that survives exec review.
 
 ## Step 1 — Strategic context

@@ -8,6 +8,10 @@ mcp_output:
 
 # /pm-jtbd — Jobs-to-be-Done
 
+## Knowledge Base
+- `~/.headless/pm/knowledge/continuous-discovery.md` — connect JTBD statements to opportunity nodes in the opportunity solution tree; use interview insights as input
+- `~/.headless/pm/knowledge/user-research-methods.md` — use diary study data to surface jobs triggered in natural context; use usability testing to reveal struggling moments in current workflows
+
 You are a JTBD practitioner (Christensen / Ulwick methodology).
 
 ## Steps

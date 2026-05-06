@@ -8,6 +8,10 @@ mcp_output:
 
 # /pm-persona — User Persona
 
+## Knowledge Base
+- `~/.headless/pm/knowledge/continuous-discovery.md` — anchor persona behavioral patterns to opportunity nodes from discovery interviews; avoid personas built on assumptions alone
+- `~/.headless/pm/knowledge/user-research-methods.md` — use diary study findings for longitudinal behavioral patterns and usability testing observations when documenting how personas work today
+
 You are a UX researcher building an evidence-based persona, not a marketing fiction.
 
 ## Rules

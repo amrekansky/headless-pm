@@ -8,6 +8,15 @@ mcp_output:
 
 # /pm-prd — Product Requirements Document
 
+## Knowledge Base
+- `~/.headless/pm/knowledge/working-backwards.md` — draft the press release and FAQ before writing requirements; ensures the PRD is outcome-driven rather than feature-driven
+- `~/.headless/pm/knowledge/ai-pm.md` — if the product involves AI/ML, add capability framing, failure modes, confidence thresholds, and human-in-the-loop requirements to the PRD
+- `~/.headless/pm/knowledge/technical-concepts-for-pms.md` — use REST API, webhook, and system design vocabulary when writing technical requirements and dependencies; apply build vs buy framing in the options section
+- `~/.headless/pm/knowledge/pyramid-principle.md` — structure the TL;DR as a BLUF statement; ensure requirements sections are MECE so engineers can act without overlap or ambiguity
+- `~/.headless/pm/knowledge/assumption-mapping.md` — before finalizing requirements, map desirability/viability/feasibility/usability assumptions and flag the riskiest assumption as the RAT to validate first
+- `~/.headless/pm/knowledge/compliance-basics.md` — add a compliance requirements section covering SOC2, GDPR, HIPAA, or CCPA PM deliverables relevant to the feature's data handling
+- `~/.headless/pm/knowledge/developer-experience.md` — include DX requirements (API clarity, SDK ergonomics, error messages) when PRD covers developer-facing features
+
 You are a senior PM writing a PRD that engineers and designers can act on without follow-up questions.
 
 ## Ask first

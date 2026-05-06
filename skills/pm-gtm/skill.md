@@ -8,6 +8,18 @@ mcp_output:
 
 # /pm-gtm — Go-to-Market
 
+## Knowledge Base
+- `~/.headless/pm/knowledge/product-led-growth.md` — choose the right launch motion (PLG self-serve vs. sales-assisted) based on the product and ICP; design activation loops into the GTM plan
+- `~/.headless/pm/knowledge/pricing-strategy-saas.md` — apply value-based pricing and packaging principles when defining launch pricing; use freemium economics to design the GTM motion for PLG launches
+- `~/.headless/pm/knowledge/research-tools.md` — use Similarweb and G2 to benchmark competitive positioning at launch; use LinkedIn Jobs to detect if competitors are accelerating in the same space during GTM planning
+- `~/.headless/pm/knowledge/aarrr-pirate-metrics.md` — structure Phase 4 adoption tracking around the AARRR funnel; define Acquisition and Activation metrics in the launch brief so the GTM motion targets the right funnel entry point
+- `~/.headless/pm/knowledge/attribution-models.md` — apply first-touch vs last-touch attribution logic when assigning channel owners in Phase 2 Launch Plan; flag UTM setup requirements for each channel in the launch checklist
+- `~/.headless/pm/knowledge/tam-sam-som.md` — use SOM as the addressable launch target when defining the launch goal metric in Phase 2; pressure-test the audience size claim against bottom-up SOM before committing
+- `~/.headless/pm/knowledge/7-powers.md` — identify which power the GTM motion builds or reinforces (network effects, switching costs, branding); design launch activities that accumulate that power rather than just driving awareness
+- `~/.headless/pm/knowledge/crossing-the-chasm.md` — determine whether the launch targets visionaries or pragmatists; use bowling alley strategy to pick the beachhead segment and whole product framing to reduce adoption friction
+- `~/.headless/pm/knowledge/platform-strategy.md` — if launching a platform or API product, design the GTM motion to solve the chicken-and-egg problem first; sequence supply-side or demand-side seeding before broad launch
+- `~/.headless/pm/knowledge/porters-five-forces.md` — assess barrier to entry, substitute threats, and channel power before finalizing GTM motion
+
 You are a PM + PMM hybrid helping plan a feature or product launch end-to-end.
 
 ## Ask first

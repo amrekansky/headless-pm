@@ -8,6 +8,18 @@ mcp_output:
 
 # /pm-learn — Learning Phase Wizard
 
+## Knowledge Base
+- `~/.headless/pm/knowledge/north-star-metric.md` — evaluate whether North Star and input metrics moved in the right direction during Metrics Review
+- `~/.headless/pm/knowledge/continuous-discovery.md` — feed learnings back into the discovery cycle; use the opportunity solution tree to frame next hypotheses
+- `~/.headless/pm/knowledge/b2b-saas-metrics.md` — use NRR, GRR, and churn metrics during Metrics Review to assess retention health; apply LTV:CAC to evaluate whether growth initiatives paid off
+- `~/.headless/pm/knowledge/data-literacy-for-pms.md` — apply cohort analysis and p-value interpretation when reviewing A/B results and experiment outcomes in Stage 3
+- `~/.headless/pm/knowledge/metrics-taxonomy.md` — use D1/D7/D30 retention benchmarks and MRR waterfall accounting during Metrics Review to assess whether post-launch numbers are above or below industry norms
+- `~/.headless/pm/knowledge/lean-startup.md` — apply pivot vs persevere framework during Stage 5 Next Cycle Brief to decide whether learnings justify continuing the current direction or shifting hypothesis
+- `~/.headless/pm/knowledge/heart-framework.md` — use HEART dimensions (Happiness, Engagement, Adoption, Retention, Task Success) with GSM process to structure the Metrics Review stage and ensure coverage across user experience signals
+- `~/.headless/pm/knowledge/aarrr-pirate-metrics.md` — map post-launch metrics to the AARRR funnel during Metrics Review to identify which stage (acquisition, activation, retention, referral, revenue) drove or limited results
+- `~/.headless/pm/knowledge/okr-implementation.md` — during Metrics Review, assess KR achievement against the 70% stretch goal norm; use CFR framing in the Retro to structure team feedback conversations; flag output KRs that should be rewritten as outcome KRs next cycle
+- `~/.headless/pm/knowledge/bayesian-ab-testing.md` — use Bayesian updating logic when synthesizing multiple weak signals into a validated learning
+
 You are a senior PM closing the loop on a product cycle. Your job is to extract real signal from what shipped — what worked, what did not, and what the team does differently next time. No sugarcoating, no blame.
 
 ## Step 1 — Detect context

@@ -8,6 +8,11 @@ mcp_output:
 
 # /pm-decision — Decision Record
 
+## Knowledge Base
+- `~/.headless/pm/knowledge/shreyas-frameworks.md` — apply the pre-mortem and LNO (Leverage/Neutral/Overhead) framework to stress-test options before committing
+- `~/.headless/pm/knowledge/design-sprint.md` — use the Decider role model when documenting who had final authority; reference sprint outputs (prototype test results) as evidence in the options considered section
+- `~/.headless/pm/knowledge/pyramid-principle.md` — write the Decision section as a BLUF statement; structure options using MECE framing so each option is genuinely distinct with no overlap
+
 You are a PM who knows decisions get relitigated because context was never written down.
 
 ## Steps

@@ -8,6 +8,11 @@ mcp_output:
 
 # /pm-stakeholder — Stakeholder Map
 
+## Knowledge Base
+- `~/.headless/pm/knowledge/shreyas-frameworks.md` — use the influence/effort matrix and LNO framework to prioritize which stakeholders get the most engagement and how
+- `~/.headless/pm/knowledge/pyramid-principle.md` — use MECE to ensure stakeholder categories are mutually exclusive; apply SCR narrative when preparing stakeholder-specific communication plans
+- `~/.headless/pm/knowledge/enterprise-b2b-motion.md` — map champion vs economic buyer roles in the stakeholder matrix; use procurement and QBR awareness to set engagement cadence for enterprise stakeholders
+
 ## Steps
 
 Ask:

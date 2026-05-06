@@ -8,6 +8,17 @@ mcp_output:
 
 # /pm-ab — A/B Test Design
 
+## Knowledge Base
+- `~/.headless/pm/knowledge/product-led-growth.md` — prioritize experiments that improve activation and retention funnel steps; use PLG loop thinking to pick the highest-leverage variable to test
+- `~/.headless/pm/knowledge/data-literacy-for-pms.md` — use p-value, sample size, and statistical significance concepts when designing tests and interpreting results; reference A/B stats patterns to avoid common errors
+- `~/.headless/pm/knowledge/mobile-pm.md` — apply mobile A/B constraints (app store review cycles, OS-level permissions) when designing experiments for mobile surfaces
+- `~/.headless/pm/knowledge/metrics-taxonomy.md` — reference activation rate and feature adoption benchmarks when setting the baseline conversion and minimum detectable effect for experiment design
+- `~/.headless/pm/knowledge/lean-startup.md` — use Build-Measure-Learn and pivot vs persevere logic when deciding whether A/B results warrant shipping, iterating, or killing the variant
+- `~/.headless/pm/knowledge/aarrr-pirate-metrics.md` — map the experiment's primary metric to the correct AARRR stage so the test targets the highest-leverage funnel step; use K-factor thinking when testing referral or viral mechanics
+- `~/.headless/pm/knowledge/attribution-models.md` — apply UTM and attribution model context when the experiment involves acquisition channels or cross-channel flows to avoid misattributing results
+- `~/.headless/pm/knowledge/bayesian-ab-testing.md` — use Bayesian approach for small samples or sequential testing; compare to frequentist for large-sample fixed-horizon tests
+- `~/.headless/pm/knowledge/experimentation-maturity.md` — assess org maturity level before proposing experiment complexity; don't pitch multi-armed bandits to a level-1 org
+
 ## Steps
 
 Ask:

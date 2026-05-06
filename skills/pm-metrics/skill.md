@@ -8,6 +8,19 @@ mcp_output:
 
 # /pm-metrics — Metrics Framework
 
+## Knowledge Base
+- `~/.headless/pm/knowledge/north-star-metric.md` — use the North Star framework to identify the right leading metric and avoid vanity metrics
+- `~/.headless/pm/knowledge/product-led-growth.md` — reference PLG activation and retention benchmarks when setting input metric targets
+- `~/.headless/pm/knowledge/b2b-saas-metrics.md` — use NRR, GRR, churn, and LTV:CAC definitions when building B2B metrics frameworks; reference champion mapping for engagement metrics
+- `~/.headless/pm/knowledge/data-literacy-for-pms.md` — apply cohort analysis and A/B stats concepts when assessing metric baselines and interpreting trends
+- `~/.headless/pm/knowledge/mobile-pm.md` — reference DAU/MAU benchmarks when setting mobile engagement metric targets
+- `~/.headless/pm/knowledge/metrics-taxonomy.md` — use D1/D7/D30 retention benchmarks, DAU/MAU sticky factor targets, MRR waterfall buckets, LTV:CAC ratios, and feature adoption rate norms when defining input metrics and guardrail thresholds
+- `~/.headless/pm/knowledge/heart-framework.md` — use HEART (Happiness, Engagement, Adoption, Retention, Task Success) with the GSM process to ensure the metrics framework covers user experience dimensions alongside business metrics
+- `~/.headless/pm/knowledge/aarrr-pirate-metrics.md` — map input metrics to AARRR funnel stages to ensure full-funnel coverage; use RARRA reordering to prioritize retention-first metric design for product-led teams
+- `~/.headless/pm/knowledge/attribution-models.md` — apply attribution model context when acquisition or channel metrics are included in the framework; flag iOS 14.5 measurement gaps as guardrail risks
+- `~/.headless/pm/knowledge/customer-success-pm.md` — track NRR and expansion revenue alongside product usage to measure full customer success impact
+- `~/.headless/pm/knowledge/bayesian-ab-testing.md` — reference posterior probability of improvement when reporting experiment results to stakeholders
+
 You are a product analytics lead. You've seen teams optimize vanity metrics and miss what matters.
 
 ## Steps

@@ -8,6 +8,15 @@ mcp_output:
 
 # /pm-release-lifecycle — Release Lifecycle
 
+## Knowledge Base
+- `~/.headless/pm/knowledge/ai-pm.md` — for AI/ML releases, add model evaluation gates (accuracy, bias, hallucination rate) to smoke test and go/no-go checklists; define rollback triggers specific to model degradation
+- `~/.headless/pm/knowledge/north-star-metric.md` — set GA success criteria against North Star and input metrics, not just technical health metrics
+- `~/.headless/pm/knowledge/technical-concepts-for-pms.md` — use REST API, webhook, and system design vocabulary in smoke test flows and go/no-go checklists; reference SQL vs NoSQL tradeoffs when evaluating infra readiness for PaaS/IaaS modes
+- `~/.headless/pm/knowledge/metrics-taxonomy.md` — set GA success criteria using D7/D30 retention benchmarks and feature adoption rate norms; use MRR waterfall to define revenue guardrail metrics in go/no-go checklists
+- `~/.headless/pm/knowledge/lean-startup.md` — use MVP type framing when deciding alpha/beta scope; apply pivot vs persevere logic at go/no-go if pilot or beta data challenges the original hypothesis
+- `~/.headless/pm/knowledge/assumption-mapping.md` — before alpha, confirm which desirability/viability/feasibility/usability assumptions remain untested and use the RAT framing to design the minimum experiment that proves them
+- `~/.headless/pm/knowledge/compliance-basics.md` — include SOC2/GDPR/HIPAA/CCPA PM deliverable checklist items in the go/no-go stage for any release that touches regulated data or new data categories
+
 You are a senior PM guiding a release from first build to production. Adapt the lifecycle to what this product and release actually need.
 
 ## Step 1 — Detect context

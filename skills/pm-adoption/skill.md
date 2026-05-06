@@ -8,6 +8,18 @@ mcp_output:
 
 # /pm-adoption — Feature Adoption
 
+## Knowledge Base
+- `~/.headless/pm/knowledge/north-star-metric.md` — check whether adoption moves the North Star metric; flag if adoption is up but North Star is flat
+- `~/.headless/pm/knowledge/product-led-growth.md` — use PLG activation/retention benchmarks and viral loop thinking when recommending next interventions
+- `~/.headless/pm/knowledge/b2b-saas-metrics.md` — reference NRR and churn patterns when interpreting retention drops; use champion mapping to identify power user segments
+- `~/.headless/pm/knowledge/mobile-pm.md` — use DAU/MAU benchmarks and push notification patterns when analyzing mobile feature adoption
+- `~/.headless/pm/knowledge/metrics-taxonomy.md` — use feature adoption rate benchmarks (avg 24.5%, good 28%+) and breadth-of-use data to assess whether adoption numbers are healthy and identify power-user expansion opportunities
+- `~/.headless/pm/knowledge/heart-framework.md` — map adoption funnel metrics to HEART dimensions: Adoption covers the A, Retention the R, Task Success the T; use GSM to verify each metric has a clear goal and signal
+- `~/.headless/pm/knowledge/aarrr-pirate-metrics.md` — align the adoption funnel (Awareness → Activation → Retention → Habitual) to AARRR stages; use K-factor when recommending referral-loop interventions for low-awareness findings
+- `~/.headless/pm/knowledge/crossing-the-chasm.md` — when adoption is stalling, diagnose whether the product is stuck between visionary and pragmatist segments; use whole product gap analysis to identify what's missing for mainstream uptake
+- `~/.headless/pm/knowledge/enterprise-b2b-motion.md` — for B2B features, track champion engagement separately from seat utilization; use expansion motion signals (QBR cadence, multi-team usage) as leading indicators of healthy adoption
+- `~/.headless/pm/knowledge/customer-success-pm.md` — frame adoption metrics in terms of net revenue retention and expansion using QBR context
+
 ## Steps
 
 Ask:

@@ -8,6 +8,12 @@ mcp_output:
 
 # /pm-survey — Survey Design
 
+## Knowledge Base
+- `~/.headless/pm/knowledge/continuous-discovery.md` — use surveys to validate patterns found in qualitative discovery; frame questions around opportunity hypotheses from the opportunity solution tree
+- `~/.headless/pm/knowledge/user-research-methods.md` — reference card sorting and tree testing techniques when designing surveys for information architecture or navigation validation
+- `~/.headless/pm/knowledge/research-tools.md` — use G2 review themes and Reddit complaints as input for survey question framing; use Amplitude vs Mixpanel vs Heap comparison when recommending analytics instrumentation alongside survey programs
+- `~/.headless/pm/knowledge/conjoint-analysis.md` — design trade-off surveys instead of feature-preference surveys; use CBC methodology to reveal willingness-to-pay
+
 You are a quantitative UX researcher.
 
 ## Steps

@@ -8,6 +8,14 @@ mcp_output:
 
 # /pm-launch — Launch Phase Wizard
 
+## Knowledge Base
+- `~/.headless/pm/knowledge/product-led-growth.md` — design the launch motion around PLG principles: self-serve activation, viral loops, and in-product onboarding rather than relying solely on announcements
+- `~/.headless/pm/knowledge/pricing-strategy-saas.md` — use Van Westendorp and packaging frameworks when launch includes a new pricing tier or freemium offer; reference value-based pricing when crafting launch messaging pillars
+- `~/.headless/pm/knowledge/aarrr-pirate-metrics.md` — map the launch goal metric to the correct AARRR stage; ensure Activation metric is defined before launch day so post-launch D+2 checks measure the right funnel step
+- `~/.headless/pm/knowledge/attribution-models.md` — configure UTM parameters for every external channel in the Comms Plan; select the appropriate attribution model (first-touch for awareness campaigns, last-touch for conversion-focused launches) before launch
+- `~/.headless/pm/knowledge/crossing-the-chasm.md` — identify whether the launch audience is visionary or pragmatist; use whole product framing in the enablement brief and bowling alley beachhead targeting in the GTM plan
+- `~/.headless/pm/knowledge/enterprise-b2b-motion.md` — design the enablement brief with champion and economic buyer talk tracks distinct; include QBR and expansion motion materials when launching to existing enterprise accounts
+
 You are a senior PM driving a product launch from GA-ready to market impact. Your job is to ensure the right people know about the right thing at the right time — and that the team is ready to support users on day one.
 
 ## Step 1 — Detect context
