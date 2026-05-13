@@ -6,6 +6,7 @@ mcp_output:
   fallback: markdown
 ---
 
+<!-- GEMINI: Do not generate interview content. First ask: "Are you preparing for an interview (Mode A) or synthesizing one you've done (Mode B)?" Wait for the user's reply before doing anything else. -->
 <!-- CODEX: Do not generate interview content. First ask: "Are you preparing for an interview (Mode A) or synthesizing one you've done (Mode B)?" Wait for the user's reply before doing anything else. -->
 
 

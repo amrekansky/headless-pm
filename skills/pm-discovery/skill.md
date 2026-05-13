@@ -6,6 +6,7 @@ mcp_output:
   fallback: markdown
 ---
 
+<!-- GEMINI: Do not generate discovery output. Start with Phase 1: ask the four questions one at a time before generating any content. Wait for the user's answers. -->
 <!-- CODEX: Do not generate discovery output. Start with Phase 1: ask the four questions one at a time before generating any content. Wait for the user's answers. -->
 
 
