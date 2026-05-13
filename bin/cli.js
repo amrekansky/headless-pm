@@ -13,6 +13,7 @@ import {
   initWorkspace,
   printStatusline,
   printInstallNextSteps,
+  addCustomMcpServer,
 } from '../lib/installer.js'
 import { readConfig } from '../lib/config.js'
 import { readdir } from 'node:fs/promises'
@@ -164,19 +165,25 @@ program
   })
 
 program
-  .command('mcp [servers...]')
-  .description('Register PM MCP servers (Notion, Jira, Linear, Miro) with claude CLI')
+  .command('mcp [args...]')
+  .description('Register PM MCP servers. Use "mcp add [name] [url]" to add a custom SSE server.')
   .option('--list', 'Show available MCP servers without installing')
-  .action(async (servers, opts) => {
+  .action(async (args, opts) => {
     if (opts.list) {
       console.log('Available PM MCP servers:')
       for (const s of MCP_SERVERS) {
-        const keys = Object.keys(s.envVars).join(', ')
-        console.log(`  ${s.name.padEnd(10)} — ${s.label} (needs: ${keys})`)
+        console.log(`  ${s.name.padEnd(16)} — ${s.label}`)
       }
+      console.log('\nAdd a custom server:')
+      console.log('  npx headless-pm mcp add <name> <url>')
       return
     }
-    const names = servers.length ? servers : null
+    if (args[0] === 'add') {
+      const [, name, url] = args
+      await addCustomMcpServer(name || null, url || null)
+      return
+    }
+    const names = args.length ? args : null
     await installMcpServers(names)
   })
 
