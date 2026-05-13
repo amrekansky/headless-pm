@@ -6,6 +6,14 @@ mcp_output:
   fallback: confluence
 ---
 
+
+## Universal Rules
+- Respond in the same language the user writes in
+- Before asking questions, identify what is already provided in context. Only ask for genuinely missing data.
+- When asking a question, always offer 3-4 ready-made options with a smart default; last option: "Enter your own"
+- Read all files listed in ## Knowledge Base before generating any output
+
+
 # /pm-brief — Weekly Brief
 
 ## Knowledge Base
@@ -13,6 +21,15 @@ mcp_output:
 - `~/.headless/pm/knowledge/working-backwards.md` — lead with customer outcome and impact; use press-release thinking to keep the brief outcome-focused
 - `~/.headless/pm/knowledge/design-sprint.md` — when briefing on a sprint outcome, use sprint artifact vocabulary (prototype, test, Decider decision) to communicate results concisely to stakeholders
 - `~/.headless/pm/knowledge/pyramid-principle.md` — open with the headline finding (BLUF), group this-week items into MECE buckets, and use SCR structure when the brief surfaces a significant risk or decision
+
+## Output Template
+Every response MUST include (Pyramid Principle: BLUF first):
+- **Headline:** one sentence — what's the most important thing that happened or is at risk
+- **Shipped / progressed:** outcome language — not "worked on X", use "X now enables users to Y"
+- **Next week:** what's planned + why it matters (linked to KR or sprint goal)
+- **Risks and blockers:** impact of non-resolution + who owns the unblock
+- **Decisions needed:** decision text + named owner + deadline + consequence of delay
+- **Metrics pulse:** at least one metric with current value vs target vs trend
 
 ## Steps
 

@@ -6,10 +6,26 @@ mcp_output:
   fallback: slack
 ---
 
+
+## Universal Rules
+- Respond in the same language the user writes in
+- Before asking questions, identify what is already provided in context. Only ask for genuinely missing data.
+- When asking a question, always offer 3-4 ready-made options with a smart default; last option: "Enter your own"
+- Read all files listed in ## Knowledge Base before generating any output
+
+
 # /pm-release — Release Notes
 
 ## Knowledge Base
 - `~/.headless/pm/knowledge/mobile-pm.md` — when writing release notes for mobile, include ASO-relevant feature descriptions and note any changes affecting push notifications or DAU/MAU tracking
+
+## Output Template
+Every response MUST include concrete values, not placeholder labels:
+- **Three formats always produced:** changelog (technical/internal) + user-facing (benefit-led) + executive summary (one sentence, business impact)
+- **Changelog:** semver or date header; Added / Changed / Fixed sections with concrete descriptions — no marketing language
+- **User-facing:** lead with the user benefit, not the feature name (e.g., "You can now export reports in 3 clicks" not "Added export functionality"); mobile releases include ASO-relevant description and note any DAU/MAU tracking changes (mobile-pm.md)
+- **Executive summary:** one line — "[Feature] ships [date]. Expected impact: [metric] by [date]." — ties to a business outcome, not a feature description
+- **Audience mapping:** each format states its target audience and distribution channel (Slack #changelog / email / in-app banner / App Store notes)
 
 ## Steps
 

@@ -6,7 +6,23 @@ mcp_output:
   fallback: markdown
 ---
 
+
+## Universal Rules
+- Respond in the same language the user writes in
+- Before asking questions, identify what is already provided in context. Only ask for genuinely missing data.
+- When asking a question, always offer 3-4 ready-made options with a smart default; last option: "Enter your own"
+- Read all files listed in ## Knowledge Base before generating any output
+
+
 # /pm-capacity — Capacity Planning
+
+## Output Template
+Every response MUST include:
+- **Headcount:** N people, names of OOO with dates
+- **Available person-days:** formula shown (N people x D days - OOO days - ceremony overhead)
+- **Velocity target:** X SP — labeled per person, per sprint
+- **Confidence multiplier:** 0.8 applied for unplanned work — shown explicitly
+- **Risk flags:** if capacity < 70% of norm — call it out explicitly with recommendation
 
 ## Steps
 

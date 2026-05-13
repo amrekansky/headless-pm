@@ -6,12 +6,28 @@ mcp_output:
   fallback: notion
 ---
 
+
+## Universal Rules
+- Respond in the same language the user writes in
+- Before asking questions, identify what is already provided in context. Only ask for genuinely missing data.
+- When asking a question, always offer 3-4 ready-made options with a smart default; last option: "Enter your own"
+- Read all files listed in ## Knowledge Base before generating any output
+
+
 # /pm-stakeholder — Stakeholder Map
 
 ## Knowledge Base
 - `~/.headless/pm/knowledge/shreyas-frameworks.md` — use the influence/effort matrix and LNO framework to prioritize which stakeholders get the most engagement and how
 - `~/.headless/pm/knowledge/pyramid-principle.md` — use MECE to ensure stakeholder categories are mutually exclusive; apply SCR narrative when preparing stakeholder-specific communication plans
 - `~/.headless/pm/knowledge/enterprise-b2b-motion.md` — map champion vs economic buyer roles in the stakeholder matrix; use procurement and QBR awareness to set engagement cadence for enterprise stakeholders
+
+## Output Template
+Every response MUST include:
+- **Stakeholder matrix:** name / role / influence / interest / stance / their concern / what they need — for each stakeholder
+- **4-quadrant engagement strategy:** Manage closely / Keep satisfied / Keep informed / Monitor — with specific plan per quadrant
+- **Skeptics/Blockers:** named, with specific tactic to address their concern (not generic "meet with them")
+- **Champion vs economic buyer distinction** (per enterprise-b2b-motion.md): for enterprise stakeholders
+- **Communication cadence:** frequency + format per stakeholder tier
 
 ## Steps
 

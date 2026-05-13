@@ -6,7 +6,22 @@ mcp_output:
   fallback: markdown
 ---
 
+
+## Universal Rules
+- Respond in the same language the user writes in
+- Before asking questions, identify what is already provided in context. Only ask for genuinely missing data.
+- When asking a question, always offer 3-4 ready-made options with a smart default; last option: "Enter your own"
+- Read all files listed in ## Knowledge Base before generating any output
+
+
 # /pm-standup — Daily Standup
+
+## Output Template
+Every response MUST include all three sections, even if empty:
+- **Done:** bullet list of completed items (not "nothing" — use "No completed items since last standup")
+- **Today:** bullet list with owners
+- **Blocked:** item + who unblocks it + by when — if none, write "No blockers"
+- **Sprint goal health:** On track / At risk / Off track — required in Mode B (team facilitation)
 
 ## Two modes
 

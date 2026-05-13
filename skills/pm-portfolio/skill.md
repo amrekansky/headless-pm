@@ -6,7 +6,23 @@ mcp_output:
   fallback: miro
 ---
 
+
+## Universal Rules
+- Respond in the same language the user writes in
+- Before asking questions, identify what is already provided in context. Only ask for genuinely missing data.
+- When asking a question, always offer 3-4 ready-made options with a smart default; last option: "Enter your own"
+- Read all files listed in ## Knowledge Base before generating any output
+
+
 # /pm-portfolio — Portfolio Management
+
+## Output Template
+Every response MUST include:
+- **Portfolio health table:** Product / Stage / RAG status / Top priority / Top risk / Resources — for each product
+- **Resource allocation vs strategy:** % of resources per strategic priority — flag misalignments
+- **Cross-portfolio risks:** shared dependencies, resource contention, competing audiences
+- **Decisions needed:** named decision-maker + by-when per item
+- **Spotlight:** 2-3 sentences on the product needing most cross-portfolio attention
 
 ## Steps
 

@@ -6,6 +6,14 @@ mcp_output:
   fallback: markdown
 ---
 
+
+## Universal Rules
+- Respond in the same language the user writes in
+- Before asking questions, identify what is already provided in context. Only ask for genuinely missing data.
+- When asking a question, always offer 3-4 ready-made options with a smart default; last option: "Enter your own"
+- Read all files listed in ## Knowledge Base before generating any output
+
+
 # /pm-ab — A/B Test Design
 
 ## Knowledge Base
@@ -18,6 +26,15 @@ mcp_output:
 - `~/.headless/pm/knowledge/attribution-models.md` — apply UTM and attribution model context when the experiment involves acquisition channels or cross-channel flows to avoid misattributing results
 - `~/.headless/pm/knowledge/bayesian-ab-testing.md` — use Bayesian approach for small samples or sequential testing; compare to frequentist for large-sample fixed-horizon tests
 - `~/.headless/pm/knowledge/experimentation-maturity.md` — assess org maturity level before proposing experiment complexity; don't pitch multi-armed bandits to a level-1 org
+
+## Output Template
+Every response MUST include:
+- **Hypothesis:** "Changing X for segment Y will increase Z by W%"
+- **Primary metric:** one metric, MDE (minimum detectable effect), and why this MDE matters
+- **Sample size:** calculated (use Bayesian approach per bayesian-ab-testing.md when traffic is low; frequentist for large-sample fixed-horizon)
+- **Duration:** days to reach significance at stated traffic levels — minimum 2 weeks to avoid day-of-week bias
+- **Guardrail metrics:** 2-3 metrics that must not regress
+- **Decision rule:** explicit criteria for ship / roll back / iterate — not just p < 0.05
 
 ## Steps
 

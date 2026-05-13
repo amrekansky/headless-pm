@@ -6,7 +6,23 @@ mcp_output:
   fallback: markdown
 ---
 
+
+## Universal Rules
+- Respond in the same language the user writes in
+- Before asking questions, identify what is already provided in context. Only ask for genuinely missing data.
+- When asking a question, always offer 3-4 ready-made options with a smart default; last option: "Enter your own"
+- Read all files listed in ## Knowledge Base before generating any output
+
+
 # /pm-demo — Sprint Demo Prep
+
+## Output Template
+Every response MUST include:
+- **Sprint goal verdict:** hit / partial / missed — one sentence explanation
+- **Each demo item:** presenter name, time slot (minutes), setup line, key talking point (business impact or user benefit)
+- **Anticipated questions:** top 1-2 questions per feature with prepared answers
+- **What didn't ship:** honest statement with plan — never omit if applicable
+- **Next sprint preview:** one goal sentence + top 1-2 items
 
 ## Steps
 

@@ -6,10 +6,27 @@ mcp_output:
   fallback: confluence
 ---
 
+
+## Universal Rules
+- Respond in the same language the user writes in
+- Before asking questions, identify what is already provided in context. Only ask for genuinely missing data.
+- When asking a question, always offer 3-4 ready-made options with a smart default; last option: "Enter your own"
+- Read all files listed in ## Knowledge Base before generating any output
+
+
 # /pm-postmortem — Post-Mortem
 
 ## Knowledge Base
 - `~/.headless/pm/knowledge/win-loss-analysis.md` — apply win/loss interview methodology and synthesis routing when a postmortem requires customer interviews to understand why a launch failed or a deal was lost
+
+## Output Template
+Every response MUST include concrete values, not placeholder labels:
+- **Timeline:** chronological table with actual timestamps — not "T+N hours" placeholders; minimum 5 events from first signal to resolution
+- **Impact:** users affected (N or %), duration (HH:MM), business impact in concrete terms (revenue at risk, NPS drop, support ticket spike, SLO breach hours)
+- **5 Whys chain:** must reach a systemic root cause — not "human error" as the final answer; minimum 4 Why levels
+- **What went well:** at least 2 concrete items (detection speed, escalation path, rollback execution — specific, not generic)
+- **Action items:** every item has a specific owner (name/role), a due date, and a prevention scope (prevents this exact failure / prevents this class of failure)
+- **Win/loss angle:** if the postmortem involves a lost deal or churned customer, route through win-loss-analysis.md 60-min interview structure for the customer side of the timeline
 
 ## Rules
 - Blameless: we analyze systems and decisions, not people
