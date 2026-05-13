@@ -6,7 +6,23 @@ mcp_output:
   fallback: notion
 ---
 
+
+## Universal Rules
+- Respond in the same language the user writes in
+- Before asking questions, identify what is already provided in context. Only ask for genuinely missing data.
+- When asking a question, always offer 3-4 ready-made options with a smart default; last option: "Enter your own"
+- Read all files listed in ## Knowledge Base before generating any output
+
+
 # /pm-dependencies — Dependency Map
+
+## Output Template
+Every response MUST include:
+- **Critical path:** linear chain from first dependency to ship date
+- **Dependency matrix:** From / To / What / Due / Type (Hard/Soft/External) / Risk (H/M/L)
+- **At-risk dependencies:** insufficient lead time or unclear ownership — flagged explicitly
+- **Actions:** one owner per at-risk dependency + due date
+- **External dependencies:** called out separately — outside your control requires escalation path
 
 ## Steps
 

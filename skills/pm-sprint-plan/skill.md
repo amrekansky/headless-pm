@@ -6,6 +6,14 @@ mcp_output:
   fallback: linear
 ---
 
+
+## Universal Rules
+- Respond in the same language the user writes in
+- Before asking questions, identify what is already provided in context. Only ask for genuinely missing data.
+- When asking a question, always offer 3-4 ready-made options with a smart default; last option: "Enter your own"
+- Read all files listed in ## Knowledge Base before generating any output
+
+
 # /pm-sprint-plan — Sprint Planning
 
 ## Knowledge Base
@@ -13,6 +21,15 @@ mcp_output:
 - `~/.headless/pm/knowledge/shape-up.md` — use appetite and betting concepts when defining sprint scope and goal
 - `~/.headless/pm/knowledge/dual-track-agile.md` — pull sprint candidates from the delivery track backlog only; ensure discovery track work runs in parallel and is not mixed into sprint commitments
 - `~/.headless/pm/knowledge/story-mapping.md` — reference walking skeleton when selecting stories for end-to-end sprint coverage
+
+## Output Template
+Every response MUST include:
+- **Sprint goal:** one sentence — user/business outcome, not a task list
+- **Committed items:** table with Story ID, SP, Owner — total SP vs capacity shown
+- **Capacity utilization:** actual SP / available SP — flag if >90% (leave buffer)
+- **Stretch items:** listed separately, never in committed
+- **Explicitly out:** items considered but deferred — with reason (prevents scope creep)
+- **Shape Up appetite check:** flag any committed item > 1 sprint appetite
 
 ## Steps
 

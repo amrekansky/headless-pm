@@ -6,11 +6,27 @@ mcp_output:
   fallback: notion
 ---
 
+
+## Universal Rules
+- Respond in the same language the user writes in
+- Before asking questions, identify what is already provided in context. Only ask for genuinely missing data.
+- When asking a question, always offer 3-4 ready-made options with a smart default; last option: "Enter your own"
+- Read all files listed in ## Knowledge Base before generating any output
+
+
 # /pm-retro — Retrospective
 
 ## Knowledge Base
 - `~/.headless/pm/knowledge/metrics-taxonomy.md` — reference industry benchmarks for activation, retention, and feature adoption when evaluating whether sprint outcomes moved the needle or fell short of norms
 - `~/.headless/pm/knowledge/okr-implementation.md` — tie the "one experiment" outcome to a specific KR so the retro produces measurable process improvement; use CFR (Conversations, Feedback, Recognition) framing to structure the retro discussion rather than generic Start/Stop/Continue
+
+## Output Template
+Every response MUST include:
+- **Went well:** 3+ items
+- **Painful:** 3+ items — each with a root cause hypothesis (5-whys), not just description
+- **Try next sprint:** exactly ONE action — owner, success metric, due date
+- **Shape Up circuit breaker check:** did any work exceed its appetite this sprint? Name it.
+- **Retro health signal:** participation count, psychological safety note
 
 ## Format
 Start/Stop/Continue + one experiment. Time-boxed to 45 min.

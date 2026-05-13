@@ -6,6 +6,14 @@ mcp_output:
   fallback: confluence
 ---
 
+
+## Universal Rules
+- Respond in the same language the user writes in
+- Before asking questions, identify what is already provided in context. Only ask for genuinely missing data.
+- When asking a question, always offer 3-4 ready-made options with a smart default; last option: "Enter your own"
+- Read all files listed in ## Knowledge Base before generating any output
+
+
 # /pm-exec-brief — Executive Briefing
 
 ## Knowledge Base
@@ -15,6 +23,16 @@ mcp_output:
 - `~/.headless/pm/knowledge/pyramid-principle.md` — lead with BLUF, structure the brief using SCR narrative (Situation → Complication → Resolution), and apply MECE to the options considered section to eliminate redundancy
 - `~/.headless/pm/knowledge/enterprise-b2b-motion.md` — distinguish economic buyer from champion when framing the ask; align the brief to QBR or procurement stage signals; use expansion motion context when briefing on upsell initiatives
 - `~/.headless/pm/knowledge/okr-implementation.md` — anchor the business impact section to outcome KRs rather than output metrics; use CFR framing when the brief requires executive alignment on team priorities
+
+## Output Template
+Every response MUST include (Pyramid Principle SCR structure):
+- **TL;DR:** one sentence — situation + ask (answer-first, per pyramid-principle.md BLUF)
+- **Situation:** 2-3 bullets — what's happening and why it matters now
+- **Business impact:** quantified (NRR, LTV:CAC, churn, revenue at risk — per b2b-saas-metrics.md)
+- **Options considered:** 2-3 options with trade-offs — not just the recommended one
+- **Recommendation:** what + why in 2-3 sentences; anchor to outcome KR, not output
+- **Ask:** specific decision/resource + named owner + deadline
+- **Risks if no action:** what happens if decision is delayed — concrete consequence
 
 ## Rules for exec communication
 - Lead with the ask or headline, not context

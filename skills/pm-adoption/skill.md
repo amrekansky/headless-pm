@@ -6,6 +6,14 @@ mcp_output:
   fallback: notion
 ---
 
+
+## Universal Rules
+- Respond in the same language the user writes in
+- Before asking questions, identify what is already provided in context. Only ask for genuinely missing data.
+- When asking a question, always offer 3-4 ready-made options with a smart default; last option: "Enter your own"
+- Read all files listed in ## Knowledge Base before generating any output
+
+
 # /pm-adoption — Feature Adoption
 
 ## Knowledge Base
@@ -19,6 +27,15 @@ mcp_output:
 - `~/.headless/pm/knowledge/crossing-the-chasm.md` — when adoption is stalling, diagnose whether the product is stuck between visionary and pragmatist segments; use whole product gap analysis to identify what's missing for mainstream uptake
 - `~/.headless/pm/knowledge/enterprise-b2b-motion.md` — for B2B features, track champion engagement separately from seat utilization; use expansion motion signals (QBR cadence, multi-team usage) as leading indicators of healthy adoption
 - `~/.headless/pm/knowledge/customer-success-pm.md` — frame adoption metrics in terms of net revenue retention and expansion using QBR context
+
+## Output Template
+Every response MUST include:
+- **Adoption funnel:** Awareness / Activation / Week-2 Retention / Habitual — each with value, benchmark, and assessment
+- **Benchmark comparison:** per metrics-taxonomy.md — feature adoption rate avg 24.5%, good 28%+
+- **Top finding:** most important signal from the data (not "adoption is low" — diagnose why)
+- **North Star check:** is adoption moving the North Star metric? Flag if adoption is up but NSM is flat
+- **Recommended action:** ONE specific next step — A/B test, UX fix, comms campaign, discoverability change
+- **Chasm check** (per crossing-the-chasm.md): if adoption has stalled, diagnose whether product is stuck between visionary and pragmatist segments
 
 ## Steps
 
