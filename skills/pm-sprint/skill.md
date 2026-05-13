@@ -7,6 +7,7 @@ mcp_output:
 ---
 
 <!-- GEMINI: Generate all output directly as text. Do not run any shell commands, do not invoke any tools, do not execute any subcommands. Produce the full response inline. -->
+<!-- CODEX: Do not generate sprint content. First ask: "Which part of the sprint cycle do you need help with?" with options 1-4 from the ## Ask first section. Wait for the user's reply before doing anything else. -->
 
 
 ## Universal Rules
