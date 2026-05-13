@@ -1,6 +1,6 @@
 # headless-pm
 
-AI Chief of Staff for product managers. Installs PM skills and tools into Claude Code.
+AI Chief of Staff for product managers. Installs PM skills, tools, and MCP servers into Claude Code, Gemini CLI, and Codex CLI.
 
 ## Install
 
@@ -8,7 +8,17 @@ AI Chief of Staff for product managers. Installs PM skills and tools into Claude
 npx headless-pm install
 ```
 
-Detects Claude Code, Gemini CLI, and Codex CLI automatically. Installs skills for each one found. Prompts to register MCP servers (Notion, Linear, Jira, Miro) across all detected CLIs.
+Detects Claude Code, Gemini CLI, and Codex CLI automatically. Installs skills for each one found. Prompts to register MCP servers across all detected CLIs.
+
+---
+
+## What You Get
+
+- **/pm** — agentic PM orchestrator: reads your `.pm/` workspace (sprint state, backlog, context) and routes to the right skill automatically
+- **51 PM skills** across 7 categories, each with Output Templates grounded in the knowledge base (no generic placeholders)
+- **40-file Knowledge Base** covering 7-powers, AARRR, Mom Test, North Star Metric, crossing-the-chasm, Van Westendorp, and more
+- **8 MCP servers**: Notion, Linear, Jira, Miro, Google Sheets, Figma, Slack, GitHub
+- **Works with**: Claude Code, Gemini CLI, Codex CLI (auto-detected on install)
 
 ---
 
@@ -20,96 +30,55 @@ After install, open Claude Code in any directory:
 claude
 ```
 
-Type `/pm` to start the PM lifecycle orchestrator.
+Type `/pm` to start. The orchestrator reads your `.pm/` workspace and routes automatically:
 
-This installs:
-- PM skills (`/pm`, `/cusdev`, `/pm-prd`, and 40+ paid skills) → `~/.claude/skills/` (and other CLI skill directories)
-- PM tools (`pm-interview-prep`, `pm-sprint-brief`) → `~/.headless/pm/`
-- MCP servers (Notion, Linear, Jira, Miro) registered across all detected CLIs
+- Planning a sprint? → `/pm-sprint-plan`
+- Writing a PRD? → `/pm-prd`
+- Running a retro? → `/pm-retro`
+- Customer discovery? → `/cusdev`
 
 ---
 
-## MCP Setup (PM Tools Integration)
+## Skill Categories
 
-During `npx headless-pm install` you'll see a checkbox to select which tools you use.
-Each tool connects differently:
+| Category | Skills |
+|---|---|
+| Sprint / Delivery | pm-sprint, pm-sprint-plan, pm-capacity, pm-standup, pm-status, pm-demo, pm-retro, pm-backlog, pm-story, pm-acceptance, pm-dependencies |
+| Strategy / OKR | pm-okr, pm-roadmap, pm-plan, pm-portfolio, pm-prioritize, pm-brief, pm-exec-brief |
+| Discovery / Research | pm-discovery, pm-discover, pm-hypothesis, pm-jtbd, pm-persona, pm-cjm, pm-survey, pm-learn, pm-nps-csat |
+| Metrics / Analytics | pm-metrics, pm-ab, pm-feature-flags, pm-adoption, pm-customer-health |
+| Stakeholder / Comms | pm-stakeholder, pm-decision, pm-prd, pm-epic, pm-define |
+| GTM / Market | pm-gtm, pm-launch, pm-market, pm-competitive, pm-positioning, pm-pricing-changes |
+| Ops / Incidents | pm-incident-response, pm-postmortem, pm-sla-slo, pm-release, pm-release-lifecycle, pm-sunset-deprecation |
 
-### Miro
-
-**Read-only (view boards):** Works automatically if you have the `claude.ai Miro` integration connected in Claude.ai settings. No extra steps.
-
-**Read + Write (create cards, sticky notes, frames):** Requires a personal access token.
-
-1. Go to [developers.miro.com](https://developers.miro.com) → **Your apps** → **Create new app**
-2. Set OAuth scopes: `boards:read` `boards:write`
-3. Click **Install app and get OAuth token** → copy the token
-4. Run:
-```bash
-claude mcp add -s user --force miro \
-  -e MIRO_ACCESS_TOKEN=your_token_here \
-  --transport sse https://mcp.miro.com/sse
-```
-
-### Notion
-
-1. Go to [notion.so/my-integrations](https://www.notion.so/my-integrations) → **New integration**
-2. Copy the **Internal Integration Token**
-3. Share relevant pages with your integration (open page → `...` → Connections → your integration)
-4. Run:
-```bash
-claude mcp add -s user --force notion \
-  -e NOTION_API_KEY=your_token_here \
-  -- npx -y @notionhq/notion-mcp-server
-```
-
-### Linear
-
-Connects via OAuth — no API key needed. On first use in Claude Code, browser will open for login.
-
-```bash
-claude mcp add -s user --transport sse linear https://mcp.linear.app/sse
-```
-
-### Jira / Confluence
-
-Connects via OAuth — no API key needed. On first use in Claude Code, browser will open for login.
-
-```bash
-claude mcp add -s user --transport sse jira https://mcp.atlassian.com/v1/sse
-```
+Plus: `/pm` (orchestrator) and `/cusdev` (customer discovery)
 
 ---
 
 ## Commands
 
 ```bash
-npx headless-pm install       # Install tools + skills + MCP setup prompt
-npx headless-pm setup --key=YOUR-KEY   # Unlock paid toolkit with license
-npx headless-pm mcp           # Re-run MCP setup (checkbox)
-npx headless-pm mcp --list    # List available MCP servers
-npx headless-pm list          # List installed tools and skills
-npx headless-pm update        # Update to latest version
+npx headless-pm install              # Install tools + skills + MCP setup prompt
+npx headless-pm setup --key=YOUR-KEY # Unlock paid toolkit with license
+npx headless-pm mcp                  # Re-run MCP setup
+npx headless-pm mcp --list           # List available MCP servers
+npx headless-pm list                 # List installed tools and skills
+npx headless-pm update               # Update to latest version
 ```
 
 ---
 
-## Skills (use inside Claude Code)
+## MCP Setup
 
-| Skill | What it does |
-|-------|-------------|
-| `/pm` | PM lifecycle orchestrator — routes to the right phase |
-| `/cusdev` | Customer development interview guide |
-| `/pm-discover` | 5-stage discovery wizard |
-| `/pm-define` | PRD → Epics → Stories → Acceptance |
-| `/pm-plan` | OKR → Roadmap → Capacity → Sprint |
-| `/pm-launch` | GTM → Positioning → Comms → Launch checklist |
-| `/pm-learn` | Metrics → Retro → A/B → Next cycle |
-| `/pm-release-lifecycle` | smoke→alpha→beta→pilot→go-nogo→GA |
-| `/pm-incident-response` | Triage → Comms → Resolution → Postmortem |
-| `/pm-nps-csat` | Parse → Segment → Diagnose → Roadmap impact |
-| `/pm-feature-flags` | Flag spec → Targeting → Rollout → Cleanup |
+During install you'll see a checkbox to select which tools you use. Each server connects differently:
 
-Full list: 40+ skills covering the entire PM lifecycle.
+### Notion
+1. Go to [notion.so/my-integrations](https://www.notion.so/my-integrations) → **New integration**
+2. Copy the **Internal Integration Token**
+3. Share relevant pages with your integration (open page → `...` → Connections → your integration)
+
+### Linear / Jira / Miro / Google Sheets / Figma / Slack / GitHub
+Connect via OAuth — no API key needed. On first use in Claude Code, a browser window opens for login.
 
 ---
 
@@ -118,3 +87,23 @@ Full list: 40+ skills covering the entire PM lifecycle.
 Free skills: `/pm`, `/cusdev`, `/pm-prd`, `/pm-story`, `/pm-retro`, `/pm-standup`
 
 Full toolkit: [headlessaimode.com](https://headlessaimode.com)
+
+---
+
+## What's New
+
+### v0.6.6 — Skill Quality Standard
+- **Universal Rules** injected into all 51 skills: respond in user's language, only ask for genuinely missing data, always offer options with smart defaults, read KB before output
+- **Output Templates** added to all 51 skills: KB-grounded, concrete field requirements, no generic placeholders
+
+### v0.6.5 — Knowledge Base
+- 40-file knowledge base installed to `~/.headless/pm/knowledge/` on setup
+- Fixed: Gemini interpreting skill.md as an agent (added no-execute directive)
+
+### v0.6.4 — Bug Fixes
+- Fixed Gemini re-asking data already in context
+- Fixed Codex skill menu not showing
+
+### v0.6.3 — /pm Agentic Orchestrator
+- `/pm` reads `.pm/` workspace and routes to the right skill automatically
+- Sprint state, backlog context, and stakeholder list inform every skill call
