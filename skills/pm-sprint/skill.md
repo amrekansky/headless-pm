@@ -6,7 +6,7 @@ mcp_output:
   fallback: notion
 ---
 
-<!-- GEMINI: Generate all output directly as text. Do not run any shell commands, do not invoke any tools, do not execute any subcommands. Produce the full response inline. -->
+<!-- GEMINI: Do not generate sprint content and do not run any shell commands. First ask: "Which part of the sprint cycle do you need help with?" with options 1-4 from the ## Ask first section. Wait for the user's reply before doing anything else. -->
 <!-- CODEX: Do not generate sprint content. First ask: "Which part of the sprint cycle do you need help with?" with options 1-4 from the ## Ask first section. Wait for the user's reply before doing anything else. -->
 
 
