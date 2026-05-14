@@ -14,6 +14,7 @@ import {
   printStatusline,
   printInstallNextSteps,
   addCustomMcpServer,
+  installStatusline,
 } from '../lib/installer.js'
 import { readConfig } from '../lib/config.js'
 import { readdir } from 'node:fs/promises'
@@ -63,6 +64,7 @@ program
         printPathInstructions()
       }
       await promptMcpSetup(detectedCLIs)
+      await installStatusline(detectedCLIs)
       printInstallNextSteps()
     } catch (err) {
       console.error(`Install failed: ${err.message}`)
