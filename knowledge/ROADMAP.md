@@ -53,25 +53,25 @@ Status: `[ ]` = todo, `[~]` = in progress, `[x]` = done
 - [x] impact-mapping.md — Gojko Adzic, goals → actors → impacts → deliverables
 
 ## Tier 4 — Business fundamentals
-- [ ] unit-economics.md — CAC, LTV, payback, contribution margin, when unit economics matter
-- [ ] make-buy-partner.md — framework for build vs buy vs partner decisions
-- [ ] startup-pm.md — fundraising basics, pitch deck structure, board communication for PMs
-- [ ] pm-writing.md — PRD writing, specs, executive emails, crisp communication
+- [x] unit-economics.md — CAC, LTV, payback, contribution margin, when unit economics matter
+- [x] make-buy-partner.md — framework for build vs buy vs partner decisions
+- [x] startup-pm.md — fundraising basics, pitch deck structure, board communication for PMs
+- [x] pm-writing.md — PRD writing, specs, executive emails, crisp communication
 
 ## Tier 5 — Domain specialization
-- [ ] fintech-pm.md — PSD2, open banking, regulatory approval, KYC/AML for product
-- [ ] healthcare-pm.md — FDA clearance, HIPAA, clinical workflow constraints
-- [ ] marketplace-pm.md — supply/demand balance, liquidity, chicken-and-egg, take rate
-- [ ] infrastructure-pm.md — DevTools PM, platform reliability, SRE collaboration
+- [x] fintech-pm.md — PSD2, open banking, regulatory approval, KYC/AML for product
+- [x] healthcare-pm.md — FDA clearance, HIPAA, clinical workflow constraints
+- [x] marketplace-pm.md — supply/demand balance, liquidity, chicken-and-egg, take rate
+- [x] infrastructure-pm.md — DevTools PM, platform reliability, SRE collaboration
 
 ## Tier 6 — Career & soft skills
-- [ ] pm-interview-prep.md — case interviews, estimation, product design questions, behavioral
-- [ ] pm-career-ladder.md — IC vs management track, leveling criteria, promotion narratives
-- [ ] difficult-conversations.md — negotiation, conflict between eng/design/business, managing up
-- [ ] pm-rituals.md — weekly/monthly product reviews, roadmap reviews, design reviews
+- [x] pm-interview-prep.md — case interviews, estimation, product design questions, behavioral
+- [x] pm-career-ladder.md — IC vs management track, leveling criteria, promotion narratives
+- [x] difficult-conversations.md — negotiation, conflict between eng/design/business, managing up
+- [x] pm-rituals.md — weekly/monthly product reviews, roadmap reviews, design reviews
 
 ## Tier 7 — Org & tooling
-- [ ] org-design-product.md — team topologies for product, stream-aligned vs platform teams
-- [ ] hiring-pms.md — PM hiring frameworks, interview design, onboarding
-- [ ] notion-for-pms.md — Notion systems, templates, databases for PM workflows
-- [ ] linear-jira-best-practices.md — workflow setup, labeling, sprint hygiene
+- [x] org-design-product.md — team topologies for product, stream-aligned vs platform teams
+- [x] hiring-pms.md — PM hiring frameworks, interview design, onboarding
+- [x] notion-for-pms.md — Notion systems, templates, databases for PM workflows
+- [x] linear-jira-best-practices.md — workflow setup, labeling, sprint hygiene
