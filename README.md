@@ -17,7 +17,7 @@ Auto-detects which CLIs you have. Installs skills into each one. Prompts to conn
 - **/pm** — agentic orchestrator that reads your `.pm/` workspace (sprint state, backlog, context) and routes to the right skill automatically
 - **51 PM skills** across 7 categories, each grounded in the knowledge base with concrete output templates
 - **40-file knowledge base** — 7 Powers, AARRR, Mom Test, North Star, Crossing the Chasm, Van Westendorp, and more — installed to `~/.headless/pm/knowledge/`
-- **MCP integrations** — Notion, Linear, Jira, Miro, Google Sheets, Figma, Slack, GitHub
+- **MCP integrations** — Notion, Linear, Jira, Miro, Exa, Google Sheets, Figma, Slack, GitHub
 - **Works with** Claude Code, Gemini CLI, and Codex CLI — all three, or just one
 
 ---
@@ -83,8 +83,18 @@ Runs automatically during install. You'll see a checkbox list — select the too
 2. Copy the **Internal Integration Token**
 3. Share relevant pages with your integration (open page → `...` → Connections → your integration)
 
-### Linear / Jira / Miro / Google Sheets / Figma / Slack / GitHub
+### Linear / Jira / Google Sheets / Figma / Slack / GitHub
 OAuth — no API key needed. A browser window opens on first use.
+
+### Miro
+OAuth — no API key needed. A browser window opens on first use.
+
+> **Write access:** The OAuth flow provides read-only access. For write operations (creating cards, updating boards), generate a personal access token with `boards:write` scope at [miro.com/app/settings/user-profile/apps](https://miro.com/app/settings/user-profile/apps) and set it as `MIRO_TOKEN` in your environment.
+
+### Exa
+AI-powered web search. After install, you will see setup instructions to add your API key.
+
+Get your API key: [exa.ai/settings/api-keys](https://exa.ai/settings/api-keys)
 
 ---
 
