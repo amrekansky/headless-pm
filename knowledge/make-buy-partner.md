@@ -126,6 +126,16 @@ Partner = OEM/resell/API, shared economics, ongoing relationship
 Acquire = buy the company, right when team+IP is the asset
 ```
 
+| Signal | Make | Buy | Partner | Acquire |
+|--------|------|-----|---------|---------|
+| Core differentiator | ✓ | | | ✓ |
+| Commoditized capability | | ✓ | ✓ | |
+| Needs fast time-to-market | | ✓ | ✓ | |
+| Vendor market immature | ✓ | | | |
+| High lock-in risk + strategic | ✓ | | | |
+| Team/IP is the asset | | | | ✓ |
+| Shared distribution needed | | | ✓ | |
+
 ## Sources
 
 - [The Build vs. Buy Decision — Ben Horowitz (a16z)](https://a16z.com/2014/06/23/the-build-vs-buy-decision/)
