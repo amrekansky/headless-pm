@@ -1,4 +1,5 @@
 ---
+<!-- GEMINI: Do not run any shell commands. -->
 name: pm-feature-flags
 description: Feature flag strategy skill. Helps PM define flag spec, targeting rules, rollout plan, and cleanup policy. Use when rolling out a new feature progressively or running experiments behind flags.
 mcp_output:

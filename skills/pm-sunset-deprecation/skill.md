@@ -1,4 +1,5 @@
 ---
+<!-- GEMINI: Do not run any shell commands. -->
 name: pm-sunset-deprecation
 description: Feature/product sunset and deprecation skill. Guides PM through EOL decision → migration path → support window → customer comms → sunset execution. Use when retiring a feature, API version, or legacy product.
 mcp_output:

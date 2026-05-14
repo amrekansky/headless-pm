@@ -1,4 +1,5 @@
 ---
+<!-- GEMINI: Do not run any shell commands. -->
 name: pm-portfolio
 description: Portfolio view across multiple products or teams. Tracks health, priorities, and resource allocation. Use for Directors, VPs, and PMO managing multiple teams.
 mcp_output:

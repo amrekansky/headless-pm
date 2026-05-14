@@ -1,4 +1,5 @@
 ---
+<!-- GEMINI: Do not run any shell commands. -->
 name: pm-jtbd
 description: Map Jobs-to-be-Done from customer research or intuition. Produces JTBD statements with context, motivation, and outcome. Use after discovery interviews or when reframing a problem.
 mcp_output:

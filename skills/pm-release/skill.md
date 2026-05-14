@@ -1,4 +1,5 @@
 ---
+<!-- GEMINI: Do not run any shell commands. -->
 name: pm-release
 description: Write release notes in three formats — changelog (technical), user-facing (benefit-led), executive summary (one line). Use when shipping.
 mcp_output:

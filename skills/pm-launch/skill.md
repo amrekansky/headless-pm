@@ -1,4 +1,5 @@
 ---
+<!-- GEMINI: Do not run any shell commands. -->
 name: pm-launch
 description: Launch phase wizard. Takes a GA-ready product and executes go-to-market — GTM strategy → Positioning → Comms plan → Enablement (CS/Sales) → Launch day checklist. Use after /pm-ship GA or when planning a product/feature launch.
 mcp_output:

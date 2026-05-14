@@ -1,4 +1,5 @@
 ---
+<!-- GEMINI: Do not run any shell commands. -->
 name: pm-prd
 description: Write a complete PRD from discovery notes or a problem statement. Engineering-ready. Use when moving from discovery to delivery.
 mcp_output:

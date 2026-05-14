@@ -1,4 +1,5 @@
 ---
+<!-- GEMINI: Do not run any shell commands. -->
 name: pm-cjm
 description: Create a Customer Journey Map for a user flow. Visualizes stages, actions, thoughts, emotions, and pain points. Outputs to Miro board.
 mcp_output:

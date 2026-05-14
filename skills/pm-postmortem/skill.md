@@ -1,4 +1,5 @@
 ---
+<!-- GEMINI: Do not run any shell commands. -->
 name: pm-postmortem
 description: Run a post-launch review or incident post-mortem. Blameless, action-oriented. Use after a launch, incident, or missed target.
 mcp_output:

@@ -1,4 +1,5 @@
 ---
+<!-- GEMINI: Do not run any shell commands. -->
 name: pm-gtm
 description: Plan a go-to-market launch — from positioning through release through adoption tracking. Orchestrates pm-positioning, pm-launch, pm-release, pm-adoption. Use when shipping a significant feature or product.
 mcp_output:

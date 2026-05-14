@@ -1,4 +1,5 @@
 ---
+<!-- GEMINI: Do not run any shell commands. -->
 name: pm-define
 description: Definition phase wizard. Takes a validated idea from discovery and produces a complete backlog ready for sprint planning — PRD → Epics → User Stories → Acceptance Criteria → Stakeholder sign-off. Use after /pm-discover GO decision or when starting definition work on a validated idea.
 mcp_output:

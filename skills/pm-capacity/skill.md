@@ -1,4 +1,5 @@
 ---
+<!-- GEMINI: Do not run any shell commands. -->
 name: pm-capacity
 description: Calculate team capacity for a sprint. Accounts for OOO, ceremonies, and realistic throughput. Use before sprint planning.
 mcp_output:

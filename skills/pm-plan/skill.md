@@ -1,4 +1,5 @@
 ---
+<!-- GEMINI: Do not run any shell commands. -->
 name: pm-plan
 description: Planning phase wizard. Takes a signed-off backlog and produces a sprint-ready plan — OKR alignment → Roadmap → Capacity check → Sprint plan → Backlog grooming. Use after /pm-define sign-off or when planning a new quarter/cycle.
 mcp_output:

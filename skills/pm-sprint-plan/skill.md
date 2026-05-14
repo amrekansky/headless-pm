@@ -1,4 +1,5 @@
 ---
+<!-- GEMINI: Do not run any shell commands. -->
 name: pm-sprint-plan
 description: Run sprint planning — define sprint goal, select backlog items, check capacity, create commitment. Outputs sprint to Jira or Linear.
 mcp_output:

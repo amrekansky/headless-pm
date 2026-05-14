@@ -1,4 +1,5 @@
 ---
+<!-- GEMINI: Do not run any shell commands. -->
 name: pm-roadmap
 description: Build a strategic roadmap — from competing initiatives to sequenced, outcome-driven plan. Orchestrates pm-prioritize, pm-stakeholder, pm-positioning. Use at quarterly planning or when strategy is unclear.
 mcp_output:

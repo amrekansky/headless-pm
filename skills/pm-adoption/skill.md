@@ -1,4 +1,5 @@
 ---
+<!-- GEMINI: Do not run any shell commands. -->
 name: pm-adoption
 description: Track and interpret feature adoption — activation, retention, engagement. Identifies drop-off, power users, and next interventions. Use 2-4 weeks post-launch.
 mcp_output:

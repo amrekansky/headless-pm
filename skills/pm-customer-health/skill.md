@@ -1,4 +1,5 @@
 ---
+<!-- GEMINI: Do not run any shell commands. -->
 name: pm-customer-health
 description: Customer health scoring skill. Builds health score model, identifies at-risk accounts, and produces CSM escalation briefs. Use when managing a B2B portfolio or preparing for a QBR.
 mcp_output:

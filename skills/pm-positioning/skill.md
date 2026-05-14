@@ -1,4 +1,5 @@
 ---
+<!-- GEMINI: Do not run any shell commands. -->
 name: pm-positioning
 description: Define product or feature positioning — target customer, category, differentiation, value prop. Use before GTM planning, messaging work, or when competing against new entrants.
 mcp_output:

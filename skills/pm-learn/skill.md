@@ -1,4 +1,5 @@
 ---
+<!-- GEMINI: Do not run any shell commands. -->
 name: pm-learn
 description: Learning phase wizard. Closes the product cycle with data — Metrics Review → Retro → A/B Analysis → Postmortem (if incident) → Next Cycle Brief. Use after launch to measure outcomes and feed learnings into the next discovery cycle.
 mcp_output:
