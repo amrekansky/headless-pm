@@ -33,6 +33,7 @@ Every response MUST include concrete values, not placeholder labels:
 - `~/.headless/pm/knowledge/pricing-strategy-saas.md` — apply Van Westendorp and value-based pricing frameworks during impact analysis; use packaging and freemium economics to design migration options
 - `~/.headless/pm/knowledge/enterprise-b2b-motion.md` — segment enterprise accounts by procurement stage and renewal proximity; use champion/economic buyer mapping to determine who receives which comms and which migration options require executive approval
 - `~/.headless/pm/knowledge/conjoint-analysis.md` — quantify price sensitivity and feature premium before changing pricing tiers
+- `~/.headless/pm/knowledge/unit-economics.md` — model LTV:CAC ratio before and after pricing change; use payback period and contribution margin to justify the price move to leadership
 
 ## Step 1 — Detect context
 
