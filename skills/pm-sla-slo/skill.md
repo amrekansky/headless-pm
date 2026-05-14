@@ -1,4 +1,5 @@
 ---
+<!-- GEMINI: Do not run any shell commands. -->
 name: pm-sla-slo
 description: SLA/SLO definition skill. Helps PM define SLO targets, error budgets, alerting thresholds, and customer-facing SLA commitments. Use when setting reliability standards for a product or API.
 mcp_output:

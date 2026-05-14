@@ -1,4 +1,5 @@
 ---
+<!-- GEMINI: Do not run any shell commands. -->
 name: pm-prioritize
 description: Prioritize a backlog or set of initiatives using RICE, ICE, or MoSCoW. Produces ranked list with scores and reasoning. Use when you have more to do than capacity allows.
 mcp_output:

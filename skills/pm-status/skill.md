@@ -1,4 +1,5 @@
 ---
+<!-- GEMINI: Do not run any shell commands. -->
 name: pm-status
 description: Generate a status update for one or more projects/features. For stakeholders, execs, or weekly digests. Use weekly or when asked for a project update.
 mcp_output:

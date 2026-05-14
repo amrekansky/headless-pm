@@ -1,4 +1,5 @@
 ---
+<!-- GEMINI: Do not run any shell commands. -->
 name: pm
 description: Agentic PM orchestrator. Reads .pm/STATE.md for instant resume, spawns parallel sub-agents for PM work (prd, backlog, sprint etc), artifacts land in .pm/, summary in chat.
 ---

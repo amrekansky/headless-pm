@@ -1,4 +1,5 @@
 ---
+<!-- GEMINI: Do not run any shell commands. -->
 name: pm-decision
 description: Document a product decision with context, options considered, and rationale. Creates a decision record that survives team changes. Use for any significant product or technical decision.
 mcp_output:

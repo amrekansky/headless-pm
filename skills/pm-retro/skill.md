@@ -1,4 +1,5 @@
 ---
+<!-- GEMINI: Do not run any shell commands. -->
 name: pm-retro
 description: Facilitate a sprint retrospective. Structured, action-oriented — one concrete experiment per retro. Outputs to Miro or Notion.
 mcp_output:

@@ -1,4 +1,5 @@
 ---
+<!-- GEMINI: Do not run any shell commands. -->
 name: pm-acceptance
 description: Write acceptance criteria for a feature or user story using Given/When/Then format. Covers happy path, edge cases, and error states.
 mcp_output:

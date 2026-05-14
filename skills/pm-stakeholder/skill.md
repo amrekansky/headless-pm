@@ -1,4 +1,5 @@
 ---
+<!-- GEMINI: Do not run any shell commands. -->
 name: pm-stakeholder
 description: Map stakeholders for a project and plan communications. Identifies influence, interest, and what each stakeholder needs from you. Use at the start of any significant initiative.
 mcp_output:

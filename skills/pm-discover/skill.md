@@ -1,4 +1,5 @@
 ---
+<!-- GEMINI: Do not run any shell commands. -->
 name: pm-discover
 description: Discovery phase wizard. Guides PM through problem framing → hypothesis → user interviews → synthesis → go/no-go decision. Use when starting exploration of a new product idea, feature, or market opportunity.
 mcp_output:

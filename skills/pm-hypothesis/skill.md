@@ -1,4 +1,5 @@
 ---
+<!-- GEMINI: Do not run any shell commands. -->
 name: pm-hypothesis
 description: Generate and prioritize testable product hypotheses from a problem statement or strategic goal. Use before discovery to decide what to investigate first.
 mcp_output:

@@ -1,4 +1,5 @@
 ---
+<!-- GEMINI: Do not run any shell commands. -->
 name: pm-ab
 description: Design an A/B test — hypothesis, variants, success metric, sample size, duration. Use before running any experiment.
 mcp_output:

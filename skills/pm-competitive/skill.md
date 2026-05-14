@@ -1,4 +1,5 @@
 ---
+<!-- GEMINI: Do not run any shell commands. -->
 name: pm-competitive
 description: Produce a structured competitive brief for one or more competitors. Use before positioning work, roadmap planning, or sales enablement.
 mcp_output:

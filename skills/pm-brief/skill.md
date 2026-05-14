@@ -1,4 +1,5 @@
 ---
+<!-- GEMINI: Do not run any shell commands. -->
 name: pm-brief
 description: Write a weekly PM brief or sprint update for stakeholders and leadership. Concise, outcome-focused. Use weekly or end of sprint.
 mcp_output:

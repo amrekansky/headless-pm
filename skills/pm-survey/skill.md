@@ -1,4 +1,5 @@
 ---
+<!-- GEMINI: Do not run any shell commands. -->
 name: pm-survey
 description: Design a quantitative survey for product research. Produces survey questions with logic, answer scales, and analysis plan. Use to validate patterns from qualitative discovery at scale.
 mcp_output:

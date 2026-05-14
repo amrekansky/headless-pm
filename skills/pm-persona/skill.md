@@ -1,4 +1,5 @@
 ---
+<!-- GEMINI: Do not run any shell commands. -->
 name: pm-persona
 description: Synthesize user research into a product persona. Evidence-based, not fictional. Use after discovery interviews to align the team on who they're building for.
 mcp_output:

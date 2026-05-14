@@ -1,4 +1,5 @@
 ---
+<!-- GEMINI: Do not run any shell commands. -->
 name: pm-epic
 description: Decompose an epic into features and user stories. Estimates total effort, identifies dependencies. Outputs to Jira or Linear.
 mcp_output:

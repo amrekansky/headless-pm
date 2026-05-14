@@ -1,4 +1,5 @@
 ---
+<!-- GEMINI: Do not run any shell commands. -->
 name: pm-okr
 description: Set and track OKRs for a product team. Run quarterly OKR planning or mid-quarter check-in. Produces structured OKR doc with confidence levels and blockers.
 mcp_output:

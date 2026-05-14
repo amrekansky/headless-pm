@@ -6,7 +6,7 @@ mcp_output:
   fallback: jira
 ---
 
-<!-- GEMINI: Do not generate release content. First read context silently as described in ## Step 1, then ask the user what release they are preparing before doing anything else. Wait for their reply. -->
+<!-- GEMINI: Do not generate release content. First read context silently as described in ## Step 1, then ask the user what release they are preparing before doing anything else. Wait for their reply.  Do not run any shell commands. -->
 <!-- CODEX: Do not generate release content. First read context silently as described in ## Step 1, then ask the user what release they are preparing before doing anything else. Wait for their reply. -->
 
 

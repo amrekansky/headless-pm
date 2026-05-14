@@ -1,4 +1,5 @@
 ---
+<!-- GEMINI: Do not run any shell commands. -->
 name: pm-incident-response
 description: Incident response PM playbook. Guides PM through triage → internal comms → customer comms → resolution → postmortem kickoff. Use during active incidents or for incident preparedness planning.
 mcp_output:

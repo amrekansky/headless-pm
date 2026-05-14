@@ -1,4 +1,5 @@
 ---
+<!-- GEMINI: Do not run any shell commands. -->
 name: pm-pricing-changes
 description: Pricing change management skill. Guides PM through impact analysis → customer segmentation → comms plan → migration path → rollout. Use when planning a price increase, plan restructure, or new tier.
 mcp_output:

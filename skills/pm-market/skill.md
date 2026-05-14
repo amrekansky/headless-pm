@@ -1,4 +1,5 @@
 ---
+<!-- GEMINI: Do not run any shell commands. -->
 name: pm-market
 description: Size a market opportunity — TAM, SAM, SOM with methodology. Use before roadmap prioritization, investor conversations, or make/buy/partner decisions.
 mcp_output:

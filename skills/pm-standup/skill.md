@@ -1,4 +1,5 @@
 ---
+<!-- GEMINI: Do not run any shell commands. -->
 name: pm-standup
 description: Prepare or run a standup. Formats updates for async (Slack) or sync (meeting). Surfaces blockers. Use daily.
 mcp_output:

@@ -1,4 +1,5 @@
 ---
+<!-- GEMINI: Do not run any shell commands. -->
 name: pm-exec-brief
 description: Write an executive or board briefing on a product initiative. One page, outcome-focused, with clear ask. Use for leadership reviews, board updates, or budget discussions.
 mcp_output:

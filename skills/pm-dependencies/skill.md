@@ -1,4 +1,5 @@
 ---
+<!-- GEMINI: Do not run any shell commands. -->
 name: pm-dependencies
 description: Map dependencies between teams, systems, or initiatives. Identifies critical path, risks, and owners. Outputs to Miro.
 mcp_output:

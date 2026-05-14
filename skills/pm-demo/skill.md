@@ -1,4 +1,5 @@
 ---
+<!-- GEMINI: Do not run any shell commands. -->
 name: pm-demo
 description: Prepare a sprint demo or product show & tell. Produces demo script with talking points, timing, and who presents what.
 mcp_output:

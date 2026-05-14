@@ -1,4 +1,5 @@
 ---
+<!-- GEMINI: Do not run any shell commands. -->
 name: pm-metrics
 description: Define a metrics framework — North Star metric, input metrics, guardrail metrics. Use when starting a new product/team or when metrics are unclear or contested.
 mcp_output:

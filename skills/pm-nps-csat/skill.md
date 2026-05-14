@@ -1,4 +1,5 @@
 ---
+<!-- GEMINI: Do not run any shell commands. -->
 name: pm-nps-csat
 description: NPS/CSAT analysis skill. Parses survey data, segments by user cohort, diagnoses root causes, and produces roadmap impact recommendations. Use after collecting NPS/CSAT data or when planning a survey cycle.
 mcp_output:

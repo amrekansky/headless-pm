@@ -1,4 +1,5 @@
 ---
+<!-- GEMINI: Do not run any shell commands. -->
 name: pm-story
 description: Write user stories in standard format with acceptance criteria. Optionally create a story map for a full workflow. Outputs to Jira or Linear.
 mcp_output:
