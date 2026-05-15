@@ -1,11 +1,15 @@
 ---
-<!-- GEMINI: Do not run any shell commands. -->
 name: pm-exec-brief
 description: Write an executive or board briefing on a product initiative. One page, outcome-focused, with clear ask. Use for leadership reviews, board updates, or budget discussions.
+agent: true
+artifact_output: .pm/artifacts/exec-brief.md
 mcp_output:
   primary: notion
   fallback: confluence
 ---
+
+<!-- GEMINI: Do not run any shell commands. Read .pm/artifacts/status-report.md, .pm/situation.md, and .pm/goals.md, then write exec-brief.md as described in ## Agent Output. -->
+<!-- CODEX: Read status-report.md, situation.md, goals.md, then write exec-brief.md. -->
 
 
 ## Universal Rules
@@ -13,6 +17,14 @@ mcp_output:
 - Before asking questions, identify what is already provided in context. Only ask for genuinely missing data.
 - When asking a question, always offer 3-4 ready-made options with a smart default; last option: "Enter your own"
 - Read all files listed in ## Knowledge Base before generating any output
+
+
+## Agent Input
+
+When invoked as agent, read before generating output:
+1. `.pm/artifacts/status-report.md` — detailed status (synthesize to executive level)
+2. `.pm/situation.md` — critical deadlines and blockers
+3. `.pm/goals.md` — OKR context for business framing
 
 
 # /pm-exec-brief — Executive Briefing
@@ -83,3 +95,19 @@ Option B: [description] — [trade-off]
 
 If Notion: create in Leadership Updates database.
 If Confluence: create in Leadership space.
+
+## Agent Output
+
+When invoked as agent, write 1-page executive brief to `.pm/artifacts/exec-brief.md`:
+- **Overall Status:** Green / Yellow / Red + 1 sentence why
+- **Key wins this period:** 2-3 bullets, business-impact framing
+- **Risks requiring attention:** 1-2 items, escalation required or not
+- **Decision needed:** any exec decisions blocking progress (or "none")
+- **Next milestone:** {milestone} — {date} — {confidence %}
+
+Maximum 300 words. No technical jargon.
+
+Append to `.pm/orchestrator.log`:
+```
+{ISO timestamp} pm-exec-brief completed → .pm/artifacts/exec-brief.md
+```
