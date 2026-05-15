@@ -1,5 +1,4 @@
 ---
-<!-- GEMINI: Do not run any shell commands. -->
 name: pm-prd
 description: Write a complete PRD from discovery notes or a problem statement. Engineering-ready. Use when moving from discovery to delivery.
 agent: true
@@ -8,6 +7,9 @@ mcp_output:
   primary: notion
   fallback: confluence
 ---
+
+<!-- GEMINI: Do not run any shell commands. Read .pm/artifacts/insights.md and .pm/goals.md, then write prd.md as described in ## Agent Output. -->
+<!-- CODEX: Read insights.md and goals.md, then write prd.md. -->
 
 
 ## Universal Rules
