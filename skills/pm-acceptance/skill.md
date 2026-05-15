@@ -1,11 +1,15 @@
 ---
-<!-- GEMINI: Do not run any shell commands. -->
 name: pm-acceptance
 description: Write acceptance criteria for a feature or user story using Given/When/Then format. Covers happy path, edge cases, and error states.
+agent: true
+artifact_output: .pm/artifacts/acceptance-{name}.md
 mcp_output:
   primary: jira
   fallback: markdown
 ---
+
+<!-- GEMINI: Do not run any shell commands. Read .pm/artifacts/feature-{name}.md, then write acceptance-{name}.md as described in ## Agent Output. -->
+<!-- CODEX: Read feature spec, then write acceptance criteria. -->
 
 
 ## Universal Rules
@@ -13,6 +17,12 @@ mcp_output:
 - Before asking questions, identify what is already provided in context. Only ask for genuinely missing data.
 - When asking a question, always offer 3-4 ready-made options with a smart default; last option: "Enter your own"
 - Read all files listed in ## Knowledge Base before generating any output
+
+
+## Agent Input
+
+When invoked as agent, the feature name matches the pm-define output. Read:
+1. `.pm/artifacts/feature-{name}.md` — feature spec with user stories and scope
 
 
 # /pm-acceptance — Acceptance Criteria
@@ -70,3 +80,26 @@ Then [error message shown / fallback behavior]
 
 If Jira MCP: add AC to the story description, update DoD checklist.
 If not: output as markdown, paste into ticket manually.
+
+## Agent Output
+
+When invoked as agent, write acceptance criteria to `.pm/artifacts/acceptance-{name}.md`:
+
+For each user story from feature spec, write:
+```
+## Story: {story title}
+**Given** {initial context}
+**When** {user action}
+**Then** {expected outcome}
+
+**Edge cases:**
+- Given {edge condition} → {expected behavior}
+
+**Out of scope:**
+- {explicitly not tested}
+```
+
+Append to `.pm/orchestrator.log`:
+```
+{ISO timestamp} pm-acceptance completed → .pm/artifacts/acceptance-{name}.md
+```
