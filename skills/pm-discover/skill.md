@@ -2,6 +2,8 @@
 <!-- GEMINI: Do not run any shell commands. -->
 name: pm-discover
 description: Discovery phase wizard. Guides PM through problem framing → hypothesis → user interviews → synthesis → go/no-go decision. Use when starting exploration of a new product idea, feature, or market opportunity.
+agent: true
+artifact_output: .pm/artifacts/interview-{id}.md
 mcp_output:
   primary: notion
   fallback: local
@@ -13,6 +15,15 @@ mcp_output:
 - Before asking questions, identify what is already provided in context. Only ask for genuinely missing data.
 - When asking a question, always offer 3-4 ready-made options with a smart default; last option: "Enter your own"
 - Read all files listed in ## Knowledge Base before generating any output
+
+## Agent Input
+
+When invoked as agent, read before generating output:
+1. `.pm/goals.md` — OKRs and problems being investigated
+2. `.pm/situation.md` — current focus area from radar analysis
+3. Interview transcript — user provides as file path or pastes directly
+
+Assign interview ID: count existing `.pm/artifacts/interview-*.md` files + 1. Use format `interview-001.md`, `interview-002.md`, etc.
 
 
 # /pm-discover — Discovery Phase Wizard
@@ -316,3 +327,20 @@ After each completed stage, output this tracker:
 - If hypothesis is disproved — do not skip to go/no-go. Surface the finding, offer to pivot or kill
 - Synthesis must be evidence-based, not wishful — explicitly label assumptions vs confirmed signals
 - After GO decision, always suggest updating `context.md` and starting `/pm-define`
+
+## Agent Output
+
+When invoked as agent, write structured interview to `.pm/artifacts/interview-{ID}.md`:
+- **Interviewee:** role, company type, anonymized name (e.g., "PM at mid-size SaaS")
+- **Date:** {date}
+- **Problem signals:** direct quotes with context (use actual quotes, not paraphrases)
+- **Workflow observed:** what they currently do, step by step
+- **Pain points:** ranked by interviewee's expressed frustration
+- **Workarounds:** what they do instead of having the ideal solution
+- **Jobs to be done:** 1-3 JTBD statements in "When I... I want to... So I can..." format
+- **Hypothesis generated:** 1 falsifiable hypothesis from this interview
+
+Append to `.pm/orchestrator.log`:
+```
+{ISO timestamp} pm-interviewer completed → .pm/artifacts/interview-{ID}.md
+```
