@@ -1,11 +1,14 @@
 ---
-<!-- GEMINI: Do not run any shell commands. -->
 name: pm-retro
 description: Facilitate a sprint retrospective. Structured, action-oriented — one concrete experiment per retro. Outputs to Miro or Notion.
 mcp_output:
   primary: miro
   fallback: notion
+agent: true
+artifact_output: .pm/artifacts/retro.md
 ---
+
+<!-- GEMINI: Do not run any shell commands. When invoked as agent, first read .pm/artifacts/sprint-plan.md and .pm/artifacts/progress-report.md, then generate retro.md as described in ## Agent Output. -->
 
 
 ## Universal Rules
@@ -13,6 +16,13 @@ mcp_output:
 - Before asking questions, identify what is already provided in context. Only ask for genuinely missing data.
 - When asking a question, always offer 3-4 ready-made options with a smart default; last option: "Enter your own"
 - Read all files listed in ## Knowledge Base before generating any output
+
+## Agent Input
+
+When invoked as agent, read before generating output:
+1. `.pm/artifacts/sprint-plan.md` — what was committed this sprint
+2. `.pm/artifacts/progress-report.md` — what actually happened, blockers encountered
+3. MCP (Jira/Linear): closed tickets, merged PRs, velocity for this sprint
 
 
 # /pm-retro — Retrospective
@@ -88,3 +98,13 @@ Psychological safety: felt safe / had one quiet person / dominated by one voice
 
 If Miro MCP: create retro board — three columns (went well / painful / try), add voted stickies, document experiment card.
 If Notion: save retro page linked to sprint.
+
+## Agent Output
+
+When invoked as agent, write retro to `.pm/artifacts/retro.md` using existing Output Template format. Add at the end:
+- **Agent summary:** 1-sentence status for orchestrator log
+
+Append to `.pm/orchestrator.log`:
+```
+{ISO timestamp} pm-retro completed → .pm/artifacts/retro.md
+```
