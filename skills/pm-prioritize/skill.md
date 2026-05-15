@@ -1,11 +1,15 @@
 ---
-<!-- GEMINI: Do not run any shell commands. -->
 name: pm-prioritize
 description: Prioritize a backlog or set of initiatives using RICE, ICE, or MoSCoW. Produces ranked list with scores and reasoning. Use when you have more to do than capacity allows.
+agent: true
+artifact_output: .pm/artifacts/recommendations.md
 mcp_output:
   primary: notion
   fallback: markdown
 ---
+
+<!-- GEMINI: Do not run any shell commands. Read .pm/artifacts/analytics-digest.md and .pm/backlog.md, then write recommendations.md as described in ## Agent Output. -->
+<!-- CODEX: Read analytics-digest.md and backlog.md, then write recommendations.md. -->
 
 
 ## Universal Rules
@@ -13,6 +17,14 @@ mcp_output:
 - Before asking questions, identify what is already provided in context. Only ask for genuinely missing data.
 - When asking a question, always offer 3-4 ready-made options with a smart default; last option: "Enter your own"
 - Read all files listed in ## Knowledge Base before generating any output
+
+
+## Agent Input
+
+When invoked as agent (analytics workflow), read before generating output:
+1. `.pm/artifacts/analytics-digest.md` — trends, anomalies, off-track metrics
+2. `.pm/backlog.md` — available items that could address the issues found
+3. `.pm/goals.md` — OKR priorities to use as decision criteria
 
 
 # /pm-prioritize — Prioritization
@@ -100,3 +112,19 @@ Framework: [RICE/ICE/MoSCoW]
 ```
 
 If Notion: create prioritization table in Product workspace.
+
+## Agent Output
+
+When invoked as agent, write recommendations to `.pm/artifacts/recommendations.md`:
+- **Recommendation N:** {action} — addresses {metric/anomaly from digest}
+- **Priority:** H/M/L — {rationale tied to OKR impact}
+- **Effort:** S/M/L estimate
+- **Backlog item:** {ID if exists in backlog.md, or "new item needed"}
+- **Expected impact:** {metric} should move from {current} to {target} in {timeframe}
+
+Sort by priority descending. Top 3 recommendations highlighted.
+
+Append to `.pm/orchestrator.log`:
+```
+{ISO timestamp} pm-recommendation completed → .pm/artifacts/recommendations.md
+```
