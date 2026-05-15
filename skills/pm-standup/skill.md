@@ -36,6 +36,25 @@ Every response MUST include all three sections, even if empty:
 
 ## Agent Output
 
+## Agent Communication Protocol
+
+**Opening block — output immediately, before reading Agent Input files:**
+```
+▶ pm-standup
+  Проблема:  {from situation.md — one PM-language sentence about what is blocking the team or what daily progress needs capturing}
+  Читаю:     .pm/artifacts/sprint-plan.md, .pm/STATE.md (2 файла)
+  Делаю:     generating standup summary: done, today, blockers
+  ···
+```
+
+**Closing block — output after writing artifact, before appending to orchestrator.log:**
+```
+✓ pm-standup  ({elapsed})
+  Результат: {standup.md summary: N done items, N blockers, N items for today}
+  Артефакт:  .pm/artifacts/standup.md
+  Дальше:    /pm-status  — blockers identified, stakeholder status update needed
+```
+
 When invoked as agent, write progress report to `.pm/artifacts/progress-report.md`:
 - Sprint {N} Progress — {date}
 - Done since last standup: items with IDs

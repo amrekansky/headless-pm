@@ -47,6 +47,25 @@ Every response MUST include:
 
 ## Agent Output
 
+## Agent Communication Protocol
+
+**Opening block — output immediately, before reading Agent Input files:**
+```
+▶ pm-kickoff
+  Проблема:  {from situation.md ## Recommended Workflow — one PM-language sentence about why a release kickoff is needed now}
+  Читаю:     .pm/situation.md, .pm/goals.md, .pm/STATE.md (3 файла)
+  Делаю:     writing release kickoff brief — scope, stakeholders, success criteria, risks, timeline
+  ···
+```
+
+**Closing block — output after writing artifact, before appending to orchestrator.log:**
+```
+✓ pm-kickoff  ({elapsed})
+  Результат: {kickoff.md summary: release name, N risks flagged, timeline X days, N success criteria defined}
+  Артефакт:  .pm/artifacts/kickoff.md
+  Дальше:    /pm-sprint  — release scope defined, ready to plan sprint capacity and backlog
+```
+
 Write the above to `.pm/artifacts/kickoff.md`.
 
 Append to `.pm/orchestrator.log`:

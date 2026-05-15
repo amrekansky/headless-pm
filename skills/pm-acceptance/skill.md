@@ -83,6 +83,25 @@ If not: output as markdown, paste into ticket manually.
 
 ## Agent Output
 
+## Agent Communication Protocol
+
+**Opening block — output immediately, before reading Agent Input files:**
+```
+▶ pm-acceptance
+  Проблема:  {from situation.md — one PM-language sentence about what definition-of-done gap could cause rework after build}
+  Читаю:     .pm/artifacts/definition.md, .pm/artifacts/prd.md (2 файла)
+  Делаю:     writing acceptance criteria: Given/When/Then format, edge cases, DoD checklist
+  ···
+```
+
+**Closing block — output after writing artifact, before appending to orchestrator.log:**
+```
+✓ pm-acceptance  ({elapsed})
+  Результат: {acceptance-criteria.md summary: N scenarios in Given/When/Then, N edge cases, N DoD checklist items}
+  Артефакт:  .pm/artifacts/acceptance-criteria.md
+  Дальше:    /pm-estimation  — criteria written, estimate effort for sprint planning
+```
+
 When invoked as agent, write acceptance criteria to `.pm/artifacts/acceptance-{name}.md`:
 
 For each user story from feature spec, write:

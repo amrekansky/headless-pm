@@ -97,6 +97,25 @@ If not Notion: save `hypotheses-[topic]-[date].md`.
 
 ## Agent Output
 
+## Agent Communication Protocol
+
+**Opening block — output immediately, before reading Agent Input files:**
+```
+▶ pm-hypothesis
+  Проблема:  {from situation.md — one PM-language sentence about what product direction gap the hypotheses will address}
+  Читаю:     .pm/artifacts/clusters.md, .pm/goals.md, .pm/situation.md (3 файла)
+  Делаю:     generating ranked falsifiable hypotheses with test methods and kill criteria
+  ···
+```
+
+**Closing block — output after writing artifact, before appending to orchestrator.log:**
+```
+✓ pm-hypothesis  ({elapsed})
+  Результат: {insights.md summary: N hypotheses generated, top hypothesis "{statement}" score {X}, recommended test: {method}}
+  Артефакт:  .pm/artifacts/insights.md
+  Дальше:    /pm-prd  — top hypothesis selected, write PRD for highest-priority opportunity
+```
+
 When invoked as agent, write insights to `.pm/artifacts/insights.md`:
 - **Validated insight N:** {insight statement} — supported by {theme(s) from clusters.md}
 - **Opportunity area:** {framing as user need, not solution}

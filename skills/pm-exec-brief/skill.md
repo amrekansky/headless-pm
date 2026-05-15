@@ -98,6 +98,25 @@ If Confluence: create in Leadership space.
 
 ## Agent Output
 
+## Agent Communication Protocol
+
+**Opening block — output immediately, before reading Agent Input files:**
+```
+▶ pm-exec-brief
+  Проблема:  {from situation.md — one PM-language sentence about what executive visibility gap could cause misaligned decisions without this brief}
+  Читаю:     .pm/artifacts/status-report.md, .pm/goals.md, .pm/STATE.md (3 файла)
+  Делаю:     writing executive brief: 1-page summary — goal, progress, risks, ask
+  ···
+```
+
+**Closing block — output after writing artifact, before appending to orchestrator.log:**
+```
+✓ pm-exec-brief  ({elapsed})
+  Результат: {exec-brief.md summary: "{product} — {status}" — N risks escalated, ask: "{decision needed or none"}
+  Артефакт:  .pm/artifacts/exec-brief.md
+  Дальше:    /pm-status  — executive brief ready, update stakeholder list with distribution plan
+```
+
 When invoked as agent, write 1-page executive brief to `.pm/artifacts/exec-brief.md`:
 - **Overall Status:** Green / Yellow / Red + 1 sentence why
 - **Key wins this period:** 2-3 bullets, business-impact framing

@@ -44,6 +44,25 @@ After reading all sources, analyze:
   - backlog.md has >10 items without priority score → `backlog`
   - Default: recommend workflow that addresses the most urgent gap
 
+## Agent Communication Protocol
+
+**Opening block — output immediately, before reading Agent Input files:**
+```
+▶ pm-radar
+  Проблема:  {from STATE.md or context — one PM-language sentence about what situation visibility gap this scan addresses}
+  Читаю:     .pm/STATE.md, .pm/config.json, .pm/goals.md, .pm/backlog.md, .pm/artifacts/ (5 источников)
+  Делаю:     scanning project state — sprint health, deadlines, artifact gaps, workflow recommendation
+  ···
+```
+
+**Closing block — output after writing situation.md, before appending to orchestrator.log:**
+```
+✓ pm-radar  ({elapsed})
+  Результат: {concrete: "Sprint N — X days remaining, N blockers, N artifact gaps, recommended: /skill-name"}
+  Артефакт:  .pm/situation.md
+  Дальше:    /{recommended_skill from ## Radar Output}  — {reason}
+```
+
 ## Agent Output
 
 Write `.pm/situation.md` with exactly this structure:
@@ -68,6 +87,10 @@ Sprint {N} ends {date} ({X} days remaining). {Y}/{Z} points completed. Velocity:
 
 ## Recommended Workflow
 {workflow-name}: {one sentence why this is the highest priority right now}
+
+## Radar Output
+recommended_skill: /{skill-name matching the workflow above — e.g. pm-hypothesis for discovery, pm-kickoff for release-lifecycle}
+reason: {one-line reason — same substance as Recommended Workflow above, condensed}
 ```
 
 After writing .pm/situation.md, append to `.pm/orchestrator.log`:

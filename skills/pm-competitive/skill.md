@@ -93,6 +93,25 @@ If not: save `competitive-[name]-[date].md`.
 
 ## Agent Output
 
+## Agent Communication Protocol
+
+**Opening block — output immediately, before reading Agent Input files:**
+```
+▶ pm-competitive
+  Проблема:  {from situation.md — one PM-language sentence about what competitor intelligence gap is limiting positioning or roadmap decisions}
+  Читаю:     .pm/goals.md, .pm/situation.md (2 файла)
+  Делаю:     analyzing one competitor: pricing, features, positioning, recent moves
+  ···
+```
+
+**Closing block — output after writing artifact, before appending to orchestrator.log:**
+```
+✓ pm-competitive  ({elapsed})
+  Результат: {competitive.md summary: competitor "{name}" — N differentiators, N gaps vs us, pricing model "{model}"}
+  Артефакт:  .pm/artifacts/competitive.md
+  Дальше:    /pm-competitive-synthesis  — N competitor analyses collected, ready to synthesize
+```
+
 When invoked as agent, write competitor profile to `.pm/artifacts/competitor-{NAME}.md`:
 - **Company:** name, funding stage, team size estimate
 - **Positioning:** their stated value proposition

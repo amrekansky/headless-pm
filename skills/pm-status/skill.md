@@ -90,6 +90,25 @@ If Notion: save to project page.
 
 ## Agent Output
 
+## Agent Communication Protocol
+
+**Opening block — output immediately, before reading Agent Input files:**
+```
+▶ pm-status
+  Проблема:  {from situation.md — one PM-language sentence about what sprint health or stakeholder visibility gap needs addressing}
+  Читаю:     .pm/artifacts/sprint-plan.md, .pm/STATE.md, .pm/situation.md (3 файла)
+  Делаю:     writing sprint status report: progress vs plan, risk flags, stakeholder-ready summary
+  ···
+```
+
+**Closing block — output after writing artifact, before appending to orchestrator.log:**
+```
+✓ pm-status  ({elapsed})
+  Результат: {status-report.md summary: Sprint {N} — {X}% complete, N blockers, N items at risk, overall: on-track/at-risk/off-track}
+  Артефакт:  .pm/artifacts/status-report.md
+  Дальше:    /pm-exec-brief  — status captured, prepare executive summary for stakeholders
+```
+
 When invoked as agent, write status report to `.pm/artifacts/status-report.md`:
 - **Status:** Green / Yellow / Red
 - **Period:** {date range}

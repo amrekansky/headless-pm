@@ -35,6 +35,25 @@ For each metric:
 
 ## Agent Output
 
+## Agent Communication Protocol
+
+**Opening block — output immediately, before reading Agent Input files:**
+```
+▶ pm-analyst
+  Проблема:  {from situation.md — one PM-language sentence about what data trend or anomaly needs interpretation to inform a product decision}
+  Читаю:     .pm/artifacts/metrics.md, .pm/goals.md, .pm/situation.md (3 файла)
+  Делаю:     analyzing metrics: trends, anomalies, cohort breakdown, actionable recommendations
+  ···
+```
+
+**Closing block — output after writing artifact, before appending to orchestrator.log:**
+```
+✓ pm-analyst  ({elapsed})
+  Результат: {analysis.md summary: "{key finding}" — N anomalies found, top recommendation: "{action}", confidence: high/medium/low}
+  Артефакт:  .pm/artifacts/analysis.md
+  Дальше:    /pm-prioritize  — analysis complete, re-score backlog based on data
+```
+
 Write `.pm/artifacts/analytics-digest.md`:
 
 ```markdown

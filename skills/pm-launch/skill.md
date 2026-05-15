@@ -340,6 +340,25 @@ After each completed stage, output this tracker:
 
 ## Agent Output
 
+## Agent Communication Protocol
+
+**Opening block — output immediately, before reading Agent Input files:**
+```
+▶ pm-launch
+  Проблема:  {from situation.md — one PM-language sentence about what go-to-market preparation is missing before release ships to users}
+  Читаю:     .pm/artifacts/release-notes.md, .pm/goals.md, .pm/STATE.md (3 файла)
+  Делаю:     writing launch brief: GTM plan, positioning, comms, launch checklist
+  ···
+```
+
+**Closing block — output after writing artifact, before appending to orchestrator.log:**
+```
+✓ pm-launch  ({elapsed})
+  Результат: {launch-brief.md summary: N GTM channels, launch date confirmed, N checklist items, positioning statement defined}
+  Артефакт:  .pm/artifacts/launch-brief.md
+  Дальше:    /pm-radar  — launch complete, reset situation snapshot for next sprint
+```
+
 When invoked as agent, write launch brief to `.pm/artifacts/launch-brief.md`:
 - Release headline (1 sentence, user benefit-first)
 - Target audience: who benefits most from this release

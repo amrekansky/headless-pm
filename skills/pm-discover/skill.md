@@ -332,6 +332,25 @@ After each completed stage, output this tracker:
 
 ## Agent Output
 
+## Agent Communication Protocol
+
+**Opening block — output immediately, before reading Agent Input files:**
+```
+▶ pm-discover
+  Проблема:  {from situation.md — one PM-language sentence about what customer insight gap is blocking product direction}
+  Читаю:     .pm/goals.md, .pm/situation.md, .pm/STATE.md (3 файла)
+  Делаю:     generating discovery interview guide: questions, screener, session structure
+  ···
+```
+
+**Closing block — output after writing artifact, before appending to orchestrator.log:**
+```
+✓ pm-discover  ({elapsed})
+  Результат: {discovery.md summary: N interview questions, target segment defined, screener criteria set}
+  Артефакт:  .pm/artifacts/discovery.md
+  Дальше:    /pm-cluster  — interviews complete, cluster themes before hypothesis generation
+```
+
 When invoked as agent, write structured interview to `.pm/artifacts/interview-{ID}.md`:
 - **Interviewee:** role, company type, anonymized name (e.g., "PM at mid-size SaaS")
 - **Date:** {date}

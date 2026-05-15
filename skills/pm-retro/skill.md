@@ -101,6 +101,25 @@ If Notion: save retro page linked to sprint.
 
 ## Agent Output
 
+## Agent Communication Protocol
+
+**Opening block — output immediately, before reading Agent Input files:**
+```
+▶ pm-retro
+  Проблема:  {from situation.md — one PM-language sentence about what sprint lessons need capturing before the next sprint starts}
+  Читаю:     .pm/artifacts/sprint-plan.md, .pm/STATE.md, .pm/situation.md (3 файла)
+  Делаю:     facilitating sprint retrospective: what went well, what was painful, one experiment for next sprint
+  ···
+```
+
+**Closing block — output after writing artifact, before appending to orchestrator.log:**
+```
+✓ pm-retro  ({elapsed})
+  Результат: {retro.md summary: N went-well items, N pain points, 1 experiment defined with owner and success metric}
+  Артефакт:  .pm/artifacts/retro.md
+  Дальше:    /pm-release  — sprint closed, write release notes before launch
+```
+
 When invoked as agent, write retro to `.pm/artifacts/retro.md` using existing Output Template format. Add at the end:
 - **Agent summary:** 1-sentence status for orchestrator log
 
