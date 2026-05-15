@@ -2,6 +2,8 @@
 <!-- GEMINI: Do not run any shell commands. -->
 name: pm-competitive
 description: Produce a structured competitive brief for one or more competitors. Use before positioning work, roadmap planning, or sales enablement.
+agent: true
+artifact_output: .pm/artifacts/competitor-{name}.md
 mcp_output:
   primary: notion
   fallback: markdown
@@ -13,6 +15,14 @@ mcp_output:
 - Before asking questions, identify what is already provided in context. Only ask for genuinely missing data.
 - When asking a question, always offer 3-4 ready-made options with a smart default; last option: "Enter your own"
 - Read all files listed in ## Knowledge Base before generating any output
+
+## Agent Input
+
+When invoked as agent:
+- Competitor name is passed as input (from orchestrator or user)
+- Read `.pm/goals.md` — understand which features/positioning to compare against
+- Read `.pm/situation.md` — understand current competitive context
+- Use Exa MCP (if available) to search for recent news about the competitor
 
 
 # /pm-competitive — Competitive Analysis
@@ -78,3 +88,19 @@ _Date: [YYYY-MM-DD]_
 
 If Notion MCP: create/update "Competitive — [name]" page in Competitive Intel database.
 If not: save `competitive-[name]-[date].md`.
+
+## Agent Output
+
+When invoked as agent, write competitor profile to `.pm/artifacts/competitor-{NAME}.md`:
+- **Company:** name, funding stage, team size estimate
+- **Positioning:** their stated value proposition
+- **Key features:** top 5 features relevant to our market
+- **Pricing:** model and tiers if public
+- **Weaknesses:** gaps, negative reviews, known limitations
+- **Recent moves:** last 90 days — product updates, announcements, pricing changes
+- **Threat level:** H/M/L with reason
+
+Append to `.pm/orchestrator.log`:
+```
+{ISO timestamp} pm-competitor({NAME}) completed → .pm/artifacts/competitor-{NAME}.md
+```
