@@ -1,11 +1,15 @@
 ---
-<!-- GEMINI: Do not run any shell commands. -->
 name: pm-define
 description: Definition phase wizard. Takes a validated idea from discovery and produces a complete backlog ready for sprint planning — PRD → Epics → User Stories → Acceptance Criteria → Stakeholder sign-off. Use after /pm-discover GO decision or when starting definition work on a validated idea.
+agent: true
+artifact_output: .pm/artifacts/feature-{name}.md
 mcp_output:
   primary: notion
   fallback: local
 ---
+
+<!-- GEMINI: Do not run any shell commands. Read .pm/artifacts/prd.md, .pm/goals.md, and .pm/backlog.md, then write feature-{name}.md as described in ## Agent Output. -->
+<!-- CODEX: Read prd.md, goals.md, backlog.md, then write feature spec. -->
 
 
 ## Universal Rules
@@ -13,6 +17,16 @@ mcp_output:
 - Before asking questions, identify what is already provided in context. Only ask for genuinely missing data.
 - When asking a question, always offer 3-4 ready-made options with a smart default; last option: "Enter your own"
 - Read all files listed in ## Knowledge Base before generating any output
+
+
+## Agent Input
+
+When invoked as agent, the feature name or backlog item ID is passed as input. Read:
+1. `.pm/artifacts/prd.md` — PRD context if this feature derives from discovery (if exists)
+2. `.pm/goals.md` — OKR alignment check
+3. `.pm/backlog.md` — existing item description if feature is in backlog
+
+Derive output filename from feature name: slugify to lowercase-with-hyphens. Example: "User notifications" → `feature-user-notifications.md`.
 
 
 # /pm-define — Definition Phase Wizard
@@ -291,3 +305,20 @@ After each completed stage, output this tracker:
 - Stories must be independently deliverable — if a story requires another to be done first, note the dependency explicitly
 - No story enters sign-off with AC missing — "TBD" ACs are a planning blocker
 - After APPROVED sign-off, always suggest updating `context.md` and starting `/pm-plan`
+
+## Agent Output
+
+When invoked as agent, write feature spec to `.pm/artifacts/feature-{name}.md`:
+- **Feature name:** {name}
+- **Problem:** what user problem this solves (with evidence from prd.md or backlog)
+- **Solution:** what we're building (not how — that's engineering's job)
+- **In scope:** explicit list
+- **Out of scope:** explicit list (as important as in-scope)
+- **User stories:** 3-5 in "As a {persona}, I want to {action}, so that {outcome}" format
+- **Success metrics:** 2-3 measurable outcomes with targets
+- **Dependencies:** other features or systems required
+
+Append to `.pm/orchestrator.log`:
+```
+{ISO timestamp} pm-define completed → .pm/artifacts/feature-{name}.md
+```
