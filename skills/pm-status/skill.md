@@ -1,11 +1,15 @@
 ---
-<!-- GEMINI: Do not run any shell commands. -->
 name: pm-status
 description: Generate a status update for one or more projects/features. For stakeholders, execs, or weekly digests. Use weekly or when asked for a project update.
+agent: true
+artifact_output: .pm/artifacts/status-report.md
 mcp_output:
   primary: confluence
   fallback: slack
 ---
+
+<!-- GEMINI: Do not run any shell commands. Read .pm/artifacts/progress-report.md, .pm/artifacts/sprint-plan.md, .pm/situation.md, and .pm/goals.md, then write status-report.md as described in ## Agent Output. -->
+<!-- CODEX: Read progress-report.md, sprint-plan.md, situation.md, then write status-report.md. -->
 
 
 ## Universal Rules
@@ -13,6 +17,15 @@ mcp_output:
 - Before asking questions, identify what is already provided in context. Only ask for genuinely missing data.
 - When asking a question, always offer 3-4 ready-made options with a smart default; last option: "Enter your own"
 - Read all files listed in ## Knowledge Base before generating any output
+
+
+## Agent Input
+
+When invoked as agent, read before generating output:
+1. `.pm/artifacts/progress-report.md` — sprint progress data (if exists)
+2. `.pm/artifacts/sprint-plan.md` — committed items and goals
+3. `.pm/situation.md` — current blockers and deadlines
+4. `.pm/goals.md` — OKR progress context
 
 
 # /pm-status — Status Report
@@ -74,3 +87,19 @@ Ask:
 If Confluence MCP: create/update status page in project space.
 If Slack MCP: post summary to #product-updates or #[project] channel.
 If Notion: save to project page.
+
+## Agent Output
+
+When invoked as agent, write status report to `.pm/artifacts/status-report.md`:
+- **Status:** Green / Yellow / Red
+- **Period:** {date range}
+- **Completed:** {items done since last report}
+- **In progress:** {items with % complete}
+- **Blocked:** {blockers with owner and since-date}
+- **Next 7 days:** {planned deliverables}
+- **Risks:** {items at risk with mitigation}
+
+Append to `.pm/orchestrator.log`:
+```
+{ISO timestamp} pm-status-report completed → .pm/artifacts/status-report.md
+```
