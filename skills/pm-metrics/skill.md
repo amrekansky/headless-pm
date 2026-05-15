@@ -1,11 +1,15 @@
 ---
-<!-- GEMINI: Do not run any shell commands. -->
 name: pm-metrics
 description: Define a metrics framework — North Star metric, input metrics, guardrail metrics. Use when starting a new product/team or when metrics are unclear or contested.
+agent: true
+artifact_output: .pm/artifacts/metrics-raw.md
 mcp_output:
   primary: notion
   fallback: markdown
 ---
+
+<!-- GEMINI: Do not run any shell commands. Read .pm/goals.md and .pm/situation.md, then collect metrics data and write metrics-raw.md as described in ## Agent Output. -->
+<!-- CODEX: Read goals.md and situation.md, then write metrics-raw.md. -->
 
 
 ## Universal Rules
@@ -13,6 +17,17 @@ mcp_output:
 - Before asking questions, identify what is already provided in context. Only ask for genuinely missing data.
 - When asking a question, always offer 3-4 ready-made options with a smart default; last option: "Enter your own"
 - Read all files listed in ## Knowledge Base before generating any output
+
+
+## Agent Input
+
+When invoked as agent, collect from:
+1. `.pm/goals.md` — which metrics matter for current OKRs
+2. `.pm/situation.md` — current product focus
+3. MCP sources (read all available):
+   - **Notion**: any pages with "metrics", "dashboard", "analytics" in title
+   - **Linear/Jira**: velocity, cycle time, throughput for last 3 sprints
+   - If no MCP connected: ask user to paste metrics data
 
 
 # /pm-metrics — Metrics Framework
@@ -98,3 +113,16 @@ North Star: weekly | Inputs: weekly | Guardrails: monthly
 If Amplitude/Mixpanel MCP connected: query current baseline for each metric.
 If Notion: save to "Metrics — [product]" page.
 If not: save `metrics-[product]-[date].md`.
+
+## Agent Output
+
+When invoked as agent, write raw metrics to `.pm/artifacts/metrics-raw.md`:
+- Collection date: {ISO date}
+- Source: {MCP source or "user-provided"}
+- Metrics table: name | current value | previous value | change % | date range
+- Data quality notes: any gaps, stale data, missing sources
+
+Append to `.pm/orchestrator.log`:
+```
+{ISO timestamp} pm-metrics/data completed → .pm/artifacts/metrics-raw.md
+```
