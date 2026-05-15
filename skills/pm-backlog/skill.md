@@ -1,11 +1,15 @@
 ---
-<!-- GEMINI: Do not run any shell commands. -->
 name: pm-backlog
 description: Run a backlog grooming / refinement session. Reviews items for readiness, splits large ones, removes stale items. Use weekly or before sprint planning.
+agent: true
+artifact_output: .pm/backlog.md
 mcp_output:
   primary: jira
   fallback: linear
 ---
+
+<!-- GEMINI: Do not run any shell commands. Read .pm/situation.md, .pm/goals.md, and .pm/backlog.md, then groom and write backlog.md as described in ## Agent Output. -->
+<!-- CODEX: Read situation.md, goals.md, backlog.md, then write groomed backlog.md. -->
 
 
 ## Universal Rules
@@ -13,6 +17,15 @@ mcp_output:
 - Before asking questions, identify what is already provided in context. Only ask for genuinely missing data.
 - When asking a question, always offer 3-4 ready-made options with a smart default; last option: "Enter your own"
 - Read all files listed in ## Knowledge Base before generating any output
+
+
+## Agent Input
+
+When invoked as agent, read before generating output:
+1. `.pm/backlog.md` — current backlog state (if exists; create from scratch if not)
+2. `.pm/situation.md` — current sprint end date, blockers, recommended workflow
+3. `.pm/goals.md` — OKRs to use as grooming criteria
+4. MCP (Jira/Linear if connected): all open issues not yet in a sprint
 
 
 # /pm-backlog — Backlog Grooming
@@ -78,3 +91,19 @@ Next sprint candidates (ready): [list top 5-10]
 ```
 
 If Jira/Linear MCP: update item statuses, add grooming notes to descriptions.
+
+## Agent Output
+
+When invoked as agent, write groomed backlog to `.pm/backlog.md` (overwrites existing):
+
+Format each item as:
+```
+- [ ] [{ID}] {Title} — {size: XS/S/M/L/XL} — {OKR: KR-N} — {status: ready/needs-work/blocked}
+```
+
+Group by: Ready for sprint / Needs refinement / Blocked / Icebox
+
+Append to `.pm/orchestrator.log`:
+```
+{ISO timestamp} pm-grooming completed → .pm/backlog.md ({N} items groomed)
+```
