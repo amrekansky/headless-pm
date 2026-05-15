@@ -1,5 +1,6 @@
 ---
-<!-- GEMINI: Do not run any shell commands. -->
+<!-- GEMINI: Do not run shell commands before reading .pm/STATE.md and .pm/situation.md. Follow Step 1, then Step 2 (spawn pm-radar via bash as described), then Step 3. -->
+<!-- CODEX: Follow Step 1 (read context files), then Step 2 (spawn pm-radar via shell as described), then Step 3 (orchestrate). -->
 name: pm
 description: Agentic PM orchestrator. Reads .pm/STATE.md for instant resume, spawns parallel sub-agents for PM work (prd, backlog, sprint etc), artifacts land in .pm/, summary in chat.
 ---
@@ -41,7 +42,75 @@ Before responding, read in this order:
 
 ---
 
-## Step 2 — Respond based on what you find
+## Step 2 — Run pm-radar (situational awareness)
+
+Before deciding what to orchestrate, spawn pm-radar to get a fresh situation snapshot.
+
+**Claude Code:** Use Task tool. Read `~/.headless/pm/agents/pm-radar.md` first, then spawn a Task with that file's content as the system prompt. Pass the current working directory as context. Wait for the task to complete before proceeding.
+
+**Gemini CLI:** Run in bash:
+```bash
+gemini -p "$(cat ~/.headless/pm/agents/pm-radar.md)" --yolo
+```
+
+**Codex CLI:** Run in shell:
+```bash
+codex "$(cat ~/.headless/pm/agents/pm-radar.md)"
+```
+
+After pm-radar completes, read `.pm/situation.md` to get the synthesized situation.
+
+---
+
+## Step 3 — Decide and orchestrate
+
+Read `.pm/situation.md`. Based on the Recommended Workflow and the user's goal:
+
+1. State the situation summary in 2-3 sentences
+2. Propose the workflow with the agents that will run, in order
+3. If `--supervised` mode (default): ask for confirmation before each agent spawn
+4. If `--auto` mode: spawn the full chain without pausing
+
+### Spawning an agent
+
+**Claude Code:** Use Task tool. Read `~/.headless/pm/agents/{AGENT-NAME}.md`, spawn Task with that content as system prompt, pass `.pm/` directory as working context.
+
+**Gemini CLI:**
+```bash
+gemini -p "$(cat ~/.headless/pm/agents/{AGENT-NAME}.md)" --yolo
+```
+
+**Codex CLI:**
+```bash
+codex "$(cat ~/.headless/pm/agents/{AGENT-NAME}.md)"
+```
+
+After each agent completes, read the artifact it wrote (listed in its `artifact_output` frontmatter) and summarize for the user before spawning the next agent.
+
+### Workflow → Agent Chain
+
+| Workflow | Agent chain (sequential) |
+|----------|--------------------------|
+| `release-lifecycle` | pm-kickoff → pm-sprint-planner → pm-progress → pm-retro → pm-release-notes → pm-launch-brief |
+| `discovery` | pm-interviewer → pm-cluster → pm-insight → pm-prd |
+| `competitive` | pm-competitor (×N parallel) → pm-competitive-synthesis |
+| `analytics` | pm-data → pm-analyst → pm-recommendation |
+| `strategy` | pm-roadmap → pm-okr |
+| `backlog` | pm-grooming → pm-prioritization |
+| `stakeholder` | pm-status-report → pm-exec-brief |
+| `feature` | pm-define → pm-acceptance-criteria → pm-estimation |
+
+### Shortcuts
+
+- `/pm release start` → `release-lifecycle` workflow
+- `/pm discovery start` → `discovery` workflow
+- `/pm sprint plan` → `release-lifecycle` starting from pm-sprint-planner
+- `/pm competitive scan` → `competitive` workflow
+- `/pm radar` → run pm-radar only, show situation.md, no further agents
+
+---
+
+## Step 5 — Respond based on what you find
 
 ### Case A: Context found + vague request
 
@@ -69,7 +138,7 @@ Determine work needed → proceed to Step 3.
 
 ---
 
-## Step 3 — Orchestrate
+## Step 6 — Orchestrate
 
 ### Multi-agent patterns
 
@@ -130,7 +199,7 @@ Update STATE.md? (phase / focus / blockers)
 
 ---
 
-## Step 4 — Update state
+## Step 7 — Update state
 
 After completion, offer to update `.pm/STATE.md`:
 - `- Phase:` if phase changed
