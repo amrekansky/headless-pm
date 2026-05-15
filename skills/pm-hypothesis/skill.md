@@ -2,6 +2,8 @@
 <!-- GEMINI: Do not run any shell commands. -->
 name: pm-hypothesis
 description: Generate and prioritize testable product hypotheses from a problem statement or strategic goal. Use before discovery to decide what to investigate first.
+agent: true
+artifact_output: .pm/artifacts/insights.md
 mcp_output:
   primary: notion
   fallback: markdown
@@ -13,6 +15,13 @@ mcp_output:
 - Before asking questions, identify what is already provided in context. Only ask for genuinely missing data.
 - When asking a question, always offer 3-4 ready-made options with a smart default; last option: "Enter your own"
 - Read all files listed in ## Knowledge Base before generating any output
+
+## Agent Input
+
+When invoked as agent, read before generating output:
+1. `.pm/artifacts/clusters.md` — thematic clusters from discovery interviews
+2. `.pm/goals.md` — OKRs and strategic bets to validate against
+3. `.pm/situation.md` — current product focus and phase
 
 
 # /pm-hypothesis — Hypothesis Generation
@@ -83,3 +92,17 @@ We'll abandon this hypothesis if: [specific evidence]
 ```
 
 If not Notion: save `hypotheses-[topic]-[date].md`.
+
+## Agent Output
+
+When invoked as agent, write insights to `.pm/artifacts/insights.md`:
+- **Validated insight N:** {insight statement} — supported by {theme(s) from clusters.md}
+- **Opportunity area:** {framing as user need, not solution}
+- **Hypotheses:** 2-3 falsifiable hypotheses ranked by confidence
+- **OKR alignment:** which OKR from goals.md this opportunity serves
+- **Recommended next step:** define feature / run experiment / gather more data
+
+Append to `.pm/orchestrator.log`:
+```
+{ISO timestamp} pm-insight completed → .pm/artifacts/insights.md
+```
