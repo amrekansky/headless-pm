@@ -4,9 +4,11 @@ description: Orchestrate a full sprint cycle — from capacity planning through 
 mcp_output:
   primary: jira
   fallback: notion
+agent: true
+artifact_output: .pm/artifacts/sprint-plan.md
 ---
 
-<!-- GEMINI: Do not generate sprint content and do not run any shell commands. First ask: "Which part of the sprint cycle do you need help with?" with options 1-4 from the ## Ask first section. Wait for the user's reply before doing anything else. -->
+<!-- GEMINI: Do not generate sprint content before asking the phase question. When invoked as agent, first read .pm/artifacts/kickoff.md and .pm/STATE.md, then generate sprint-plan.md as described in ## Agent Output. Do not run shell commands. -->
 <!-- CODEX: Do not generate sprint content. First ask: "Which part of the sprint cycle do you need help with?" with options 1-4 from the ## Ask first section. Wait for the user's reply before doing anything else. -->
 
 
@@ -15,6 +17,14 @@ mcp_output:
 - Before asking questions, identify what is already provided in context. Only ask for genuinely missing data.
 - When asking a question, always offer 3-4 ready-made options with a smart default; last option: "Enter your own"
 - Read all files listed in ## Knowledge Base before generating any output
+
+## Agent Input
+
+When invoked as an agent (by pm orchestrator), read before generating output:
+1. `.pm/artifacts/kickoff.md` — release goals, scope, success criteria, timeline
+2. `.pm/backlog.md` — available items to pull into sprint (if exists)
+3. `.pm/STATE.md` — current sprint N, phase, team velocity
+4. MCP (Jira/Linear if connected): current open tickets, estimated points
 
 
 # /pm-sprint — Full Sprint Cycle
@@ -158,3 +168,17 @@ Try next sprint:
 
 If Miro MCP: create retro board with three columns, populate stickies.
 If not: save `retro-sprint-[N]-[date].md`.
+
+## Agent Output
+
+When invoked as agent, write sprint plan to `.pm/artifacts/sprint-plan.md`:
+- Sprint goal (1 sentence)
+- Committed items: ID, title, points, owner, DoR status
+- Capacity table: person × available days × velocity
+- Dependencies and sequencing notes
+- Risk flags (items at risk of not completing)
+
+Append to `.pm/orchestrator.log`:
+```
+{ISO timestamp} pm-sprint completed → .pm/artifacts/sprint-plan.md
+```
