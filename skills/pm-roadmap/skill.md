@@ -1,11 +1,15 @@
 ---
-<!-- GEMINI: Do not run any shell commands. -->
 name: pm-roadmap
 description: Build a strategic roadmap — from competing initiatives to sequenced, outcome-driven plan. Orchestrates pm-prioritize, pm-stakeholder, pm-positioning. Use at quarterly planning or when strategy is unclear.
+agent: true
+artifact_output: .pm/roadmap.md
 mcp_output:
   primary: miro
   fallback: notion
 ---
+
+<!-- GEMINI: Do not run any shell commands. Read .pm/goals.md, .pm/situation.md, and any available artifacts, then write .pm/roadmap.md as described in ## Agent Output. -->
+<!-- CODEX: Read goals.md and situation.md, then write roadmap.md. -->
 
 
 ## Universal Rules
@@ -13,6 +17,16 @@ mcp_output:
 - Before asking questions, identify what is already provided in context. Only ask for genuinely missing data.
 - When asking a question, always offer 3-4 ready-made options with a smart default; last option: "Enter your own"
 - Read all files listed in ## Knowledge Base before generating any output
+
+
+## Agent Input
+
+When invoked as agent, read before generating output:
+1. `.pm/goals.md` — current OKRs and strategic themes
+2. `.pm/artifacts/insights.md` — discovery insights (if exists)
+3. `.pm/artifacts/competitive-report.md` — competitive gaps (if exists)
+4. `.pm/artifacts/analytics-digest.md` — metric trends (if exists)
+5. `.pm/situation.md` — current phase and priorities
 
 
 # /pm-roadmap — Strategic Roadmap
@@ -100,3 +114,17 @@ OKRs: [top 2-3]
 If Miro MCP: create roadmap board with Now/Next/Later swim lanes, add initiative cards.
 If Notion: create roadmap page in Product wiki.
 If not: save `roadmap-[team]-[quarter].md`.
+
+## Agent Output
+
+When invoked as agent, write roadmap to `.pm/roadmap.md` (not artifacts/ — this is a workspace file):
+- Planning horizon: {quarter or half-year}
+- Theme 1: {strategic theme} → {milestones} → {success metric}
+- Theme 2: ...
+- Now / Next / Later breakdown
+- Dependencies and sequencing notes
+
+Append to `.pm/orchestrator.log`:
+```
+{ISO timestamp} pm-roadmap completed → .pm/roadmap.md
+```
