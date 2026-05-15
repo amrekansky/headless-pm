@@ -2,7 +2,7 @@
 name: pm-prioritize
 description: Prioritize a backlog or set of initiatives using RICE, ICE, or MoSCoW. Produces ranked list with scores and reasoning. Use when you have more to do than capacity allows.
 agent: true
-artifact_output: .pm/artifacts/recommendations.md
+artifact_output: .pm/artifacts/priority-matrix.md
 mcp_output:
   primary: notion
   fallback: markdown
@@ -25,6 +25,11 @@ When invoked as agent (analytics workflow), read before generating output:
 1. `.pm/artifacts/analytics-digest.md` — trends, anomalies, off-track metrics
 2. `.pm/backlog.md` — available items that could address the issues found
 3. `.pm/goals.md` — OKR priorities to use as decision criteria
+
+**When invoked in backlog workflow** (after pm-grooming):
+1. `.pm/backlog.md` — groomed items ready for prioritization
+2. `.pm/goals.md` — OKR weights for scoring
+3. `.pm/situation.md` — sprint capacity and deadline context
 
 
 # /pm-prioritize — Prioritization
@@ -115,7 +120,20 @@ If Notion: create prioritization table in Product workspace.
 
 ## Agent Output
 
-When invoked as agent, write recommendations to `.pm/artifacts/recommendations.md`:
+**When invoked in backlog workflow**, write `.pm/artifacts/priority-matrix.md`:
+
+| Item ID | Title | RICE Score | OKR Fit | Effort | Recommended Sprint |
+|---------|-------|------------|---------|--------|-------------------|
+| {ID} | {title} | {score} | KR-N | S/M/L | Sprint {N} / Next / Later |
+
+Top 10 items ranked. Bottom section: items recommended for icebox.
+
+Append to `.pm/orchestrator.log`:
+```
+{ISO timestamp} pm-prioritization completed → .pm/artifacts/priority-matrix.md
+```
+
+**When invoked as analytics agent**, write recommendations to `.pm/artifacts/recommendations.md`:
 - **Recommendation N:** {action} — addresses {metric/anomaly from digest}
 - **Priority:** H/M/L — {rationale tied to OKR impact}
 - **Effort:** S/M/L estimate
