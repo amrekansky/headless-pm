@@ -1,11 +1,15 @@
 ---
-<!-- GEMINI: Do not run any shell commands. -->
 name: pm-okr
 description: Set and track OKRs for a product team. Run quarterly OKR planning or mid-quarter check-in. Produces structured OKR doc with confidence levels and blockers.
+agent: true
+artifact_output: .pm/goals.md
 mcp_output:
   primary: notion
   fallback: markdown
 ---
+
+<!-- GEMINI: Do not run any shell commands. Read .pm/roadmap.md and .pm/goals.md, then write updated goals.md as described in ## Agent Output. -->
+<!-- CODEX: Read roadmap.md and goals.md, then write updated goals.md. -->
 
 
 ## Universal Rules
@@ -13,6 +17,15 @@ mcp_output:
 - Before asking questions, identify what is already provided in context. Only ask for genuinely missing data.
 - When asking a question, always offer 3-4 ready-made options with a smart default; last option: "Enter your own"
 - Read all files listed in ## Knowledge Base before generating any output
+
+
+## Agent Input
+
+When invoked as agent, read before generating output:
+1. `.pm/roadmap.md` — strategic themes and milestones for OKR derivation
+2. `.pm/goals.md` — current OKRs to review or update
+3. `.pm/artifacts/analytics-digest.md` — metric baselines for setting KR targets (if exists)
+4. MCP (Notion): existing OKR pages if connected
 
 
 # /pm-okr — OKR Planning & Tracking
@@ -107,7 +120,7 @@ For each KR produce:
 ```
 KR: [statement]
 Current: [value] / [target] ([%] complete)
-Confidence: 🟢 On track / 🟡 At risk / 🔴 Off track
+Confidence: on track / at risk / off track
 Blockers: [what's stopping progress]
 Action needed: [specific next step, owner]
 ```
@@ -123,3 +136,17 @@ Recommended escalation: [yes/no + reason]
 ## MCP Output
 Notion: create or update "OKRs — [Team] — Q[N]" page.
 If not: save `okr-[team]-Q[N].md`.
+
+## Agent Output
+
+When invoked as agent, write updated OKRs to `.pm/goals.md` (overwrites existing):
+- **Objective N:** {inspiring, qualitative goal}
+  - **KR N.1:** {measurable result} — baseline: {X}, target: {Y}, due: {date}
+  - **KR N.2:** ...
+- **Owner:** {name or TBD}
+- **Review cadence:** {weekly/bi-weekly}
+
+Append to `.pm/orchestrator.log`:
+```
+{ISO timestamp} pm-okr completed → .pm/goals.md
+```
