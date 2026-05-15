@@ -2,6 +2,8 @@
 <!-- GEMINI: Do not run any shell commands. -->
 name: pm-prd
 description: Write a complete PRD from discovery notes or a problem statement. Engineering-ready. Use when moving from discovery to delivery.
+agent: true
+artifact_output: .pm/artifacts/prd.md
 mcp_output:
   primary: notion
   fallback: confluence
@@ -13,6 +15,14 @@ mcp_output:
 - Before asking questions, identify what is already provided in context. Only ask for genuinely missing data.
 - When asking a question, always offer 3-4 ready-made options with a smart default; last option: "Enter your own"
 - Read all files listed in ## Knowledge Base before generating any output
+
+## Agent Input
+
+When invoked as agent, read before generating output:
+1. `.pm/artifacts/insights.md` — validated insights and opportunity areas
+2. `.pm/goals.md` — OKRs this PRD must serve
+3. `.pm/artifacts/clusters.md` — raw user signals for evidence section
+4. `.pm/STATE.md` — current phase and product context
 
 
 # /pm-prd — Product Requirements Document
@@ -115,3 +125,12 @@ _Owner: [PM name] | Status: Draft | Date: [YYYY-MM-DD]_
 If Notion MCP: create page in Product / PRDs database, set status = Draft.
 If Confluence MCP: create page in Product space.
 If not: save `prd-[feature]-[date].md`.
+
+## Agent Output
+
+When invoked as agent, write full PRD to `.pm/artifacts/prd.md` using existing Output Template. Add evidence section referencing clusters.md quotes.
+
+Append to `.pm/orchestrator.log`:
+```
+{ISO timestamp} pm-prd completed → .pm/artifacts/prd.md
+```
