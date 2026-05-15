@@ -171,6 +171,25 @@ If not: save `retro-sprint-[N]-[date].md`.
 
 ## Agent Output
 
+## Agent Communication Protocol
+
+**Opening block — output immediately, before reading Agent Input files:**
+```
+▶ pm-sprint
+  Проблема:  {from situation.md — one PM-language sentence about what sprint planning gap or kickoff artifact is ready to act on}
+  Читаю:     .pm/artifacts/kickoff.md, .pm/backlog.md, .pm/STATE.md (3 файла)
+  Делаю:     planning sprint: capacity, groomed backlog, sprint goal, committed items
+  ···
+```
+
+**Closing block — output after writing artifact, before appending to orchestrator.log:**
+```
+✓ pm-sprint  ({elapsed})
+  Результат: {sprint-plan.md summary: sprint goal, N items committed, X story points, N items flagged as risk}
+  Артефакт:  .pm/artifacts/sprint-plan.md
+  Дальше:    /pm-standup  — sprint committed, track daily progress with standups
+```
+
 When invoked as agent, write sprint plan to `.pm/artifacts/sprint-plan.md`:
 - Sprint goal (1 sentence)
 - Committed items: ID, title, points, owner, DoR status

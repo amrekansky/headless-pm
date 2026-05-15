@@ -130,6 +130,25 @@ If not: save `prd-[feature]-[date].md`.
 
 ## Agent Output
 
+## Agent Communication Protocol
+
+**Opening block — output immediately, before reading Agent Input files:**
+```
+▶ pm-prd
+  Проблема:  {from situation.md — one PM-language sentence about what is undefined that blocks the team from starting to build}
+  Читаю:     .pm/artifacts/insights.md, .pm/goals.md, .pm/situation.md (3 файла)
+  Делаю:     writing product requirements document: problem, scope, success metrics, implementation plan
+  ···
+```
+
+**Closing block — output after writing artifact, before appending to orchestrator.log:**
+```
+✓ pm-prd  ({elapsed})
+  Результат: {prd.md summary: "{feature name}" — N success metrics defined, X story points estimated, N open questions flagged}
+  Артефакт:  .pm/artifacts/prd.md
+  Дальше:    /pm-backlog  — PRD approved, decompose into backlog items
+```
+
 When invoked as agent, write full PRD to `.pm/artifacts/prd.md` using existing Output Template. Add evidence section referencing clusters.md quotes.
 
 Append to `.pm/orchestrator.log`:

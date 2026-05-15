@@ -42,6 +42,49 @@ Before responding, read in this order:
 
 ---
 
+## Opening Dashboard
+
+After reading context in Step 1, before spawning pm-radar, output the opening dashboard.
+
+**Compute:**
+1. From `.pm/STATE.md`: extract `- Product:`, `- Sprint:` (sprint N + end date), `- Focus:`, `- Blockers:`
+2. From `.pm/config.json`: extract `sprintAnchor` and `sprintCadence` if present
+3. From `.pm/artifacts/` (list directory): check existence of each artifact:
+   - DISCOVERY: `insights.md`, any `interview-*.md`, `clusters.md`
+   - DEFINE: `prd.md`, `backlog.md`, any `acceptance-*.md`
+   - BUILD: `sprint-plan.md`; stories — check STATE.md for active stories
+   - SHIP: `status-report.md`, `retro.md`, any `release-*.md`
+4. From `.pm/situation.md` (if exists from a previous session): extract `## Recommended Workflow` line for "Следующий шаг"
+5. Compute days remaining: calendar days from today to sprint end date
+
+**Snapshot:** Note the current list of `.pm/artifacts/` files as the baseline — you will compare against this in the Closing Dashboard.
+
+**Output (fill in from data above):**
+```
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ {Product}  ·  Sprint {N}  ·  {start} → {end}  ·  {X}д
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+ DISCOVERY      DEFINE         BUILD          SHIP
+ ──────────     ──────────     ──────────     ──────────
+ ✓/○ insights   ✓/○ prd        ✓/○ sprint     ✓/○ release
+ ✓/○ interviews ✓/○ backlog    ✓/○ stories    ✓/○ retro
+ ✓/○ clusters   ✓/○ acceptance
+
+ Блокеры: {from STATE.md, or "нет"}
+ Фокус:   {from STATE.md, or "не задан"}
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ Следующий шаг:  /{skill}  — {reason from situation.md, or "запускаю pm-radar"}
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+```
+
+Use ✓ when the artifact file exists; ○ when it does not. Replace each column row with the actual symbol.
+
+**Then** proceed to Step 2 (spawn pm-radar).
+
+---
+
 ## Step 2 — Run pm-radar (situational awareness)
 
 Before deciding what to orchestrate, spawn pm-radar to get a fresh situation snapshot.
@@ -172,6 +215,23 @@ Return a 3-sentence summary of what you produced.
 
 Wait for all → collect summaries → synthesize.
 
+**Session counter:** Each time you spawn an agent via Task tool, increment `agents_run` (starts at 0 for pm-radar, counts each subsequent agent). You will use this count in the Closing Dashboard.
+
+**Parallel launch display:** When spawning N > 1 agents simultaneously, output before spawning:
+```
+▶ Запускаю {N} агентов параллельно
+
+  [1/{N}] {skill-name}      Проблема: {one-line PM problem this agent solves}
+  [2/{N}] {skill-name}      Проблема: {one-line PM problem this agent solves}
+  ...
+  ···
+```
+
+As each parallel agent completes, output:
+```
+✓ [{i}/{N}] {skill-name}      ({elapsed}) → {artifact path}
+```
+
 ### Single-agent requests
 
 For quick tasks in the routing table below — spawn ONE agent, same pattern.
@@ -208,6 +268,49 @@ After completion, offer to update `.pm/STATE.md`:
 - Append to `## Changelog`: `- YYYY-MM-DD: [what was done]`
 
 If `.pm/STATE.md` not found → offer to update `context.md ## PM Lifecycle` instead.
+
+---
+
+## Closing Dashboard
+
+After completing Step 7, output the closing dashboard.
+
+**Compute:**
+1. Re-read `.pm/STATE.md`: updated Product, Sprint, Focus, Blockers
+2. List `.pm/artifacts/` again: compare to Opening Dashboard snapshot to find new artifacts (files that did not exist at opening — these get `←` marker)
+3. Re-read `.pm/situation.md` `## Radar Output`: extract `recommended_skill` and `reason` for next step
+4. `agents_run`: total agents spawned this session (counted in Step 6)
+5. `new_artifact_count`: number of ← artifacts
+
+**Output:**
+```
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ {Product}  ·  Sprint {N}  ·  {X}д осталось
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+ DISCOVERY      DEFINE         BUILD          SHIP
+ ──────────     ──────────     ──────────     ──────────
+ ✓/○ insights ←?  ✓/○ prd ←?     ✓/○ sprint ←?   ✓/○ release ←?
+ ✓/○ interviews   ✓/○ backlog ←?  ✓/○ stories    ✓/○ retro ←?
+ ✓/○ clusters ←?  ✓/○ acceptance ←?
+
+ Сделано сейчас:
+   + {artifact name} — {one line: what's inside, key numbers/decisions}
+   (one line per new artifact; omit if no new artifacts)
+
+ Следующий шаг:  /{recommended_skill}  — {reason}
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+```
+
+Add `←` next to each artifact that was created or updated this session (in artifacts_after but not artifacts_before).
+
+**Compact indicator:** if `agents_run ≥ 3` OR `new_artifact_count ≥ 2`, append inside the bottom border:
+```
+ ⚠ Сессия большая — сохрани перед продолжением:
+   напиши /save  или  compact
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+```
 
 ---
 

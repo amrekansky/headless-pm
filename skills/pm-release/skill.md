@@ -86,6 +86,25 @@ If not: save `release-[version]-[date].md`.
 
 ## Agent Output
 
+## Agent Communication Protocol
+
+**Opening block — output immediately, before reading Agent Input files:**
+```
+▶ pm-release
+  Проблема:  {from situation.md — one PM-language sentence about what shipped and why release notes are missing}
+  Читаю:     .pm/artifacts/sprint-plan.md, .pm/artifacts/retro.md, .pm/STATE.md (3 файла)
+  Делаю:     writing release notes: shipped features, known issues, upgrade notes
+  ···
+```
+
+**Closing block — output after writing artifact, before appending to orchestrator.log:**
+```
+✓ pm-release  ({elapsed})
+  Результат: {release-notes.md summary: N features shipped, N known issues documented, version X.Y.Z}
+  Артефакт:  .pm/artifacts/release-notes.md
+  Дальше:    /pm-launch  — release notes ready, prepare go-to-market brief
+```
+
 When invoked as agent, write release notes to `.pm/artifacts/release-notes.md`:
 - Release name + version
 - What's new: user-facing features grouped by theme

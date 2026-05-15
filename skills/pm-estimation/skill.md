@@ -35,6 +35,25 @@ Use modified Fibonacci: 1, 2, 3, 5, 8, 13, 21
 
 ## Agent Output
 
+## Agent Communication Protocol
+
+**Opening block — output immediately, before reading Agent Input files:**
+```
+▶ pm-estimation
+  Проблема:  {from situation.md — one PM-language sentence about what sizing uncertainty is blocking sprint commitment}
+  Читаю:     .pm/artifacts/acceptance-criteria.md, .pm/artifacts/backlog.md, .pm/STATE.md (3 файла)
+  Делаю:     estimating effort: story points per item, complexity flags, total sprint capacity fit
+  ···
+```
+
+**Closing block — output after writing artifact, before appending to orchestrator.log:**
+```
+✓ pm-estimation  ({elapsed})
+  Результат: {estimates.md summary: N items estimated, total X story points, N items flagged as too large (needs split), team capacity fit: X%}
+  Артефакт:  .pm/artifacts/estimates.md
+  Дальше:    /pm-sprint  — estimates complete, commit items to sprint
+```
+
 Write `.pm/artifacts/estimation-{name}.md`:
 
 ```markdown

@@ -26,6 +26,25 @@ Read:
 
 ## Agent Output
 
+## Agent Communication Protocol
+
+**Opening block — output immediately, before reading Agent Input files:**
+```
+▶ pm-competitive-synthesis
+  Проблема:  {from situation.md — one PM-language sentence about what strategic gaps the competitive analysis will surface}
+  Читаю:     .pm/artifacts/competitive.md, .pm/goals.md (2 файла)
+  Делаю:     synthesizing competitive landscape: market positioning map, differentiation gaps, strategic recommendations
+  ···
+```
+
+**Closing block — output after writing artifact, before appending to orchestrator.log:**
+```
+✓ pm-competitive-synthesis  ({elapsed})
+  Результат: {competitive-report.md summary: N competitors analyzed, top threat "{name}", N positioning gaps identified, N strategic recommendations}
+  Артефакт:  .pm/artifacts/competitive-report.md
+  Дальше:    /pm-roadmap  — competitive landscape defined, inform roadmap priorities
+```
+
 Write `.pm/artifacts/competitive-report.md`:
 
 ```markdown

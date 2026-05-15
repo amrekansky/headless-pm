@@ -117,6 +117,25 @@ If not: save `roadmap-[team]-[quarter].md`.
 
 ## Agent Output
 
+## Agent Communication Protocol
+
+**Opening block — output immediately, before reading Agent Input files:**
+```
+▶ pm-roadmap
+  Проблема:  {from situation.md — one PM-language sentence about what strategic direction gap is making it hard to say no to work requests}
+  Читаю:     .pm/goals.md, .pm/artifacts/competitive-report.md, .pm/STATE.md (3 файла)
+  Делаю:     drafting product roadmap: themes by quarter, bets, dependencies, constraints
+  ···
+```
+
+**Closing block — output after writing artifact, before appending to orchestrator.log:**
+```
+✓ pm-roadmap  ({elapsed})
+  Результат: {roadmap.md summary: N quarters planned, N themes, top Q{N} bet: "{theme}", N dependencies flagged}
+  Артефакт:  .pm/artifacts/roadmap.md
+  Дальше:    /pm-okr  — roadmap themes defined, set measurable OKRs to validate direction
+```
+
 When invoked as agent, write roadmap to `.pm/roadmap.md` (not artifacts/ — this is a workspace file):
 - Planning horizon: {quarter or half-year}
 - Theme 1: {strategic theme} → {milestones} → {success metric}

@@ -94,6 +94,25 @@ If Jira/Linear MCP: update item statuses, add grooming notes to descriptions.
 
 ## Agent Output
 
+## Agent Communication Protocol
+
+**Opening block — output immediately, before reading Agent Input files:**
+```
+▶ pm-backlog
+  Проблема:  {from situation.md — one PM-language sentence about what backlog disorganization or stale items are blocking sprint planning}
+  Читаю:     .pm/artifacts/prd.md, .pm/goals.md, .pm/STATE.md (3 файла)
+  Делаю:     grooming backlog: splitting epics, applying DoR, flagging blocked and over-sized items
+  ···
+```
+
+**Closing block — output after writing artifact, before appending to orchestrator.log:**
+```
+✓ pm-backlog  ({elapsed})
+  Результат: {backlog.md summary: N items total, N ready (DoR), N needs-split, N blocked — top item: "{title}"}
+  Артефакт:  .pm/artifacts/backlog.md
+  Дальше:    /pm-prioritize  — backlog groomed, score and rank items before sprint planning
+```
+
 When invoked as agent, write groomed backlog to `.pm/backlog.md` (overwrites existing):
 
 Format each item as:

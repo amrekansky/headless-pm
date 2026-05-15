@@ -139,6 +139,25 @@ If not: save `okr-[team]-Q[N].md`.
 
 ## Agent Output
 
+## Agent Communication Protocol
+
+**Opening block — output immediately, before reading Agent Input files:**
+```
+▶ pm-okr
+  Проблема:  {from situation.md — one PM-language sentence about what strategic alignment gap OKRs will address}
+  Читаю:     .pm/artifacts/roadmap.md, .pm/goals.md, .pm/STATE.md (3 файла)
+  Делаю:     drafting OKRs: objectives with measurable key results and baseline/target values
+  ···
+```
+
+**Closing block — output after writing artifact, before appending to orchestrator.log:**
+```
+✓ pm-okr  ({elapsed})
+  Результат: {okr.md summary: N objectives, N key results total, N KRs with numeric targets, N flagged as needing baseline data}
+  Артефакт:  .pm/artifacts/okr.md
+  Дальше:    /pm-roadmap  — OKRs set, validate roadmap themes against objectives
+```
+
 When invoked as agent, write updated OKRs to `.pm/goals.md` (overwrites existing):
 - **Objective N:** {inspiring, qualitative goal}
   - **KR N.1:** {measurable result} — baseline: {X}, target: {Y}, due: {date}

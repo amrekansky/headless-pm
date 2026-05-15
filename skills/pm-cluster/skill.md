@@ -31,6 +31,25 @@ Group pain points and signals by theme:
 
 ## Agent Output
 
+## Agent Communication Protocol
+
+**Opening block — output immediately, before reading Agent Input files:**
+```
+▶ pm-cluster
+  Проблема:  {from situation.md — one PM-language sentence about what unstructured interview data needs organizing into themes}
+  Читаю:     .pm/artifacts/discovery.md, .pm/goals.md (2 файла)
+  Делаю:     clustering interview themes: grouping insights by pain, frequency, and opportunity size
+  ···
+```
+
+**Closing block — output after writing artifact, before appending to orchestrator.log:**
+```
+✓ pm-cluster  ({elapsed})
+  Результат: {clusters.md summary: N themes identified, top cluster "{name}" mentioned N times, N low-signal items dropped}
+  Артефакт:  .pm/artifacts/clusters.md
+  Дальше:    /pm-hypothesis  — themes clustered, generate falsifiable hypotheses
+```
+
 Write `.pm/artifacts/clusters.md`:
 
 ```markdown

@@ -116,6 +116,25 @@ If not: save `metrics-[product]-[date].md`.
 
 ## Agent Output
 
+## Agent Communication Protocol
+
+**Opening block — output immediately, before reading Agent Input files:**
+```
+▶ pm-metrics
+  Проблема:  {from situation.md — one PM-language sentence about what metric visibility gap is blocking data-driven decisions}
+  Читаю:     .pm/goals.md, .pm/situation.md, .pm/STATE.md (3 файла)
+  Делаю:     defining metrics framework: north star, leading indicators, guardrail metrics with targets
+  ···
+```
+
+**Closing block — output after writing artifact, before appending to orchestrator.log:**
+```
+✓ pm-metrics  ({elapsed})
+  Результат: {metrics.md summary: north star metric "{name}", N leading indicators, N guardrail metrics, current baseline values}
+  Артефакт:  .pm/artifacts/metrics.md
+  Дальше:    /pm-analyst  — metrics collected, analyze trends and surface actionable insights
+```
+
 When invoked as agent, write raw metrics to `.pm/artifacts/metrics-raw.md`:
 - Collection date: {ISO date}
 - Source: {MCP source or "user-provided"}

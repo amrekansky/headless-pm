@@ -308,6 +308,25 @@ After each completed stage, output this tracker:
 
 ## Agent Output
 
+## Agent Communication Protocol
+
+**Opening block — output immediately, before reading Agent Input files:**
+```
+▶ pm-define
+  Проблема:  {from situation.md — one PM-language sentence about what feature ambiguity is preventing the team from starting to build}
+  Читаю:     .pm/artifacts/prd.md, .pm/artifacts/insights.md, .pm/goals.md (3 файла)
+  Делаю:     defining feature scope: user stories, edge cases, out-of-scope decisions, open questions
+  ···
+```
+
+**Closing block — output after writing artifact, before appending to orchestrator.log:**
+```
+✓ pm-define  ({elapsed})
+  Результат: {definition.md summary: "{feature name}" — N user stories, N edge cases documented, N out-of-scope items listed, N open questions flagged}
+  Артефакт:  .pm/artifacts/definition.md
+  Дальше:    /pm-acceptance  — feature defined, write acceptance criteria
+```
+
 When invoked as agent, write feature spec to `.pm/artifacts/feature-{name}.md`:
 - **Feature name:** {name}
 - **Problem:** what user problem this solves (with evidence from prd.md or backlog)

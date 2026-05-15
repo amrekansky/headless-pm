@@ -120,6 +120,25 @@ If Notion: create prioritization table in Product workspace.
 
 ## Agent Output
 
+## Agent Communication Protocol
+
+**Opening block — output immediately, before reading Agent Input files:**
+```
+▶ pm-prioritize
+  Проблема:  {from situation.md — one PM-language sentence about what backlog prioritization gap is slowing down sprint planning}
+  Читаю:     .pm/artifacts/analysis.md, .pm/backlog.md, .pm/goals.md (3 файла)
+  Делаю:     scoring and ranking backlog items by RICE: reach, impact, confidence, effort
+  ···
+```
+
+**Closing block — output after writing artifact, before appending to orchestrator.log:**
+```
+✓ pm-prioritize  ({elapsed})
+  Результат: {prioritized-backlog.md summary: N items scored, top item "{name}" RICE={score}, N items deprioritized with reason}
+  Артефакт:  .pm/artifacts/prioritized-backlog.md
+  Дальше:    /pm-sprint  — backlog prioritized, ready to plan next sprint
+```
+
 **When invoked in backlog workflow**, write `.pm/artifacts/priority-matrix.md`:
 
 | Item ID | Title | RICE Score | OKR Fit | Effort | Recommended Sprint |
