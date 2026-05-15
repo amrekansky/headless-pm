@@ -1,5 +1,4 @@
 ---
-<!-- GEMINI: Do not run any shell commands. -->
 name: pm-discover
 description: Discovery phase wizard. Guides PM through problem framing → hypothesis → user interviews → synthesis → go/no-go decision. Use when starting exploration of a new product idea, feature, or market opportunity.
 agent: true
@@ -8,6 +7,9 @@ mcp_output:
   primary: notion
   fallback: local
 ---
+
+<!-- GEMINI: Do not run any shell commands. Read .pm/goals.md and .pm/situation.md, then produce discovery artifacts as described in ## Agent Output. -->
+<!-- CODEX: Read goals.md and situation.md, then produce discovery artifacts. -->
 
 
 ## Universal Rules

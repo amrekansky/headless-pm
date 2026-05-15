@@ -1,5 +1,4 @@
 ---
-<!-- GEMINI: Do not run any shell commands. -->
 name: pm-competitive
 description: Produce a structured competitive brief for one or more competitors. Use before positioning work, roadmap planning, or sales enablement.
 agent: true
@@ -8,6 +7,9 @@ mcp_output:
   primary: notion
   fallback: markdown
 ---
+
+<!-- GEMINI: Do not run any shell commands. Read .pm/goals.md and .pm/situation.md, then write competitor-{name}.md as described in ## Agent Output. -->
+<!-- CODEX: Read goals.md and situation.md, then write competitor brief. -->
 
 
 ## Universal Rules
