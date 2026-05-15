@@ -1,11 +1,14 @@
 ---
-<!-- GEMINI: Do not run any shell commands. -->
 name: pm-release
 description: Write release notes in three formats — changelog (technical), user-facing (benefit-led), executive summary (one line). Use when shipping.
 mcp_output:
   primary: confluence
   fallback: slack
+agent: true
+artifact_output: .pm/artifacts/release-notes.md
 ---
+
+<!-- GEMINI: Do not run any shell commands. When invoked as agent, first read .pm/artifacts/sprint-plan.md, .pm/artifacts/retro.md, and .pm/artifacts/kickoff.md, then generate release-notes.md as described in ## Agent Output. -->
 
 
 ## Universal Rules
@@ -13,6 +16,14 @@ mcp_output:
 - Before asking questions, identify what is already provided in context. Only ask for genuinely missing data.
 - When asking a question, always offer 3-4 ready-made options with a smart default; last option: "Enter your own"
 - Read all files listed in ## Knowledge Base before generating any output
+
+## Agent Input
+
+When invoked as agent, read before generating output:
+1. `.pm/artifacts/sprint-plan.md` — committed items for this release
+2. `.pm/artifacts/retro.md` — what shipped, what was cut
+3. `.pm/artifacts/kickoff.md` — release goal and success criteria
+4. MCP (Jira/Linear): closed tickets tagged for this release; merged PRs
 
 
 # /pm-release — Release Notes
@@ -72,3 +83,17 @@ We fixed [N] issues including [most impactful one].
 If Confluence MCP: publish changelog to Release Notes page.
 If Slack MCP: post user-facing version to #product-updates.
 If not: save `release-[version]-[date].md`.
+
+## Agent Output
+
+When invoked as agent, write release notes to `.pm/artifacts/release-notes.md`:
+- Release name + version
+- What's new: user-facing features grouped by theme
+- Fixes: bug fixes with ticket references
+- Breaking changes (if any): migration instructions
+- Known issues
+
+Append to `.pm/orchestrator.log`:
+```
+{ISO timestamp} pm-release completed → .pm/artifacts/release-notes.md
+```
