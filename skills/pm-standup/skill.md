@@ -1,11 +1,14 @@
 ---
-<!-- GEMINI: Do not run any shell commands. -->
 name: pm-standup
 description: Prepare or run a standup. Formats updates for async (Slack) or sync (meeting). Surfaces blockers. Use daily.
 mcp_output:
   primary: slack
   fallback: markdown
+agent: true
+artifact_output: .pm/artifacts/progress-report.md
 ---
+
+<!-- GEMINI: Do not run any shell commands. When invoked as agent, first read .pm/artifacts/sprint-plan.md and .pm/STATE.md, then generate progress-report.md as described in ## Agent Output. -->
 
 
 ## Universal Rules
@@ -13,6 +16,13 @@ mcp_output:
 - Before asking questions, identify what is already provided in context. Only ask for genuinely missing data.
 - When asking a question, always offer 3-4 ready-made options with a smart default; last option: "Enter your own"
 - Read all files listed in ## Knowledge Base before generating any output
+
+## Agent Input
+
+When invoked as agent, read before generating output:
+1. `.pm/artifacts/sprint-plan.md` — committed items, goals, capacity
+2. `.pm/STATE.md` — current sprint N, phase
+3. MCP (Jira/Linear if connected): current ticket statuses, updated today/this week
 
 
 # /pm-standup — Daily Standup
@@ -23,6 +33,21 @@ Every response MUST include all three sections, even if empty:
 - **Today:** bullet list with owners
 - **Blocked:** item + who unblocks it + by when — if none, write "No blockers"
 - **Sprint goal health:** On track / At risk / Off track — required in Mode B (team facilitation)
+
+## Agent Output
+
+When invoked as agent, write progress report to `.pm/artifacts/progress-report.md`:
+- Sprint {N} Progress — {date}
+- Done since last standup: items with IDs
+- In progress: items with % complete estimate
+- Blocked: item + blocker description + owner
+- Burndown: points completed / total committed
+- Risk flag: on track / at risk / off track with reason
+
+Append to `.pm/orchestrator.log`:
+```
+{ISO timestamp} pm-standup/progress completed → .pm/artifacts/progress-report.md
+```
 
 ## Two modes
 
