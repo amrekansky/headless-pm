@@ -1,11 +1,14 @@
 ---
-<!-- GEMINI: Do not run any shell commands. -->
 name: pm-launch
 description: Launch phase wizard. Takes a GA-ready product and executes go-to-market — GTM strategy → Positioning → Comms plan → Enablement (CS/Sales) → Launch day checklist. Use after /pm-ship GA or when planning a product/feature launch.
 mcp_output:
   primary: notion
   fallback: local
+agent: true
+artifact_output: .pm/artifacts/launch-brief.md
 ---
+
+<!-- GEMINI: Do not run any shell commands. When invoked as agent, first read .pm/artifacts/release-notes.md, .pm/artifacts/kickoff.md, and .pm/goals.md, then generate launch-brief.md as described in ## Agent Output. -->
 
 
 ## Universal Rules
@@ -13,6 +16,13 @@ mcp_output:
 - Before asking questions, identify what is already provided in context. Only ask for genuinely missing data.
 - When asking a question, always offer 3-4 ready-made options with a smart default; last option: "Enter your own"
 - Read all files listed in ## Knowledge Base before generating any output
+
+## Agent Input
+
+When invoked as agent, read before generating output:
+1. `.pm/artifacts/release-notes.md` — what shipped
+2. `.pm/artifacts/kickoff.md` — release goals, target audience, success criteria
+3. `.pm/goals.md` — OKR context for positioning
 
 
 # /pm-launch — Launch Phase Wizard
@@ -327,3 +337,18 @@ After each completed stage, output this tracker:
 - Enablement is not optional for features that touch CS or Sales — skip only for pure internal changes
 - Launch checklist is the final gate — no launch without a rollback plan
 - After checklist complete, always suggest updating `context.md` and starting `/pm-learn`
+
+## Agent Output
+
+When invoked as agent, write launch brief to `.pm/artifacts/launch-brief.md`:
+- Release headline (1 sentence, user benefit-first)
+- Target audience: who benefits most from this release
+- Key messages: 3 bullets for marketing/sales
+- Call to action: what we want users to do
+- Launch channels: recommended channels with message variants
+- Metrics to track: 3-5 KPIs for launch success
+
+Append to `.pm/orchestrator.log`:
+```
+{ISO timestamp} pm-launch completed → .pm/artifacts/launch-brief.md
+```
