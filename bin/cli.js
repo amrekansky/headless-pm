@@ -25,6 +25,23 @@ import { createRequire } from 'node:module'
 const require = createRequire(import.meta.url)
 const { version } = require('../package.json')
 
+async function checkForUpdates() {
+  try {
+    const ac = new AbortController()
+    const timer = setTimeout(() => ac.abort(), 2000)
+    const res = await fetch('https://registry.npmjs.org/headless-pm/latest', { signal: ac.signal })
+    clearTimeout(timer)
+    const data = await res.json()
+    const latest = data.version
+    if (latest && latest !== version) {
+      console.log(`\n  Update available: ${version} → ${latest}`)
+      console.log('  Run: npx headless-pm update\n')
+    }
+  } catch {
+    // silently ignore network errors or timeout
+  }
+}
+
 const program = new Command()
 
 program
@@ -38,6 +55,7 @@ program
   .option('--tools-only', 'Install tools only, skip skills')
   .option('--skills-only', 'Install skills only, skip tools')
   .action(async (opts) => {
+    await checkForUpdates()
     console.log('Installing Headless PM...\n')
     const cfg = await readConfig()
 
@@ -109,6 +127,7 @@ program
     const pmDir = join(homedir(), '.headless', 'pm')
     const skillsDir = join(homedir(), '.claude', 'skills')
 
+    await checkForUpdates()
     try {
       const tools = await readdir(pmDir)
       console.log('Installed tools (~/.headless/pm/):')
@@ -129,14 +148,18 @@ program
 
 program
   .command('update')
-  .description('Update installed tools and skills')
+  .description('Update tools and skills to latest version')
   .action(async () => {
     const cfg = await readConfig()
-    console.log('Updating Headless PM...')
+    const detectedCLIs = await detectCLIs()
+    console.log('Updating Headless PM...\n')
     try {
       await installTools()
-      await installSkills(cfg.pmLicenseKey || null)
-      console.log('Updated.')
+      await installSkills(cfg.pmLicenseKey || null, detectedCLIs)
+      await installPrerequisiteSkills()
+      await installStatusline(detectedCLIs)
+      console.log('\nHeadless PM updated.')
+      console.log('Restart Claude Code to apply skill changes.')
     } catch (err) {
       console.error(`Update failed: ${err.message}`)
       process.exit(1)
