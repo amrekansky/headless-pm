@@ -10,6 +10,7 @@ import {
   detectCLIs,
   MCP_SERVERS,
   installPrerequisiteSkills,
+  cleanupRemovedSkills,
   initWorkspace,
   printStatusline,
   printInstallNextSteps,
@@ -156,6 +157,7 @@ program
     try {
       await installTools()
       await installSkills(cfg.pmLicenseKey || null, detectedCLIs)
+      await cleanupRemovedSkills(detectedCLIs)
       await installPrerequisiteSkills()
       await installStatusline(detectedCLIs)
       console.log('\nHeadless PM updated.')
