@@ -10,6 +10,8 @@ npx headless-pm install
 
 Auto-detects which CLIs you have. Installs skills into each one. Prompts to connect MCP servers.
 
+New to the terminal? → **[Getting Started Guide](docs/getting-started.md)** — step-by-step from zero to your first `/pm` run.
+
 ---
 
 ## What You Get
