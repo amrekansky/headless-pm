@@ -31,7 +31,9 @@
     "sprint",
     "roadmap",
     "okr",
-    "skills"
+    "skills",
+    "agentic",
+    "orchestrator"
   ],
   "license": "Proprietary",
   "type": "module",
