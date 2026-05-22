@@ -1,5 +1,9 @@
 # headless-pm
 
+[![npm version](https://img.shields.io/npm/v/headless-pm)](https://www.npmjs.com/package/headless-pm)
+[![npm downloads](https://img.shields.io/npm/dm/headless-pm)](https://www.npmjs.com/package/headless-pm)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+
 PM toolkit for Claude Code, Gemini CLI, and Codex CLI. One command installs 51 skills, a 40-file knowledge base, and MCP server connections — so your AI assistant thinks like a product manager, not a generic chatbot.
 
 ## Install
@@ -110,7 +114,7 @@ Get your API key: [exa.ai/settings/api-keys](https://exa.ai/settings/api-keys)
 
 All remaining skills — sprint planning, OKR, roadmap, GTM, metrics, stakeholder, ops, and more.
 
-Get a license: [headlessaimode.com](https://headlessaimode.com)
+Get a license: [headlesspm.com](https://headlesspm.com)
 
 ---
 
