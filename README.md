@@ -120,28 +120,27 @@ Get a license: [headlesspm.com](https://headlesspm.com)
 
 ## What's New
 
-### v0.6.15 — Gemini migration cleanup
-- Installer now removes legacy `~/.gemini/commands/headless-pm/` on upgrade so old namespaced skills don't persist
+### v0.7.10 — Zombie skill cleanup
+- `update` command now removes skills that were deleted in newer versions — no stale `/pm-*` commands left behind after upgrade
 
-### v0.6.14 — Gemini flat commands path
-- Fixed Gemini skill install path: skills now live at `~/.gemini/commands/pm-sprint.toml` (was `~/.gemini/commands/headless-pm/pm-sprint.toml`)
-- Skills now work with `/pm-sprint` directly — no `/headless-pm:pm-sprint` prefix needed
+### v0.7.9 — Update notifier
+- CLI notifies you when a new version is available
+- `npx headless-pm update` now does a full reinstall (not just a version bump)
 
-### v0.6.13 — Gemini MCP fix
-- Fixed silent MCP failure in Gemini CLI: replaced `gemini mcp add` with direct `~/.gemini/settings.json` write
-- Notion, Linear, Jira, Miro now reliably registered in Gemini on install
+### v0.7.7–v0.7.8 — /pm Dashboard + /pm-save
+- `/pm` now opens with a visual dashboard: lifecycle phase, sprint status, artifact inventory
+- `/pm-save` — new skill to wrap up a PM session and commit context to git
 
-### v0.6.11–v0.6.12 — GEMINI directive hardening
-- Shell-safe directive added to all 51 skills (prevents Gemini from running shell commands inside skill responses)
-- Routing directives strengthened for `pm-release-lifecycle` and `pm-discovery`
+### v0.7.0–v0.7.6 — Agentic Layer (24 agents)
+- All major PM workflows now run as autonomous agents with Opening/Closing Dashboards
+- 24 skills upgraded: discovery, competitive, release lifecycle, sprint planning, exec brief, backlog grooming, and more
+- Agent Communication Protocol standardized across all agents
+- Gemini CLI routing directives hardened for all agent skills
 
-### v0.6.6–v0.6.10 — Skill Quality Standard + GEMINI routing
-- Universal Rules injected into all 51 skills: respond in user's language, only ask for genuinely missing data, always offer options with smart defaults, read KB before output
-- Output Templates added to all 51 skills: KB-grounded, concrete field requirements
-- GEMINI routing directives added for `pm-release-lifecycle`, `pm-discovery`, `cusdev`, `pm-sprint`
-
-### v0.6.5 — Knowledge Base
-- 40-file knowledge base installed to `~/.headless/pm/knowledge/` on setup
+### v0.6.5–v0.6.15 — Knowledge Base + Skill Quality
+- 40-file knowledge base: 7 Powers, AARRR, Mom Test, North Star, Crossing the Chasm, Van Westendorp
+- Universal Rules + Output Templates injected into all 51 skills
+- Gemini MCP fix: Notion, Linear, Jira, Miro reliably registered on install
 
 ### v0.6.3 — /pm Agentic Orchestrator
 - `/pm` reads `.pm/` workspace and routes to the right skill automatically
