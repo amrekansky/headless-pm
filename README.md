@@ -1,5 +1,7 @@
 # headless-pm
 
+![headless-pm](./banner.svg)
+
 [![npm version](https://img.shields.io/npm/v/headless-pm)](https://www.npmjs.com/package/headless-pm)
 [![npm downloads](https://img.shields.io/npm/dm/headless-pm)](https://www.npmjs.com/package/headless-pm)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
