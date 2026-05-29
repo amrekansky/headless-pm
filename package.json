@@ -1,6 +1,6 @@
 {
   "name": "headless-pm",
-  "version": "0.7.11",
+  "version": "0.7.6",
   "description": "AI Chief of Staff for product managers",
   "main": "lib/installer.js",
   "bin": {
@@ -20,22 +20,12 @@
   "keywords": [
     "ai",
     "product-management",
-    "product-manager",
     "pm",
     "claude",
-    "gemini",
-    "codex",
     "cli",
-    "mcp",
-    "agile",
-    "sprint",
-    "roadmap",
-    "okr",
-    "skills",
-    "agentic",
-    "orchestrator"
+    "mcp"
   ],
-  "license": "Proprietary",
+  "license": "FSL-1.1-MIT",
   "type": "module",
   "repository": {
     "type": "git",
