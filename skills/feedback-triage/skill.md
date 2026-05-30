@@ -68,6 +68,8 @@ For each top-3 theme, select one quote that best represents the cluster. Quote m
 
 ### 6. Output
 
+Related skills: `/pm-cluster` (cluster larger volumes of feedback into themes), `/pm-prioritize` (prioritize triaged themes against the backlog), `/pm-nps-csat` (process NPS verbatims specifically)
+
 ```
 ## Feedback Triage — [Time Period / Source]
 

@@ -43,6 +43,8 @@ Ask:
 
 ## Output
 
+Related skills: `/pm-incident-response` (the incident response playbook that precedes this postmortem), `/pm-decision` (document the decisions made during the incident), `/risk-escalation` (escalate systemic risks discovered in the postmortem)
+
 ```
 ## Post-Mortem — [Title]
 Date: [YYYY-MM-DD] | Type: [launch review / incident / missed target]

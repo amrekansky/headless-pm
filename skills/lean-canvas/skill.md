@@ -87,6 +87,8 @@ Be honest: "passionate team" is not an unfair advantage. Data moats, network eff
 
 ### 3. Output
 
+Related skills: `/vision-setting` (set the product vision before or alongside the canvas), `/tam-sizing` (validate market size for the customer segment box), `/pm-prioritize` (prioritize riskiest assumptions for first experiments)
+
 ```
 ## Lean Canvas — [Product / Business Name]
 

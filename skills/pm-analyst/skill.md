@@ -15,6 +15,9 @@ artifact_output: .pm/artifacts/analytics-digest.md
 - State confidence level when making inferences from limited data
 - Never invent metrics — only analyze what is in the input
 
+## Knowledge Base
+- `~/.headless/pm/knowledge/metrics-taxonomy.md` — use the metric hierarchy (North Star → KPIs → inputs) to structure the digest; flag when input metrics move but the North Star does not
+- `~/.headless/pm/knowledge/data-literacy-for-pms.md` — report all metrics with comparison periods and confidence intervals; never report a number without context
 
 # /pm-analyst — Analytics Analysis Agent
 
@@ -55,6 +58,8 @@ For each metric:
 ```
 
 Write `.pm/artifacts/analytics-digest.md`:
+
+Related skills: `/dashboard-structuring` (structure the dashboard that feeds this analysis), `/pm-metrics` (define the metric set before running analysis), `/pm-prioritize` (re-score backlog based on analytics findings)
 
 ```markdown
 # Analytics Digest — {date}

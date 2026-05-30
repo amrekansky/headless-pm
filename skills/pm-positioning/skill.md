@@ -66,6 +66,8 @@ The category sets customer expectations and comparison set.
 
 ### 6. Output
 
+Related skills: `/competitive-battlecard` (build a battle card after positioning is defined), `/icp-definition` (sharpen the target customer profile to match the positioning), `/pm-gtm` (use the positioning statement to plan the go-to-market motion)
+
 ```
 ## Positioning — [Product/Feature]
 Date: [YYYY-MM-DD]

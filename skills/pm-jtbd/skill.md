@@ -56,6 +56,8 @@ For each functional job:
 
 ### 5. Output
 
+Related skills: `/pm-persona` (build a persona around the user performing the job), `/pm-cjm` (map the journey where the job occurs), `/cusdev` (run interviews to discover and validate jobs-to-be-done)
+
 ```
 ## JTBD Map — [User Segment]
 

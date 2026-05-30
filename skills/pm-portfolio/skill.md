@@ -17,6 +17,10 @@ mcp_output:
 
 # /pm-portfolio — Portfolio Management
 
+## Knowledge Base
+- `~/.headless/pm/knowledge/org-design-product.md` — use stream-aligned vs platform team framing when assessing portfolio structure; flag cognitive load imbalances that signal team restructuring is needed
+- `~/.headless/pm/knowledge/okr-implementation.md` — align portfolio health assessment to company-level OKRs; surface misalignments between team-level KRs and strategic priorities at the portfolio review
+
 ## Output Template
 Every response MUST include:
 - **Portfolio health table:** Product / Stage / RAG status / Top priority / Top risk / Resources — for each product
@@ -39,6 +43,8 @@ For each product/team:
 - **Top priority this quarter**
 - **Top risk**
 - **Resource**: [N engineers, N PMs]
+
+Related skills: `/pm-okr` (review OKRs for each product in the portfolio), `/pm-roadmap` (produce individual roadmaps that feed this portfolio view), `/pm-exec-brief` (escalate portfolio-level decisions to leadership)
 
 ```
 ## Portfolio — [Your Name/Team] — [Quarter]

@@ -70,6 +70,8 @@ A 10-point scoring rubric for sales to qualify accounts quickly.
 
 ### 7. Output
 
+Related skills: `/beachhead-mapping` (pick the first segment to win within the ICP), `/attitudinal-segmentation` (add psychographic depth to the firmographic ICP), `/competitive-battlecard` (arm sales with differentiation for the ICP's top competitor)
+
 ```
 ## Ideal Customer Profile — [Product Name]
 

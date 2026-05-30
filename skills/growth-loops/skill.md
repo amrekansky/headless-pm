@@ -80,6 +80,8 @@ Find the step with the lowest conversion rate in the primary (highest-potential)
 
 ### 5. Output
 
+Related skills: `/north-star-selection` (identify which loop metric becomes the North Star), `/brainstorm-experiments` (generate experiments to strengthen the primary loop bottleneck), `/funnel-analysis` (compare linear funnel performance before switching to loop model)
+
 ```
 ## Growth Loop Analysis — [Product Name]
 

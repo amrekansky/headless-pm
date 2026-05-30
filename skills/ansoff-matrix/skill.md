@@ -71,6 +71,8 @@ Based on current company stage:
 
 ### 5. Output
 
+Related skills: `/strategy-stack` (link Ansoff choice to full strategy stack), `/beachhead-mapping` (pick entry segment for market development), `/tam-sizing` (size new markets before diversification)
+
 ```
 ## Ansoff Growth Matrix — [Company / Product]
 

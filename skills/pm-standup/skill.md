@@ -17,6 +17,10 @@ artifact_output: .pm/artifacts/progress-report.md
 - When asking a question, always offer 3-4 ready-made options with a smart default; last option: "Enter your own"
 - Read all files listed in ## Knowledge Base before generating any output
 
+## Knowledge Base
+- `~/.headless/pm/knowledge/pm-rituals.md` — use the async standup template and weekly product review agenda to structure daily updates; apply the async-first patterns to reduce synchronous meeting load
+- `~/.headless/pm/knowledge/linear-jira-best-practices.md` — pull ticket statuses and blockers directly from the sprint board; use workflow state transitions to validate standup accuracy against actual ticket state
+
 ## Agent Input
 
 When invoked as agent, read before generating output:
@@ -92,6 +96,8 @@ Format:
 📌 FYI
   - [anything the team should know]
 ```
+
+Related skills: `/pm-sprint` (full sprint cycle context for standup health), `/pm-status` (escalate blocker-heavy standups into a stakeholder status report), `/pm-brief` (roll up the week's standups into an end-of-week brief)
 
 If Slack MCP: post to #standup or #pm channel.
 

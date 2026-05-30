@@ -226,6 +226,8 @@ Ask:
 
 Generate `pricing-rollout.md`:
 
+Related skills: `/pm-customer-health` (identify at-risk accounts before the pricing change), `/pm-positioning` (ensure pricing change is grounded in repositioning, not just cost recovery), `/pm-gtm` (plan the pricing change as a mini-launch with its own GTM motion)
+
 ```
 ## Pricing Rollout Checklist — [Date]
 

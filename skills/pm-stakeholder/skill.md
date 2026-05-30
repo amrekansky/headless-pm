@@ -72,3 +72,5 @@ For each stakeholder:
 
 If Miro MCP: create 2×2 stakeholder matrix with names placed in quadrants.
 If Notion: create table in project space.
+
+Related skills: `/pm-exec-brief` (prepare stakeholder-ready executive communication), `/pm-decision` (map stakeholders before making a major decision), `/pm-status` (report to stakeholders using the map as the audience guide)

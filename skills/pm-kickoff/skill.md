@@ -17,6 +17,9 @@ mcp_output:
 - Read all Agent Input files before generating any output
 - Never invent stakeholder names or numbers — ask if missing
 
+## Knowledge Base
+- `~/.headless/pm/knowledge/okr-implementation.md` — frame release goals as outcome-based OKRs rather than output milestones; each success criterion should trace to a measurable key result
+- `~/.headless/pm/knowledge/shape-up.md` — set the release appetite at kickoff; agree on what gets cut if scope expands rather than sliding the deadline
 
 # /pm-kickoff — Release Kick-off Agent
 
@@ -65,6 +68,8 @@ Every response MUST include:
   Артефакт:  .pm/artifacts/kickoff.md
   Дальше:    /pm-sprint  — release scope defined, ready to plan sprint capacity and backlog
 ```
+
+Related skills: `/pm-sprint` (plan the sprint after the kickoff sets the release scope), `/pm-stakeholder` (map all stakeholders identified at kickoff), `/pm-plan` (build the full delivery plan from the kickoff brief)
 
 Write the above to `.pm/artifacts/kickoff.md`.
 

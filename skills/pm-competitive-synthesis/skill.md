@@ -14,6 +14,9 @@ artifact_output: .pm/artifacts/competitive-report.md
 - Read all competitor files before generating output
 - Base strategic conclusions on the data — flag gaps explicitly
 
+## Knowledge Base
+- `~/.headless/pm/knowledge/7-powers.md` — assess which of the 7 powers each competitor holds; frame strategic recommendations around building durable advantage, not catching up on features
+- `~/.headless/pm/knowledge/win-loss-analysis.md` — feed churned-customer and lost-deal patterns into the synthesis; competitive positioning gaps show up most clearly in win/loss data
 
 # /pm-competitive-synthesis — Competitive Synthesis Agent
 
@@ -46,6 +49,8 @@ Read:
 ```
 
 Write `.pm/artifacts/competitive-report.md`:
+
+Related skills: `/pm-competitive` (run individual competitor briefs before this synthesis), `/pm-positioning` (update positioning after synthesis), `/strategy-stack` (plug synthesis findings into the full strategy stack)
 
 ```markdown
 # Competitive Report — {date}

@@ -125,5 +125,7 @@ Consider: highest strategic value + biggest gap between current product fit and 
 **Expected impact:** [metric improvement]
 ```
 
+Related skills: `/attitudinal-segmentation` (layer attitudinal data on top of behavioral segments for richer profiles), `/pm-persona` (convert segments into named personas for design and communication), `/icp-definition` (identify which segment is the ideal customer and focus product investment there)
+
 If Notion MCP: create a User Segmentation database with each segment as a page with properties.
 If not: save `user-segmentation-[product]-[date].md`.

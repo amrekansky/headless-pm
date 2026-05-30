@@ -18,6 +18,9 @@ mcp_output:
 - When asking a question, always offer 3-4 ready-made options with a smart default; last option: "Enter your own"
 - Read all files listed in ## Knowledge Base before generating any output
 
+## Knowledge Base
+- `~/.headless/pm/knowledge/user-research-methods.md` — use behavioral observation and usability testing findings to write realistic edge-case scenarios that reflect actual user actions, not theoretical ones
+- `~/.headless/pm/knowledge/continuous-discovery.md` — acceptance criteria must trace back to a validated opportunity; criteria that can't be linked to a user outcome should be challenged
 
 ## Agent Input
 
@@ -80,6 +83,8 @@ Then [error message shown / fallback behavior]
 
 If Jira MCP: add AC to the story description, update DoD checklist.
 If not: output as markdown, paste into ticket manually.
+
+Related skills: `/pm-story` (write the user story before acceptance criteria), `/pm-define` (feature definition that acceptance criteria are derived from), `/pm-estimation` (estimate effort after AC is finalized)
 
 ## Agent Output
 

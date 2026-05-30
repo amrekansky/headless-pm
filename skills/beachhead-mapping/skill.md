@@ -72,6 +72,8 @@ Within the beachhead segment, identify the specific entry point:
 
 ### 5. Output
 
+Related skills: `/icp-definition` (define the ideal account profile within the beachhead), `/tam-sizing` (confirm beachhead is big enough to sustain the business), `/ansoff-matrix` (plan expansion beyond the beachhead)
+
 ```
 ## Beachhead Market Map — [Product Name]
 

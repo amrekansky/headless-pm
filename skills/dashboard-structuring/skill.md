@@ -81,6 +81,8 @@ For each metric in the dashboard:
 
 ### 5. Output
 
+Related skills: `/north-star-selection` (select the North Star before building the dashboard), `/pm-metrics` (define the full metric set for a product area), `/pm-okr` (align dashboard KPIs with quarterly OKRs)
+
 ```
 ## Dashboard Spec — [Product Area / Team]
 

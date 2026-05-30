@@ -242,6 +242,8 @@ Ask:
 
 Generate `go-nogo-checklist.md`:
 
+Related skills: `/pm-launch` (run the launch wizard after a GO decision), `/pm-release` (write release notes triggered by the GA release stage), `/pm-feature-flags` (manage the flag rollout that gates each lifecycle stage)
+
 ```
 ## Go/No-Go — [Product/Feature]
 Date: [YYYY-MM-DD HH:MM] | Decision: GO / NO-GO

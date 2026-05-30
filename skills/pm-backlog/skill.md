@@ -78,6 +78,8 @@ Action: [who does what by when]
 
 ### 4. Groomed backlog summary
 
+Related skills: `/pm-prioritize` (score and rank items after grooming), `/pm-sprint-plan` (pull groomed items into a sprint plan), `/pm-epic` (break down epics that need splitting before they can be groomed)
+
 ```
 ## Backlog Grooming — [date]
 

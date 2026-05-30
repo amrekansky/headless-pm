@@ -79,3 +79,5 @@ Activity 2: ...
 
 If Miro MCP: create story map board with activity swim lanes.
 If Jira MCP: create epic + child stories.
+
+Related skills: `/pm-epic` (define the epic before writing child stories), `/pm-acceptance` (write acceptance criteria linked to the story's DoD), `/pm-estimation` (size stories before pulling them into sprint planning)

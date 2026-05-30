@@ -75,6 +75,8 @@ Example: If North Star = "weekly active buyers" — anti-metrics might include "
 
 ### 7. Output
 
+Related skills: `/dashboard-structuring` (build the dashboard around the chosen North Star), `/pm-okr` (set the North Star target as a company-level OKR), `/growth-loops` (identify which loop drives the North Star metric)
+
 ```
 ## North Star Metric Selection — [Product Name]
 

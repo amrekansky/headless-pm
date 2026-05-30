@@ -14,6 +14,10 @@ artifact_output: .pm/artifacts/clusters.md
 - Read all interview files before generating any output
 - Only cluster signals that appear in the actual interviews — do not invent
 
+## Knowledge Base
+- `~/.headless/pm/knowledge/user-research-methods.md` — use affinity mapping principles when clustering: group by similarity of pain, not similarity of surface behavior; name clusters as problem statements
+- `~/.headless/pm/knowledge/continuous-discovery.md` — clusters feed directly into the opportunity solution tree as opportunity nodes; each cluster must be specific enough to generate solution hypotheses
+
 
 # /pm-cluster — Feedback Clustering Agent
 
@@ -51,6 +55,8 @@ Group pain points and signals by theme:
 ```
 
 Write `.pm/artifacts/clusters.md`:
+
+Related skills: `/cusdev` (run interviews that generate the input for this skill), `/feedback-triage` (pre-triage before clustering at volume), `/pm-hypothesis` (generate hypotheses from cluster themes)
 
 ```markdown
 # Feedback Clusters — {date}

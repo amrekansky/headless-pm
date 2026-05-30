@@ -92,5 +92,7 @@ A decision request must include:
 | [initiative] | [name/team] | [what done looks like] |
 ```
 
+Related skills: `/pm-brief` (shorter async brief for mid-week updates between digests), `/pm-status` (generate the raw status data that feeds the digest), `/pm-standup` (use standup summaries as the input for wins and blockers sections)
+
 If Notion MCP: create a Weekly Digest page in the team's PM workspace, add date to title.
 If not: save `weekly-digest-[date].md` and paste into Slack/email.

@@ -265,6 +265,8 @@ Ask:
 
 Generate `discovery-decision.md`:
 
+Related skills: `/cusdev` (run individual interviews within the discovery process), `/pm-hypothesis` (write structured hypotheses before interviews), `/pm-define` (proceed to feature definition after a GO decision)
+
 ```
 ## Discovery Decision — [Product/Idea]
 Date: [YYYY-MM-DD] | Decision owner: [name]

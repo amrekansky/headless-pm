@@ -113,5 +113,7 @@ When must this decision be made? What happens if it isn't? (plan collapses, cont
 [Supporting data, timeline details, stakeholder list]
 ```
 
+Related skills: `/pre-mortem` (surface risks before they require escalation), `/pm-stakeholder` (identify the right escalation target and their communication preferences), `/pm-incident-response` (escalate active incidents using this framework)
+
 If Notion MCP: create a Risk Escalation page in the PM workspace with status tracking.
 If not: send via email/Slack; save `escalation-[risk]-[date].md` for records.

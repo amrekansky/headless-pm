@@ -83,6 +83,8 @@ Identify 2-3 guardrails (e.g., "don't sacrifice retention to grow activation").
 
 ### 5. Output
 
+Related skills: `/north-star-selection` (formal process to select the North Star before building the framework), `/dashboard-structuring` (turn this framework into a structured dashboard), `/pm-okr` (align metric targets with OKR key results)
+
 ```
 ## Metrics Framework — [Product/Team]
 

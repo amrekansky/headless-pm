@@ -252,6 +252,8 @@ Ask:
 
 Generate `sign-off.md`:
 
+Related skills: `/pm-prd` (detailed PRD for the defined feature), `/pm-acceptance` (write acceptance criteria after definition), `/pm-epic` (break the definition into epics and stories)
+
 ```
 ## Stakeholder Sign-off — [Product/Feature]
 Date: [YYYY-MM-DD] | Deadline: [date]

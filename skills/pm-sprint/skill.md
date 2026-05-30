@@ -169,6 +169,8 @@ Try next sprint:
 If Miro MCP: create retro board with three columns, populate stickies.
 If not: save `retro-sprint-[N]-[date].md`.
 
+Related skills: `/pm-capacity` (plan team capacity before sprint start), `/pm-sprint-plan` (run planning to commit items), `/pm-retro` (close the sprint with a structured retrospective)
+
 ## Agent Output
 
 ## Agent Communication Protocol

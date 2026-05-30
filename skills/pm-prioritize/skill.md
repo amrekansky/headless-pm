@@ -101,6 +101,8 @@ Output four lists with brief rationale for each placement.
 
 ## Final output for any framework
 
+Related skills: `/pm-backlog` (groom before prioritizing), `/pm-sprint-plan` (fill the sprint with top-priority items after scoring), `/pm-roadmap` (align priority decisions with the roadmap horizon)
+
 ```
 ## Prioritization — [Context] — [Date]
 Framework: [RICE/ICE/MoSCoW]

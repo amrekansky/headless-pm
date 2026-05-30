@@ -241,6 +241,8 @@ No new questions — review the remaining backlog against the roadmap.
 
 Generate `backlog-groomed.md`:
 
+Related skills: `/pm-sprint-plan` (detailed sprint plan for the first sprint after planning), `/pm-okr` (set OKRs that the plan executes against), `/pm-dependencies` (map cross-team dependencies before finalizing the plan)
+
 ```
 ## Groomed Backlog — [Product/Team]
 Date: [YYYY-MM-DD] | Owner: [name]

@@ -84,6 +84,8 @@ Find 2-3 companies that targeted a similar market and report their revenue at co
 
 ### 7. Output
 
+Related skills: `/tam-sizing` (detailed TAM/SAM/SOM calculation), `/beachhead-mapping` (pick the segment to win within the sized market), `/ansoff-matrix` (use market size to choose growth vector)
+
 ```
 ## Market Sizing — [Product / Market]
 

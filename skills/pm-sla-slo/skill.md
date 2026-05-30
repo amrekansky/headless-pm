@@ -14,6 +14,9 @@ mcp_output:
 - When asking a question, always offer 3-4 ready-made options with a smart default; last option: "Enter your own"
 - Read all files listed in ## Knowledge Base before generating any output
 
+## Knowledge Base
+- `~/.headless/pm/knowledge/compliance-basics.md` — apply GDPR/HIPAA/CCPA PM notification obligations when an SLO breach triggers regulatory reporting requirements; use the breach window timelines when drafting customer SLA remedies
+- `~/.headless/pm/knowledge/technical-concepts-for-pms.md` — use system design vocabulary (error budget, burn rate, SLI/SLO/SLA) fluently; understand the engineering implications of each reliability target you set
 
 # /pm-sla-slo — SLA & SLO Definition
 
@@ -180,6 +183,8 @@ Ask:
 2. "What are the penalties for SLA breach — service credits, contract termination, manual review?"
 
 Generate `customer-sla.md`:
+
+Related skills: `/pm-incident-response` (track breaches during incidents), `/pm-postmortem` (document SLO breaches in postmortems), `/dashboard-structuring` (display SLO burn rate on the team dashboard)
 
 ```
 ## Customer SLA — [Product] — v[N]

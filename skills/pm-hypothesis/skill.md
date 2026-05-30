@@ -76,6 +76,8 @@ Priority = Importance × Uncertainty × Testability
 
 ### 4. Output
 
+Related skills: `/cusdev` (run interviews to validate or refute the top hypotheses), `/brainstorm-experiments` (design experiments that test the hypotheses), `/pm-cluster` (cluster interview data before generating hypotheses)
+
 ```
 ## Hypotheses — [Topic]
 

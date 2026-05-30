@@ -56,6 +56,8 @@ For each stage, populate:
 
 ### 4. Output (text version)
 
+Related skills: `/pm-persona` (build the persona before mapping their journey), `/pm-jtbd` (identify the jobs-to-be-done that drive each journey stage), `/pm-discovery` (use CJM pain points as inputs to discovery)
+
 ```
 ## Customer Journey Map — [Journey Name]
 Persona: [name] | State: [current/future] | Date: [YYYY-MM-DD]

@@ -38,6 +38,8 @@ Ask: "What's happened this week / sprint? What's coming? Any blockers or decisio
 
 ## Output
 
+Related skills: `/weekly-digest` (full weekly digest with metrics for broader stakeholders), `/pm-status` (detailed status update for project tracking), `/pm-exec-brief` (escalated executive brief for strategic decisions)
+
 ```
 ## PM Brief — [Week of / Sprint N] — [date]
 

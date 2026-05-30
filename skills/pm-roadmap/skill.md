@@ -89,6 +89,8 @@ For each stakeholder, anticipate:
 
 ## Step 5 — Output
 
+Related skills: `/pm-okr` (set OKRs that the roadmap executes against), `/pm-prioritize` (score and rank initiatives before building the roadmap), `/strategy-stack` (ensure the roadmap fits into the full strategy stack)
+
 ```
 # Product Roadmap — [Team/Product] — [Quarter]
 

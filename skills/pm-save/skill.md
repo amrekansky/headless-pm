@@ -183,6 +183,8 @@ If the commit fails, report the reason and continue to Step 11 — do not stop.
 
 Output a completion summary:
 
+Related skills: `/pm-radar` (run at the start of the next session to restore situational awareness), `/pm-standup` (generate the standup update after saving the session), `/pm-status` (share a status update with stakeholders after saving)
+
 ```
 ✅ context.md updated
 ✅ CLAUDE.md updated

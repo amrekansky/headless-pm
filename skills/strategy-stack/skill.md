@@ -133,5 +133,7 @@ Owner: [role]
 **Gap 3:** ...
 ```
 
+Related skills: `/ansoff-matrix` (use Ansoff to stress-test the strategy layer's growth direction), `/swot-analysis` (run SWOT before auditing the strategy layer to surface external threats and internal gaps), `/vision-setting` (define or refine the vision layer before auditing stack alignment)
+
 If Notion MCP: create a Strategy Stack page with each layer as a section and alignment database.
 If not: save `strategy-stack-[company]-[date].md`.

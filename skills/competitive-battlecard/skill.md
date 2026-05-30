@@ -65,6 +65,8 @@ Example: "When you're evaluating tools, how important is it that you can export 
 
 ### 6. Output
 
+Related skills: `/pm-competitive` (broader competitive landscape analysis), `/icp-definition` (understand which ICP segments competitors target), `/pm-positioning` (update positioning after battlecard analysis)
+
 ```
 ## Battle Card — vs [Competitor Name]
 

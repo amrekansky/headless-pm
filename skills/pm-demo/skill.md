@@ -17,6 +17,10 @@ mcp_output:
 
 # /pm-demo — Sprint Demo Prep
 
+## Knowledge Base
+- `~/.headless/pm/knowledge/pyramid-principle.md` — open the demo with the sprint goal verdict (BLUF), then show results — never bury the headline in the middle of feature demos
+- `~/.headless/pm/knowledge/shape-up.md` — frame demo items as "scope completed" rather than task completion; use hill chart language to show progress against the shaped work
+
 ## Output Template
 Every response MUST include:
 - **Sprint goal verdict:** hit / partial / missed — one sentence explanation
@@ -33,6 +37,8 @@ Ask:
 3. "How long is the demo slot?"
 
 ## Demo script
+
+Related skills: `/pm-retro` (run the retrospective after the demo), `/pm-status` (send a status update to stakeholders before the demo), `/pm-sprint` (review sprint metrics alongside the demo)
 
 ```
 ## Sprint [N] Demo — [date]

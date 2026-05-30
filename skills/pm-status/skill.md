@@ -84,6 +84,8 @@ Ask:
 - [Decision] — needed from [who] — by [when]
 ```
 
+Related skills: `/pm-exec-brief` (compress the status report into a board-ready executive brief), `/weekly-digest` (roll up status reports into the weekly stakeholder digest), `/pm-standup` (use daily standups as the input data source for status reports)
+
 If Confluence MCP: create/update status page in project space.
 If Slack MCP: post summary to #product-updates or #[project] channel.
 If Notion: save to project page.

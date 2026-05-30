@@ -160,6 +160,8 @@ Ask:
 
 Generate `roadmap-impact.md`:
 
+Related skills: `/feedback-triage` (triage all feedback including NPS verbatims), `/pm-prioritize` (prioritize backlog items based on NPS roadmap impact), `/pm-customer-health` (use NPS as a health score dimension)
+
 ```
 ## Roadmap Impact — NPS/CSAT [Period]
 

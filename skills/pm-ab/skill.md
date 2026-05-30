@@ -46,6 +46,8 @@ Ask:
 
 ## Output
 
+Related skills: `/brainstorm-experiments` (generate experiment ideas before designing this test), `/pm-hypothesis` (write the hypothesis before running this skill), `/funnel-analysis` (identify which funnel step to test)
+
 ```
 ## A/B Test — [Name]
 Date: [YYYY-MM-DD]

@@ -108,5 +108,7 @@ Label each estimate: High (data-backed), Medium (estimated from proxies), Low (a
 | Penetration rate | [%] | [%/2] | [%×1.5] | $[range] |
 ```
 
+Related skills: `/market-sizing` (detailed market sizing workflow before TAM/SAM/SOM summary), `/beachhead-mapping` (use SOM to define the beachhead segment to enter first), `/icp-definition` (ICP defines who is in the SAM — run it before the bottom-up calculation)
+
 If Notion MCP: create a Market Sizing page with both methods as toggle sections and sensitivity table.
 If not: save `tam-sizing-[market]-[date].md`.

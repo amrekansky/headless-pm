@@ -14,6 +14,9 @@ mcp_output:
 - When asking a question, always offer 3-4 ready-made options with a smart default; last option: "Enter your own"
 - Read all files listed in ## Knowledge Base before generating any output
 
+## Knowledge Base
+- `~/.headless/pm/knowledge/compliance-basics.md` — check GDPR data deletion and CCPA opt-out obligations before setting the EOL date; regulated data must be purged on schedule, not just feature-flagged off
+- `~/.headless/pm/knowledge/enterprise-b2b-motion.md` — enterprise accounts require individual outreach with named CSM ownership; use QBR framing to introduce deprecation plans before sending mass comms
 
 # /pm-sunset-deprecation — Sunset & Deprecation
 
@@ -265,6 +268,8 @@ Generate `sunset-execution.md`:
 ```
 
 Progress: `[✓ EOL decision] → [✓ Migration path] → [✓ Support window] → [✓ Customer comms] → [✓ Execution]`
+
+Related skills: `/pm-decision` (frame the EOL decision with options and recommendation before announcing), `/pm-customer-health` (identify at-risk accounts before deprecation comms), `/pm-gtm` (plan the replacement product launch to run in parallel with the sunset)
 
 ## Rules
 

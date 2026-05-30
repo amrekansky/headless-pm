@@ -79,6 +79,8 @@ Retention (week 2): [X%]
 
 ### Output
 
+Related skills: `/pm-learn` (run the post-launch learning cycle after adoption review), `/brainstorm-experiments` (design experiments to improve the weakest adoption stage), `/pm-metrics` (set adoption targets before launch)
+
 ```
 ## Adoption Report — [Feature] — [date]
 Launch: [date] ([N weeks ago])

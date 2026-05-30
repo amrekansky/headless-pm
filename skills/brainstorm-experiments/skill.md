@@ -92,6 +92,8 @@ For each top experiment:
 
 ### 5. Output
 
+Related skills: `/pm-hypothesis` (write the hypothesis before this skill), `/pm-ab` (run a specific A/B test after backlog is defined), `/growth-loops` (identify which loop the experiment is meant to strengthen)
+
 ```
 ## Experiment Backlog — [Product / Goal]
 

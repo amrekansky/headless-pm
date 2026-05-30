@@ -71,6 +71,8 @@ Before finalizing, verify for each version:
 
 ### 5. Output
 
+Related skills: `/pm-exec-brief` (executive-only communication for strategic decisions), `/pm-status` (structured status update across audiences), `/weekly-digest` (recurring stakeholder communication format)
+
 ```
 ## Audience-Tailored Communication — [Topic]
 

@@ -89,6 +89,8 @@ Ask: "How will you know you've hit the objective? What changes in user behavior 
 
 ### Step 4 — Output
 
+Related skills: `/pm-roadmap` (build the roadmap that executes on the OKRs), `/north-star-selection` (select the North Star metric that the OKRs should drive), `/pm-metrics` (define input metrics that predict OKR key result movement)
+
 ```
 ## OKR — [Team] — Q[N] [Year]
 

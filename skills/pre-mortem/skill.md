@@ -114,5 +114,7 @@ Based on the risk landscape, recommend:
 **Rationale:** [1-2 sentences]
 ```
 
+Related skills: `/pm-decision` (follow the pre-mortem with a structured decision framework), `/pm-hypothesis` (convert pre-mortem risks into testable hypotheses before launch), `/risk-escalation` (escalate any pre-mortem risk that exceeds team authority to resolve)
+
 If Notion MCP: create a Pre-Mortem page with risk database (likelihood, impact, mitigation, owner columns).
 If not: save `pre-mortem-[initiative]-[date].md`.

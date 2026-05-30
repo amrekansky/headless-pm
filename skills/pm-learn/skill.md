@@ -175,6 +175,8 @@ If not: save next-cycle-brief.md.
 
 After each completed stage, output this tracker:
 
+Related skills: `/pm-retro` (focused retrospective within the learning cycle), `/pm-postmortem` (full postmortem if an incident occurred during the cycle), `/pm-discovery` (start the next discovery cycle after learnings are captured)
+
 ```
 → Metrics Review — in progress
 ○ Retro

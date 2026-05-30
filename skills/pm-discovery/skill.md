@@ -78,6 +78,8 @@ When user says they've completed interviews:
 
 ### Phase 5 — Outcome
 Produce Discovery Summary:
+Related skills: `/pm-discover` (full 5-stage discovery wizard with artifact generation), `/cusdev` (individual interview guide and synthesis), `/pm-define` (proceed to feature definition after discovery validates the problem)
+
 ```
 ## Discovery Summary — [Feature/Initiative]
 Date: [YYYY-MM-DD]

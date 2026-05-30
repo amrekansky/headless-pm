@@ -70,6 +70,8 @@ Identify ONE specific change to try next sprint:
 
 ### Output
 
+Related skills: `/pm-sprint` (review sprint metrics before the retro), `/pm-learn` (the full learning cycle that wraps the retro), `/pm-postmortem` (run a postmortem if the sprint had a significant incident)
+
 ```
 ## Retro — Sprint [N] — [date]
 

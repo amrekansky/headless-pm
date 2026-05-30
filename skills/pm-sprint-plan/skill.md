@@ -81,3 +81,5 @@ Total: [N] SP
 
 If Jira MCP: create sprint, move selected issues in, set sprint goal.
 If Linear MCP: create cycle with selected issues.
+
+Related skills: `/pm-capacity` (confirm team capacity before committing sprint items), `/pm-backlog` (groom and prioritize candidates before planning), `/pm-estimation` (size stories before pulling them into the sprint)

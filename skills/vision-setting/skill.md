@@ -87,5 +87,7 @@ Instead, they [new reality].
 [The one metric that best represents this vision being achieved]
 ```
 
+Related skills: `/strategy-stack` (map the vision to the full strategy stack after it is defined), `/pm-okr` (translate the vision's implied North Star into measurable quarterly OKRs), `/north-star-selection` (formally select the North Star metric implied by the vision statement)
+
 If Notion MCP: create a Vision page with all sections; pin to the team's workspace home.
 If not: save `vision-[product]-[date].md`.

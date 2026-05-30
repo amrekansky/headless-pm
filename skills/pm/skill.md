@@ -12,6 +12,9 @@ description: Agentic PM orchestrator. Reads .pm/STATE.md for instant resume, spa
 - When asking a question, always offer 3-4 ready-made options with a smart default; last option: "Enter your own"
 - Read all files listed in ## Knowledge Base before generating any output
 
+## Knowledge Base
+- `~/.headless/pm/knowledge/dual-track-agile.md` — use dual-track framing when orchestrating discovery and delivery agents in parallel; never mix discovery outputs into sprint commitments
+- `~/.headless/pm/knowledge/okr-implementation.md` — route all orchestration decisions through the OKR lens; each agent chain should advance at least one active key result
 
 # /pm — AI Chief of Staff
 
@@ -357,6 +360,8 @@ Atomic tasks → spawn ONE agent:
 | what should I do / triage | run triage mode | — |
 
 ---
+
+Related skills: `/pm-radar` (run at session start to get situational awareness before orchestrating), `/pm-discover` (entry point for all discovery work), `/pm-plan` (entry point for quarterly planning and OKR-roadmap-sprint alignment)
 
 ## Triage mode
 

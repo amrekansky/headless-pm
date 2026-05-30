@@ -81,6 +81,8 @@ For the #1 drop-off:
 
 ### 7. Output
 
+Related skills: `/growth-loops` (after fixing the funnel, model compounding loop dynamics), `/brainstorm-experiments` (generate fix experiments for the priority drop-off), `/pm-nps-csat` (correlate NPS patterns with funnel drop-off segments)
+
 ```
 ## Funnel Analysis — [Funnel Name]
 

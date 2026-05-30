@@ -90,6 +90,8 @@ Factors that are currently Medium but trending toward High — need monitoring c
 
 ### 6. Output
 
+Related skills: `/swot-analysis` (combine PESTLE external factors with internal SWOT), `/strategy-stack` (feed PESTLE findings into the full strategy stack), `/risk-escalation` (escalate high-impact PESTLE threats to leadership)
+
 ```
 ## PESTLE Analysis — [Market/Product/Geography]
 

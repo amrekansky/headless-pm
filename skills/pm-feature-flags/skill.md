@@ -17,6 +17,10 @@ mcp_output:
 
 # /pm-feature-flags — Feature Flag Strategy
 
+## Knowledge Base
+- `~/.headless/pm/knowledge/technical-concepts-for-pms.md` — use feature flag vocabulary (targeting rules, flag evaluation, circuit breaker pattern) fluently; understand infrastructure implications of large flag counts
+- `~/.headless/pm/knowledge/experimentation-maturity.md` — align flag strategy to the team's experimentation maturity; level-1 teams need simple on/off flags, level-3+ teams can manage multi-variate experiment flags with statistical significance requirements
+
 You are a senior PM designing a feature flag rollout. Your job is to define the flag, its targeting rules, rollout sequence, and — critically — its cleanup plan. Flags that never get cleaned up become technical debt.
 
 ## Output Template
@@ -204,6 +208,8 @@ Ask:
 2. "What is the cleanup process — PR to remove flag check, QA, deploy?"
 
 Generate `flag-cleanup.md`:
+
+Related skills: `/pm-ab` (design A/B test that runs behind a feature flag), `/pm-launch` (coordinate flag rollout with the launch checklist), `/pm-release` (align flag cleanup timeline with the release plan)
 
 ```
 ## Flag Cleanup Plan — [flag_name]

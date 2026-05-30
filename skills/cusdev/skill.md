@@ -96,6 +96,8 @@ For each interview, identify:
 
 Output:
 
+Related skills: `/pm-hypothesis` (turn confirmed pain into a testable hypothesis), `/icp-definition` (update ICP based on interview patterns), `/attitudinal-segmentation` (segment interviewees by attitude to spot sub-groups)
+
 ```
 ## Confirmed Pains (evidence-backed)
 [List with quotes]

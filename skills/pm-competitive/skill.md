@@ -56,6 +56,8 @@ Ask:
 
 ### 2. Produce brief per competitor
 
+Related skills: `/competitive-battlecard` (turn this brief into a sales battle card), `/pm-competitive-synthesis` (synthesize multiple competitor briefs into a strategic report), `/pm-positioning` (update positioning based on competitive findings)
+
 ```
 ## Competitive Brief — [Competitor Name]
 _Date: [YYYY-MM-DD]_

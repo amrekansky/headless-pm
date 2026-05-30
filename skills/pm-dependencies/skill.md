@@ -17,6 +17,10 @@ mcp_output:
 
 # /pm-dependencies — Dependency Map
 
+## Knowledge Base
+- `~/.headless/pm/knowledge/dual-track-agile.md` — track discovery dependencies separately from delivery dependencies; discovery blockers require different resolution paths than engineering blockers
+- `~/.headless/pm/knowledge/shape-up.md` — use Shape Up's scope mapping to identify which dependencies are within a shaped bet vs. outside it; external dependencies are a risk to the bet's fixed-time constraint
+
 ## Output Template
 Every response MUST include:
 - **Critical path:** linear chain from first dependency to ship date
@@ -46,6 +50,8 @@ For each team/system pair:
 - **External** (outside your control — 3rd party, other BU)
 
 ### Output
+
+Related skills: `/pm-epic` (identify epic-level dependencies before detailing stories), `/pm-plan` (integrate dependency map into the delivery plan), `/risk-escalation` (escalate hard dependencies that block the critical path)
 
 ```
 ## Dependency Map — [Initiative]

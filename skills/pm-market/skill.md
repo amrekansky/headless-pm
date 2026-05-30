@@ -73,6 +73,8 @@ SOM = SAM × [realistic market share %]
 
 ### 3. Output
 
+Related skills: `/tam-sizing` (deeper TAM/SAM/SOM methodology), `/market-sizing` (alternative market sizing approach with sensitivity analysis), `/beachhead-mapping` (pick the segment to win within the sized market)
+
 ```
 ## Market Sizing — [Product/Segment]
 _Methodology: bottom-up | top-down | hybrid_

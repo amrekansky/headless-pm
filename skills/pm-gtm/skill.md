@@ -110,6 +110,8 @@ Produce release notes in three formats:
 Ask: "What metric proves this feature is being used successfully?"
 
 Define:
+Related skills: `/pm-positioning` (position the feature before planning the launch), `/pm-launch` (detailed launch checklist and go-live coordination), `/icp-definition` (confirm the beachhead segment before GTM planning)
+
 ```
 Success metric: [metric name]
 Target: [value] by [date]

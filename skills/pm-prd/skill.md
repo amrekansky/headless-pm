@@ -63,6 +63,8 @@ If from scratch: ask the minimum questions below.
 
 ## PRD structure
 
+Related skills: `/pm-epic` (decompose the PRD into epics and stories), `/pm-acceptance` (write acceptance criteria for each PRD requirement), `/pm-define` (the full feature definition process that this PRD is part of)
+
 ```markdown
 # PRD — [Feature Name]
 _Owner: [PM name] | Status: Draft | Date: [YYYY-MM-DD]_

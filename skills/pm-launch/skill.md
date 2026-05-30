@@ -274,6 +274,8 @@ No new questions — generate the final go-live checklist from all previous stag
 
 Generate `launch-checklist.md`:
 
+Related skills: `/pm-gtm` (orchestrates the full GTM including this launch skill), `/pm-release` (produce release notes before the launch checklist), `/pm-learn` (run the post-launch learning cycle after the checklist completes)
+
 ```
 ## Launch Day Checklist — [Product/Feature]
 Date: [YYYY-MM-DD] | Owner: [name]

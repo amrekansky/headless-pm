@@ -74,6 +74,8 @@ We fixed [N] issues including [most impactful one].
 ```
 
 ### Executive summary
+Related skills: `/pm-launch` (coordinate the launch around these release notes), `/pm-gtm` (build the full go-to-market from the release), `/audience-tailoring` (adapt release notes for different audiences beyond the three default formats)
+
 ```
 [Product] released [N] updates on [date]:
 [Feature 1] — [one-line business impact]

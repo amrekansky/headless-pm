@@ -105,5 +105,7 @@ One action that either: captures the highest-value SO combination, or neutralize
 **Timeline:** [when]
 ```
 
+Related skills: `/pestle-analysis` (run PESTLE before SWOT to populate the Opportunities and Threats quadrants with macro forces), `/strategy-stack` (map SWOT outputs to the strategy layer of the stack), `/pm-prioritize` (prioritize strategic actions that emerge from the SWOT implications)
+
 If Notion MCP: create a SWOT page with a 2x2 grid and linked strategy database.
 If not: save `swot-[scope]-[date].md`.

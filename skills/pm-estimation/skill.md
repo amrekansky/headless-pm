@@ -15,6 +15,10 @@ artifact_output: .pm/artifacts/estimation-{name}.md
 - State assumptions explicitly — never hide them in the estimate
 - Calibrate to team velocity from .pm/STATE.md if available
 
+## Knowledge Base
+- `~/.headless/pm/knowledge/technical-concepts-for-pms.md` — use the technical complexity vocabulary (API surface area, data migration risk, third-party dependencies) to justify estimate assumptions rather than treating complexity as a black box
+- `~/.headless/pm/knowledge/shape-up.md` — if an item exceeds the team's appetite for one cycle, flag it for scope hammering before committing to an estimate; appetite beats effort when deadlines are fixed
+
 
 # /pm-estimation — Estimation Agent
 
@@ -55,6 +59,8 @@ Use modified Fibonacci: 1, 2, 3, 5, 8, 13, 21
 ```
 
 Write `.pm/artifacts/estimation-{name}.md`:
+
+Related skills: `/pm-acceptance` (write acceptance criteria before estimating), `/pm-capacity` (compare estimate to team capacity before sprint commitment), `/pm-sprint-plan` (use estimates to fill the sprint plan)
 
 ```markdown
 # Estimation: {feature name}

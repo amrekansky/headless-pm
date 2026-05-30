@@ -52,6 +52,8 @@ From the input, extract:
 
 ### 3. Build the persona card
 
+Related skills: `/pm-jtbd` (map the jobs-to-be-done underlying the persona), `/attitudinal-segmentation` (segment personas by attitude rather than demographics), `/pm-cjm` (map the persona's journey through the product)
+
 ```
 ## [Behavioral Name]
 

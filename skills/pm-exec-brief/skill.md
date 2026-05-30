@@ -63,6 +63,8 @@ Ask:
 
 ## Output
 
+Related skills: `/pm-status` (detailed status report that feeds the exec brief), `/pm-stakeholder` (identify the right stakeholders before writing the brief), `/audience-tailoring` (adapt the brief for different executive audiences)
+
 ```
 ## [Topic] — Executive Brief
 Date: [YYYY-MM-DD] | Prepared by: [name] | For: [audience]

@@ -164,6 +164,8 @@ For each Red or high-priority Yellow account, generate a brief for CSM/Sales:
 
 Generate `escalation-brief-[account].md`:
 
+Related skills: `/pm-nps-csat` (enrich health scores with NPS/CSAT signals), `/pm-metrics` (define the product usage metrics that feed into health dimensions), `/pm-roadmap` (align roadmap priorities with at-risk account recovery plans)
+
 ```
 ## Escalation Brief — [Account Name] — [Date]
 CSM: [name]  |  Account exec: [name]  |  ARR: $[N]  |  Renewal: [date]

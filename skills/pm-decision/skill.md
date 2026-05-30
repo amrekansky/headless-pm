@@ -52,6 +52,8 @@ For each option:
 
 ### 3. Output
 
+Related skills: `/pre-mortem` (stress-test the decision before it's final), `/pm-stakeholder` (identify who needs to be involved in the decision), `/pm-postmortem` (reflect on the decision outcome after implementation)
+
 ```
 ## Decision Record — [Title]
 Date: [YYYY-MM-DD]

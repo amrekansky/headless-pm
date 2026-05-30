@@ -17,6 +17,10 @@ mcp_output:
 
 # /pm-capacity — Capacity Planning
 
+## Knowledge Base
+- `~/.headless/pm/knowledge/shape-up.md` — use Shape Up's appetite concept alongside capacity; capacity tells you how many days you have, appetite tells you how many you're willing to spend on a given problem
+- `~/.headless/pm/knowledge/dual-track-agile.md` — reserve a portion of sprint capacity for discovery work; delivery-only sprints erode product quality over time
+
 ## Output Template
 Every response MUST include:
 - **Headcount:** N people, names of OOO with dates
@@ -57,6 +61,8 @@ Story point conversion:
 ```
 
 Output:
+Related skills: `/pm-sprint-plan` (use capacity output to fill the sprint), `/pm-dependencies` (check cross-team dependencies before committing capacity), `/pm-estimation` (estimate items before applying capacity targets)
+
 ```
 ## Capacity — Sprint [N]
 Team: [N] engineers

@@ -109,5 +109,7 @@ For a healthy product team at [stage]:
 Current distribution: [assessment vs. recommended]
 ```
 
+Related skills: `/pm-prioritize` (score and rank items once they are classified at the correct level), `/pm-roadmap` (ensure roadmap themes are distributed across levels appropriately), `/pm-okr` (map work levels to the OKR hierarchy — feature → input metric, product → product KPI, company → North Star)
+
 If Notion MCP: create a Work Levels dashboard with classification database.
 If not: save `work-levels-[team]-[date].md`.

@@ -14,6 +14,9 @@ artifact_output: .pm/situation.md
 - Read all listed files before generating any output
 - Never invent data — only report what you actually read
 
+## Knowledge Base
+- `~/.headless/pm/knowledge/metrics-taxonomy.md` — use the metric hierarchy to assess sprint health signals; flag when velocity drops or burn rate is off track relative to OKR targets
+- `~/.headless/pm/knowledge/okr-implementation.md` — cross-reference artifact gaps against OKR milestone dates; prioritize the recommended workflow that unblocks the most at-risk key result
 
 # /pm-radar — Situational Awareness Agent
 
@@ -66,6 +69,8 @@ After reading all sources, analyze:
 ## Agent Output
 
 Write `.pm/situation.md` with exactly this structure:
+
+Related skills: `/pm-kickoff` (start a release cycle after radar recommends it), `/pm-sprint` (review sprint metrics surfaced by radar), `/pm` (the orchestrator that uses radar output to route to the right workflow)
 
 ```markdown
 # Situation — {YYYY-MM-DD}

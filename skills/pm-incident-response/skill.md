@@ -180,6 +180,8 @@ Ask:
 
 Generate `postmortem-kickoff.md`:
 
+Related skills: `/pm-postmortem` (run the full postmortem after the incident is resolved), `/pm-sla-slo` (review SLA/SLO commitments that were breached), `/risk-escalation` (escalate incidents that exceed the on-call team's authority)
+
 ```
 ## Postmortem — [Incident Name] — [Date]
 Owner: [name]  |  Meeting: [YYYY-MM-DD HH:MM]  |  Attendees: [list]

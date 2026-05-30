@@ -73,6 +73,8 @@ For each segment:
 
 ### 6. Output
 
+Related skills: `/icp-definition` (translate attitudinal segments into a firmographic ICP), `/user-segmentation` (combine attitudinal + behavioral segmentation), `/pm-persona` (build a persona for each prioritized segment)
+
 ```
 ## Attitudinal Segmentation — [Product / Domain]
 
@@ -122,3 +124,4 @@ If only segment, we'd build: [what would change]
 
 If Notion MCP: create an Attitudinal Segmentation page with each segment as a card with properties.
 If not: save `attitudinal-segments-[product]-[date].md`.
+

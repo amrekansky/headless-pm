@@ -74,4 +74,6 @@ When results come in, look for:
 For 95% confidence ±5% margin: [N responses]
 ```
 
+Related skills: `/cusdev` (run qualitative interviews before designing the survey to generate the hypotheses it will test), `/pm-nps-csat` (use survey design principles when crafting NPS/CSAT questionnaires), `/pm-hypothesis` (ensure each survey question maps to a falsifiable hypothesis)
+
 If not Notion: save `survey-[topic]-[date].md`.

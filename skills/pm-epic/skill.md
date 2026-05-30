@@ -63,6 +63,8 @@ For epic: sum of features + 20% buffer
 
 ### 5. Output
 
+Related skills: `/pm-story` (write individual stories within the epic), `/pm-estimation` (estimate the epic stories after decomposition), `/pm-backlog` (groom the resulting stories into the backlog)
+
 ```
 ## Epic: [Name]
 Outcome: [what this delivers]
