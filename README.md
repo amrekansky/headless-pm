@@ -6,7 +6,7 @@
 [![npm downloads](https://img.shields.io/npm/dm/headless-pm)](https://www.npmjs.com/package/headless-pm)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-PM toolkit for Claude Code, Gemini CLI, and Codex CLI. One command installs 51 skills, a 40-file knowledge base, and MCP server connections — so your AI assistant thinks like a product manager, not a generic chatbot.
+PM toolkit for Claude Code, Gemini CLI, and Codex CLI. One command installs 88 skills, a 59-file knowledge base, and MCP server connections — so your AI assistant thinks like a product manager, not a generic chatbot.
 
 ## Install
 
@@ -23,8 +23,9 @@ New to the terminal? → **[Getting Started Guide](docs/getting-started.md)** �
 ## What You Get
 
 - **/pm** — agentic orchestrator that reads your `.pm/` workspace (sprint state, backlog, context) and routes to the right skill automatically
-- **51 PM skills** across 7 categories, each grounded in the knowledge base with concrete output templates
-- **40-file knowledge base** — 7 Powers, AARRR, Mom Test, North Star, Crossing the Chasm, Van Westendorp, and more — installed to `~/.headless/pm/knowledge/`
+- **88 PM skills** across 17 categories, each grounded in the knowledge base with concrete output templates and workflow cross-links
+- **59-file knowledge base** — 7 Powers, AARRR, Jobs-to-be-Done, April Dunford positioning, Crossing the Chasm, Lean Startup, Shape Up, and more — installed to `~/.headless/pm/knowledge/`
+- **Cross-linked workflows** — every skill lists related skills to follow; `/pm-hypothesis` leads to `/brainstorm-experiments` leads to `/pm-ab` — no more dead ends
 - **MCP integrations** — Notion, Linear, Jira, Miro, Exa, Google Sheets, Figma, Slack, GitHub
 - **Works with** Claude Code, Gemini CLI, and Codex CLI — all three, or just one
 
@@ -57,15 +58,23 @@ Common entry points:
 
 | Category | Skills |
 |---|---|
-| Orchestrator | pm, cusdev |
-| Discovery / Research | pm-discover, pm-discovery, pm-hypothesis, pm-jtbd, pm-persona, pm-cjm, pm-survey, pm-market, pm-learn, pm-nps-csat |
-| Definition | pm-define, pm-prd, pm-story, pm-epic, pm-acceptance |
-| Sprint / Delivery | pm-sprint, pm-sprint-plan, pm-backlog, pm-capacity, pm-standup, pm-status, pm-demo, pm-retro, pm-dependencies |
-| Strategy / OKR | pm-okr, pm-roadmap, pm-plan, pm-portfolio, pm-prioritize, pm-brief, pm-exec-brief |
-| GTM / Market | pm-gtm, pm-launch, pm-competitive, pm-positioning, pm-pricing-changes |
-| Stakeholder / Comms | pm-stakeholder, pm-decision |
-| Metrics / Growth | pm-metrics, pm-ab, pm-feature-flags, pm-adoption, pm-customer-health |
-| Ops / Incidents | pm-incident-response, pm-postmortem, pm-sla-slo, pm-release, pm-release-lifecycle, pm-sunset-deprecation |
+| Orchestrator | `/pm` |
+| Customer Development | `/cusdev`, `/switch-interview`, `/continuous-interview-synthesis` |
+| Discovery & Research | `/pm-discover`, `/pm-discovery`, `/pm-define`, `/pm-hypothesis`, `/pm-learn`, `/pm-market`, `/pm-cjm`, `/opportunity-solution-tree` |
+| JTBD & Segmentation | `/pm-jtbd`, `/pm-persona`, `/attitudinal-segmentation`, `/user-segmentation` |
+| Survey & Feedback | `/pm-survey`, `/pm-nps-csat`, `/feedback-triage`, `/pm-cluster` |
+| Definition & Spec | `/pm-prd`, `/pm-story`, `/pm-epic`, `/pm-acceptance`, `/pm-brief` |
+| Sprint & Delivery | `/pm-sprint`, `/pm-sprint-plan`, `/pm-backlog`, `/pm-capacity`, `/pm-estimation`, `/pm-dependencies`, `/pm-kickoff`, `/pm-standup`, `/pm-status`, `/pm-demo`, `/pm-retro`, `/pm-save` |
+| Strategy | `/strategy-stack`, `/vision-setting`, `/product-work-levels`, `/ansoff-matrix`, `/swot-analysis`, `/pestle-analysis`, `/pm-radar` |
+| OKR & Roadmap | `/pm-okr`, `/pm-roadmap`, `/pm-portfolio`, `/pm-prioritize`, `/pm-plan` |
+| Market & Sizing | `/tam-sizing`, `/market-sizing`, `/beachhead-mapping` |
+| Positioning & Messaging | `/positioning-five-component`, `/icp-definition`, `/messaging-hierarchy`, `/pm-positioning`, `/competitive-battlecard` |
+| Competitive | `/pm-competitive`, `/pm-competitive-synthesis` |
+| GTM & Launch | `/pm-gtm`, `/pm-launch`, `/pm-feature-flags`, `/pm-release`, `/pm-release-lifecycle`, `/pm-pricing-changes` |
+| Stakeholder & Comms | `/pm-stakeholder`, `/pm-exec-brief`, `/risk-escalation`, `/audience-tailoring`, `/weekly-digest` |
+| Metrics & Analytics | `/pm-metrics`, `/north-star-selection`, `/funnel-analysis`, `/dashboard-structuring`, `/pm-ab`, `/pm-adoption`, `/pm-customer-health`, `/pm-analyst`, `/growth-loops` |
+| Experiments & Risk | `/assumption-mapping`, `/brainstorm-experiments`, `/lean-canvas`, `/pre-mortem`, `/pm-decision` |
+| Ops & Incidents | `/pm-incident-response`, `/pm-postmortem`, `/pm-sla-slo`, `/pm-sunset-deprecation` |
 
 ---
 
@@ -121,6 +130,12 @@ Get a license: [headlesspm.com](https://headlesspm.com)
 ---
 
 ## What's New
+
+### v0.7.13 — Full cross-link graph + expanded knowledge base
+- All 88 skills now have "Related skills:" cross-links — every skill points to the next one in the workflow
+- Knowledge base expanded to 59 files: added Jobs-to-be-Done (Moesta/Christensen/Ulwick) and April Dunford positioning
+- 37 new skills added since v0.6.x: strategy, positioning, experiments, segmentation, comms, and more
+- Zero isolated skills — every workflow chain is navigable end-to-end
 
 ### v0.7.10 — Zombie skill cleanup
 - `update` command now removes skills that were deleted in newer versions — no stale `/pm-*` commands left behind after upgrade
