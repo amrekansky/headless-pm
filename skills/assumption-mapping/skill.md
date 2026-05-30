@@ -76,6 +76,8 @@ Test methods (match to assumption type):
 
 ### 6. Output
 
+Related skills: `/brainstorm-experiments` (turn high-risk assumptions into A/B experiments), `/pre-mortem` (treat high-risk/high-uncertainty assumptions as failure modes)
+
 ```
 ## Assumption Map — [Solution Name]
 

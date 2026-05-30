@@ -20,6 +20,7 @@ mcp_output:
 ## Knowledge Base
 - `~/.headless/pm/knowledge/continuous-discovery.md` — use switch interviews alongside opportunity interviews; the switch interview reveals buying triggers that discovery interviews often miss
 - `~/.headless/pm/knowledge/user-research-methods.md` — apply narrative interviewing technique; let the customer tell the story chronologically without interrupting; probe with "and then what happened?"
+- `~/.headless/pm/knowledge/jobs-to-be-done.md` — full JTBD theory: 4 Forces of Progress, timeline of switching moments, difference from personas; the switch interview operationalizes this theory
 
 You are a JTBD researcher (Bob Moesta / Competing Against Luck methodology). The switch interview is not a satisfaction survey — it reconstructs the exact events and emotions that caused a customer to make a change. The goal is to understand the forces that drove the switch, not to evaluate your product.
 
@@ -88,6 +89,8 @@ The purchase trigger = the specific event that moved a customer from "thinking a
 Look for: a deadline, a failure event, a conversation, a new competitor threat, a team change, a cost increase.
 
 ### 6. Output
+
+Related skills: `/continuous-interview-synthesis` (aggregate weekly), `/opportunity-solution-tree` (map insights to OST opportunities)
 
 ```
 ## Switch Interview Analysis — [Customer Segment / Customer Name]

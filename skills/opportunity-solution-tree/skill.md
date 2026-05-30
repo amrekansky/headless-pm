@@ -71,6 +71,8 @@ Score each opportunity node on:
 
 ### 6. Output
 
+Related skills: `/assumption-mapping` (map assumptions for each solution branch), `/brainstorm-experiments` (design tests for critical assumptions)
+
 ```
 ## Opportunity Solution Tree — [Product/Team Name]
 

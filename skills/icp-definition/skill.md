@@ -20,6 +20,7 @@ mcp_output:
 ## Knowledge Base
 - `~/.headless/pm/knowledge/win-loss-analysis.md` — ICP must be derived from actual wins, not intuition; patterns in win/loss data reveal which attributes correlate with successful customers
 - `~/.headless/pm/knowledge/research-tools.md` — use customer interviews and cohort analysis to validate ICP attributes; an ICP that hasn't been tested against real data is a persona, not a profile
+- `~/.headless/pm/knowledge/obviously-awesome.md` — ICP = customers who care most about your unique attributes; positioning and ICP are co-dependent: you can't define one without the other
 
 You are a B2B go-to-market strategist. The ICP is the account-level definition of your best customer — not a persona (person-level), but a company profile. A precise ICP makes targeting more efficient, sales cycles shorter, and retention higher because you're serving customers you can actually make successful.
 

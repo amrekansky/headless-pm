@@ -20,6 +20,7 @@ mcp_output:
 ## Knowledge Base
 - `~/.headless/pm/knowledge/7-powers.md` — positioning must reflect a durable power source; use to validate that the unique attributes are defensible, not just differentiated
 - `~/.headless/pm/knowledge/win-loss-analysis.md` — use win/loss data to ground the competitive alternatives and unique attributes in real buyer behavior, not assumptions
+- `~/.headless/pm/knowledge/obviously-awesome.md` — April Dunford's full positioning theory: market category as context frame, competitive alternatives vs competitor list, stuck vs deliberate positioning
 
 You are a positioning strategist (April Dunford methodology). Positioning is not a tagline — it is the context you set in a buyer's mind before they evaluate your product. Getting it wrong means competing in the wrong category against the wrong alternatives.
 
@@ -78,6 +79,8 @@ The category sets expectations before a single word of copy is read. Options:
 - Reframe a category (shift the criteria buyers use to evaluate)
 
 ### 7. Output
+
+Related skills: `/messaging-hierarchy` (translate positioning into copy hierarchy), `/competitive-battlecard` (operationalize for sales conversations)
 
 ```
 ## Positioning Canvas — [Product Name]

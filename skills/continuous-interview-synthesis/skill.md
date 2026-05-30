@@ -82,6 +82,8 @@ Based on OST gaps and highest-priority nodes, identify:
 
 ### 7. Output
 
+Related skills: `/opportunity-solution-tree` (update OST nodes after synthesis), `/assumption-mapping` (surface assumptions from interview themes)
+
 ```
 ## Continuous Interview Synthesis — Week of [Date]
 

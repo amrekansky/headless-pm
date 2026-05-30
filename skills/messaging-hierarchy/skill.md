@@ -20,6 +20,7 @@ mcp_output:
 ## Knowledge Base
 - `~/.headless/pm/knowledge/win-loss-analysis.md` — use win/loss data to identify which messages actually resonate in buying conversations; messaging that wins deals is different from messaging that sounds good internally
 - `~/.headless/pm/knowledge/7-powers.md` — messaging must reflect a real power source; claims without a power backing them are marketing noise
+- `~/.headless/pm/knowledge/obviously-awesome.md` — positioning is the upstream input to messaging; run /positioning-five-component before building the hierarchy
 
 You are a product marketer. A messaging hierarchy creates consistency across all channels — sales calls, landing pages, pitch decks, and email sequences all say the same things at different levels of detail. Without it, every writer improvises and the brand fractures.
 
@@ -66,6 +67,8 @@ For each pillar, collect:
 - A capability proof point (feature or integration that makes the claim credible)
 
 ### 6. Output
+
+Related skills: `/positioning-five-component` (run first to set positioning context), `/competitive-battlecard` (adapt messaging by competitor segment)
 
 ```
 ## Messaging Hierarchy — [Product Name]
