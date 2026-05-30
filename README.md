@@ -6,7 +6,9 @@
 [![npm downloads](https://img.shields.io/npm/dm/headless-pm)](https://www.npmjs.com/package/headless-pm)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-PM toolkit for Claude Code, Gemini CLI, and Codex CLI. One command installs 88 skills, a 59-file knowledge base, and MCP server connections — so your AI assistant thinks like a product manager, not a generic chatbot.
+Turn your AI terminal assistant into a PM agent.
+
+**Claude Code, Gemini CLI, and Codex CLI** are the terminal interfaces for Claude (Anthropic), Gemini (Google), and Codex (OpenAI) — AI assistants you run from your computer's command line instead of a browser chat. headless-pm installs 88 PM skills into whichever one you use, so it stops being a generic chatbot and starts behaving like a product manager.
 
 ## Install
 
@@ -14,7 +16,7 @@ PM toolkit for Claude Code, Gemini CLI, and Codex CLI. One command installs 88 s
 npx headless-pm install
 ```
 
-Auto-detects which CLIs you have. Installs skills into each one. Prompts to connect MCP servers.
+Auto-detects which AI assistant you have. Installs skills into each one. Prompts to connect your tools.
 
 New to the terminal? → **[Getting Started Guide](docs/getting-started.md)** — step-by-step from zero to your first `/pm` run.
 
@@ -22,11 +24,11 @@ New to the terminal? → **[Getting Started Guide](docs/getting-started.md)** �
 
 ## What You Get
 
-- **/pm** — agentic orchestrator that reads your `.pm/` workspace (sprint state, backlog, context) and routes to the right skill automatically
-- **88 PM skills** across 17 categories, each grounded in the knowledge base with concrete output templates and workflow cross-links
-- **59-file knowledge base** — 7 Powers, AARRR, Jobs-to-be-Done, April Dunford positioning, Crossing the Chasm, Lean Startup, Shape Up, and more — installed to `~/.headless/pm/knowledge/`
-- **Cross-linked workflows** — every skill lists related skills to follow; `/pm-hypothesis` leads to `/brainstorm-experiments` leads to `/pm-ab` — no more dead ends
-- **MCP integrations** — Notion, Linear, Jira, Miro, Exa, Google Sheets, Figma, Slack, GitHub
+- **/pm** — agentic orchestrator that reads your `.pm/` workspace (sprint state, backlog, context) and routes to the right skill automatically. No prompting, no copy-paste — just `/pm`
+- **88 PM skills** across 17 categories: discovery, JTBD, roadmapping, OKR, sprint, GTM, competitive, metrics, stakeholder comms, and more
+- **Deep methodology knowledge** — 7 Powers, Jobs-to-be-Done, April Dunford positioning, Crossing the Chasm, Shape Up, Lean Startup, and 50+ PM frameworks built in. The AI knows the theory, not just the templates
+- **Cross-linked workflows** — every skill points to the next one. `/pm-hypothesis` → `/brainstorm-experiments` → `/pm-ab`. No dead ends, no context loss between steps
+- **Connects to your tools** — Notion, Linear, Jira, Miro, Exa, Google Sheets, Figma, Slack, GitHub via MCP
 - **Works with** Claude Code, Gemini CLI, and Codex CLI — all three, or just one
 
 ---
