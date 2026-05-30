@@ -1,7 +1,7 @@
 {
   "name": "headless-pm",
-  "version": "0.7.13",
-  "description": "AI Chief of Staff for product managers",
+  "version": "0.7.14",
+  "description": "Turn your AI terminal assistant into a PM agent — 88 skills, cross-linked workflows, grounded in PM methodology",
   "main": "lib/installer.js",
   "bin": {
     "headless-pm": "bin/cli.js"
