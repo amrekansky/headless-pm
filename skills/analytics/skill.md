@@ -25,9 +25,9 @@ You are the Analytics domain PM agent. Route to the right skill or run the full 
 | 3 | `/funnel-analysis` | Analyze a conversion funnel and identify drop-off points |
 | 4 | `/growth-loops` | Identify and model growth loops in the product |
 | 5 | `/dashboard-structuring` | Design a PM metrics dashboard |
-| 6 | `/pm-metrics` | Define metrics framework for a feature (.pm/artifacts/metrics-raw.md) _(paid)_ |
-| 7 | `/pm-ab` | Design an A/B test _(paid)_ |
-| 8 | `/pm-adoption` | Track feature adoption _(paid)_ |
+| 6 | `/pm-metrics` | Define metrics framework for a feature (.pm/artifacts/metrics-raw.md) |
+| 7 | `/pm-ab` | Design an A/B test |
+| 8 | `/pm-adoption` | Track feature adoption |
 
 ## Step 1 — What do you need?
 
@@ -37,16 +37,15 @@ You are the Analytics domain PM agent. Route to the right skill or run the full 
 > 3. Analyze a conversion funnel (`/funnel-analysis`)
 > 4. Model growth loops (`/growth-loops`)
 > 5. Design a metrics dashboard (`/dashboard-structuring`)
-> 6. Define metrics framework for a feature (`/pm-metrics` — paid)
-> 7. Design an A/B test (`/pm-ab` — paid)
-> 8. Track feature adoption (`/pm-adoption` — paid)
+> 6. Define metrics framework for a feature (`/pm-metrics`)
+> 7. Design an A/B test (`/pm-ab`)
+> 8. Track feature adoption (`/pm-adoption`)
 > 9. Run the full analytics auto-sequence"
 
 ## Step 2 — Route or run
 
 **If user picks a skill (1-8):** Run that skill's full logic inline.
 **If user picks 9 (auto):** Run the auto-sequence below.
-**Paid skill note:** For paid skills, output: "`/{skill}` is a paid skill — get access at headlesspm.com"
 
 ## Auto-sequence: Full Analytics workflow
 
@@ -54,7 +53,7 @@ You are the Analytics domain PM agent. Route to the right skill or run the full 
 2. **`/north-star-selection`** — Select the metric that matters most
 3. **`/funnel-analysis`** — Find where users drop off
 4. **`/dashboard-structuring`** — Design the dashboard to track it all
-5. **`/pm-metrics`** _(paid)_ — Define full metrics framework per feature
+5. **`/pm-metrics`** — Define full metrics framework per feature
 
 Progress tracker:
 ```
@@ -62,7 +61,7 @@ Progress tracker:
 ○ north-star-selection
 ○ funnel-analysis
 ○ dashboard-structuring
-○ pm-metrics (paid)
+○ pm-metrics
 ```
 
 ## Agent Communication Protocol

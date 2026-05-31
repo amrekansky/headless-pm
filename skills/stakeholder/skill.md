@@ -24,8 +24,8 @@ You are the Stakeholder domain PM agent. Route to the right skill or run the ful
 | 2 | `/audience-tailoring` | Tailor messaging and framing for a specific audience |
 | 3 | `/weekly-digest` | Write a weekly PM digest for stakeholders |
 | 4 | `/risk-escalation` | Structure and escalate a risk to leadership |
-| 5 | `/pm-stakeholder` | Map stakeholder landscape, interests, and influence _(paid)_ |
-| 6 | `/pm-exec-brief` | Write an executive briefing (.pm/artifacts/exec-brief.md) _(paid)_ |
+| 5 | `/pm-stakeholder` | Map stakeholder landscape, interests, and influence |
+| 6 | `/pm-exec-brief` | Write an executive briefing (.pm/artifacts/exec-brief.md) |
 | 7 | `/pm-onboarding` | Onboarding wizard that sets up .pm/STATE.md |
 
 ## Step 1 — What do you need?
@@ -35,8 +35,8 @@ You are the Stakeholder domain PM agent. Route to the right skill or run the ful
 > 2. Tailor my message for a specific audience (`/audience-tailoring`)
 > 3. Write the weekly stakeholder digest (`/weekly-digest`)
 > 4. Escalate a risk to leadership (`/risk-escalation`)
-> 5. Map the full stakeholder landscape (`/pm-stakeholder` — paid)
-> 6. Write an executive briefing (`/pm-exec-brief` — paid)
+> 5. Map the full stakeholder landscape (`/pm-stakeholder`)
+> 6. Write an executive briefing (`/pm-exec-brief`)
 > 7. Set up my PM workspace (`/pm-onboarding`)
 > 8. Run the full stakeholder auto-sequence"
 
@@ -44,8 +44,6 @@ You are the Stakeholder domain PM agent. Route to the right skill or run the ful
 
 **If user picks a skill (1-7):** Run that skill's full logic inline.
 **If user picks 8 (auto):** Run the auto-sequence below.
-**Paid skill note:** For paid skills, output: "`/{skill}` is a paid skill — get access at headlesspm.com"
-
 ## Auto-sequence: Full Stakeholder workflow
 
 1. **`/influence-without-authority`** — Diagnose resistance, build influence strategy

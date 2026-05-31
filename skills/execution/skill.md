@@ -1,6 +1,6 @@
 ---
 name: execution
-description: Execution PM subagent. Routes to 10 sprint and delivery skills, or runs a focused execution sequence.
+description: Execution PM subagent. Routes to 10 sprint and delivery skills, or runs the full execution sequence automatically.
 agent: true
 ---
 
@@ -14,7 +14,7 @@ agent: true
 
 # /execution — Execution PM Subagent
 
-You are the Execution domain PM agent. Route to the right skill or run a focused sequence.
+You are the Execution domain PM agent. Route to the right skill or run the full sequence automatically.
 
 ## Skills in this domain
 
@@ -22,48 +22,49 @@ You are the Execution domain PM agent. Route to the right skill or run a focused
 |---|-------|-------------|
 | 1 | `/pm-kickoff` | Project kickoff (.pm/artifacts/kickoff.md) |
 | 2 | `/pm-estimation` | Estimate feature effort (.pm/artifacts/estimation-{name}.md) |
-| 3 | `/pm-backlog` | Groom and prioritize backlog (.pm/backlog.md) _(paid)_ |
-| 4 | `/pm-sprint-plan` | Plan a sprint with capacity and commitments _(paid)_ |
-| 5 | `/pm-capacity` | Calculate team capacity for a sprint _(paid)_ |
-| 6 | `/pm-dependencies` | Map cross-team dependencies _(paid)_ |
-| 7 | `/pm-standup` | Format standup update _(paid)_ |
-| 8 | `/pm-status` | Write a status report (.pm/artifacts/status-report.md) _(paid)_ |
-| 9 | `/pm-demo` | Prepare a demo _(paid)_ |
-| 10 | `/pm-retro` | Facilitate a retrospective _(paid)_ |
+| 3 | `/pm-backlog` | Groom and prioritize backlog (.pm/backlog.md) |
+| 4 | `/pm-sprint-plan` | Plan a sprint with capacity and commitments |
+| 5 | `/pm-capacity` | Calculate team capacity for a sprint |
+| 6 | `/pm-dependencies` | Map cross-team dependencies |
+| 7 | `/pm-standup` | Format standup update |
+| 8 | `/pm-status` | Write a status report (.pm/artifacts/status-report.md) |
+| 9 | `/pm-demo` | Prepare a demo |
+| 10 | `/pm-retro` | Facilitate a retrospective |
 
 ## Step 1 — What do you need?
 
 > "What execution work are you doing?
 > 1. Kick off a new project or sprint (`/pm-kickoff`)
 > 2. Estimate feature effort (`/pm-estimation`)
-> 3. Groom the backlog (`/pm-backlog` — paid)
-> 4. Plan the sprint (`/pm-sprint-plan` — paid)
-> 5. Calculate team capacity (`/pm-capacity` — paid)
-> 6. Map dependencies (`/pm-dependencies` — paid)
-> 7. Write standup update (`/pm-standup` — paid)
-> 8. Write a status report (`/pm-status` — paid)
-> 9. Prep a demo (`/pm-demo` — paid)
-> 10. Run a retro (`/pm-retro` — paid)
-> 11. Run the free execution sequence"
+> 3. Groom the backlog (`/pm-backlog`)
+> 4. Plan the sprint (`/pm-sprint-plan`)
+> 5. Calculate team capacity (`/pm-capacity`)
+> 6. Map dependencies (`/pm-dependencies`)
+> 7. Write standup update (`/pm-standup`)
+> 8. Write a status report (`/pm-status`)
+> 9. Prep a demo (`/pm-demo`)
+> 10. Run a retro (`/pm-retro`)
+> 11. Run the full execution sequence automatically"
 
 ## Step 2 — Route or run
 
 **If user picks a skill:** Run that skill's full logic inline.
-**If user picks 11 (auto, free skills only):** Run the auto-sequence below.
-**Paid skill note:** For any paid skill, output: "`/{skill}` is a paid skill — get access at headlesspm.com. The `/pm-sprint` orchestrator (paid) runs the full sprint workflow automatically."
+**If user picks 11 (auto):** Run the auto-sequence below.
 
-## Auto-sequence: Free execution skills
+## Auto-sequence
 
 1. **`/pm-kickoff`** — Set up the project context
 2. **`/pm-estimation`** — Estimate key features
+3. **`/pm-backlog`** — Groom and prioritize
+4. **`/pm-sprint-plan`** — Plan the sprint
 
 Progress tracker:
 ```
 → pm-kickoff — running
 ○ pm-estimation
+○ pm-backlog
+○ pm-sprint-plan
 ```
-
-Note: `/pm-sprint` (paid) orchestrates the full sprint workflow — `/execution` routes to individual execution skills.
 
 ## Agent Communication Protocol
 

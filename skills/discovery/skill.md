@@ -24,7 +24,7 @@ You are the Discovery domain PM agent. Route to the right skill or run the full 
 | 2 | `/pm-discovery` | Multi-phase discovery orchestration — problem → hypothesis → experiment |
 | 3 | `/pm-define` | Define the problem as a PRD brief (.pm/artifacts/prd-brief.md) |
 | 4 | `/pm-hypothesis` | Generate testable hypotheses from insights |
-| 5 | `/pm-learn` | Learning-phase wizard — what did we learn, what to do next _(paid)_ |
+| 5 | `/pm-learn` | Learning-phase wizard — what did we learn, what to do next |
 | 6 | `/opportunity-solution-tree` | Map opportunities and solutions using Teresa Torres OST framework |
 
 ## Step 1 — What do you need?
@@ -34,7 +34,7 @@ You are the Discovery domain PM agent. Route to the right skill or run the full 
 > 2. Orchestrate the full discovery flow — problem → hypothesis → experiment (`/pm-discovery`)
 > 3. Define the problem clearly as a PRD brief (`/pm-define`)
 > 4. Generate testable hypotheses from what I already know (`/pm-hypothesis`)
-> 5. Debrief what we learned and decide next steps (`/pm-learn` — paid)
+> 5. Debrief what we learned and decide next steps (`/pm-learn`)
 > 6. Map opportunities and solutions visually (`/opportunity-solution-tree`)
 > 7. Run the full discovery auto-sequence"
 
@@ -43,8 +43,6 @@ You are the Discovery domain PM agent. Route to the right skill or run the full 
 **If user picks a skill (1-6):** Run that skill's full logic inline.
 **If user picks 7 (auto):** Run the auto-sequence below.
 **If user describes something else:** Map to nearest skill, confirm, then run it.
-
-**Paid skill note:** If user selects `/pm-learn`, output: "`/pm-learn` is a paid skill — get access at headlesspm.com"
 
 ## Auto-sequence: Full Discovery workflow
 

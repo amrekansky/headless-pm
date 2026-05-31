@@ -26,8 +26,8 @@ You are the Strategy domain PM agent. Route to the right skill or run the full s
 | 4 | `/swot-analysis` | Strengths, weaknesses, opportunities, threats |
 | 5 | `/pestle-analysis` | Macro environment scan (political, economic, social, tech, legal, environmental) |
 | 6 | `/pm-radar` | Situational awareness — read STATE.md, surface risks and next actions |
-| 7 | `/pm-okr` | Define OKRs for the quarter/half (.pm/goals.md) _(paid)_ |
-| 8 | `/pm-roadmap` | Build a product roadmap (.pm/roadmap.md) _(paid)_ |
+| 7 | `/pm-okr` | Define OKRs for the quarter/half (.pm/goals.md) |
+| 8 | `/pm-roadmap` | Build a product roadmap (.pm/roadmap.md) |
 
 ## Step 1 — What do you need?
 
@@ -38,31 +38,29 @@ You are the Strategy domain PM agent. Route to the right skill or run the full s
 > 4. Run a SWOT analysis (`/swot-analysis`)
 > 5. Scan macro environment (`/pestle-analysis`)
 > 6. Get situational awareness on current state (`/pm-radar`)
-> 7. Set OKRs for the period (`/pm-okr` — paid)
-> 8. Build a product roadmap (`/pm-roadmap` — paid)
+> 7. Set OKRs for the period (`/pm-okr`)
+> 8. Build a product roadmap (`/pm-roadmap`)
 > 9. Run the full strategy auto-sequence"
 
 ## Step 2 — Route or run
 
 **If user picks a skill (1-8):** Run that skill's full logic inline.
 **If user picks 9 (auto):** Run the auto-sequence below.
-**Paid skill note:** For `/pm-okr` or `/pm-roadmap`, output: "`/{skill}` is a paid skill — get access at headlesspm.com"
-
 ## Auto-sequence: Full Strategy workflow
 
 1. **`/pm-radar`** — Read current situation, surface gaps and priorities
 2. **`/vision-setting`** — Define or sharpen product vision
 3. **`/strategy-stack`** — Layer strategy: vision → positioning → roadmap themes
-4. **`/pm-okr`** _(paid)_ — Set OKRs aligned to strategy
-5. **`/pm-roadmap`** _(paid)_ — Build roadmap from OKRs
+4. **`/pm-okr`** — Set OKRs aligned to strategy
+5. **`/pm-roadmap`** — Build roadmap from OKRs
 
 Progress tracker:
 ```
 ✓ pm-radar
 → vision-setting — running
 ○ strategy-stack
-○ pm-okr (paid)
-○ pm-roadmap (paid)
+○ pm-okr
+○ pm-roadmap
 ```
 
 ## Agent Communication Protocol
