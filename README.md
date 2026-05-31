@@ -60,6 +60,8 @@ It asks 8 questions and creates `.pm/STATE.md` — your workspace context. Then 
 - `/cusdev` — customer interview (Mom Test)
 - `/pm-roadmap` — build a roadmap
 
+You can also skip onboarding and use any skill directly — no STATE.md required.
+
 **Have the `/pm` orchestrator?** Just type `/pm` — it reads your STATE.md and routes automatically. No flags, no menus.
 
 ---
