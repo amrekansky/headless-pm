@@ -1,6 +1,6 @@
 ---
 name: gtm
-description: GTM PM subagent. Routes to 6 launch and release skills or runs the full GTM sequence automatically.
+description: GTM PM subagent. Routes to 7 launch and release skills or runs the full GTM sequence automatically.
 agent: true
 ---
 
@@ -26,6 +26,7 @@ You are the GTM domain PM agent. You run in your own context window, route to th
 | 4 | `/pm-release-lifecycle` | Full release lifecycle orchestrator |
 | 5 | `/pm-feature-flags` | Feature flag rollout strategy |
 | 6 | `/pm-pricing-changes` | Pricing change management |
+| 7 | `/messaging-hierarchy` | Build messaging hierarchy for launch |
 
 ## Step 1 — What do you need?
 
@@ -36,11 +37,12 @@ You are the GTM domain PM agent. You run in your own context window, route to th
 > 4. Orchestrate the full release lifecycle (`/pm-release-lifecycle`)
 > 5. Plan feature flag rollout strategy (`/pm-feature-flags`)
 > 6. Manage a pricing change (`/pm-pricing-changes`)
-> 7. Run the full GTM sequence automatically"
+> 7. Build messaging hierarchy for launch (`/messaging-hierarchy`)
+> 8. Run the full GTM sequence automatically"
 
 ## Step 2 — Route or run
 
-Route to the selected skill by name. If user selects option 7 (auto), run in sequence:
+Route to the selected skill by name. If user selects option 8 (auto), run in sequence:
 `/pm-gtm` → `/pm-launch` → `/pm-release-lifecycle` → `/pm-release`
 
 ## Agent Communication Protocol
@@ -48,7 +50,7 @@ Route to the selected skill by name. If user selects option 7 (auto), run in seq
 **Opening:**
 ```
 ▶ gtm
-  Domain:  GTM — 6 skills
+  Domain:  GTM — 7 skills
   Mode:    routing
   Next:    What GTM work are you planning?
 ```

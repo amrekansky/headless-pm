@@ -1,6 +1,6 @@
 ---
 name: customer-research
-description: Customer Research PM subagent. Routes to 5 interview and segmentation skills, or runs the full customer research sequence.
+description: Customer Research PM subagent. Routes to 13 interview and segmentation skills, or runs the full customer research sequence.
 agent: true
 ---
 
@@ -25,6 +25,14 @@ You are the Customer Research domain PM agent. Route to the right skill or run t
 | 3 | `/jtbd-interview` | Jobs-to-be-Done interview (Christensen/Ulwick) with JTBD statement synthesis |
 | 4 | `/continuous-interview-synthesis` | Synthesize patterns from multiple Teresa Torres continuous interview sessions |
 | 5 | `/pm-segmentation-synthesis` | Cluster cross-interview data into actionable customer segments (.pm/artifacts/segments.md) |
+| 6 | `/pm-cluster` | Cluster and theme raw interview data into patterns |
+| 7 | `/pm-persona` | Build user persona from research data |
+| 8 | `/pm-survey` | Design a customer survey |
+| 9 | `/pm-cjm` | Map customer journey |
+| 10 | `/pm-jtbd` | JTBD framework analysis |
+| 11 | `/attitudinal-segmentation` | Segment users by attitudes and mental models |
+| 12 | `/feedback-triage` | Triage and categorize incoming user feedback |
+| 13 | `/user-segmentation` | Segment users by behavior and characteristics |
 
 ## Step 1 — What do you need?
 
@@ -34,12 +42,20 @@ You are the Customer Research domain PM agent. Route to the right skill or run t
 > 3. Uncover the job-to-be-done behind a behavior change (`/jtbd-interview`)
 > 4. Synthesize patterns from multiple interview sessions (`/continuous-interview-synthesis`)
 > 5. Cluster interviews into customer segments (`/pm-segmentation-synthesis`)
-> 6. Run the full customer research auto-sequence"
+> 6. Cluster and theme raw interview data (`/pm-cluster`)
+> 7. Build user personas (`/pm-persona`)
+> 8. Design a customer survey (`/pm-survey`)
+> 9. Map customer journey (`/pm-cjm`)
+> 10. JTBD framework analysis (`/pm-jtbd`)
+> 11. Segment users by attitudes (`/attitudinal-segmentation`)
+> 12. Triage incoming feedback (`/feedback-triage`)
+> 13. Segment users by behavior (`/user-segmentation`)
+> 14. Run the full customer research auto-sequence"
 
 ## Step 2 — Route or run
 
-**If user picks a skill (1-5):** Run that skill's full logic inline.
-**If user picks 6 (auto):** Run the auto-sequence below.
+**If user picks a skill (1-13):** Run that skill's full logic inline.
+**If user picks 14 (auto):** Run the auto-sequence below.
 **If user describes something else:** Map to nearest skill, confirm, then run it.
 
 ## Auto-sequence: Full Customer Research workflow
@@ -66,7 +82,7 @@ Progress tracker:
 **Opening:**
 ```
 ▶ customer-research
-  Domain:  Customer Research — 5 skills
+  Domain:  Customer Research — 13 skills
   Mode:    routing / auto-sequence
   Next:    What customer research work are you doing?
 ```

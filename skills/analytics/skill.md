@@ -1,6 +1,6 @@
 ---
 name: analytics
-description: Analytics PM subagent. Routes to 8 metrics and analytics skills, or runs the full analytics sequence.
+description: Analytics PM subagent. Routes to 10 metrics and analytics skills, or runs the full analytics sequence.
 agent: true
 ---
 
@@ -28,6 +28,8 @@ You are the Analytics domain PM agent. Route to the right skill or run the full 
 | 6 | `/pm-metrics` | Define metrics framework for a feature (.pm/artifacts/metrics-raw.md) |
 | 7 | `/pm-ab` | Design an A/B test |
 | 8 | `/pm-adoption` | Track feature adoption |
+| 9 | `/pm-customer-health` | Track and score customer health |
+| 10 | `/pm-nps-csat` | Design and analyze NPS/CSAT survey |
 
 ## Step 1 — What do you need?
 
@@ -40,12 +42,14 @@ You are the Analytics domain PM agent. Route to the right skill or run the full 
 > 6. Define metrics framework for a feature (`/pm-metrics`)
 > 7. Design an A/B test (`/pm-ab`)
 > 8. Track feature adoption (`/pm-adoption`)
-> 9. Run the full analytics auto-sequence"
+> 9. Track customer health (`/pm-customer-health`)
+> 10. Design and analyze NPS/CSAT survey (`/pm-nps-csat`)
+> 11. Run the full analytics auto-sequence"
 
 ## Step 2 — Route or run
 
-**If user picks a skill (1-8):** Run that skill's full logic inline.
-**If user picks 9 (auto):** Run the auto-sequence below.
+**If user picks a skill (1-10):** Run that skill's full logic inline.
+**If user picks 11 (auto):** Run the auto-sequence below.
 
 ## Auto-sequence: Full Analytics workflow
 
@@ -69,7 +73,7 @@ Progress tracker:
 **Opening:**
 ```
 ▶ analytics
-  Domain:  Analytics — 8 skills
+  Domain:  Analytics — 10 skills
   Mode:    routing / auto-sequence
   Next:    What analytics work are you doing?
 ```
