@@ -8,7 +8,7 @@
 
 Turn your AI terminal assistant into a PM agent.
 
-**Claude Code, Gemini CLI, and Codex CLI** are the terminal interfaces for Claude (Anthropic), Gemini (Google), and Codex (OpenAI) — AI assistants you run from your computer's command line instead of a browser chat. headless-pm installs 121 PM skills into whichever one you use, so it stops being a generic chatbot and starts behaving like a product manager.
+**Claude Code, Gemini CLI, and Codex CLI** are the terminal interfaces for Claude (Anthropic), Gemini (Google), and Codex (OpenAI) — AI assistants you run from your computer's command line instead of a browser chat. headless-pm installs 101 PM skills into whichever one you use, so it stops being a generic chatbot and starts behaving like a product manager.
 
 ## Install
 
@@ -26,7 +26,7 @@ New to the terminal? → **[Getting Started Guide](docs/getting-started.md)** �
 
 **Free — everything below installs with `npx headless-pm install`:**
 
-- **121 PM skills** across 17 categories: discovery, JTBD, roadmapping, OKR, sprint, GTM, competitive, metrics, stakeholder comms, and more
+- **101 PM skills** across 16 categories: discovery, JTBD, roadmapping, OKR, sprint, GTM, competitive, metrics, stakeholder comms, and more
 - **`/pm-onboarding`** — wizard that sets up your `.pm/STATE.md` workspace in 8 questions
 - **8 PM domain subagents** — `/discovery`, `/customer-research`, `/strategy`, `/market-research`, `/execution`, `/gtm`, `/analytics`, `/stakeholder`. Plus `/pm-agents` hub to find the right one. Each routes to domain skills or runs a full auto-sequence.
 - **Deep methodology knowledge** — 7 Powers, JTBD, April Dunford positioning, Shape Up, Lean Startup, and 50+ PM frameworks built in
@@ -131,7 +131,7 @@ Get your API key: [exa.ai/settings/api-keys](https://exa.ai/settings/api-keys)
 ## Free vs Paid
 
 **Free** — everything you need to get started:
-- All 121 PM skills (slash commands)
+- All 101 PM skills (slash commands)
 - `/pm-onboarding` wizard
 - 8 PM subagents
 - MCP integrations (Notion, Linear, Jira, Miro)
