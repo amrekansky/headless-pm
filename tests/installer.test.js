@@ -386,6 +386,45 @@ test('printStatusline outputs empty string when .pm/ is absent', async () => {
   }
 })
 
+// --- v0.8.0: 30 framework skills + isHeadlessPmSkill fix ---
+
+test('FREE_SKILLS contains all 30 framework skills', async () => {
+  const src = await readFile(new URL('../lib/installer.js', import.meta.url), 'utf8')
+  const freeBlock = src.match(/const FREE_SKILLS = \[([\s\S]*?)\]/)?.[1] ?? ''
+  const entries = freeBlock.match(/'[^']+'/g) ?? []
+  assert.ok(entries.length >= 52, `Expected >= 52 FREE_SKILLS, got ${entries.length}`)
+  const required = [
+    'ansoff-matrix', 'assumption-mapping', 'attitudinal-segmentation', 'audience-tailoring',
+    'beachhead-mapping', 'brainstorm-experiments', 'competitive-battlecard', 'continuous-interview-synthesis',
+    'dashboard-structuring', 'feedback-triage', 'funnel-analysis', 'growth-loops', 'icp-definition',
+    'lean-canvas', 'market-sizing', 'messaging-hierarchy', 'north-star-selection', 'opportunity-solution-tree',
+    'pestle-analysis', 'positioning-five-component', 'pre-mortem', 'product-work-levels', 'risk-escalation',
+    'strategy-stack', 'switch-interview', 'swot-analysis', 'tam-sizing', 'user-segmentation',
+    'vision-setting', 'weekly-digest',
+  ]
+  for (const name of required) {
+    assert.ok(entries.some(e => e === `'${name}'`), `FREE_SKILLS missing: ${name}`)
+  }
+})
+
+test('isHeadlessPmSkill uses knownSkills.has() not prefix check', async () => {
+  const src = await readFile(new URL('../lib/installer.js', import.meta.url), 'utf8')
+  assert.ok(src.includes('isHeadlessPmSkill = (name) => knownSkills.has(name)'),
+    'isHeadlessPmSkill must be set-based, not prefix-based')
+  assert.ok(!src.includes("name.startsWith('pm-')") || src.indexOf('isHeadlessPmSkill') < src.indexOf("name.startsWith('pm-')"),
+    'startsWith check must not appear inside isHeadlessPmSkill definition')
+})
+
+test('framework skills are in FREE_SKILLS, not PAID_SKILLS', async () => {
+  const src = await readFile(new URL('../lib/installer.js', import.meta.url), 'utf8')
+  const paidBlock = src.match(/const PAID_SKILLS = \[([\s\S]*?)\]/)?.[1] ?? ''
+  const paidEntries = paidBlock.match(/'[^']+'/g) ?? []
+  const frameworkSkills = ['ansoff-matrix', 'vision-setting', 'tam-sizing', 'funnel-analysis', 'growth-loops']
+  for (const name of frameworkSkills) {
+    assert.ok(!paidEntries.some(e => e === `'${name}'`), `${name} should not be in PAID_SKILLS`)
+  }
+})
+
 test('printStatusline outputs [phase] Sprint N format when .pm/ exists', async () => {
   const testDir = await mkdtemp(join(tmpdir(), 'pm-statusline-test-'))
   await mkdir(join(testDir, '.pm'), { recursive: true })
