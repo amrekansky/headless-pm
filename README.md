@@ -146,6 +146,14 @@ Get a license: [headlesspm.com](https://headlesspm.com)
 
 ## What's New
 
+### v0.8.1–v0.8.6 — Free tier cleanup + full skill discoverability
+- All 101 PM skills now free — only `/pm` orchestrator requires a license
+- All 35 previously-orphaned skills now listed in domain subagent routing tables
+- Skill count corrected to 101 across README, npm description, and all marketing copy
+- Skill Categories table now complete — `jtbd-interview`, `pm-segmentation-synthesis`, `influence-without-authority` added
+- Fixed: skill cleanup on update no longer removes skills it doesn't own (manifest-based tracking)
+- Fixed: subagents no longer show paywall messaging for free skills
+
 ### v0.8.0 — 8 Domain Subagents
 - 8 domain subagents: `/discovery`, `/customer-research`, `/strategy`, `/market-research`, `/execution`, `/gtm`, `/analytics`, `/stakeholder`
 - `/pm-agents` hub — describe your task, get routed to the right domain
