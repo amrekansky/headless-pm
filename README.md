@@ -18,18 +18,25 @@ npx headless-pm install
 
 Auto-detects which AI assistant you have. Installs skills into each one. Prompts to connect your tools.
 
-New to the terminal? → **[Getting Started Guide](docs/getting-started.md)** — step-by-step from zero to your first `/pm` run.
+New to the terminal? → **[Getting Started Guide](docs/getting-started.md)** — step-by-step from zero to your first `/pm-onboarding` run.
 
 ---
 
 ## What You Get
 
-- **/pm** — agentic orchestrator that reads your `.pm/` workspace (sprint state, backlog, context) and routes to the right skill automatically. No prompting, no copy-paste — just `/pm`
+**Free — everything below installs with `npx headless-pm install`:**
+
 - **88 PM skills** across 17 categories: discovery, JTBD, roadmapping, OKR, sprint, GTM, competitive, metrics, stakeholder comms, and more
-- **Deep methodology knowledge** — 7 Powers, Jobs-to-be-Done, April Dunford positioning, Crossing the Chasm, Shape Up, Lean Startup, and 50+ PM frameworks built in. The AI knows the theory, not just the templates
-- **Cross-linked workflows** — every skill points to the next one. `/pm-hypothesis` → `/brainstorm-experiments` → `/pm-ab`. No dead ends, no context loss between steps
+- **`/pm-onboarding`** — wizard that sets up your `.pm/STATE.md` workspace in 8 questions
+- **8 PM subagents** — autonomous agents for discovery, research, strategy, GTM, and more
+- **Deep methodology knowledge** — 7 Powers, JTBD, April Dunford positioning, Shape Up, Lean Startup, and 50+ PM frameworks built in
+- **Cross-linked workflows** — every skill points to the next one. `/pm-hypothesis` → `/brainstorm-experiments` → `/pm-ab`. No dead ends
 - **Connects to your tools** — Notion, Linear, Jira, Miro, Exa, Google Sheets, Figma, Slack, GitHub via MCP
 - **Works with** Claude Code, Gemini CLI, and Codex CLI — all three, or just one
+
+**Paid — `/pm` orchestrator:**
+
+- Reads your `.pm/STATE.md` and routes to the right skill automatically. No manual selection — just `/pm` and it thinks for you
 
 ---
 
@@ -39,20 +46,21 @@ New to the terminal? → **[Getting Started Guide](docs/getting-started.md)** �
 npx headless-pm install
 ```
 
-Then open Claude Code (or Gemini CLI / Codex) in any project directory and type `/pm`:
+Then open Claude Code (or Gemini CLI / Codex) in your project directory and run the onboarding wizard:
 
 ```
-/pm
+/pm-onboarding
 ```
 
-The orchestrator reads your `.pm/` workspace and routes automatically. No flags, no menus.
+It asks 8 questions and creates `.pm/STATE.md` — your workspace context. Then use any skill directly:
 
-Common entry points:
 - `/pm-sprint-plan` — plan a sprint
 - `/pm-prd` — write a PRD
 - `/pm-discovery` — run a discovery session
 - `/cusdev` — customer interview (Mom Test)
 - `/pm-roadmap` — build a roadmap
+
+**Have the `/pm` orchestrator?** Just type `/pm` — it reads your STATE.md and routes automatically. No flags, no menus.
 
 ---
 
@@ -60,7 +68,7 @@ Common entry points:
 
 | Category | Skills |
 |---|---|
-| Orchestrator | `/pm` |
+| Orchestrator | `/pm` _(paid)_ |
 | Customer Development | `/cusdev`, `/switch-interview`, `/continuous-interview-synthesis` |
 | Discovery & Research | `/pm-discover`, `/pm-discovery`, `/pm-define`, `/pm-hypothesis`, `/pm-learn`, `/pm-market`, `/pm-cjm`, `/opportunity-solution-tree` |
 | JTBD & Segmentation | `/pm-jtbd`, `/pm-persona`, `/attitudinal-segmentation`, `/user-segmentation` |
@@ -84,7 +92,7 @@ Common entry points:
 
 ```bash
 npx headless-pm install              # Install skills + tools + MCP setup
-npx headless-pm setup --key=YOUR-KEY # Unlock paid skills with license key
+npx headless-pm setup --key=YOUR-KEY # Unlock /pm orchestrator with license key
 npx headless-pm mcp                  # Re-run MCP setup
 npx headless-pm mcp --list           # List available MCP servers
 npx headless-pm list                 # List installed skills and tools
@@ -125,7 +133,7 @@ Get your API key: [exa.ai/settings/api-keys](https://exa.ai/settings/api-keys)
 - 8 PM subagents
 - MCP integrations (Notion, Linear, Jira, Miro)
 
-**Paid — `/pm` orchestrator ($29 one-time)**
+**Paid — `/pm` orchestrator**
 
 Reads your `.pm/STATE.md`, routes automatically, coordinates subagents. No manual skill selection — just `/pm` and it thinks for you.
 
