@@ -1,6 +1,6 @@
 {
   "name": "headless-pm",
-  "version": "0.8.5",
+  "version": "0.8.6",
   "description": "Turn your AI terminal assistant into a PM agent — 101 PM skills, 8 domain subagents, cross-linked workflows, grounded in PM methodology",
   "main": "lib/installer.js",
   "bin": {
