@@ -159,7 +159,9 @@ Expected output: `artifacts/`
 
 ### 6. Load Your Product Context
 
-Open a text editor and create `.pm/STATE.md` with this content. Fill in your own product details.
+The easiest way is to let `/pm-onboarding` do it for you after install (Step 8). It asks 8 quick questions and creates `.pm/STATE.md` automatically.
+
+Or create it manually now:
 
 ```bash
 # Open the file in nano (simple editor):
@@ -174,25 +176,9 @@ Paste this template and fill it in:
 - Sprint: 1 (ends 2026-06-01)
 - Focus: [what you're working on this sprint]
 - Blockers: none
-
-## Context
-[Write 2-3 sentences about your product: what it does, who uses it, and what stage you're at. Example: "B2B analytics dashboard for e-commerce teams. We're pre-launch, currently in closed beta with 5 teams. Focus is on reducing time-to-first-insight."]
 ```
 
 Save: press **Ctrl+O**, then **Enter**, then **Ctrl+X** to exit.
-
-**Example of a filled STATE.md:**
-
-```markdown
-- Product: DataPulse
-- Phase: Build
-- Sprint: 3 (ends 2026-06-15)
-- Focus: Onboarding flow redesign — reduce drop-off at step 2
-- Blockers: waiting on design review from Sara
-
-## Context
-B2B analytics dashboard for e-commerce teams tracking conversion funnels. We're in closed beta with 12 paying customers. The main problem we're solving is that existing tools require SQL — our customers are non-technical ops managers.
-```
 
 **Verify:** Run `cat .pm/STATE.md` — you should see your content.
 
@@ -206,13 +192,11 @@ npx headless-pm install
 
 What happens:
 - Detects which CLIs you have installed (Claude, Gemini, Codex)
-- Installs PM skills into each one
+- Installs all 88 PM skills into each one
 - Installs the knowledge base to `~/.headless/pm/`
 - Asks if you want to connect Notion, Linear, or other tools (press Enter to skip for now)
 
-**If you have a license key** (from your purchase email): enter it when prompted. All 56 skills install.
-
-**If you don't have a key yet**: press Enter to skip. Stage 1 (Discovery) and Stage 2 (Definition) skills install for free — 13 skills total.
+**If you have a license key** for the `/pm` orchestrator: enter it when prompted.
 
 **Verify:**
 
@@ -233,45 +217,23 @@ cd ~/projects/my-product
 claude
 ```
 
-Type this inside Claude Code:
+**If you skipped Step 6**, run the onboarding wizard first:
 
 ```
-/pm
+/pm-onboarding
 ```
 
-You'll see a dashboard like this:
+It asks 8 questions and creates `.pm/STATE.md` for you. Then you're ready to use any skill.
 
-```
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
- DataPulse  ·  Sprint 3  ·  2026-06-01 → 2026-06-15  ·  14d
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
- DISCOVERY      DEFINE         BUILD          SHIP
- ──────────     ──────────     ──────────     ──────────
- ✓ insights     ○ prd          ○ sprint       ○ release
- ○ interviews   ○ backlog      ○ stories      ○ retro
- ○ clusters     ○ acceptance
-
- Blockers: waiting on design review from Sara
- Focus:    Onboarding flow redesign — reduce drop-off at step 2
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
- Next step:  /pm-prd  — no PRD found, recommend starting here
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-```
-
-What each part means:
-- **DISCOVERY / DEFINE / BUILD / SHIP** — the four PM phases. `✓` = artifact exists, `○` = not yet created.
-- **Blockers / Focus** — pulled directly from your `STATE.md`
-- **Next step** — the skill the AI recommends based on your current state
-
-**Try these first:**
+**Try these:**
 
 ```
 /pm-prd           # write a PRD for your current focus
 /cusdev           # prepare a customer interview (Mom Test)
 /pm-sprint-plan   # plan your sprint
 ```
+
+**If you have the `/pm` orchestrator** (license key): just type `/pm` — it reads your STATE.md and routes to the right skill automatically.
 
 ---
 
@@ -398,6 +360,8 @@ cd ~/projects/my-product
 
 ### 6. Load Your Product Context
 
+The easiest way is to let `/pm-onboarding` do it after install (Step 8). Or create it manually:
+
 ```bash
 nano .pm/STATE.md
 ```
@@ -410,9 +374,6 @@ Paste and fill in:
 - Sprint: 1 (ends 2026-06-01)
 - Focus: [what you're working on this sprint]
 - Blockers: none
-
-## Context
-[2-3 sentences about your product: what it does, who uses it, current stage.]
 ```
 
 Save: **Ctrl+O** → **Enter** → **Ctrl+X**
@@ -427,7 +388,7 @@ Save: **Ctrl+O** → **Enter** → **Ctrl+X**
 npx headless-pm install
 ```
 
-Enter your license key when prompted (or press Enter to install free skills).
+Installs all 88 PM skills. Enter your license key if you have one (for the `/pm` orchestrator), or press Enter to skip.
 
 ---
 
@@ -438,19 +399,21 @@ cd ~/projects/my-product
 claude
 ```
 
-Inside Claude Code, type:
+**If you skipped Step 6**, run the onboarding wizard first:
 
 ```
-/pm
+/pm-onboarding
 ```
 
-You'll see the PM dashboard. Try:
+Then try:
 
 ```
 /pm-prd           # write a PRD
 /cusdev           # customer interview prep
 /pm-sprint-plan   # plan your sprint
 ```
+
+**If you have the `/pm` orchestrator**: just type `/pm` — it routes automatically.
 
 ---
 
@@ -592,6 +555,8 @@ cd ~/projects/my-product
 
 ### 6. Load Your Product Context
 
+The easiest way is to let `/pm-onboarding` do it after install (Step 8). Or create it manually:
+
 ```bash
 nano .pm/STATE.md
 ```
@@ -604,9 +569,6 @@ Paste and fill in:
 - Sprint: 1 (ends 2026-06-01)
 - Focus: [what you're working on this sprint]
 - Blockers: none
-
-## Context
-[2-3 sentences about your product: what it does, who uses it, current stage.]
 ```
 
 Save: **Ctrl+O** → **Enter** → **Ctrl+X**
@@ -621,7 +583,7 @@ Save: **Ctrl+O** → **Enter** → **Ctrl+X**
 npx headless-pm install
 ```
 
-Enter your license key when prompted (or press Enter for free skills).
+Installs all 88 PM skills. Enter your license key if you have one (for the `/pm` orchestrator), or press Enter to skip.
 
 ---
 
@@ -632,19 +594,21 @@ cd ~/projects/my-product
 claude
 ```
 
-Inside Claude Code:
+**If you skipped Step 6**, run the onboarding wizard first:
 
 ```
-/pm
+/pm-onboarding
 ```
 
-You'll see the PM dashboard. Try:
+Then try:
 
 ```
 /pm-prd           # write a PRD
 /cusdev           # customer interview prep
 /pm-sprint-plan   # plan your sprint
 ```
+
+**If you have the `/pm` orchestrator**: just type `/pm` — it routes automatically.
 
 ---
 
