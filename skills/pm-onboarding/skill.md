@@ -7,7 +7,7 @@ mcp_output:
 ---
 
 <!-- GEMINI: Do not generate any content. First ask: "Do you have existing product docs I can read? (PRD, roadmap, backlog, OKR doc, strategy deck — any of these)" Wait for the user's reply before anything else. -->
-<!-- CODEX: Do not generate any content. Start with the opening question and wait for the user's reply before proceeding. -->
+<!-- CODEX: Do not generate any content. First say exactly: "Hey, let's get your PM workspace set up so /pm knows what you're working on. Quick question first: do you have existing product docs I can pull from? PRD, roadmap, backlog, OKR doc, strategy deck — anything works." Wait for the user's reply before anything else. -->
 
 
 ## Universal Rules
@@ -160,50 +160,27 @@ Wait for confirmation or edits.
 
 ---
 
-## Writing .pm/context.md
+## Writing .pm/STATE.md
 
-After either path confirms the summary, create `.pm/context.md` in the current working directory:
+After either path confirms the summary, create `.pm/STATE.md` in the current working directory:
 
 ```
 mkdir -p .pm
 ```
 
+Related skills: `/pm` (run this next — reads STATE.md and routes to the right work), `/pm-sprint-plan` (if you're starting a sprint), `/pm-prd` (if you need to define a feature first)
+
 Write the file:
 
 ```
-# PM Context
-_Updated: [YYYY-MM-DD]_
-
-## Product
-[name] — [one sentence description]
-
-## Stage
-[discovery / build / scale / optimize]
-
-## Current Focus
-[what the team is working on right now]
-
-## Goals (30 days)
-- [goal 1]
-- [goal 2]
-- [goal 3 if applicable]
-
-## Team
-[size + key roles]
-
-## Stakeholders
-[who and why they matter]
-
-## Tools
-[tools in use]
-
-## Blockers
-[current blockers, or "None"]
+- Product: [name]
+- Phase: [stage]
+- Sprint: [sprint focus or "Not started"]
+- Focus: [current focus]
+- Blockers: [blockers or "None"]
 ```
 
 After writing, say:
-> "Done. `.pm/context.md` is set up.
+> "Done. `.pm/STATE.md` is set up.
 >
 > Now just run `/pm` — it'll read this and pick up from here."
-
-Related skills: `/pm` (run this next — reads context.md and routes to the right work), `/pm-sprint-plan` (if you're starting a sprint), `/pm-prd` (if you need to define a feature first)

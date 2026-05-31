@@ -119,13 +119,15 @@ Get your API key: [exa.ai/settings/api-keys](https://exa.ai/settings/api-keys)
 
 ## Free vs Paid
 
-**Free** (installed without a license key):
+**Free** — everything you need to get started:
+- All 88 PM skills (slash commands)
+- `/pm-onboarding` wizard
+- 8 PM subagents
+- MCP integrations (Notion, Linear, Jira, Miro)
 
-`/pm`, `/cusdev`, `/pm-discover`, `/pm-discovery`, `/pm-persona`, `/pm-survey`, `/pm-cjm`, `/pm-jtbd`, `/pm-market`, `/pm-hypothesis`, `/pm-define`, `/pm-prd`, `/pm-story`, `/pm-epic`, `/pm-acceptance`
+**Paid — `/pm` orchestrator ($29 one-time)**
 
-**Paid** (require license key via `npx headless-pm setup --key=YOUR-KEY`):
-
-All remaining skills — sprint planning, OKR, roadmap, GTM, metrics, stakeholder, ops, and more.
+Reads your `.pm/STATE.md`, routes automatically, coordinates subagents. No manual skill selection — just `/pm` and it thinks for you.
 
 Get a license: [headlesspm.com](https://headlesspm.com)
 
