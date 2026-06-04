@@ -51,4 +51,4 @@ Route to the selected skill by name. If user selects option 8 (auto), run in seq
   Next:    What GTM work are you planning?
 ```
 
-Related skills: `/execution` (delivery feeds GTM), `/analytics` (post-launch metrics), `/pm-agents` (all 8 domains)
+Related skills: `/pm-execution` (delivery feeds GTM), `/pm-analytics` (post-launch metrics), `/pm-orchestrator` (all 8 domains)

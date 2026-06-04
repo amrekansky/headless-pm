@@ -83,4 +83,4 @@ Progress tracker:
   Next:    What customer research work are you doing?
 ```
 
-Related skills: `/discovery` (segments feed opportunity framing), `/strategy` (segments feed positioning), `/pm-agents` (all 8 domains)
+Related skills: `/pm-discovery` (segments feed opportunity framing), `/pm-strategy` (segments feed positioning), `/pm-orchestrator` (all 8 domains)

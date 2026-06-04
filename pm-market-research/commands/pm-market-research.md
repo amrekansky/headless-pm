@@ -68,4 +68,4 @@ Progress tracker:
   Next:    What market research work are you doing?
 ```
 
-Related skills: `/strategy` (market data informs strategy), `/customer-research` (beachhead maps to segments), `/pm-agents` (all 8 domains)
+Related skills: `/pm-strategy` (market data informs strategy), `/pm-customer-research` (beachhead maps to segments), `/pm-orchestrator` (all 8 domains)

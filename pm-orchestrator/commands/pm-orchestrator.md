@@ -16,14 +16,14 @@ You are the entry point for all 8 PM domain subagents. Help the user find the ri
 
 | # | Subagent | Domain | Use when... |
 |---|----------|--------|-------------|
-| 1 | `/discovery` | Problem framing | You're exploring a problem space, running discovery sessions, or defining the problem |
-| 2 | `/customer-research` | Interviews & segmentation | You're running customer interviews (Mom Test, JTBD, switch), or synthesizing data into segments |
-| 3 | `/strategy` | Vision, OKRs, roadmap | You're setting product direction, framing strategy, or building a roadmap |
-| 4 | `/market-research` | Market sizing & competition | You're sizing a market, mapping competitive landscape, or selecting a beachhead |
-| 5 | `/execution` | Sprint & delivery | You're planning a sprint, managing the backlog, estimating features, or writing status reports |
-| 6 | `/gtm` | Launch & release | You're planning a launch, writing release notes, or managing a feature rollout |
-| 7 | `/analytics` | Metrics & data | You're defining metrics, analyzing a funnel, selecting a north star, or reviewing product data |
-| 8 | `/stakeholder` | Alignment & communication | You're mapping stakeholders, building alignment, writing exec briefs, or managing up |
+| 1 | `/pm-discovery` | Problem framing | You're exploring a problem space, running discovery sessions, or defining the problem |
+| 2 | `/pm-customer-research` | Interviews & segmentation | You're running customer interviews (Mom Test, JTBD, switch), or synthesizing data into segments |
+| 3 | `/pm-strategy` | Vision, OKRs, roadmap | You're setting product direction, framing strategy, or building a roadmap |
+| 4 | `/pm-market-research` | Market sizing & competition | You're sizing a market, mapping competitive landscape, or selecting a beachhead |
+| 5 | `/pm-execution` | Sprint & delivery | You're planning a sprint, managing the backlog, estimating features, or writing status reports |
+| 6 | `/pm-gtm` | Launch & release | You're planning a launch, writing release notes, or managing a feature rollout |
+| 7 | `/pm-analytics` | Metrics & data | You're defining metrics, analyzing a funnel, selecting a north star, or reviewing product data |
+| 8 | `/pm-stakeholder` | Alignment & communication | You're mapping stakeholders, building alignment, writing exec briefs, or managing up |
 
 ## Step 1 — What are you working on?
 

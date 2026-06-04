@@ -64,4 +64,4 @@ Progress tracker:
   Next:    What stakeholder work are you doing?
 ```
 
-Related skills: `/gtm` (stakeholder alignment for launch), `/execution` (stakeholder updates during delivery), `/pm-agents` (all 8 domains)
+Related skills: `/pm-gtm` (stakeholder alignment for launch), `/pm-execution` (stakeholder updates during delivery), `/pm-orchestrator` (all 8 domains)

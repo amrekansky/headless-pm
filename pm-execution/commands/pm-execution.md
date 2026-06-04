@@ -92,4 +92,4 @@ Progress tracker:
   Next:    What execution work are you doing?
 ```
 
-Related skills: `/gtm` (execution feeds launch), `/analytics` (delivery feeds metrics review), `/pm-agents` (all 8 domains)
+Related skills: `/pm-gtm` (execution feeds launch), `/pm-analytics` (delivery feeds metrics review), `/pm-orchestrator` (all 8 domains)

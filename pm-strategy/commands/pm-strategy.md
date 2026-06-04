@@ -80,4 +80,4 @@ Progress tracker:
   Next:    What strategy work are you doing?
 ```
 
-Related skills: `/market-research` (market data informs strategy), `/discovery` (problem space feeds strategy), `/pm-agents` (all 8 domains)
+Related skills: `/pm-market-research` (market data informs strategy), `/pm-discovery` (problem space feeds strategy), `/pm-orchestrator` (all 8 domains)

@@ -77,4 +77,4 @@ Progress tracker:
   Next:    What are you working on in discovery?
 ```
 
-Related skills: `/customer-research` (interview data feeds discovery), `/strategy` (discovery feeds strategy work), `/pm-agents` (all 8 domains)
+Related skills: `/pm-customer-research` (interview data feeds discovery), `/pm-strategy` (discovery feeds strategy work), `/pm-orchestrator` (all 8 domains)

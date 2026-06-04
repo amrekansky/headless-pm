@@ -74,4 +74,4 @@ Progress tracker:
   Next:    What analytics work are you doing?
 ```
 
-Related skills: `/gtm` (post-launch metrics), `/execution` (delivery feeds metrics), `/pm-agents` (all 8 domains)
+Related skills: `/pm-gtm` (post-launch metrics), `/pm-execution` (delivery feeds metrics), `/pm-orchestrator` (all 8 domains)
