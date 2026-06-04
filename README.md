@@ -5,6 +5,7 @@
 [![npm version](https://img.shields.io/npm/v/headless-pm)](https://www.npmjs.com/package/headless-pm)
 [![npm downloads](https://img.shields.io/npm/dm/headless-pm)](https://www.npmjs.com/package/headless-pm)
 [![License: FSL-1.1-MIT](https://img.shields.io/badge/License-FSL--1.1--MIT-blue.svg)](LICENSE)
+[![GitHub stars](https://img.shields.io/github/stars/amrekansky/headless-pm)](https://github.com/amrekansky/headless-pm)
 
 Turn your AI terminal assistant into a PM agent.
 
@@ -12,32 +13,37 @@ Turn your AI terminal assistant into a PM agent.
 
 ---
 
-## Install in Claude (No Terminal)
+## Start Here
 
-If you use **Claude.ai** (browser or desktop app), you can add headless-pm as a plugin — no terminal needed.
-
-1. Open Claude → click **Browse plugins** in the left sidebar
-2. Go to **Personal plugins** → **Add from GitHub**
-3. Enter: `amrekansky/headless-pm`
-4. Click **Add** — all 9 PM skill groups install instantly
-
-You'll get slash commands like `/pm-discovery`, `/pm-strategy`, `/pm-execution`, `/pm-customer-research`, and 5 more — directly in your Claude chat.
-
-> **Cowork mode:** Skills run conversationally — no memory between sessions. Artifacts stay in chat. For persistent `.pm/STATE.md` context and `/pm` autopilot, [install via terminal](#install).
-
-> **Terminal user?** Skip this and use `npx headless-pm install` below — you get the same skills plus MCP integrations and the agentic subagents.
-
-→ **[Cowork Getting Started Guide](COWORK.md)** — what works, what doesn't, and how to upgrade
+Not sure where to start?  → `/pm-orchestrator` describe what you're working on
+Sprint planning?          → `/pm-execution`
+Customer interview?       → `/pm-customer-research`
+Writing a PRD?            → `/pm-discovery`
+Planning a launch?        → `/pm-gtm`
+Measuring impact?         → `/pm-analytics`
 
 ---
 
 ## Install
 
+### Claude Cowork (recommended for non-developers)
+
+1. Open **Customize** (bottom-left in Claude Desktop)
+2. Go to **Browse plugins** → **Personal** → **+**
+3. Select **Add marketplace from GitHub**
+4. Enter: `amrekansky/headless-pm`
+
+All 9 PM plugins install automatically. You get commands like `/pm-discovery`, `/pm-execution`, `/pm-customer-research`, and 6 more — directly in your Claude chat.
+
+> Skills work conversationally in Cowork — no memory between sessions. → [Getting Started Guide](COWORK.md)
+
+### Claude Code / Gemini CLI / Codex CLI (terminal)
+
 ```bash
 npx headless-pm install
 ```
 
-Auto-detects which AI assistant you have. Installs skills into each one. Prompts to connect your tools.
+Auto-detects which AI assistant you have. Installs skills into each one. Prompts to connect your tools (Notion, Linear, Jira, Miro).
 
 New to the terminal? → **[Getting Started Guide](docs/getting-started.md)** — step-by-step from zero to your first `/pm-onboarding` run.
 
