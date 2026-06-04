@@ -1,0 +1,13 @@
+{
+  "name": "pm-customer-research",
+  "version": "0.9.0",
+  "description": "Customer research subagent with 13 skills",
+  "author": {
+    "name": "Arman Rekanski",
+    "email": "amrekanski@gmail.com",
+    "url": "https://headlesspm.com"
+  },
+  "keywords": ["product-management", "customer-research", "interviews", "jtbd"],
+  "homepage": "https://headlesspm.com",
+  "license": "FSL-1.1-MIT"
+}

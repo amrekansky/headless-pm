@@ -1,0 +1,13 @@
+{
+  "name": "pm-orchestrator",
+  "version": "0.9.0",
+  "description": "PM subagent hub — routes to any of 8 domains",
+  "author": {
+    "name": "Arman Rekanski",
+    "email": "amrekanski@gmail.com",
+    "url": "https://headlesspm.com"
+  },
+  "keywords": ["product-management", "orchestrator", "routing", "pm-agents"],
+  "homepage": "https://headlesspm.com",
+  "license": "FSL-1.1-MIT"
+}

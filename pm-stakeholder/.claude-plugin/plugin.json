@@ -1,0 +1,13 @@
+{
+  "name": "pm-stakeholder",
+  "version": "0.9.0",
+  "description": "Stakeholder subagent for comms and influence",
+  "author": {
+    "name": "Arman Rekanski",
+    "email": "amrekanski@gmail.com",
+    "url": "https://headlesspm.com"
+  },
+  "keywords": ["product-management", "stakeholder", "comms", "influence"],
+  "homepage": "https://headlesspm.com",
+  "license": "FSL-1.1-MIT"
+}

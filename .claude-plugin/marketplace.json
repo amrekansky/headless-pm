@@ -1,0 +1,67 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "headless-pm",
+  "version": "0.9.0",
+  "description": "101 PM skills, 8 domain subagents, and cross-linked PM workflows for product managers. Discovery, strategy, execution, GTM, analytics, stakeholder comms — grounded in PM methodology.",
+  "owner": {
+    "name": "Arman Rekanski",
+    "email": "amrekanski@gmail.com",
+    "url": "https://headlesspm.com"
+  },
+  "plugins": [
+    {
+      "name": "pm-discovery",
+      "description": "Discovery domain: 12 skills for problem framing, hypothesis generation, opportunity mapping, and PRD writing.",
+      "source": "./pm-discovery",
+      "category": "product-management"
+    },
+    {
+      "name": "pm-customer-research",
+      "description": "Customer research domain: 13 skills for interviews (Mom Test, JTBD, switch), segmentation, and survey design.",
+      "source": "./pm-customer-research",
+      "category": "product-management"
+    },
+    {
+      "name": "pm-strategy",
+      "description": "Strategy domain: 13 skills for vision, strategy stack, OKRs, roadmaps, prioritization, and portfolio.",
+      "source": "./pm-strategy",
+      "category": "product-management"
+    },
+    {
+      "name": "pm-market-research",
+      "description": "Market research domain: skills for market sizing, competitive analysis, ICP definition, and positioning.",
+      "source": "./pm-market-research",
+      "category": "product-management"
+    },
+    {
+      "name": "pm-execution",
+      "description": "Execution domain: sprint planning, backlog, estimation, standup, retro, and delivery skills.",
+      "source": "./pm-execution",
+      "category": "product-management"
+    },
+    {
+      "name": "pm-gtm",
+      "description": "GTM domain: go-to-market strategy, launch planning, feature flags, pricing changes, and release lifecycle.",
+      "source": "./pm-gtm",
+      "category": "product-management"
+    },
+    {
+      "name": "pm-analytics",
+      "description": "Analytics domain: metrics frameworks, North Star selection, funnel analysis, A/B testing, and adoption.",
+      "source": "./pm-analytics",
+      "category": "product-management"
+    },
+    {
+      "name": "pm-stakeholder",
+      "description": "Stakeholder domain: exec briefs, status updates, risk escalation, audience tailoring, and influence skills.",
+      "source": "./pm-stakeholder",
+      "category": "product-management"
+    },
+    {
+      "name": "pm-orchestrator",
+      "description": "PM subagent hub: describe your task and get routed to the right domain automatically.",
+      "source": "./pm-orchestrator",
+      "category": "product-management"
+    }
+  ]
+}

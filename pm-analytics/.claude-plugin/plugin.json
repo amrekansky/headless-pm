@@ -1,0 +1,13 @@
+{
+  "name": "pm-analytics",
+  "version": "0.9.0",
+  "description": "Analytics subagent for metrics and experiments",
+  "author": {
+    "name": "Arman Rekanski",
+    "email": "amrekanski@gmail.com",
+    "url": "https://headlesspm.com"
+  },
+  "keywords": ["product-management", "analytics", "metrics", "experiments"],
+  "homepage": "https://headlesspm.com",
+  "license": "FSL-1.1-MIT"
+}
