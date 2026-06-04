@@ -1,13 +1,13 @@
 {
   "name": "pm-customer-research",
   "version": "0.9.0",
-  "description": "Customer research subagent with 13 skills",
+  "description": "Customer research domain: Mom Test interviews, JTBD, switch interviews, segmentation, and survey design.",
   "author": {
     "name": "Arman Rekanski",
     "email": "amrekanski@gmail.com",
     "url": "https://headlesspm.com"
   },
-  "keywords": ["product-management", "customer-research", "interviews", "jtbd"],
+  "keywords": ["product-management", "customer-research", "jtbd", "interviews", "mom-test"],
   "homepage": "https://headlesspm.com",
-  "license": "FSL-1.1-MIT"
+  "license": "MIT"
 }

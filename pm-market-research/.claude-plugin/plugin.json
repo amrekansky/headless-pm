@@ -1,13 +1,13 @@
 {
   "name": "pm-market-research",
   "version": "0.9.0",
-  "description": "Market research subagent",
+  "description": "Market research domain: market sizing, competitive analysis, ICP definition, and positioning.",
   "author": {
     "name": "Arman Rekanski",
     "email": "amrekanski@gmail.com",
     "url": "https://headlesspm.com"
   },
-  "keywords": ["product-management", "market-research", "competitive", "sizing"],
+  "keywords": ["product-management", "market-research", "competitive-analysis", "icp", "tam-sam-som"],
   "homepage": "https://headlesspm.com",
-  "license": "FSL-1.1-MIT"
+  "license": "MIT"
 }

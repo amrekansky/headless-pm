@@ -1,13 +1,13 @@
 {
   "name": "pm-analytics",
   "version": "0.9.0",
-  "description": "Analytics subagent for metrics and experiments",
+  "description": "Analytics domain: North Star metrics, funnel analysis, A/B testing, and feature adoption tracking.",
   "author": {
     "name": "Arman Rekanski",
     "email": "amrekanski@gmail.com",
     "url": "https://headlesspm.com"
   },
-  "keywords": ["product-management", "analytics", "metrics", "experiments"],
+  "keywords": ["product-management", "analytics", "metrics", "ab-testing", "north-star"],
   "homepage": "https://headlesspm.com",
-  "license": "FSL-1.1-MIT"
+  "license": "MIT"
 }
