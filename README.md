@@ -4,11 +4,28 @@
 
 [![npm version](https://img.shields.io/npm/v/headless-pm)](https://www.npmjs.com/package/headless-pm)
 [![npm downloads](https://img.shields.io/npm/dm/headless-pm)](https://www.npmjs.com/package/headless-pm)
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![License: FSL-1.1-MIT](https://img.shields.io/badge/License-FSL--1.1--MIT-blue.svg)](LICENSE)
 
 Turn your AI terminal assistant into a PM agent.
 
 **Claude Code, Gemini CLI, and Codex CLI** are the terminal interfaces for Claude (Anthropic), Gemini (Google), and Codex (OpenAI) — AI assistants you run from your computer's command line instead of a browser chat. headless-pm installs 101 PM skills into whichever one you use, so it stops being a generic chatbot and starts behaving like a product manager.
+
+---
+
+## Install in Claude (No Terminal)
+
+If you use **Claude.ai** (browser or desktop app), you can add headless-pm as a plugin — no terminal needed.
+
+1. Open Claude → click **Browse plugins** in the left sidebar
+2. Go to **Personal plugins** → **Add from GitHub**
+3. Enter: `amrekansky/headless-pm`
+4. Click **Add** — all 9 PM skill groups install instantly
+
+You'll get slash commands like `/pm-discovery`, `/pm-strategy`, `/pm-execution`, `/pm-customer-research`, and 5 more — directly in your Claude chat.
+
+> **Terminal user?** Skip this and use `npx headless-pm install` below — you get the same skills plus MCP integrations and the agentic subagents.
+
+---
 
 ## Install
 
@@ -63,6 +80,33 @@ It asks 8 questions and creates `.pm/STATE.md` — your workspace context. Then 
 You can also skip onboarding and use any skill directly — no STATE.md required.
 
 **Have the `/pm` orchestrator?** Just type `/pm` — it reads your STATE.md and routes automatically. No flags, no menus.
+
+### Example Output
+
+```
+$ claude
+> /pm-agents
+
+╔══════════════════════════════════════════════╗
+║        headless-pm — PM Subagent Hub         ║
+╠══════════════════════════════════════════════╣
+║  8 domain subagents ready                    ║
+╚══════════════════════════════════════════════╝
+
+What are you working on?
+
+  1  /pm-discovery      → problem framing, hypotheses, OST
+  2  /pm-customer-research → interviews, JTBD, segmentation
+  3  /pm-strategy       → vision, OKR, roadmap, prioritization
+  4  /pm-market-research → sizing, competitive, ICP, positioning
+  5  /pm-execution      → sprint, backlog, estimation, delivery
+  6  /pm-gtm            → launch, release lifecycle, feature flags
+  7  /pm-analytics      → metrics, North Star, funnel, A/B tests
+  8  /pm-stakeholder    → exec briefs, status, risk, influence
+
+Describe your task and I'll route you, or pick a number:
+> 
+```
 
 ---
 
