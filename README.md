@@ -23,7 +23,11 @@ If you use **Claude.ai** (browser or desktop app), you can add headless-pm as a 
 
 You'll get slash commands like `/pm-discovery`, `/pm-strategy`, `/pm-execution`, `/pm-customer-research`, and 5 more — directly in your Claude chat.
 
+> **Cowork mode:** Skills run conversationally — no memory between sessions. Artifacts stay in chat. For persistent `.pm/STATE.md` context and `/pm` autopilot, [install via terminal](#install).
+
 > **Terminal user?** Skip this and use `npx headless-pm install` below — you get the same skills plus MCP integrations and the agentic subagents.
+
+→ **[Cowork Getting Started Guide](COWORK.md)** — what works, what doesn't, and how to upgrade
 
 ---
 
