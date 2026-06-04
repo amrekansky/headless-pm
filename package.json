@@ -1,7 +1,7 @@
 {
   "name": "headless-pm",
-  "version": "0.8.7",
-  "description": "Turn your AI terminal assistant into a PM agent — 101 PM skills, 8 domain subagents, cross-linked workflows, grounded in PM methodology",
+  "version": "0.9.0",
+  "description": "101 PM skills, 8 domain subagents, Claude Cowork plugin — install in Claude chat or via terminal. Discovery, strategy, execution, GTM, analytics, stakeholder comms.",
   "main": "lib/installer.js",
   "bin": {
     "headless-pm": "bin/cli.js"
