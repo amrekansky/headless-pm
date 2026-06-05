@@ -160,6 +160,40 @@ Wait for confirmation or edits.
 
 ---
 
+## Stakeholder Files
+
+After the user confirms the summary (both Path A and Path B), if stakeholders were mentioned,
+create individual files in `.pm/stakeholders/`.
+
+For each stakeholder named:
+
+```bash
+mkdir -p .pm/stakeholders
+```
+
+Write `.pm/stakeholders/{name-slug}.md` (lowercase, hyphens, e.g. `alex-johnson.md`):
+
+```
+# {Full Name}
+
+**Role:** {title or role as mentioned}
+**Influence:** high / medium / low
+**Attitude:** champion / neutral / skeptic
+**Communication:** {preferred channel if known, else "unknown"}
+**Last contact:** {today's date}
+**Notes:**
+```
+
+After writing, say briefly:
+> "Created stakeholder profiles in `.pm/stakeholders/` — update them after meetings."
+
+If no specific names were mentioned (e.g., "CEO and CTO"), create one file per role:
+`.pm/stakeholders/ceo.md`, `.pm/stakeholders/cto.md` with Role filled in and other fields blank.
+
+Do not create more than 5 files — if more are mentioned, capture the top 5 by influence.
+
+---
+
 ## Writing .pm/STATE.md
 
 After either path confirms the summary, create `.pm/STATE.md` in the current working directory:
