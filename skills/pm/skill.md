@@ -42,6 +42,8 @@ Before responding, read in this order:
 2. If `.pm/STATE.md` not found → fall back to `context.md ## PM Lifecycle`:
    - `Current phase:`, `Current stage:`, `Last session:`, `Product:`
 3. `CLAUDE.md` — project constraints
+4. `.pm/risks.md` (if exists) — scan `| Last Reviewed |` column for staleness
+5. `.pm/open-questions.md` (if exists) — scan `| Due |` column for overdue or upcoming questions
 
 ---
 
@@ -59,6 +61,9 @@ Before responding, read in this order:
    - SHIP: `status-report.md`, `retro.md`, any `release-*.md`
 4. From `.pm/situation.md` (if exists from a previous session): extract `## Recommended Workflow` line for "Следующий шаг"
 5. Compute days remaining: calendar days from today to sprint end date
+6. From `.pm/risks.md` (if exists): scan `| Last Reviewed |` column. If any row has a date more than 7 days ago, set RISKS_STALE=true.
+7. From `.pm/open-questions.md` (if exists): scan `| Due |` column. If any row has a Due date in the past or within 7 days from today, set QUESTIONS_DUE=true.
+8. From `.pm/STATE.md` `### Milestones` section: check if any milestone date is within 7 days. If so, set MILESTONE_SOON=true and extract days count.
 
 **Snapshot:** Note the current list of `.pm/artifacts/` files as the baseline — you will compare against this in the Closing Dashboard.
 
@@ -76,6 +81,10 @@ Before responding, read in this order:
 
  Блокеры: {from STATE.md, or "нет"}
  Фокус:   {from STATE.md, or "не задан"}
+
+{if RISKS_STALE}    ⚠ Risks need review (>7d since last review)
+{if QUESTIONS_DUE}  ⚠ Questions overdue or due within 7 days
+{if MILESTONE_SOON} ⚠ Milestone approaching in {N} days
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
  Следующий шаг:  /{skill}  — {reason from situation.md, or "запускаю pm-radar"}
