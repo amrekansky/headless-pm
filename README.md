@@ -198,7 +198,43 @@ Get a license: [headlesspm.com](https://headlesspm.com)
 
 ---
 
+## .pm/ Workspace
+
+When you run `npx headless-pm install`, a `.pm/` directory is created in your project folder. This is your persistent PM workspace — context that carries across sessions.
+
+```
+.pm/
+├── STATE.md           # Current sprint, phase, focus, blockers
+├── situation.md       # Situational snapshot from pm-radar
+├── goals.md           # Product goals and OKRs
+├── decisions.md       # Decision log with [verbal/documented/intuition] tags
+├── risks.md           # Active, mitigated, and closed risks
+├── open-questions.md  # Open questions with due dates
+├── BRIEF.md           # Latest stakeholder brief (written by /pm-brief)
+├── REVIEW.md          # Latest workspace health export (written by /pm-review)
+├── stakeholders/      # One file per stakeholder — attitude, history, open asks
+│   └── {name}.md
+├── artifacts/         # PRDs, sprint plans, research outputs, retros
+│   └── *.md
+├── config.json        # Workspace config (sprint cadence, team name)
+└── manifest.json      # Installed skill manifest (used for updates)
+```
+
+The `/pm` orchestrator reads this workspace on every invocation — no context re-entry needed. The Opening Dashboard shows staleness alerts when risks, questions, or briefs go stale.
+
+---
+
 ## What's New
+
+### v0.10.0 — PM Workspace Memory Layer
+- `/pm` Opening Dashboard now shows staleness reminders: `/pm-brief` and `/pm-review` last-run dates
+- New `/pm-chat` — conversational capture: pour out meeting notes, decisions, risks in one message; AI routes to the right `.pm/` file
+- New `/pm-review` — weekly workspace health sweep: flags stale risks, overdue questions, unimplemented decisions, stakeholders without recent contact
+- `.pm/` workspace now created on install: `decisions.md`, `risks.md`, `open-questions.md`, `stakeholders/` — full memory layer from day one
+
+### v0.9.1 — Cowork plugin names fix + Free tier expansion
+- Fixed Cowork slash command names (were showing internal IDs instead of readable names)
+- Added `/pm-brief` to free tier and `/pm` routing table
 
 ### v0.8.1–v0.8.6 — Free tier cleanup + full skill discoverability
 - All 101 PM skills now free — only `/pm` orchestrator requires a license
