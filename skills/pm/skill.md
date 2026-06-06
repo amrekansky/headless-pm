@@ -367,6 +367,10 @@ Atomic tasks → spawn ONE agent:
 | portfolio, multiple products | pm-portfolio | `.pm/PORTFOLIO.md` |
 | backlog, grooming, refinement | pm-backlog | `.pm/BACKLOG.md` |
 | what should I do / triage | run triage mode | — |
+| brief, weekly brief, что написать команде | pm-brief | `.pm/BRIEF.md` |
+| review, pm review, weekly sweep, что устарело | pm-review | `.pm/REVIEW.md` |
+| запомни, кстати, митинг, поговорил с, новый риск, решили | pm-chat | `.pm/` (auto-route) |
+| [any unstructured free text that matches no other row] | pm-chat | `.pm/` (auto-route) |
 
 ---
 
