@@ -1,3 +1,11 @@
+## Quick reference
+- **Use when:** Starting a planning cycle, aligning team direction, or distinguishing output delivery from outcome achievement
+- **Key concepts:** Objective (qualitative direction), Key Results (measurable proof), Initiatives (work that moves KRs), Moats vs Committed OKRs
+- **Core frameworks:** OKR formula ("I will X as measured by Y"), Health metrics vs goal metrics, Cascading OKRs
+- **Output:** 1-5 Objectives with 3-5 Key Results each; team/individual OKR tree; weekly check-in cadence
+
+---
+
 # OKR Implementation
 
 ## What it is

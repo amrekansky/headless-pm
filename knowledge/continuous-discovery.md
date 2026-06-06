@@ -1,3 +1,11 @@
+## Quick reference
+- **Use when:** Product decisions are made without regular customer input, or discovery and delivery feel like separate phases
+- **Key concepts:** Product Trio (PM+designer+engineer), Opportunity Solution Tree (OST), assumption tests, weekly interview cadence
+- **Core frameworks:** Opportunity Solution Tree, Assumption Mapping, Continuous Interview (Teresa Torres)
+- **Output:** Living OST diagram; weekly interview synthesis; assumption test backlog; opportunity-to-solution mapping
+
+---
+
 # Continuous Discovery
 
 ## What it is

@@ -1,3 +1,11 @@
+## Quick reference
+- **Use when:** Understanding why customers switched to/from a solution — to find the real job-to-be-done
+- **Key concepts:** Struggling moment, First thought, Passive looking, Active looking, Deciding moment, Consuming
+- **Core frameworks:** 5-Stage Timeline, Four Forces of Progress (Push, Pull, Anxiety, Habit)
+- **Output:** Causal story of customer behavior change; JTBD trigger; forces map for demand-side sales
+
+---
+
 # Switch Interview Methodology — Bob Moesta
 
 ## What it is

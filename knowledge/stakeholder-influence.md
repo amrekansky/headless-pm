@@ -1,3 +1,11 @@
+## Quick reference
+- **Use when:** Navigating resistance, getting buy-in, or preparing a high-stakes ask to someone who doesn't report to you
+- **Key concepts:** Influence without authority, SCARF (Status/Certainty/Autonomy/Relatedness/Fairness), Cialdini principles
+- **Core frameworks:** SCARF Model, Cialdini's 6 Principles of Influence, Difficult Conversation Structure
+- **Output:** Diagnosis of stakeholder resistance; tailored influence strategy; conversation script for high-stakes asks
+
+---
+
 # Stakeholder Influence — Frameworks for PMs Without Authority
 
 ## The PM's influence problem

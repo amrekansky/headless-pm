@@ -1,3 +1,11 @@
+## Quick reference
+- **Use when:** Competing initiatives with strong stakeholder opinions, or preparing quarterly roadmap reviews
+- **Key concepts:** Value vs effort, reach, impact, confidence, willingness-to-pay, strategic alignment
+- **Core frameworks:** RICE, ICE, Kano Model, MoSCoW, Opportunity Scoring, Weighted Scoring
+- **Output:** Ranked backlog with defensible rationale; stakeholder-ready scoring matrix
+
+---
+
 # Prioritization Frameworks
 
 ## What it is
