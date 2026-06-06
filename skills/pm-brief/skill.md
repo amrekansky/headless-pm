@@ -64,3 +64,5 @@ Related skills: `/weekly-digest` (full weekly digest with metrics for broader st
 If Slack MCP: post to #product or #leadership channel.
 If Confluence: append to Weekly Updates page.
 If not: save `brief-week-[date].md`.
+
+**Always:** Write a copy to `.pm/BRIEF.md` with `Last Updated: YYYY-MM-DD` as the first line. This is how the Opening Dashboard tracks when pm-brief was last run.

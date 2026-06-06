@@ -130,6 +130,8 @@ Go through each flagged item in order. For each:
 **If option 2 (export):**
 Write `.pm/REVIEW.md`:
 ```markdown
+Last Updated: YYYY-MM-DD
+
 # PM Review — [date]
 
 ## Summary

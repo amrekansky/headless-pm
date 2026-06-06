@@ -1,6 +1,19 @@
 # headless-pm Product Backlog
 
-_Updated: 2026-05-13_
+_Updated: 2026-05-31_
+
+## Distribution & GTM
+
+- [ ] Добавить поддержку нативного плагина Claude (Cowork) — `claude plugin marketplace add headless-pm`. Phuryn/pm-skills имеет 11,763 ⭐ именно за счёт 1-клик install через Cowork без npm. Наш npm канал остаётся, добавляем Cowork поверх.
+- [ ] Product Hunt запуск — tagline, gallery 1270×760, maker comment
+- [ ] Обновить лендинг headlesspm.com — "101 PM skills", актуальное free tier описание
+- [ ] LinkedIn + dev.to посты опубликовать (черновики готовы в 04-sales/drafts/2026-05-25-launch-posts.md)
+- [ ] Soft launch — 2-3 PM из сети, GitHub star + feedback
+
+## Product
+
+- [ ] pm-save не роутится ни в один субагент — добавить в /execution или оставить как utility
+- [ ] Провести глубокий конкурентный анализ: phuryn/pm-skills (11,763 ⭐), PM-Copilot by Product Faculty (40 ⭐) — 7 Powers, позиционирование, gap analysis
 
 ## UX Improvements
 

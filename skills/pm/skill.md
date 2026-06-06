@@ -64,6 +64,8 @@ Before responding, read in this order:
 6. From `.pm/risks.md` (if exists): scan `| Last Reviewed |` column. If any row has a date more than 7 days ago, set RISKS_STALE=true.
 7. From `.pm/open-questions.md` (if exists): scan `| Due |` column. If any row has a Due date in the past or within 7 days from today, set QUESTIONS_DUE=true.
 8. From `.pm/STATE.md` `### Milestones` section: check if any milestone date is within 7 days. If so, set MILESTONE_SOON=true and extract days count.
+9. Check `.pm/BRIEF.md` (if exists): read `Last Updated:` on line 1, compute days since today. If file missing → BRIEF_STALE=true, BRIEF_DAYS="никогда". If days > 3 → BRIEF_STALE=true, BRIEF_DAYS=N.
+10. Check `.pm/REVIEW.md` (if exists): read `Last Updated:` on line 1, compute days since today. If file missing → REVIEW_DUE=true, REVIEW_DAYS="никогда". If days > 7 → REVIEW_DUE=true, REVIEW_DAYS=N.
 
 **Snapshot:** Note the current list of `.pm/artifacts/` files as the baseline — you will compare against this in the Closing Dashboard.
 
@@ -85,6 +87,8 @@ Before responding, read in this order:
 {if RISKS_STALE}    ⚠ Risks need review (>7d since last review)
 {if QUESTIONS_DUE}  ⚠ Questions overdue or due within 7 days
 {if MILESTONE_SOON} ⚠ Milestone approaching in {N} days
+{if BRIEF_STALE}    📝 /pm-brief — {BRIEF_DAYS}д назад → обнови
+{if REVIEW_DUE}     🔄 /pm-review — {REVIEW_DAYS}д назад → запусти
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
  Следующий шаг:  /{skill}  — {reason from situation.md, or "запускаю pm-radar"}
