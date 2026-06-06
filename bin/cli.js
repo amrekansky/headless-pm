@@ -104,9 +104,23 @@ program
       const res = await fetch(`https://headless-license.onrender.com/validate?key=${key}`)
       const data = await res.json()
       if (data.valid) {
+        let expiryNote = ''
+        if (data.expires_at) {
+          const expiresDate = new Date(data.expires_at)
+          const now = new Date()
+          const daysLeft = Math.floor((expiresDate - now) / (1000 * 60 * 60 * 24))
+          const dateStr = expiresDate.toISOString().slice(0, 10)
+          if (daysLeft < 0) {
+            console.error(`License expired on ${dateStr}. Renew at headlesspm.com`)
+            process.exit(1)
+          } else if (daysLeft < 30) {
+            console.log(`⚠ License expires in ${daysLeft} days — headlesspm.com`)
+          }
+          expiryNote = ` (expires ${dateStr})`
+        }
         const { writeConfig } = await import('../lib/config.js')
         await writeConfig({ pmLicenseKey: key })
-        console.log('✓ License valid. Installing full toolkit...')
+        console.log(`✓ License valid${expiryNote}. Installing full toolkit...`)
         await installTools()
         await installSkills(key)
         await promptMcpSetup()
