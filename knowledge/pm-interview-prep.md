@@ -169,3 +169,11 @@ Behavioral: STAR → Situation (brief) → Task → Action ("I did...") → Resu
 - [Exponent PM Interview Prep — tryexponent.com](https://www.tryexponent.com/)
 - [PM Interview Questions by Company — Glassdoor](https://www.glassdoor.com/)
 - [The STAR Interview Method — Indeed](https://www.indeed.com/career-advice/interviewing/how-to-use-the-star-interview-response-technique)
+
+## Related
+
+- [[pm-career-ladder]]
+- [[prioritization-frameworks]]
+- [[shreyas-frameworks]]
+- [[user-research-methods]]
+- [[pm-writing]]

@@ -110,3 +110,11 @@ The output is not a document — it is a shared mental model. The map should be 
 - [Avion: User Story Mapping Complete Guide](https://www.avion.io/what-is-user-story-mapping/)
 - [Wall-Skills: User Story Mapping](https://wall-skills.com/2016/user-story-mapping/)
 - [Product Mindset: User Story Mapping Guide](https://productmindset.substack.com/p/48-user-story-mapping)
+
+## Related
+
+- [[dual-track-agile]]
+- [[prioritization-frameworks]]
+- [[impact-mapping]]
+- [[continuous-discovery]]
+- [[linear-jira-best-practices]]

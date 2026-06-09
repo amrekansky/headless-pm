@@ -182,3 +182,11 @@ Weekly update:    Async | < 5 min to write | shipped + in-progress + metrics + b
 - [Amazon Operating Cadence — public descriptions from Amazon alumni](https://www.aboutamazon.com/)
 - [Design Critique Best Practices — IDEO Design Kit](https://www.designkit.org/methods/)
 - [Agile Retrospectives — Esther Derby & Diana Larsen (2006)](https://www.amazon.com/Agile-Retrospectives-Making-Teams-Great/dp/0977616649)
+
+## Related
+
+- [[dual-track-agile]]
+- [[linear-jira-best-practices]]
+- [[okr-implementation]]
+- [[stakeholder-influence]]
+- [[pm-writing]]

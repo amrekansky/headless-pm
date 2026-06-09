@@ -124,3 +124,11 @@ Hypothesis → MVP → Measure real behavior → Validated learning → Pivot or
 - [Lean Startup Methodology 2024 — Business Strategy Toolkit](https://businessstrategytoolkit.com/blogs/2024-08/lean-startup-methodology-blog/) [CITED]
 - [Build Measure Learn — Userpilot](https://userpilot.com/blog/build-measure-learn/) [CITED]
 - [Lean Startup — Wikipedia](https://en.wikipedia.org/wiki/Lean_startup) [CITED]
+
+## Related
+
+- [[assumption-mapping]]
+- [[design-sprint]]
+- [[working-backwards]]
+- [[shape-up]]
+- [[continuous-discovery]]

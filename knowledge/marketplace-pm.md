@@ -153,3 +153,11 @@ Bootstrap strategies:
 - [The Supply Side of Marketplaces — Andrew Chen (a16z)](https://a16z.com/2016/08/05/marketplace-1/)
 - [Marketplace Liquidity — Josh Breinlinger (Jackson Square Ventures)](https://acrowdedspace.com/post/47658552922/the-importance-of-marketplace-liquidity)
 - [How Airbnb Bootstrapped — Paul Graham case studies](http://paulgraham.com/growth.html)
+
+## Related
+
+- [[platform-strategy]]
+- [[product-led-growth]]
+- [[unit-economics]]
+- [[aarrr-pirate-metrics]]
+- [[customer-success-pm]]

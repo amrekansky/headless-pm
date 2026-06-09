@@ -268,3 +268,11 @@ Notion vs Linear: Notion owns strategy+docs; Linear owns sprint execution
 - [Building a PM System in Notion — Lenny Rachitsky thread](https://twitter.com/lennysan)
 - [Notion AI Overview — Notion product docs](https://www.notion.so/product/ai)
 - [Notion Product Roadmap Template — Notion.so/templates](https://www.notion.so/templates/product-roadmap)
+
+## Related
+
+- [[linear-jira-best-practices]]
+- [[pm-rituals]]
+- [[okr-implementation]]
+- [[pm-writing]]
+- [[story-mapping]]

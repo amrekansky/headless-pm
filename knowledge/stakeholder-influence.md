@@ -96,3 +96,11 @@ Step 5 — Offer a joint problem-framing: "What if we figured out together what 
 - Scarcity: use only when the constraint is real
 
 **Difficult conversation steps:** (1) State intent — finding what works, not winning. (2) Describe impact, not behavior. (3) Ask their perspective before presenting yours. (4) Address their interest (why), not their position (what). (5) Offer joint problem-framing.
+
+## Related
+
+- [[difficult-conversations]]
+- [[org-design-product]]
+- [[pyramid-principle]]
+- [[enterprise-b2b-motion]]
+- [[shreyas-frameworks]]

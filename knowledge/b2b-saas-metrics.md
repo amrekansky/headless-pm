@@ -124,3 +124,11 @@ Payback > 24mo = fix before scaling
 - [CAC Payback Benchmarks — Drivetrain](https://www.drivetrain.ai/strategic-finance-glossary/cac-payback-period-formula-benchmarks-and-how-to-reduce-it)
 - [SaaS Metrics Benchmark Report 2025 — Rockingweb](https://www.rockingweb.com.au/saas-metrics-benchmark-report-2025/)
 - [NRR calculation guide — Drivetrain](https://www.drivetrain.ai/strategic-finance-glossary/how-to-calculate-net-revenue-retention)
+
+## Related
+
+- [[metrics-taxonomy]]
+- [[unit-economics]]
+- [[aarrr-pirate-metrics]]
+- [[pricing-strategy-saas]]
+- [[north-star-metric]]

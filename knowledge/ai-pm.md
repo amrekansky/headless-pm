@@ -163,3 +163,11 @@ Friday: Update golden set with new edge cases from production errors
 - [PM guide to AI evaluations — saptak.in](https://saptak.in/writing/2025/04/17/product-managers-guide-ai-evaluations)
 - [How AI changes product management — reforge.com](https://www.reforge.com/blog/how-ai-changes-product-management)
 - [AI evals error analysis — productcompass.pm](https://www.productcompass.pm/p/evaluating-ai-products-error-analysis)
+
+## Related
+
+- [[technical-concepts-for-pms]]
+- [[infrastructure-pm]]
+- [[developer-experience]]
+- [[data-literacy-for-pms]]
+- [[experimentation-maturity]]

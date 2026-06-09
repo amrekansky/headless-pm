@@ -152,3 +152,11 @@ API is the UX: treat API ergonomics with same discipline as consumer UX
 - [Team Topologies — Matthew Skelton & Manuel Pais (2019)](https://teamtopologies.com/)
 - [Platform Engineering at Spotify — Spotify Engineering Blog](https://engineering.atspotify.com/)
 - [Developer Experience (DevEx) — GitHub Research (2023)](https://github.blog/2023-06-08-developer-experience-what-is-it-and-why-should-you-care/)
+
+## Related
+
+- [[developer-experience]]
+- [[ai-pm]]
+- [[technical-concepts-for-pms]]
+- [[make-buy-partner]]
+- [[platform-strategy]]

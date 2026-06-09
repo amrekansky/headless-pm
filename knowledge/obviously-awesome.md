@@ -136,3 +136,11 @@ Positioning should be revisited when:
 - `/competitive-battlecard` — battlecard should frame alternatives, not just competitors
 - `/icp-definition` — ICP = customers who care most about your unique attributes; positioning and ICP are co-designed
 - `/market-sizing` — market category definition determines which market you're sizing
+
+## Related
+
+- [[jobs-to-be-done]]
+- [[crossing-the-chasm]]
+- [[tam-sam-som]]
+- [[win-loss-analysis]]
+- [[porters-five-forces]]

@@ -124,3 +124,11 @@ If you cannot answer all three, the deliverable is not justified.
 - [Amplitude: The Art of Impact Mapping](https://amplitude.com/blog/impact-map)
 - [Buildd: What is Impact Mapping?](https://buildd.co/product/impact-mapping)
 - [Mark Dalgarno: What is Impact Mapping?](https://markdalgarno.medium.com/what-is-impact-mapping-2ced79a8b956)
+
+## Related
+
+- [[okr-implementation]]
+- [[story-mapping]]
+- [[prioritization-frameworks]]
+- [[working-backwards]]
+- [[pm-writing]]

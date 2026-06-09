@@ -163,3 +163,11 @@ People who have always used your product or who have never switched reveal their
 - `/continuous-interview-synthesis` — aggregates JTBD findings across interview cycles
 - `/attitudinal-segmentation` — attitudes often correlate with the job being hired, not demographics
 - `/opportunity-solution-tree` — opportunity nodes should be written as JTBD opportunity statements
+
+## Related
+
+- [[switch-interview-methodology]]
+- [[continuous-discovery]]
+- [[obviously-awesome]]
+- [[assumption-mapping]]
+- [[win-loss-analysis]]

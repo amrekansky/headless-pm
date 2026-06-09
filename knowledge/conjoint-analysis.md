@@ -89,3 +89,11 @@ From utilities you can calculate:
 - [LogRocket: Conjoint analysis for product management](https://blog.logrocket.com/product-management/conjoint-analysis)
 - [Driver Research: Choice-Based Conjoint Analysis Guide](https://www.driveresearch.com/market-research-company-blog/choice-based-conjoint-analysis/)
 - [HBS Online: What is Conjoint Analysis?](https://online.hbs.edu/blog/post/what-is-conjoint-analysis)
+
+## Related
+
+- [[user-research-methods]]
+- [[pricing-strategy-saas]]
+- [[obviously-awesome]]
+- [[jobs-to-be-done]]
+- [[assumption-mapping]]

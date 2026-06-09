@@ -116,3 +116,11 @@ PM question: Is our competitive advantage durable, or will rivals copy the diffe
 - [MTLC: Revising Porter's Five Forces in the Age of AI](https://www.mtlc.co/revising-porters-five-forces-analysis-in-the-age-of-ai/)
 - [Cascade: Porter's Five Forces Complete Guide](https://www.cascade.app/blog/porters-5-forces)
 - [Flevy: Five Forces Technology Company Case Study](https://flevy.com/topic/porters-five-forces-analysis/case-porters-five-forces-analysis-refresh-technology-software-company)
+
+## Related
+
+- [[7-powers]]
+- [[obviously-awesome]]
+- [[tam-sam-som]]
+- [[crossing-the-chasm]]
+- [[platform-strategy]]

@@ -115,3 +115,11 @@ AARRR = sales-led (acquisition first) | RARRA = PLG (retention first)
 - [AARRR vs RARRA — CleverTap](https://clevertap.com/blog/aarrr-vs-rarra-framework-pirate-metrics/) [CITED]
 - [AARRR vs RARRA — Mind the Product](https://www.mindtheproduct.com/aarrr-vs-rarra-pirate-metrics-explained/) [CITED]
 - [Pirate Metrics — Product Compass](https://www.productcompass.pm/p/aarrr-pirate-metrics) [CITED]
+
+## Related
+
+- [[metrics-taxonomy]]
+- [[north-star-metric]]
+- [[product-led-growth]]
+- [[unit-economics]]
+- [[heart-framework]]

@@ -147,3 +147,11 @@ SBI feedback: Situation → Behavior → Impact
 - [Getting to Yes — Roger Fisher & William Ury (1981)](https://www.amazon.com/Getting-Yes-Negotiating-Agreement-Without/dp/0143118757)
 - [Never Split the Difference — Chris Voss (2016)](https://www.amazon.com/Never-Split-Difference-Negotiating-Depended/dp/0062407805)
 - [SBI Feedback Model — Center for Creative Leadership](https://www.ccl.org/articles/leading-effectively-articles/closing-the-gap-between-intent-and-impact/)
+
+## Related
+
+- [[stakeholder-influence]]
+- [[pyramid-principle]]
+- [[pm-writing]]
+- [[org-design-product]]
+- [[shreyas-frameworks]]

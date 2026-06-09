@@ -134,3 +134,11 @@ Question: "If this metric moves, how long until we see revenue impact?"
 - [Good vs bad NSM — amplitude.com](https://amplitude.com/blog/good-bad-north-star-metric)
 - [Leading vs lagging indicators — amplitude.com](https://amplitude.com/blog/map-your-metrics)
 - [Amplitude NSM playbook — amplitude.com/books/north-star/amplitudes-north-star-metric-and-inputs](https://amplitude.com/books/north-star/amplitudes-north-star-metric-and-inputs)
+
+## Related
+
+- [[metrics-taxonomy]]
+- [[aarrr-pirate-metrics]]
+- [[okr-implementation]]
+- [[heart-framework]]
+- [[product-led-growth]]

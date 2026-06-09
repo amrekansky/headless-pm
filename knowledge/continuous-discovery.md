@@ -93,3 +93,11 @@ Friday: Design one assumption test for next sprint
 - [Opportunity Solution Trees — producttalk.org](https://www.producttalk.org/opportunity-solution-trees/)
 - [How to Interview Customers Continuously — userinterviews.com](https://www.userinterviews.com/blog/how-to-interview-customers-continuously-with-teresa-torres-of-product-talk)
 - [Continuous Discovery Habits Summary — headway.io](https://www.headway.io/exploring-product/continuous-discovery-habits-for-product-teams-teresa-torres)
+
+## Related
+
+- [[jobs-to-be-done]]
+- [[switch-interview-methodology]]
+- [[dual-track-agile]]
+- [[assumption-mapping]]
+- [[user-research-methods]]

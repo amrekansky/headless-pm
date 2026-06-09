@@ -106,3 +106,11 @@ Low importance  │ LOW PRIORITY       │ NICE TO KNOW
 - [Riskiest Assumption Test — ModelThinkers](https://www.modelthinkers.com/mental-model/riskiest-assumption-test)
 - [The MVP is dead. Long live the RAT — HackerNoon](https://hackernoon.com/the-mvp-is-dead-long-live-the-rat-233d5d16ab02)
 - [Validating product ideas using the RAT — Red Badger](https://content.red-badger.com/resources/validating-product-ideas)
+
+## Related
+
+- [[continuous-discovery]]
+- [[lean-startup]]
+- [[design-sprint]]
+- [[jobs-to-be-done]]
+- [[prioritization-frameworks]]

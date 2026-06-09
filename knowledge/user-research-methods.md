@@ -137,3 +137,11 @@ Long-term habits?  → Diary study
 - [UX Research Methods — Maze Guide](https://maze.co/guides/ux-research/methods/)
 - [How Many Users for a Usability Study — Nielsen Norman Group](https://www.nngroup.com/articles/how-many-test-users/)
 - [UX Research Methods 2025 — Lyssna](https://www.lyssna.com/guides/ux-research/ux-research-methods/)
+
+## Related
+
+- [[continuous-discovery]]
+- [[design-sprint]]
+- [[conjoint-analysis]]
+- [[research-tools]]
+- [[assumption-mapping]]

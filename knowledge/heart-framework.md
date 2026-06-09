@@ -115,3 +115,11 @@ GSM: Goal → Signal → Metric (for each dimension you pick)
 - [GSM Process — Userpilot](https://userpilot.com/blog/goals-signals-metrics/) [CITED]
 - [HEART Framework — ProductPlan](https://www.productplan.com/glossary/heart-framework) [CITED]
 - [Google HEART Framework — Userpilot](https://userpilot.com/blog/google-heart-framework/) [CITED]
+
+## Related
+
+- [[metrics-taxonomy]]
+- [[north-star-metric]]
+- [[aarrr-pirate-metrics]]
+- [[user-research-methods]]
+- [[okr-implementation]]

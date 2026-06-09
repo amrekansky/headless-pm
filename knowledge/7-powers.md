@@ -92,3 +92,11 @@ Accumulated organizational capability — a way of doing things that is embedded
 - [7 Powers summary — Blas.com](https://blas.com/7-powers/)
 - [7 Powers with Hamilton Helmer — Acquired Podcast](https://www.acquired.fm/episodes/7-powers-with-hamilton-helmer)
 - [7 Powers: A FREE Strategic Framework Template — Strategy Punk](https://www.strategypunk.com/7-powers-by-hamilton-helmer-a-strategic-framework-template/)
+
+## Related
+
+- [[porters-five-forces]]
+- [[crossing-the-chasm]]
+- [[platform-strategy]]
+- [[make-buy-partner]]
+- [[startup-pm]]

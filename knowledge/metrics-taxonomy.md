@@ -290,3 +290,11 @@ Low utilization is the #1 leading indicator of B2B churn. Check it 60–90 days 
 - [Userpilot — Core Feature Adoption Rate Benchmark 2024](https://userpilot.com/blog/core-feature-adoption-rate-benchmark-report-2024/)
 - [First Page Sage — CAC by Channel](https://firstpagesage.com/marketing/cac-by-channel-fc/)
 - [NPS Benchmarks 2024 — Survicate](https://survicate.com/nps-benchmarks/)
+
+## Related
+
+- [[aarrr-pirate-metrics]]
+- [[north-star-metric]]
+- [[b2b-saas-metrics]]
+- [[unit-economics]]
+- [[heart-framework]]

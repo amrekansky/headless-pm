@@ -141,3 +141,11 @@ Board communication: numbers first → narrative → risk → ask
 - [Burn Multiple — Bessemer Venture Partners](https://www.bvp.com/atlas/eight-laws-for-a-cloud-business)
 - [Pitch Deck Guide — YC Startup School](https://www.startupschool.org/library)
 - [SaaS Metrics for Fundraising — David Skok (ForEntrepreneurs)](https://www.forentrepreneurs.com/saas-metrics-2/)
+
+## Related
+
+- [[lean-startup]]
+- [[7-powers]]
+- [[tam-sam-som]]
+- [[hiring-pms]]
+- [[shape-up]]

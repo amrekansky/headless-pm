@@ -116,3 +116,11 @@ Friday     → Test: 5 users, look for patterns, decide next step
 - [Jake Knapp — Sprint](https://jakeknapp.com/sprint) [CITED]
 - [Design Sprint — Wikipedia](https://en.wikipedia.org/wiki/Design_sprint) [CITED]
 - [5 Phases of a Design Sprint — Product Mindset](https://productmindset.substack.com/p/design-sprint-for-problem-solving) [CITED]
+
+## Related
+
+- [[continuous-discovery]]
+- [[assumption-mapping]]
+- [[user-research-methods]]
+- [[story-mapping]]
+- [[dual-track-agile]]

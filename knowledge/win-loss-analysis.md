@@ -129,3 +129,11 @@ Output: route to specific owners with specific actions — not a report that sit
 - [Win/Loss Checklist for PMs — Pragmatic Institute](https://www.pragmaticinstitute.com/resources/articles/product/win-loss-analysis-checklist-for-product-managers/) [CITED]
 - [Win/Loss for Product-Market Fit — Lean B2B](https://leanb2bbook.com/blog/win-loss-analysis/) [CITED]
 - [How to Conduct Win-Loss Interviews — Product Marketing Alliance](https://www.productmarketingalliance.com/how-to-conduct-win-loss-interviews/) [CITED]
+
+## Related
+
+- [[obviously-awesome]]
+- [[switch-interview-methodology]]
+- [[enterprise-b2b-motion]]
+- [[customer-success-pm]]
+- [[jobs-to-be-done]]

@@ -133,3 +133,11 @@ Raise prices  = when <15% of lost deals cite price
 - [SaaS Packaging and Pricing — Product Leadership](https://www.productleadership.com/blog/saas-packaging-and-pricing/)
 - [PSM Implementation for SaaS Research — Monetizely](https://www.getmonetizely.com/articles/how-to-implement-van-westendorp-price-sensitivity-meter-for-saas-research)
 - [Pricing Products — First Principles Ventures](https://www.firstprinciples.ventures/insights/pricing-products-the-silicon-valley-way-van-westendorp-model)
+
+## Related
+
+- [[unit-economics]]
+- [[b2b-saas-metrics]]
+- [[obviously-awesome]]
+- [[conjoint-analysis]]
+- [[product-led-growth]]

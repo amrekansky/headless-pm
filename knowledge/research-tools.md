@@ -288,3 +288,11 @@ Use AppFollow or AppBot to aggregate and analyze at scale. Manual reading of raw
 - [G2 + Capterra as competitive intelligence — HireSteve AI, 2026](https://hiresteve.ai/articles/g2-capterra-reviews-competitive-intelligence-2026)
 - [Crunchbase employment signals](https://about.crunchbase.com/blog/new-crunchbase-employment-signals)
 - [Similarweb competitive intelligence guide](https://www.similarweb.com/blog/marketing/marketing-strategy/competitive-intelligence/)
+
+## Related
+
+- [[user-research-methods]]
+- [[data-literacy-for-pms]]
+- [[conjoint-analysis]]
+- [[win-loss-analysis]]
+- [[continuous-discovery]]

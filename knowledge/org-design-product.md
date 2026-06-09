@@ -139,3 +139,11 @@ Conway's Law: org structure → software architecture; inverse = design org for 
 - [Conway's Law — Melvin Conway (1968)](http://www.melconway.com/Home/Conways_Law.html)
 - [How Spotify Builds Products — Spotify Engineering (2014)](https://engineering.atspotify.com/2014/03/spotify-engineering-culture-part-1/)
 - [Accelerate: Building and Scaling High-Performing Technology Organizations — Forsgren, Humble, Kim (2018)](https://www.amazon.com/Accelerate-Software-Performing-Technology-Organizations/dp/1942788339)
+
+## Related
+
+- [[hiring-pms]]
+- [[pm-career-ladder]]
+- [[stakeholder-influence]]
+- [[platform-strategy]]
+- [[difficult-conversations]]

@@ -143,3 +143,11 @@ Acquire = buy the company, right when team+IP is the asset
 - [Make vs Buy vs Partner — Pragmatic Institute](https://www.pragmaticinstitute.com/resources/articles/product/make-buy-or-partner/)
 - [Amazon's Approach to Technology Decisions — Werner Vogels](https://www.allthingsdistributed.com/)
 - [Stripe on buying infrastructure — Patrick Collison interviews](https://www.foundersatwork.com/)
+
+## Related
+
+- [[7-powers]]
+- [[platform-strategy]]
+- [[technical-concepts-for-pms]]
+- [[infrastructure-pm]]
+- [[compliance-basics]]
