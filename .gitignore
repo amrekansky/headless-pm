@@ -5,3 +5,5 @@ package-lock.json
 *.pem
 *.key
 .pm/
+wiki/
+.raw/
