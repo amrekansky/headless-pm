@@ -125,115 +125,146 @@ All three commands should print a version number. If one fails, that's fine — 
 
 ---
 
-### 5. Set Up Your Workspace
-
-headless-pm reads a `.pm/` folder in your project directory. This folder holds your product context — sprint state, focus, blockers — so the AI always knows what you're working on.
-
-Create the workspace for your product:
-
-```bash
-mkdir -p ~/projects/my-product/.pm/artifacts
-cd ~/projects/my-product
-```
-
-Replace `my-product` with the name of your actual product (e.g., `my-saas-app`, `analytics-platform`).
-
-Your workspace structure:
-
-```
-my-product/
-  .pm/
-    STATE.md       ← sprint state, focus, blockers
-    artifacts/     ← PRD, backlog, sprint plans, etc.
-```
-
-**Verify:**
-
-```bash
-ls .pm/
-```
-
-Expected output: `artifacts/`
-
----
-
-### 6. Load Your Product Context
-
-The easiest way is to let `/pm-onboarding` do it for you after install (Step 8). It asks 8 quick questions and creates `.pm/STATE.md` automatically.
-
-Or create it manually now:
-
-```bash
-# Open the file in nano (simple editor):
-nano .pm/STATE.md
-```
-
-Paste this template and fill it in:
-
-```markdown
-- Product: [your product name]
-- Phase: Discover
-- Sprint: 1 (ends 2026-06-01)
-- Focus: [what you're working on this sprint]
-- Blockers: none
-```
-
-Save: press **Ctrl+O**, then **Enter**, then **Ctrl+X** to exit.
-
-**Verify:** Run `cat .pm/STATE.md` — you should see your content.
-
----
-
-### 7. Install headless-pm
+### 5. Install headless-pm
 
 ```bash
 npx headless-pm install
 ```
 
-What happens:
-- Detects which CLIs you have installed (Claude, Gemini, Codex)
-- Installs all 88 PM skills into each one
+What this does:
+- Detects which CLIs you installed (Claude, Gemini, Codex)
+- Installs all 101 PM skills into each one
 - Installs the knowledge base to `~/.headless/pm/`
-- Asks if you want to connect Notion, Linear, or other tools (press Enter to skip for now)
+- Asks about optional integrations (Notion, Linear, Miro) — press Enter to skip for now
 
-**If you have a license key** for the `/pm` orchestrator: enter it when prompted.
+**License key for the `/pm` orchestrator:** Enter it when prompted, or press Enter to continue with the free tier.
 
-**Verify:**
-
-```bash
-claude --version
-```
-
-If Claude installed successfully: `npx headless-pm install` has finished.
+**Verify:** Open Claude and type `/pm-sprint-brief` — if the skill loads, you're all set.
 
 ---
 
-### 8. First Run
+### 6. Set Up Your Workspace
 
-Open Claude Code in your product folder:
+How you set up depends on where you are:
+
+---
+
+#### Scenario A — You have existing materials
+
+You have docs, PRDs, specs, notes, Notion exports, or slide decks. Don't start from a blank workspace — feed Claude your context first.
+
+**Step 1 — Convert your documents to Markdown.**
+
+Install [markitdown](https://github.com/microsoft/markitdown) — it handles DOCX, PDF, PPTX, XLSX, and more:
+
+```bash
+brew install python  # if pip is not found
+pip install markitdown
+```
+
+Convert your files:
+
+```bash
+markitdown your-prd.docx > your-prd.md
+markitdown your-roadmap.pdf > your-roadmap.md
+```
+
+Run this for every document you want Claude to read.
+
+**Step 2 — Open Claude in your project folder:**
 
 ```bash
 cd ~/projects/my-product
 claude
 ```
 
-**If you skipped Step 6**, run the onboarding wizard first:
+**Step 3 — Share your context.**
+
+Just talk. No template, no structure. Tell Claude:
+- What you're working on and why
+- What you want to achieve
+- What's blocking you or causing friction
+
+Think of it like onboarding a new colleague — the more honest and specific you are, the better Claude understands your situation.
+
+**Step 4 — At the end of the session, initialize your workspace:**
 
 ```
 /pm-onboarding
 ```
 
-It asks 8 questions and creates `.pm/STATE.md` for you. Then you're ready to use any skill.
+This creates your `.pm/` workspace based on the conversation.
 
-**Try these:**
+---
+
+#### Scenario B — You're starting from scratch
+
+No existing docs. That's fine — start with a conversation.
+
+```bash
+mkdir -p ~/projects/my-product
+cd ~/projects/my-product
+claude
+```
+
+Describe what you're planning to build: the product, the problem it solves, who it's for, where you are in the process. Just talk — no agenda required.
+
+At the end of the session, run:
 
 ```
-/pm-prd           # write a PRD for your current focus
-/cusdev           # prepare a customer interview (Mom Test)
-/pm-sprint-plan   # plan your sprint
+/pm-onboarding
 ```
 
-**If you have the `/pm` orchestrator** (license key): just type `/pm` — it reads your STATE.md and routes to the right skill automatically.
+---
+
+After init, your workspace looks like this:
+
+```
+my-product/
+  .pm/
+    STATE.md        ← current sprint state, focus, blockers
+    situation.md    ← product context
+    goals.md        ← what you're trying to achieve
+    artifacts/      ← PRDs, sprint plans, interview notes, etc.
+```
+
+---
+
+### 7. Your First Skills (Free Tier)
+
+You have 101 PM skills. Start with what's most useful right now:
+
+```
+/pm-prd               # write a PRD for your current focus
+/cusdev               # prep a customer interview (Mom Test)
+/pm-sprint-brief      # create a sprint brief
+/pm-competitive-scan  # competitive analysis
+/discovery            # discovery framework for a new problem
+```
+
+Each skill reads your `.pm/STATE.md` for context. The more specific your workspace, the better the output.
+
+---
+
+### 8. The /pm Orchestrator (Paid Tier)
+
+If you have a license key, the `/pm` orchestrator becomes your single entry point. One command instead of five.
+
+Re-run install to enter your key:
+
+```bash
+npx headless-pm install
+```
+
+Then open Claude in your project folder and type:
+
+```
+/pm
+```
+
+It reads your `STATE.md`, understands where you are in the PM workflow, and routes to the right skill automatically.
+
+Get a license key at [headlesspm.com](https://headlesspm.com).
 
 ---
 
@@ -347,73 +378,146 @@ Your browser opens → log in with OpenAI account → return to Terminal.
 
 ---
 
-### 5. Set Up Your Workspace
-
-```bash
-mkdir -p ~/projects/my-product/.pm/artifacts
-cd ~/projects/my-product
-```
-
-**Verify:** `ls .pm/` → shows `artifacts/`
-
----
-
-### 6. Load Your Product Context
-
-The easiest way is to let `/pm-onboarding` do it after install (Step 8). Or create it manually:
-
-```bash
-nano .pm/STATE.md
-```
-
-Paste and fill in:
-
-```markdown
-- Product: [your product name]
-- Phase: Discover
-- Sprint: 1 (ends 2026-06-01)
-- Focus: [what you're working on this sprint]
-- Blockers: none
-```
-
-Save: **Ctrl+O** → **Enter** → **Ctrl+X**
-
-**Verify:** `cat .pm/STATE.md`
-
----
-
-### 7. Install headless-pm
+### 5. Install headless-pm
 
 ```bash
 npx headless-pm install
 ```
 
-Installs all 88 PM skills. Enter your license key if you have one (for the `/pm` orchestrator), or press Enter to skip.
+What this does:
+- Detects which CLIs you installed (Claude, Gemini, Codex)
+- Installs all 101 PM skills into each one
+- Installs the knowledge base to `~/.headless/pm/`
+- Asks about optional integrations (Notion, Linear, Miro) — press Enter to skip for now
+
+**License key for the `/pm` orchestrator:** Enter it when prompted, or press Enter to continue with the free tier.
+
+**Verify:** Open Claude and type `/pm-sprint-brief` — if the skill loads, you're all set.
 
 ---
 
-### 8. First Run
+### 6. Set Up Your Workspace
+
+How you set up depends on where you are:
+
+---
+
+#### Scenario A — You have existing materials
+
+You have docs, PRDs, specs, notes, Notion exports, or slide decks. Don't start from a blank workspace — feed Claude your context first.
+
+**Step 1 — Convert your documents to Markdown.**
+
+Install [markitdown](https://github.com/microsoft/markitdown) — it handles DOCX, PDF, PPTX, XLSX, and more:
+
+```bash
+sudo apt install python3-pip  # if pip is not found
+pip install markitdown
+```
+
+Convert your files:
+
+```bash
+markitdown your-prd.docx > your-prd.md
+markitdown your-roadmap.pdf > your-roadmap.md
+```
+
+Run this for every document you want Claude to read.
+
+**Step 2 — Open Claude in your project folder:**
 
 ```bash
 cd ~/projects/my-product
 claude
 ```
 
-**If you skipped Step 6**, run the onboarding wizard first:
+**Step 3 — Share your context.**
+
+Just talk. No template, no structure. Tell Claude:
+- What you're working on and why
+- What you want to achieve
+- What's blocking you or causing friction
+
+Think of it like onboarding a new colleague — the more honest and specific you are, the better Claude understands your situation.
+
+**Step 4 — At the end of the session, initialize your workspace:**
 
 ```
 /pm-onboarding
 ```
 
-Then try:
+This creates your `.pm/` workspace based on the conversation.
+
+---
+
+#### Scenario B — You're starting from scratch
+
+No existing docs. That's fine — start with a conversation.
+
+```bash
+mkdir -p ~/projects/my-product
+cd ~/projects/my-product
+claude
+```
+
+Describe what you're planning to build: the product, the problem it solves, who it's for, where you are in the process. Just talk — no agenda required.
+
+At the end of the session, run:
 
 ```
-/pm-prd           # write a PRD
-/cusdev           # customer interview prep
-/pm-sprint-plan   # plan your sprint
+/pm-onboarding
 ```
 
-**If you have the `/pm` orchestrator**: just type `/pm` — it routes automatically.
+---
+
+After init, your workspace looks like this:
+
+```
+my-product/
+  .pm/
+    STATE.md        ← current sprint state, focus, blockers
+    situation.md    ← product context
+    goals.md        ← what you're trying to achieve
+    artifacts/      ← PRDs, sprint plans, interview notes, etc.
+```
+
+---
+
+### 7. Your First Skills (Free Tier)
+
+You have 101 PM skills. Start with what's most useful right now:
+
+```
+/pm-prd               # write a PRD for your current focus
+/cusdev               # prep a customer interview (Mom Test)
+/pm-sprint-brief      # create a sprint brief
+/pm-competitive-scan  # competitive analysis
+/discovery            # discovery framework for a new problem
+```
+
+Each skill reads your `.pm/STATE.md` for context. The more specific your workspace, the better the output.
+
+---
+
+### 8. The /pm Orchestrator (Paid Tier)
+
+If you have a license key, the `/pm` orchestrator becomes your single entry point. One command instead of five.
+
+Re-run install to enter your key:
+
+```bash
+npx headless-pm install
+```
+
+Then open Claude in your project folder and type:
+
+```
+/pm
+```
+
+It reads your `STATE.md`, understands where you are in the PM workflow, and routes to the right skill automatically.
+
+Get a license key at [headlesspm.com](https://headlesspm.com).
 
 ---
 
@@ -540,75 +644,149 @@ Browser opens → log in with OpenAI account.
 
 ---
 
-### 5. Set Up Your Workspace
+### 5. Install headless-pm
 
-```bash
-mkdir -p ~/projects/my-product/.pm/artifacts
-cd ~/projects/my-product
-```
-
-> **Note:** Your Linux home directory (`~/`) is stored inside WSL2 — it's separate from your Windows `C:\Users\` folder. This is intentional and keeps things clean.
-
-**Verify:** `ls .pm/` → shows `artifacts/`
-
----
-
-### 6. Load Your Product Context
-
-The easiest way is to let `/pm-onboarding` do it after install (Step 8). Or create it manually:
-
-```bash
-nano .pm/STATE.md
-```
-
-Paste and fill in:
-
-```markdown
-- Product: [your product name]
-- Phase: Discover
-- Sprint: 1 (ends 2026-06-01)
-- Focus: [what you're working on this sprint]
-- Blockers: none
-```
-
-Save: **Ctrl+O** → **Enter** → **Ctrl+X**
-
-**Verify:** `cat .pm/STATE.md`
-
----
-
-### 7. Install headless-pm
+Inside your Ubuntu (WSL2) terminal:
 
 ```bash
 npx headless-pm install
 ```
 
-Installs all 88 PM skills. Enter your license key if you have one (for the `/pm` orchestrator), or press Enter to skip.
+What this does:
+- Detects which CLIs you installed (Claude, Gemini, Codex)
+- Installs all 101 PM skills into each one
+- Installs the knowledge base to `~/.headless/pm/`
+- Asks about optional integrations (Notion, Linear, Miro) — press Enter to skip for now
+
+**License key for the `/pm` orchestrator:** Enter it when prompted, or press Enter to continue with the free tier.
+
+**Verify:** Open Claude and type `/pm-sprint-brief` — if the skill loads, you're all set.
 
 ---
 
-### 8. First Run
+### 6. Set Up Your Workspace
+
+How you set up depends on where you are:
+
+---
+
+#### Scenario A — You have existing materials
+
+You have docs, PRDs, specs, notes, Notion exports, or slide decks. Don't start from a blank workspace — feed Claude your context first.
+
+**Step 1 — Convert your documents to Markdown.**
+
+Install [markitdown](https://github.com/microsoft/markitdown) — it handles DOCX, PDF, PPTX, XLSX, and more:
+
+```bash
+sudo apt install python3-pip  # if pip is not found
+pip install markitdown
+```
+
+To convert files from your Windows folders, access them via `/mnt/c/Users/yourname/Documents/`:
+
+```bash
+markitdown /mnt/c/Users/yourname/Documents/your-prd.docx > your-prd.md
+```
+
+Run this for every document you want Claude to read.
+
+**Step 2 — Open Claude in your project folder:**
 
 ```bash
 cd ~/projects/my-product
 claude
 ```
 
-**If you skipped Step 6**, run the onboarding wizard first:
+**Step 3 — Share your context.**
+
+Just talk. No template, no structure. Tell Claude:
+- What you're working on and why
+- What you want to achieve
+- What's blocking you or causing friction
+
+Think of it like onboarding a new colleague — the more honest and specific you are, the better Claude understands your situation.
+
+**Step 4 — At the end of the session, initialize your workspace:**
 
 ```
 /pm-onboarding
 ```
 
-Then try:
+This creates your `.pm/` workspace based on the conversation.
+
+---
+
+#### Scenario B — You're starting from scratch
+
+No existing docs. That's fine — start with a conversation.
+
+```bash
+mkdir -p ~/projects/my-product
+cd ~/projects/my-product
+claude
+```
+
+Describe what you're planning to build: the product, the problem it solves, who it's for, where you are in the process. Just talk — no agenda required.
+
+At the end of the session, run:
 
 ```
-/pm-prd           # write a PRD
-/cusdev           # customer interview prep
-/pm-sprint-plan   # plan your sprint
+/pm-onboarding
 ```
 
-**If you have the `/pm` orchestrator**: just type `/pm` — it routes automatically.
+---
+
+After init, your workspace looks like this:
+
+```
+my-product/
+  .pm/
+    STATE.md        ← current sprint state, focus, blockers
+    situation.md    ← product context
+    goals.md        ← what you're trying to achieve
+    artifacts/      ← PRDs, sprint plans, interview notes, etc.
+```
+
+> **Note:** Your Linux home directory (`~/`) is stored inside WSL2 — it's separate from your Windows `C:\Users\` folder. This is intentional and keeps things clean. Find your files in Windows Explorer at `\\wsl$\Ubuntu\home\yourname\`.
+
+---
+
+### 7. Your First Skills (Free Tier)
+
+You have 101 PM skills. Start with what's most useful right now:
+
+```
+/pm-prd               # write a PRD for your current focus
+/cusdev               # prep a customer interview (Mom Test)
+/pm-sprint-brief      # create a sprint brief
+/pm-competitive-scan  # competitive analysis
+/discovery            # discovery framework for a new problem
+```
+
+Each skill reads your `.pm/STATE.md` for context. The more specific your workspace, the better the output.
+
+---
+
+### 8. The /pm Orchestrator (Paid Tier)
+
+If you have a license key, the `/pm` orchestrator becomes your single entry point. One command instead of five.
+
+Re-run install to enter your key:
+
+```bash
+npx headless-pm install
+```
+
+Then open Claude in your project folder and type:
+
+```
+/pm
+```
+
+It reads your `STATE.md`, understands where you are in the PM workflow, and routes to the right skill automatically.
+
+Get a license key at [headlesspm.com](https://headlesspm.com).
 
 ---
 
