@@ -186,28 +186,21 @@ cd ~/projects/my-product
 claude
 ```
 
-**Step 3 — Share your context.**
+**Step 3 — The first thing you type:**
 
-Just talk. No template, no structure. Tell Claude:
-- What you're working on and why
-- What you want to achieve
-- What's blocking you or causing friction
+| CLI | Command |
+|-----|---------|
+| Claude | `/pm-onboarding` |
+| Gemini | `/pm-onboarding` |
+| Codex | `$pm-onboarding` |
 
-Think of it like onboarding a new colleague — the more honest and specific you are, the better Claude understands your situation.
-
-**Step 4 — At the end of the session, initialize your workspace:**
-
-```
-/pm-onboarding
-```
-
-This creates your `.pm/` workspace based on the conversation.
+The skill runs an 8-question interview and sets up your `.pm/` workspace. When it asks for context, paste content from your converted documents or describe your situation in your own words — no template needed. Treat it like onboarding a new colleague.
 
 ---
 
 #### Scenario B — You're starting from scratch
 
-No existing docs. That's fine — start with a conversation.
+No existing docs. That's fine.
 
 ```bash
 mkdir -p ~/projects/my-product
@@ -215,13 +208,15 @@ cd ~/projects/my-product
 claude
 ```
 
-Describe what you're planning to build: the product, the problem it solves, who it's for, where you are in the process. Just talk — no agenda required.
+The first thing you type:
 
-At the end of the session, run:
+| CLI | Command |
+|-----|---------|
+| Claude | `/pm-onboarding` |
+| Gemini | `/pm-onboarding` |
+| Codex | `$pm-onboarding` |
 
-```
-/pm-onboarding
-```
+The skill will ask you 8 questions about your product, team, and current focus. Answer in your own words — no template required.
 
 ---
 
@@ -251,6 +246,8 @@ You have 101 PM skills. Start with what's most useful right now:
 | Discovery framework | `/discovery` | `$discovery` |
 
 Each skill reads your `.pm/STATE.md` for context. The more specific your workspace, the better the output.
+
+> **Full skills list** → [docs/skills-reference.md](skills-reference.md) — all 101 skills with descriptions, when to use, and example prompts.
 
 ---
 
@@ -449,28 +446,21 @@ cd ~/projects/my-product
 claude
 ```
 
-**Step 3 — Share your context.**
+**Step 3 — The first thing you type:**
 
-Just talk. No template, no structure. Tell Claude:
-- What you're working on and why
-- What you want to achieve
-- What's blocking you or causing friction
+| CLI | Command |
+|-----|---------|
+| Claude | `/pm-onboarding` |
+| Gemini | `/pm-onboarding` |
+| Codex | `$pm-onboarding` |
 
-Think of it like onboarding a new colleague — the more honest and specific you are, the better Claude understands your situation.
-
-**Step 4 — At the end of the session, initialize your workspace:**
-
-```
-/pm-onboarding
-```
-
-This creates your `.pm/` workspace based on the conversation.
+The skill runs an 8-question interview and sets up your `.pm/` workspace. When it asks for context, paste content from your converted documents or describe your situation in your own words — no template needed. Treat it like onboarding a new colleague.
 
 ---
 
 #### Scenario B — You're starting from scratch
 
-No existing docs. That's fine — start with a conversation.
+No existing docs. That's fine.
 
 ```bash
 mkdir -p ~/projects/my-product
@@ -478,13 +468,15 @@ cd ~/projects/my-product
 claude
 ```
 
-Describe what you're planning to build: the product, the problem it solves, who it's for, where you are in the process. Just talk — no agenda required.
+The first thing you type:
 
-At the end of the session, run:
+| CLI | Command |
+|-----|---------|
+| Claude | `/pm-onboarding` |
+| Gemini | `/pm-onboarding` |
+| Codex | `$pm-onboarding` |
 
-```
-/pm-onboarding
-```
+The skill will ask you 8 questions about your product, team, and current focus. Answer in your own words — no template required.
 
 ---
 
@@ -514,6 +506,8 @@ You have 101 PM skills. Start with what's most useful right now:
 | Discovery framework | `/discovery` | `$discovery` |
 
 Each skill reads your `.pm/STATE.md` for context. The more specific your workspace, the better the output.
+
+> **Full skills list** → [docs/skills-reference.md](skills-reference.md) — all 101 skills with descriptions, when to use, and example prompts.
 
 ---
 
@@ -726,28 +720,21 @@ cd ~/projects/my-product
 claude
 ```
 
-**Step 3 — Share your context.**
+**Step 3 — The first thing you type:**
 
-Just talk. No template, no structure. Tell Claude:
-- What you're working on and why
-- What you want to achieve
-- What's blocking you or causing friction
+| CLI | Command |
+|-----|---------|
+| Claude | `/pm-onboarding` |
+| Gemini | `/pm-onboarding` |
+| Codex | `$pm-onboarding` |
 
-Think of it like onboarding a new colleague — the more honest and specific you are, the better Claude understands your situation.
-
-**Step 4 — At the end of the session, initialize your workspace:**
-
-```
-/pm-onboarding
-```
-
-This creates your `.pm/` workspace based on the conversation.
+The skill runs an 8-question interview and sets up your `.pm/` workspace. When it asks for context, paste content from your converted documents or describe your situation in your own words — no template needed. Treat it like onboarding a new colleague.
 
 ---
 
 #### Scenario B — You're starting from scratch
 
-No existing docs. That's fine — start with a conversation.
+No existing docs. That's fine.
 
 ```bash
 mkdir -p ~/projects/my-product
@@ -755,13 +742,15 @@ cd ~/projects/my-product
 claude
 ```
 
-Describe what you're planning to build: the product, the problem it solves, who it's for, where you are in the process. Just talk — no agenda required.
+The first thing you type:
 
-At the end of the session, run:
+| CLI | Command |
+|-----|---------|
+| Claude | `/pm-onboarding` |
+| Gemini | `/pm-onboarding` |
+| Codex | `$pm-onboarding` |
 
-```
-/pm-onboarding
-```
+The skill will ask you 8 questions about your product, team, and current focus. Answer in your own words — no template required.
 
 ---
 
@@ -793,6 +782,8 @@ You have 101 PM skills. Start with what's most useful right now:
 | Discovery framework | `/discovery` | `$discovery` |
 
 Each skill reads your `.pm/STATE.md` for context. The more specific your workspace, the better the output.
+
+> **Full skills list** → [docs/skills-reference.md](skills-reference.md) — all 101 skills with descriptions, when to use, and example prompts.
 
 ---
 
