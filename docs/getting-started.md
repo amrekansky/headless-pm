@@ -139,7 +139,15 @@ What this does:
 
 **License key for the `/pm` orchestrator:** Enter it when prompted, or press Enter to continue with the free tier.
 
-**Verify:** Open Claude and type `/pm-sprint-brief` — if the skill loads, you're all set.
+**Verify:** Open your CLI and run a skill:
+
+| CLI | Command |
+|-----|---------|
+| Claude | `/pm-sprint-brief` |
+| Gemini | `/pm-sprint-brief` |
+| Codex | `$pm-sprint-brief` |
+
+If the skill loads, you're all set.
 
 ---
 
@@ -234,13 +242,13 @@ my-product/
 
 You have 101 PM skills. Start with what's most useful right now:
 
-```
-/pm-prd               # write a PRD for your current focus
-/cusdev               # prep a customer interview (Mom Test)
-/pm-sprint-brief      # create a sprint brief
-/pm-competitive-scan  # competitive analysis
-/discovery            # discovery framework for a new problem
-```
+| Skill | Claude / Gemini | Codex |
+|-------|----------------|-------|
+| Write a PRD | `/pm-prd` | `$pm-prd` |
+| Customer interview prep | `/cusdev` | `$cusdev` |
+| Sprint brief | `/pm-sprint-brief` | `$pm-sprint-brief` |
+| Competitive analysis | `/pm-competitive-scan` | `$pm-competitive-scan` |
+| Discovery framework | `/discovery` | `$discovery` |
 
 Each skill reads your `.pm/STATE.md` for context. The more specific your workspace, the better the output.
 
@@ -256,11 +264,13 @@ Re-run install to enter your key:
 npx headless-pm install
 ```
 
-Then open Claude in your project folder and type:
+Then open your CLI in your project folder and type:
 
-```
-/pm
-```
+| CLI | Command |
+|-----|---------|
+| Claude | `/pm` |
+| Gemini | `/pm` |
+| Codex | `$pm` |
 
 It reads your `STATE.md`, understands where you are in the PM workflow, and routes to the right skill automatically.
 
@@ -392,7 +402,15 @@ What this does:
 
 **License key for the `/pm` orchestrator:** Enter it when prompted, or press Enter to continue with the free tier.
 
-**Verify:** Open Claude and type `/pm-sprint-brief` — if the skill loads, you're all set.
+**Verify:** Open your CLI and run a skill:
+
+| CLI | Command |
+|-----|---------|
+| Claude | `/pm-sprint-brief` |
+| Gemini | `/pm-sprint-brief` |
+| Codex | `$pm-sprint-brief` |
+
+If the skill loads, you're all set.
 
 ---
 
@@ -487,13 +505,13 @@ my-product/
 
 You have 101 PM skills. Start with what's most useful right now:
 
-```
-/pm-prd               # write a PRD for your current focus
-/cusdev               # prep a customer interview (Mom Test)
-/pm-sprint-brief      # create a sprint brief
-/pm-competitive-scan  # competitive analysis
-/discovery            # discovery framework for a new problem
-```
+| Skill | Claude / Gemini | Codex |
+|-------|----------------|-------|
+| Write a PRD | `/pm-prd` | `$pm-prd` |
+| Customer interview prep | `/cusdev` | `$cusdev` |
+| Sprint brief | `/pm-sprint-brief` | `$pm-sprint-brief` |
+| Competitive analysis | `/pm-competitive-scan` | `$pm-competitive-scan` |
+| Discovery framework | `/discovery` | `$discovery` |
 
 Each skill reads your `.pm/STATE.md` for context. The more specific your workspace, the better the output.
 
@@ -509,11 +527,13 @@ Re-run install to enter your key:
 npx headless-pm install
 ```
 
-Then open Claude in your project folder and type:
+Then open your CLI in your project folder and type:
 
-```
-/pm
-```
+| CLI | Command |
+|-----|---------|
+| Claude | `/pm` |
+| Gemini | `/pm` |
+| Codex | `$pm` |
 
 It reads your `STATE.md`, understands where you are in the PM workflow, and routes to the right skill automatically.
 
@@ -660,7 +680,15 @@ What this does:
 
 **License key for the `/pm` orchestrator:** Enter it when prompted, or press Enter to continue with the free tier.
 
-**Verify:** Open Claude and type `/pm-sprint-brief` — if the skill loads, you're all set.
+**Verify:** Open your CLI and run a skill:
+
+| CLI | Command |
+|-----|---------|
+| Claude | `/pm-sprint-brief` |
+| Gemini | `/pm-sprint-brief` |
+| Codex | `$pm-sprint-brief` |
+
+If the skill loads, you're all set.
 
 ---
 
@@ -756,13 +784,13 @@ my-product/
 
 You have 101 PM skills. Start with what's most useful right now:
 
-```
-/pm-prd               # write a PRD for your current focus
-/cusdev               # prep a customer interview (Mom Test)
-/pm-sprint-brief      # create a sprint brief
-/pm-competitive-scan  # competitive analysis
-/discovery            # discovery framework for a new problem
-```
+| Skill | Claude / Gemini | Codex |
+|-------|----------------|-------|
+| Write a PRD | `/pm-prd` | `$pm-prd` |
+| Customer interview prep | `/cusdev` | `$cusdev` |
+| Sprint brief | `/pm-sprint-brief` | `$pm-sprint-brief` |
+| Competitive analysis | `/pm-competitive-scan` | `$pm-competitive-scan` |
+| Discovery framework | `/discovery` | `$discovery` |
 
 Each skill reads your `.pm/STATE.md` for context. The more specific your workspace, the better the output.
 
@@ -778,11 +806,13 @@ Re-run install to enter your key:
 npx headless-pm install
 ```
 
-Then open Claude in your project folder and type:
+Then open your CLI in your project folder and type:
 
-```
-/pm
-```
+| CLI | Command |
+|-----|---------|
+| Claude | `/pm` |
+| Gemini | `/pm` |
+| Codex | `$pm` |
 
 It reads your `STATE.md`, understands where you are in the PM workflow, and routes to the right skill automatically.
 
