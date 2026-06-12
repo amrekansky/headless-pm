@@ -135,3 +135,8 @@ Step-by-step conversion:
 
 If Notion MCP: create a Growth Loops page with each loop as a visual flow and metrics tracker.
 If not: save `growth-loops-[product]-[date].md`.
+
+
+## Related
+
+[[metrics-taxonomy]] · [[heart-framework]] · [[aarrr-pirate-metrics]] · [[product-led-growth]] · [[bayesian-ab-testing]] · [[attribution-models]] · [[experimentation-maturity]] · [[Skills]] · [[Agents]]

@@ -63,3 +63,8 @@ If the user already named a domain, route directly. Otherwise ask:
 ```
 
 Related skills: `/pm` (paid orchestrator — reads STATE.md and routes automatically), `/pm-onboarding` (set up .pm/STATE.md workspace)
+
+
+## Related
+
+[[pm-rituals]] · [[shreyas-frameworks]] · [[linear-jira-best-practices]] · [[org-design-product]] · [[Skills]] · [[Agents]]

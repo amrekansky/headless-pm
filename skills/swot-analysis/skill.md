@@ -109,3 +109,8 @@ Related skills: `/pestle-analysis` (run PESTLE before SWOT to populate the Oppor
 
 If Notion MCP: create a SWOT page with a 2x2 grid and linked strategy database.
 If not: save `swot-[scope]-[date].md`.
+
+
+## Related
+
+[[porters-five-forces]] · [[user-research-methods]] · [[research-tools]] · [[design-sprint]] · [[Skills]] · [[Agents]]

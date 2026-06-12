@@ -121,3 +121,8 @@ Unlike [competitive alternative], [product] [key differentiator].
 
 If Notion MCP: create a Positioning Canvas page with each component as a toggle section.
 If not: save `positioning-[product]-[date].md`.
+
+
+## Related
+
+[[lean-startup]] · [[7-powers]] · [[win-loss-analysis]] · [[obviously-awesome]] · [[north-star-metric]] · [[platform-strategy]] · [[Skills]] · [[Agents]]

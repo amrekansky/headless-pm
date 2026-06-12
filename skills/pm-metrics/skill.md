@@ -147,3 +147,8 @@ Append to `.pm/orchestrator.log`:
 ```
 {ISO timestamp} pm-metrics/data completed → .pm/artifacts/metrics-raw.md
 ```
+
+
+## Related
+
+[[metrics-taxonomy]] · [[heart-framework]] · [[aarrr-pirate-metrics]] · [[product-led-growth]] · [[bayesian-ab-testing]] · [[attribution-models]] · [[experimentation-maturity]] · [[Skills]] · [[Agents]]

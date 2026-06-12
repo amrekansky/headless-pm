@@ -124,3 +124,8 @@ Append to `.pm/orchestrator.log`:
 ```
 {ISO timestamp} pm-status-report completed → .pm/artifacts/status-report.md
 ```
+
+
+## Related
+
+[[dual-track-agile]] · [[shape-up]] · [[story-mapping]] · [[working-backwards]] · [[pm-rituals]] · [[Skills]] · [[Agents]]

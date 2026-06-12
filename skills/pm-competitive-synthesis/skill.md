@@ -85,3 +85,8 @@ Append to `.pm/orchestrator.log`:
 ```
 {ISO timestamp} pm-competitive-synthesis completed → .pm/artifacts/competitive-report.md
 ```
+
+
+## Related
+
+[[lean-startup]] · [[7-powers]] · [[win-loss-analysis]] · [[obviously-awesome]] · [[north-star-metric]] · [[platform-strategy]] · [[Skills]] · [[Agents]]

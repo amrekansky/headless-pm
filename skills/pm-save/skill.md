@@ -201,3 +201,8 @@ Related skills: `/pm-radar` (run at the start of the next session to restore sit
 2. [second priority]
 3. [third priority]
 ```
+
+
+## Related
+
+[[pm-rituals]] · [[shreyas-frameworks]] · [[linear-jira-best-practices]] · [[org-design-product]] · [[Skills]] · [[Agents]]

@@ -104,3 +104,8 @@ Separate content (what you want) from relationship (what you want to preserve).
 - `~/.headless/pm/knowledge/pyramid-principle.md` — structure your ask using BLUF (Bottom Line Up Front) for stakeholders
 
 Related skills: `/pm-stakeholder` (map full stakeholder landscape first), `/pm-exec-brief` (write the briefing once alignment is built), `/risk-escalation` (when influence fails and escalation is needed), `/audience-tailoring` (tailor the message to each stakeholder's communication style)
+
+
+## Related
+
+[[stakeholder-influence]] · [[pyramid-principle]] · [[difficult-conversations]] · [[Skills]] · [[Agents]]

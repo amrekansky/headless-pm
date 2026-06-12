@@ -125,3 +125,8 @@ If only segment, we'd build: [what would change]
 If Notion MCP: create an Attitudinal Segmentation page with each segment as a card with properties.
 If not: save `attitudinal-segments-[product]-[date].md`.
 
+
+
+## Related
+
+[[continuous-discovery]] · [[jobs-to-be-done]] · [[switch-interview-methodology]] · [[assumption-mapping]] · [[tam-sam-som]] · [[user-research-methods]] · [[Skills]] · [[Agents]]

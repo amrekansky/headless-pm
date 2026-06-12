@@ -278,3 +278,8 @@ Related skills: `/pm-decision` (frame the EOL decision with options and recommen
 - Track migration rate weekly — if <50% migrated at D-30, add office hours or 1:1 outreach
 - Extended windows for strategic accounts are the PM's call, not CS's
 - Keep the migration guide accessible for 12 months after EOL
+
+
+## Related
+
+[[pm-rituals]] · [[shreyas-frameworks]] · [[linear-jira-best-practices]] · [[org-design-product]] · [[Skills]] · [[Agents]]

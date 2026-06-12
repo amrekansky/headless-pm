@@ -172,10 +172,4 @@ WSJF = 21 / 5 = 4.2
 - [Prioritization frameworks comparison — altexsoft.com](https://www.altexsoft.com/blog/most-popular-prioritization-techniques-and-methods-moscow-rice-kano-model-walking-skeleton-and-others/)
 - [Atlassian prioritization guide — atlassian.com](https://www.atlassian.com/agile/product-management/prioritization-framework)
 
-## Related
-
-- [[okr-implementation]]
-- [[impact-mapping]]
-- [[story-mapping]]
-- [[shreyas-frameworks]]
-- [[dual-track-agile]]
+[[pm-knowledge-base]]

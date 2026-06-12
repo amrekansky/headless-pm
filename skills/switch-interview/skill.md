@@ -135,3 +135,8 @@ Related skills: `/continuous-interview-synthesis` (aggregate weekly), `/opportun
 
 If Notion MCP: create a Switch Interview page with timeline database and 4-forces matrix.
 If not: save `switch-interview-[segment]-[date].md`.
+
+
+## Related
+
+[[continuous-discovery]] · [[jobs-to-be-done]] · [[switch-interview-methodology]] · [[assumption-mapping]] · [[tam-sam-som]] · [[user-research-methods]] · [[Skills]] · [[Agents]]

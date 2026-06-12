@@ -80,3 +80,8 @@ Append to `.pm/orchestrator.log`:
 ```
 {ISO timestamp} pm-cluster completed → .pm/artifacts/clusters.md ({N} interviews processed)
 ```
+
+
+## Related
+
+[[porters-five-forces]] · [[user-research-methods]] · [[research-tools]] · [[design-sprint]] · [[Skills]] · [[Agents]]

@@ -97,3 +97,8 @@ Progress tracker:
 ```
 
 Related skills: `/gtm` (execution feeds launch), `/analytics` (delivery feeds metrics review), `/pm-agents` (all 8 domains)
+
+
+## Related
+
+[[dual-track-agile]] · [[shape-up]] · [[story-mapping]] · [[working-backwards]] · [[pm-rituals]] · [[Skills]] · [[Agents]]

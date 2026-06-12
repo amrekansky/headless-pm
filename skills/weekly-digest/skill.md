@@ -96,3 +96,8 @@ Related skills: `/pm-brief` (shorter async brief for mid-week updates between di
 
 If Notion MCP: create a Weekly Digest page in the team's PM workspace, add date to title.
 If not: save `weekly-digest-[date].md` and paste into Slack/email.
+
+
+## Related
+
+[[metrics-taxonomy]] · [[heart-framework]] · [[aarrr-pirate-metrics]] · [[product-led-growth]] · [[bayesian-ab-testing]] · [[attribution-models]] · [[experimentation-maturity]] · [[Skills]] · [[Agents]]

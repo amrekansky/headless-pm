@@ -321,3 +321,8 @@ After each completed stage, output this tracker (update ✓/→/○ accordingly)
 - If a stage fails exit criteria, STOP and surface the blocker clearly
 - If go-nogo = NO-GO, offer to run `/pm-postmortem` to document what blocked it
 - Adapt artifact detail to product complexity — a simple feature needs a lighter checklist than a platform migration
+
+
+## Related
+
+[[dual-track-agile]] · [[shape-up]] · [[story-mapping]] · [[working-backwards]] · [[pm-rituals]] · [[Skills]] · [[Agents]]

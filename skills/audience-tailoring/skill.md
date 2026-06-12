@@ -118,3 +118,8 @@ Related skills: `/pm-exec-brief` (executive-only communication for strategic dec
 
 If Notion MCP: create a Communication page with each version as a tab/toggle.
 If not: save `comms-[topic]-[date].md`.
+
+
+## Related
+
+[[stakeholder-influence]] · [[pyramid-principle]] · [[difficult-conversations]] · [[Skills]] · [[Agents]]

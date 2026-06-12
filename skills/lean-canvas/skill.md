@@ -120,3 +120,8 @@ Related skills: `/vision-setting` (set the product vision before or alongside th
 
 If Notion MCP: create a Lean Canvas page with each box as a property and a linked assumptions database.
 If not: save `lean-canvas-[product]-[date].md`.
+
+
+## Related
+
+[[lean-startup]] · [[7-powers]] · [[win-loss-analysis]] · [[obviously-awesome]] · [[north-star-metric]] · [[platform-strategy]] · [[Skills]] · [[Agents]]

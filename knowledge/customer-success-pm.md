@@ -128,10 +128,4 @@ Gainsight, Totango, ChurnZero, and Planhat are the standard health score platfor
 - [Customer Success Collective: Top Predictions 2024](https://www.customersuccesscollective.com/top-customer-success-predictions/)
 - [Custify: Customer Success Market Statistics 2026](https://www.custify.com/blog/customer-success-statistics/)
 
-## Related
-
-- [[metrics-taxonomy]]
-- [[b2b-saas-metrics]]
-- [[enterprise-b2b-motion]]
-- [[win-loss-analysis]]
-- [[north-star-metric]]
+[[pm-knowledge-base]]

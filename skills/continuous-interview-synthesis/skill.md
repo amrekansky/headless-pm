@@ -152,3 +152,8 @@ Reason: [why this segment has the most signal to offer]
 
 If Notion MCP: create a Synthesis page per week in the Discovery database; update OST node pages with new evidence.
 If not: save `synthesis-[date].md` and update `ost-[product]-current.md`.
+
+
+## Related
+
+[[continuous-discovery]] · [[jobs-to-be-done]] · [[switch-interview-methodology]] · [[assumption-mapping]] · [[tam-sam-som]] · [[user-research-methods]] · [[Skills]] · [[Agents]]

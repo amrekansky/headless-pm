@@ -117,10 +117,4 @@ Bayesian: stop when:
 - [Eppo: Comparing Frequentist vs Bayesian Approaches](https://www.geteppo.com/blog/comparing-frequentist-vs-bayesian-approaches)
 - [Variance Explained: Is Bayesian A/B Testing Immune to Peeking?](http://varianceexplained.org/r/bayesian-ab-testing/)
 
-## Related
-
-- [[experimentation-maturity]]
-- [[data-literacy-for-pms]]
-- [[metrics-taxonomy]]
-- [[north-star-metric]]
-- [[heart-framework]]
+[[pm-knowledge-base]]

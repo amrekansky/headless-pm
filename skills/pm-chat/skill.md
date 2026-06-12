@@ -150,3 +150,8 @@ Wait for user to confirm (y / yes / да / write / записать). If "edit" 
 ```
 
 Related skills: `/pm-review` (weekly sweep of all .pm/ files for staleness), `/pm-save` (session wrap-up and git commit)
+
+
+## Related
+
+[[pm-rituals]] · [[shreyas-frameworks]] · [[linear-jira-best-practices]] · [[org-design-product]] · [[Skills]] · [[Agents]]

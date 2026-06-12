@@ -99,3 +99,8 @@ _Methodology: bottom-up | top-down | hybrid_
 ```
 
 If not Notion: save `market-sizing-[segment]-[date].md`.
+
+
+## Related
+
+[[continuous-discovery]] · [[jobs-to-be-done]] · [[switch-interview-methodology]] · [[assumption-mapping]] · [[tam-sam-som]] · [[user-research-methods]] · [[Skills]] · [[Agents]]

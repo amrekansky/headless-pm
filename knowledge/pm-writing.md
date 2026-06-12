@@ -180,10 +180,4 @@ Writing for executives: brevity > completeness
 - [How to Write a Good PRD — Martin Cagan (SVPG)](https://www.svpg.com/assets/Files/goodprd.pdf)
 - [Bottom Line Up Front (BLUF) — US Army Writing Standards](https://armypubs.army.mil/epubs/DR_pubs/DR_a/ARN36735-AR_25-50-000-WEB-2.pdf)
 
-## Related
-
-- [[pyramid-principle]]
-- [[pm-rituals]]
-- [[working-backwards]]
-- [[stakeholder-influence]]
-- [[difficult-conversations]]
+[[pm-knowledge-base]]

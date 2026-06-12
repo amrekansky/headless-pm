@@ -143,3 +143,8 @@ Risks / confounds:
 
 If Notion MCP: create an Experiment Backlog database with each experiment as a row with status tracking.
 If not: save `experiments-[metric]-[date].md`.
+
+
+## Related
+
+[[porters-five-forces]] · [[user-research-methods]] · [[research-tools]] · [[design-sprint]] · [[Skills]] · [[Agents]]

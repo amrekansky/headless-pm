@@ -84,3 +84,8 @@ Experience level: [with the domain]
 
 If Miro MCP: create persona card on the team board.
 If not: save `persona-[name]-[date].md`.
+
+
+## Related
+
+[[porters-five-forces]] · [[user-research-methods]] · [[research-tools]] · [[design-sprint]] · [[Skills]] · [[Agents]]

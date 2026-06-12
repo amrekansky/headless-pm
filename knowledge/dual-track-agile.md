@@ -97,10 +97,4 @@ Opportunity Backlog
 - [Dual-Track Agile — LogRocket Blog](https://blog.logrocket.com/product-management/dual-track-agile-continuous-discovery/) [CITED]
 - [Let's Talk Dual Track — Ant Murphy / Medium](https://antmurphy.medium.com/lets-talk-dual-track-continuous-discovery-delivery-891fa171cd7c) [CITED]
 
-## Related
-
-- [[continuous-discovery]]
-- [[story-mapping]]
-- [[shape-up]]
-- [[prioritization-frameworks]]
-- [[pm-rituals]]
+[[pm-knowledge-base]]

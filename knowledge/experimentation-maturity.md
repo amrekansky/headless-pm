@@ -122,10 +122,4 @@ The technical infrastructure is the easy part. Culture is the hard part:
 - [Aakash Gupta: How the Fastest-Growing Companies Build a Culture of Experimentation](https://aakashgupta.medium.com/how-the-fastest-growing-companies-build-a-culture-of-experimentation-5358a43f86cd)
 - [HDSR: Online Experimentation — Benefits and Challenges](https://hdsr.mitpress.mit.edu/pub/aj31wj81)
 
-## Related
-
-- [[bayesian-ab-testing]]
-- [[data-literacy-for-pms]]
-- [[north-star-metric]]
-- [[metrics-taxonomy]]
-- [[product-led-growth]]
+[[pm-knowledge-base]]

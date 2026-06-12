@@ -116,3 +116,8 @@ Lose: [when we lose and why]
 
 If Notion MCP: create a Battle Card page in the Sales Enablement section.
 If not: save `battlecard-[competitor]-[date].md`.
+
+
+## Related
+
+[[lean-startup]] · [[7-powers]] · [[win-loss-analysis]] · [[obviously-awesome]] · [[north-star-metric]] · [[platform-strategy]] · [[Skills]] · [[Agents]]

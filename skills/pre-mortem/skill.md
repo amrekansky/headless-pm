@@ -118,3 +118,8 @@ Related skills: `/pm-decision` (follow the pre-mortem with a structured decision
 
 If Notion MCP: create a Pre-Mortem page with risk database (likelihood, impact, mitigation, owner columns).
 If not: save `pre-mortem-[initiative]-[date].md`.
+
+
+## Related
+
+[[pm-rituals]] · [[shreyas-frameworks]] · [[linear-jira-best-practices]] · [[org-design-product]] · [[Skills]] · [[Agents]]

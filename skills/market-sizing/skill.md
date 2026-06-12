@@ -138,3 +138,8 @@ Related skills: `/tam-sizing` (detailed TAM/SAM/SOM calculation), `/beachhead-ma
 
 If Notion MCP: create a Market Sizing page with methodology tables and sensitivity analysis.
 If not: save `market-sizing-[market]-[date].md`.
+
+
+## Related
+
+[[continuous-discovery]] · [[jobs-to-be-done]] · [[switch-interview-methodology]] · [[assumption-mapping]] · [[tam-sam-som]] · [[user-research-methods]] · [[Skills]] · [[Agents]]

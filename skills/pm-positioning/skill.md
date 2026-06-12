@@ -101,3 +101,8 @@ Avoid: [things that confuse the positioning]
 ```
 
 If Notion: save in Product / Positioning.
+
+
+## Related
+
+[[lean-startup]] · [[7-powers]] · [[win-loss-analysis]] · [[obviously-awesome]] · [[north-star-metric]] · [[platform-strategy]] · [[Skills]] · [[Agents]]

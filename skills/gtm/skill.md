@@ -56,3 +56,8 @@ Route to the selected skill by name. If user selects option 8 (auto), run in seq
 ```
 
 Related skills: `/execution` (delivery feeds GTM), `/analytics` (post-launch metrics), `/pm-agents` (all 8 domains)
+
+
+## Related
+
+[[crossing-the-chasm]] · [[pricing-strategy-saas]] · [[enterprise-b2b-motion]] · [[customer-success-pm]] · [[Skills]] · [[Agents]]

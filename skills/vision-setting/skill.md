@@ -91,3 +91,8 @@ Related skills: `/strategy-stack` (map the vision to the full strategy stack aft
 
 If Notion MCP: create a Vision page with all sections; pin to the team's workspace home.
 If not: save `vision-[product]-[date].md`.
+
+
+## Related
+
+[[lean-startup]] · [[7-powers]] · [[win-loss-analysis]] · [[obviously-awesome]] · [[north-star-metric]] · [[platform-strategy]] · [[Skills]] · [[Agents]]

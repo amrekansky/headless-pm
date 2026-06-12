@@ -132,3 +132,8 @@ Append to `.pm/orchestrator.log`:
 ```
 {ISO timestamp} pm-exec-brief completed → .pm/artifacts/exec-brief.md
 ```
+
+
+## Related
+
+[[stakeholder-influence]] · [[pyramid-principle]] · [[difficult-conversations]] · [[Skills]] · [[Agents]]

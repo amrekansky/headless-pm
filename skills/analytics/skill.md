@@ -79,3 +79,8 @@ Progress tracker:
 ```
 
 Related skills: `/strategy` (metrics feed OKRs), `/execution` (delivery metrics), `/pm-agents` (all 8 domains)
+
+
+## Related
+
+[[metrics-taxonomy]] · [[heart-framework]] · [[aarrr-pirate-metrics]] · [[product-led-growth]] · [[bayesian-ab-testing]] · [[attribution-models]] · [[experimentation-maturity]] · [[Skills]] · [[Agents]]

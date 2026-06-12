@@ -137,3 +137,8 @@ Related skills: `/ansoff-matrix` (use Ansoff to stress-test the strategy layer's
 
 If Notion MCP: create a Strategy Stack page with each layer as a section and alignment database.
 If not: save `strategy-stack-[company]-[date].md`.
+
+
+## Related
+
+[[lean-startup]] · [[7-powers]] · [[win-loss-analysis]] · [[obviously-awesome]] · [[north-star-metric]] · [[platform-strategy]] · [[Skills]] · [[Agents]]

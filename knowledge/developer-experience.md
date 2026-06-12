@@ -115,10 +115,4 @@ Prioritize SDKs in this order: the language your ICP uses most (check your signu
 - [Port.io: Developer Experience Metrics Best Practices](https://www.port.io/blog/developer-experience-metrics-best-practices-key-components-and-examples)
 - [Moesif: API Analytics Across the Developer Journey](https://www.moesif.com/blog/api-product-management/developer-experience/API-Analytics-Across-the-Developer-Journey/)
 
-## Related
-
-- [[infrastructure-pm]]
-- [[ai-pm]]
-- [[technical-concepts-for-pms]]
-- [[mobile-pm]]
-- [[platform-strategy]]
+[[pm-knowledge-base]]

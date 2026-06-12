@@ -142,10 +142,4 @@ Board communication: numbers first → narrative → risk → ask
 - [Pitch Deck Guide — YC Startup School](https://www.startupschool.org/library)
 - [SaaS Metrics for Fundraising — David Skok (ForEntrepreneurs)](https://www.forentrepreneurs.com/saas-metrics-2/)
 
-## Related
-
-- [[lean-startup]]
-- [[7-powers]]
-- [[tam-sam-som]]
-- [[hiring-pms]]
-- [[shape-up]]
+[[pm-knowledge-base]]

@@ -125,10 +125,4 @@ Hypothesis → MVP → Measure real behavior → Validated learning → Pivot or
 - [Build Measure Learn — Userpilot](https://userpilot.com/blog/build-measure-learn/) [CITED]
 - [Lean Startup — Wikipedia](https://en.wikipedia.org/wiki/Lean_startup) [CITED]
 
-## Related
-
-- [[assumption-mapping]]
-- [[design-sprint]]
-- [[working-backwards]]
-- [[shape-up]]
-- [[continuous-discovery]]
+[[pm-knowledge-base]]

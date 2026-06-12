@@ -207,3 +207,8 @@ If mode is `plan`, skip analysis stages and generate `nps-program.md`:
 - Flag low response rates (< 20%) as a reliability concern
 - Open-ended verbatims > score trends — always dig into the why
 - Segment first, then diagnose — aggregate scores hide the real story
+
+
+## Related
+
+[[metrics-taxonomy]] · [[heart-framework]] · [[aarrr-pirate-metrics]] · [[product-led-growth]] · [[bayesian-ab-testing]] · [[attribution-models]] · [[experimentation-maturity]] · [[Skills]] · [[Agents]]

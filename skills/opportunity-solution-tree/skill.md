@@ -101,3 +101,8 @@ Rationale: [why this node first — frequency × intensity × alignment]
 
 If Notion MCP: create a page with the OST as a nested database (Opportunity → Solutions → Assumptions).
 If not: save `ost-[outcome]-[date].md`.
+
+
+## Related
+
+[[continuous-discovery]] · [[prioritization-frameworks]] · [[okr-implementation]] · [[impact-mapping]] · [[pm-writing]] · [[shreyas-frameworks]] · [[Skills]] · [[Agents]]

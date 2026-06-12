@@ -123,10 +123,4 @@ Pressure test: verify denominator, price, penetration rate, and competition
 - [Market Sizing for Startups — Forum VC](https://www.forumvc.com/thought-pieces/understand-and-define-your-market-size) [CITED]
 - [Pitch Perfect: TAM SAM SOM — Seedblink](https://seedblink.com/blog/2025-02-25-pitch-perfect-how-to-present-tam-sam-som-to-win-over-your-investors) [CITED]
 
-## Related
-
-- [[porters-five-forces]]
-- [[obviously-awesome]]
-- [[startup-pm]]
-- [[crossing-the-chasm]]
-- [[pricing-strategy-saas]]
+[[pm-knowledge-base]]

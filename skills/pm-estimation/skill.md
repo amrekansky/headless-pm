@@ -90,3 +90,8 @@ Append to `.pm/orchestrator.log`:
 ```
 {ISO timestamp} pm-estimation completed → .pm/artifacts/estimation-{name}.md
 ```
+
+
+## Related
+
+[[dual-track-agile]] · [[shape-up]] · [[story-mapping]] · [[working-backwards]] · [[pm-rituals]] · [[Skills]] · [[Agents]]

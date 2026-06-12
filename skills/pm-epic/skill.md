@@ -85,3 +85,8 @@ Stories:
 If Jira MCP: create epic, child features as stories, add estimates.
 If Linear MCP: create project with issues.
 If not: save `epic-[name]-[date].md`.
+
+
+## Related
+
+[[continuous-discovery]] · [[prioritization-frameworks]] · [[okr-implementation]] · [[impact-mapping]] · [[pm-writing]] · [[shreyas-frameworks]] · [[Skills]] · [[Agents]]

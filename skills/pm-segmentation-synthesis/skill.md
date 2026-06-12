@@ -77,3 +77,8 @@ Tell the user: "Saved to .pm/artifacts/segments.md — use `/icp-definition` to 
 - `~/.headless/pm/knowledge/obviously-awesome.md` — April Dunford positioning; segmentation feeds directly into positioning work
 
 Related skills: `/jtbd-interview` (run JTBD interviews before synthesis), `/cusdev` (Mom Test interviews — raw input), `/switch-interview` (Bob Moesta demand-side — complementary interview data), `/icp-definition` (update ICP after segments are defined), `/pm-cluster` (cluster qualitative feedback themes)
+
+
+## Related
+
+[[porters-five-forces]] · [[user-research-methods]] · [[research-tools]] · [[design-sprint]] · [[Skills]] · [[Agents]]

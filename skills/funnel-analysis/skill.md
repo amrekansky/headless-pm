@@ -131,3 +131,8 @@ Root cause hypotheses:
 
 If Notion MCP: create a Funnel Analysis page with stage breakdown and experiment backlog.
 If not: save `funnel-analysis-[funnel]-[date].md`.
+
+
+## Related
+
+[[metrics-taxonomy]] · [[heart-framework]] · [[aarrr-pirate-metrics]] · [[product-led-growth]] · [[bayesian-ab-testing]] · [[attribution-models]] · [[experimentation-maturity]] · [[Skills]] · [[Agents]]

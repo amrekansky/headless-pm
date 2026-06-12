@@ -154,10 +154,4 @@ Bootstrap strategies:
 - [Marketplace Liquidity — Josh Breinlinger (Jackson Square Ventures)](https://acrowdedspace.com/post/47658552922/the-importance-of-marketplace-liquidity)
 - [How Airbnb Bootstrapped — Paul Graham case studies](http://paulgraham.com/growth.html)
 
-## Related
-
-- [[platform-strategy]]
-- [[product-led-growth]]
-- [[unit-economics]]
-- [[aarrr-pirate-metrics]]
-- [[customer-success-pm]]
+[[pm-knowledge-base]]

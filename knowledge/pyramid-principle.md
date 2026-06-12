@@ -89,10 +89,4 @@ Supporting arguments must be MECE. Each level answers "why?" or "so what?" about
 - [The Pyramid Principle: How McKinsey Structures Every Slide Deck](https://winningpresentations.com/pyramid-principle-presentations/)
 - [Barbara Minto — Wikipedia](https://en.wikipedia.org/wiki/Barbara_Minto)
 
-## Related
-
-- [[pm-writing]]
-- [[difficult-conversations]]
-- [[stakeholder-influence]]
-- [[working-backwards]]
-- [[shreyas-frameworks]]
+[[pm-knowledge-base]]

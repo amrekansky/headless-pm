@@ -118,3 +118,8 @@ Related skills: `/positioning-five-component` (run first to set positioning cont
 
 If Notion MCP: create a Messaging Hierarchy page with each level as a toggle.
 If not: save `messaging-[product]-[date].md`.
+
+
+## Related
+
+[[stakeholder-influence]] · [[pyramid-principle]] · [[difficult-conversations]] · [[Skills]] · [[Agents]]

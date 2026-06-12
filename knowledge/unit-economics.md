@@ -141,10 +141,4 @@ Gross Margin: 70–85% for pure SaaS
 - [Unit Economics — Y Combinator Startup School](https://www.startupschool.org/library)
 - [Measure What Matters (OKR/metrics) — John Doerr](https://www.whatmatters.com/)
 
-## Related
-
-- [[b2b-saas-metrics]]
-- [[pricing-strategy-saas]]
-- [[metrics-taxonomy]]
-- [[aarrr-pirate-metrics]]
-- [[marketplace-pm]]
+[[pm-knowledge-base]]

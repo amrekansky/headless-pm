@@ -304,3 +304,8 @@ After each completed stage, output this tracker:
 - Stories without AC are not sprint-ready — flag them in grooming
 - If velocity data is unavailable, use: S=1pt, M=2pt, L=3pt, XL=5pt as baseline
 - After planning complete, always suggest updating `context.md` and starting `/pm-ship`
+
+
+## Related
+
+[[continuous-discovery]] · [[prioritization-frameworks]] · [[okr-implementation]] · [[impact-mapping]] · [[pm-writing]] · [[shreyas-frameworks]] · [[Skills]] · [[Agents]]

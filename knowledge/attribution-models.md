@@ -137,10 +137,4 @@ Biggest trap: last-touch by default → over-credits retargeting, under-credits 
 - [Multi-Touch Attribution — MCP Analytics](https://mcpanalytics.ai/articles/marketing-attribution-models-compared) [CITED]
 - [First Touch vs Last Touch B2B — Factors.ai](https://www.factors.ai/blog/first-touch-vs-last-touch-attribution) [CITED]
 
-## Related
-
-- [[metrics-taxonomy]]
-- [[aarrr-pirate-metrics]]
-- [[b2b-saas-metrics]]
-- [[data-literacy-for-pms]]
-- [[product-led-growth]]
+[[pm-knowledge-base]]

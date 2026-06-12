@@ -144,10 +144,4 @@ Always: CFRs | Mid-cycle updates | Retrospectives
 - [OKRs: The Ultimate Guide — Atlassian](https://www.atlassian.com/agile/agile-at-scale/okr)
 - [John Doerr on OKRs: The Original Interview — BetterWorks](https://www.betterworks.com/magazine/keys-okr-success-qa-john-doerr)
 
-## Related
-
-- [[north-star-metric]]
-- [[impact-mapping]]
-- [[prioritization-frameworks]]
-- [[pm-rituals]]
-- [[working-backwards]]
+[[pm-knowledge-base]]

@@ -262,3 +262,8 @@ Progress: `[✓ Impact analysis] → [✓ Segment] → [✓ Comms plan] → [✓
 - Always have a migration option for sensitive segments — a trap is not a pricing strategy
 - The business rationale in comms must be honest — "we're growing" is not enough
 - Monitor churn weekly for 60 days after the change goes live
+
+
+## Related
+
+[[crossing-the-chasm]] · [[pricing-strategy-saas]] · [[enterprise-b2b-motion]] · [[customer-success-pm]] · [[Skills]] · [[Agents]]

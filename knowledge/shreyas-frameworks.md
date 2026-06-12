@@ -123,10 +123,4 @@ O tasks: 20% quality, just enough to close
 - [Shreyas on Lenny's Podcast — lennysnewsletter.com](https://www.lennysnewsletter.com/p/episode-3-shreyas-doshi)
 - [Influence, Power and Product Management — shreyasdoshi.substack.com](https://shreyasdoshi.substack.com/p/influence-power-and-product-management)
 
-## Related
-
-- [[prioritization-frameworks]]
-- [[difficult-conversations]]
-- [[stakeholder-influence]]
-- [[pm-career-ladder]]
-- [[okr-implementation]]
+[[pm-knowledge-base]]

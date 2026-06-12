@@ -139,3 +139,8 @@ Related skills: `/swot-analysis` (combine PESTLE external factors with internal 
 
 If Notion MCP: create a PESTLE page with each dimension as a toggle section and a watch list database.
 If not: save `pestle-[scope]-[date].md`.
+
+
+## Related
+
+[[porters-five-forces]] · [[user-research-methods]] · [[research-tools]] · [[design-sprint]] · [[Skills]] · [[Agents]]

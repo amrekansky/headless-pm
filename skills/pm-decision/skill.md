@@ -92,3 +92,8 @@ Rejected because: [reason]
 If Notion: create in Decision Log database, link to relevant PRD.
 If Confluence: create in team space Decision Log.
 If not: save `decision-[title]-[date].md`.
+
+
+## Related
+
+[[stakeholder-influence]] · [[pyramid-principle]] · [[difficult-conversations]] · [[Skills]] · [[Agents]]

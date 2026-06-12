@@ -129,3 +129,8 @@ Append to `.pm/orchestrator.log`:
 ```
 {ISO timestamp} pm-insight completed → .pm/artifacts/insights.md
 ```
+
+
+## Related
+
+[[continuous-discovery]] · [[prioritization-frameworks]] · [[okr-implementation]] · [[impact-mapping]] · [[pm-writing]] · [[shreyas-frameworks]] · [[Skills]] · [[Agents]]

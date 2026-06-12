@@ -117,3 +117,8 @@ Options:
 
 If Notion MCP: create an Ansoff Matrix page with a 2×2 grid layout and options as nested items.
 If not: save `ansoff-matrix-[company]-[date].md`.
+
+
+## Related
+
+[[lean-startup]] · [[7-powers]] · [[win-loss-analysis]] · [[obviously-awesome]] · [[north-star-metric]] · [[platform-strategy]] · [[Skills]] · [[Agents]]

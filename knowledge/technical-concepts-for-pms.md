@@ -116,10 +116,4 @@ Buy: commodity, available, fast
 - [Understanding API Design Principles for PMs — Agile Seekers](https://agileseekers.com/blog/understanding-api-design-principles-for-product-managers)
 - [REST vs GraphQL vs gRPC for PMs — Medium](https://medium.com/@pmlearnstech/rest-graphql-grpc-soap-websockets-webhooks-899d2c197d45)
 
-## Related
-
-- [[infrastructure-pm]]
-- [[make-buy-partner]]
-- [[ai-pm]]
-- [[developer-experience]]
-- [[compliance-basics]]
+[[pm-knowledge-base]]

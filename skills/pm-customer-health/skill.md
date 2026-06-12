@@ -207,3 +207,8 @@ If mode is `qbr`, focus on one account:
 - Never present a Red score to the customer without a recovery plan ready
 - Renewal date proximity multiplies urgency — same score, closer renewal = higher priority
 - Update scores monthly minimum; weekly for Red accounts
+
+
+## Related
+
+[[crossing-the-chasm]] · [[pricing-strategy-saas]] · [[enterprise-b2b-motion]] · [[customer-success-pm]] · [[Skills]] · [[Agents]]

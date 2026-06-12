@@ -150,10 +150,4 @@ Monetization: Free → paid conversion %, ARPU, LTV:CAC ratio
 - [PLG complete guide 2026 — mixpanel.com](https://mixpanel.com/blog/product-led-growth/)
 - [PLG guide for SaaS — userflow.com](https://www.userflow.com/blog/product-led-growth-the-ultimate-guide-for-saas-success-in-2024)
 
-## Related
-
-- [[aarrr-pirate-metrics]]
-- [[north-star-metric]]
-- [[crossing-the-chasm]]
-- [[marketplace-pm]]
-- [[pricing-strategy-saas]]
+[[pm-knowledge-base]]

@@ -69,3 +69,8 @@ Total time: [N minutes]
 ```
 
 If Notion: save demo script in Sprint [N] page.
+
+
+## Related
+
+[[crossing-the-chasm]] · [[pricing-strategy-saas]] · [[enterprise-b2b-motion]] · [[customer-success-pm]] · [[Skills]] · [[Agents]]

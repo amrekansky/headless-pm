@@ -112,3 +112,8 @@ Related skills: `/market-sizing` (detailed market sizing workflow before TAM/SAM
 
 If Notion MCP: create a Market Sizing page with both methods as toggle sections and sensitivity table.
 If not: save `tam-sizing-[market]-[date].md`.
+
+
+## Related
+
+[[continuous-discovery]] · [[jobs-to-be-done]] · [[switch-interview-methodology]] · [[assumption-mapping]] · [[tam-sam-som]] · [[user-research-methods]] · [[Skills]] · [[Agents]]

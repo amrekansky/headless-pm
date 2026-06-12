@@ -129,3 +129,8 @@ Related skills: `/attitudinal-segmentation` (layer attitudinal data on top of be
 
 If Notion MCP: create a User Segmentation database with each segment as a page with properties.
 If not: save `user-segmentation-[product]-[date].md`.
+
+
+## Related
+
+[[continuous-discovery]] · [[jobs-to-be-done]] · [[switch-interview-methodology]] · [[assumption-mapping]] · [[tam-sam-som]] · [[user-research-methods]] · [[Skills]] · [[Agents]]

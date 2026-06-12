@@ -72,3 +72,8 @@ Progress tracker:
 ```
 
 Related skills: `/strategy` (market data informs strategy), `/customer-research` (beachhead maps to segments), `/pm-agents` (all 8 domains)
+
+
+## Related
+
+[[continuous-discovery]] · [[jobs-to-be-done]] · [[switch-interview-methodology]] · [[assumption-mapping]] · [[tam-sam-som]] · [[user-research-methods]] · [[Skills]] · [[Agents]]

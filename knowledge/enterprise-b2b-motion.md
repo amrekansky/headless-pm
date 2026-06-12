@@ -114,10 +114,4 @@ PMs drive expansion by building features that create natural expansion pressure 
 - [What Is an Economic Buyer — Flow State Sales](https://flowstatesales.com/resource-hub/economic-buyer/)
 - [MEDDPICC — Think Insights](https://thinkinsights.net/consulting/meddpicc)
 
-## Related
-
-- [[crossing-the-chasm]]
-- [[stakeholder-influence]]
-- [[win-loss-analysis]]
-- [[obviously-awesome]]
-- [[compliance-basics]]
+[[pm-knowledge-base]]

@@ -138,3 +138,8 @@ Related skills: `/north-star-selection` (select the North Star before building t
 
 If Notion MCP: create a Dashboard Spec page with each level as a linked database.
 If not: save `dashboard-spec-[product]-[date].md`.
+
+
+## Related
+
+[[metrics-taxonomy]] · [[heart-framework]] · [[aarrr-pirate-metrics]] · [[product-led-growth]] · [[bayesian-ab-testing]] · [[attribution-models]] · [[experimentation-maturity]] · [[Skills]] · [[Agents]]

@@ -116,3 +116,8 @@ Related skills: `/dashboard-structuring` (build the dashboard around the chosen 
 
 If Notion MCP: create a North Star Metric page with candidate database and leading indicators.
 If not: save `north-star-[product]-[date].md`.
+
+
+## Related
+
+[[lean-startup]] · [[7-powers]] · [[win-loss-analysis]] · [[obviously-awesome]] · [[north-star-metric]] · [[platform-strategy]] · [[Skills]] · [[Agents]]

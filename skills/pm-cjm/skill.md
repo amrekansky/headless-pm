@@ -73,3 +73,8 @@ Identify the lowest point (biggest pain) — this is the biggest product opportu
 If Miro MCP: create CJM board using miro diagram tool with stages as columns, rows for each layer, emotion curve chart.
 If Notion: create table in Product Research.
 If not: save `cjm-[journey]-[date].md`.
+
+
+## Related
+
+[[porters-five-forces]] · [[user-research-methods]] · [[research-tools]] · [[design-sprint]] · [[Skills]] · [[Agents]]

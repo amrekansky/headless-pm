@@ -148,10 +148,4 @@ SBI feedback: Situation → Behavior → Impact
 - [Never Split the Difference — Chris Voss (2016)](https://www.amazon.com/Never-Split-Difference-Negotiating-Depended/dp/0062407805)
 - [SBI Feedback Model — Center for Creative Leadership](https://www.ccl.org/articles/leading-effectively-articles/closing-the-gap-between-intent-and-impact/)
 
-## Related
-
-- [[stakeholder-influence]]
-- [[pyramid-principle]]
-- [[pm-writing]]
-- [[org-design-product]]
-- [[shreyas-frameworks]]
+[[pm-knowledge-base]]

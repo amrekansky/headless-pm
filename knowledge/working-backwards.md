@@ -127,10 +127,4 @@ No  → Output metric (use as success check, not daily focus)
 - [Amazon Working Backwards deep dive — coda.io/@colin-bryar](https://coda.io/@colin-bryar/working-backwards-how-write-an-amazon-pr-faq)
 - [AWS prescriptive guidance — docs.aws.amazon.com](https://docs.aws.amazon.com/prescriptive-guidance/latest/strategy-product-development/start-with-why.html)
 
-## Related
-
-- [[shape-up]]
-- [[lean-startup]]
-- [[pm-writing]]
-- [[impact-mapping]]
-- [[okr-implementation]]
+[[pm-knowledge-base]]

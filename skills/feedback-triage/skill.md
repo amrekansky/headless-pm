@@ -108,3 +108,8 @@ Related skills: `/pm-cluster` (cluster larger volumes of feedback into themes), 
 
 If Notion MCP: create a Feedback Triage database with theme, count, impact, and action columns.
 If not: save `feedback-triage-[date].md`.
+
+
+## Related
+
+[[porters-five-forces]] · [[user-research-methods]] · [[research-tools]] · [[design-sprint]] · [[Skills]] · [[Agents]]

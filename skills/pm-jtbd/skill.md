@@ -82,3 +82,8 @@ Social: [perception]
 
 If Miro MCP: create JTBD canvas board with job cards and struggling moments.
 If not: save `jtbd-[segment]-[date].md`.
+
+
+## Related
+
+[[continuous-discovery]] · [[jobs-to-be-done]] · [[switch-interview-methodology]] · [[assumption-mapping]] · [[tam-sam-som]] · [[user-research-methods]] · [[Skills]] · [[Agents]]

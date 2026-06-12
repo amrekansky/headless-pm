@@ -133,10 +133,4 @@ Compliance frameworks define legal and security standards that products must mee
 - [Data Minimization under GDPR, CCPA — TrustArc](https://trustarc.com/resource/data-minimization-gdpr-ccpa-privacy-laws/)
 - [Art. 5 GDPR — gdpr-info.eu](https://gdpr-info.eu/art-5-gdpr/)
 
-## Related
-
-- [[fintech-pm]]
-- [[healthcare-pm]]
-- [[enterprise-b2b-motion]]
-- [[technical-concepts-for-pms]]
-- [[make-buy-partner]]
+[[pm-knowledge-base]]

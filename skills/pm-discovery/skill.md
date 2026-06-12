@@ -105,3 +105,8 @@ Interviews: [N]
 ## MCP Output
 If Notion: create "Discovery — [initiative] — [date]" page in Research database.
 If not: save `discovery-[initiative]-[date].md`.
+
+
+## Related
+
+[[continuous-discovery]] · [[jobs-to-be-done]] · [[switch-interview-methodology]] · [[assumption-mapping]] · [[tam-sam-som]] · [[user-research-methods]] · [[Skills]] · [[Agents]]

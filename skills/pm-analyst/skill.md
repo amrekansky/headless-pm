@@ -89,3 +89,8 @@ Append to `.pm/orchestrator.log`:
 ```
 {ISO timestamp} pm-analyst completed → .pm/artifacts/analytics-digest.md
 ```
+
+
+## Related
+
+[[pm-rituals]] · [[shreyas-frameworks]] · [[linear-jira-best-practices]] · [[org-design-product]] · [[Skills]] · [[Agents]]

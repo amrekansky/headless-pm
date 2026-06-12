@@ -195,3 +195,8 @@ Related skills: `/pm-retro` (focused retrospective within the learning cycle), `
 - Postmortem is required for any P1/P2 incident — not optional
 - Next Cycle Brief must produce at least one actionable hypothesis — the cycle has no value if it does not feed discovery
 - After cycle closes, always recommend the right next phase based on what was learned
+
+
+## Related
+
+[[metrics-taxonomy]] · [[heart-framework]] · [[aarrr-pirate-metrics]] · [[product-led-growth]] · [[bayesian-ab-testing]] · [[attribution-models]] · [[experimentation-maturity]] · [[Skills]] · [[Agents]]

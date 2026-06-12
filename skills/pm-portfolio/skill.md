@@ -72,3 +72,8 @@ Related skills: `/pm-okr` (review OKRs for each product in the portfolio), `/pm-
 
 If Notion: create/update Portfolio page in Leadership space.
 If Miro MCP: create portfolio roadmap view with all products as swim lanes.
+
+
+## Related
+
+[[pm-rituals]] · [[shreyas-frameworks]] · [[linear-jira-best-practices]] · [[org-design-product]] · [[Skills]] · [[Agents]]

@@ -121,3 +121,8 @@ Blockers for PM:
 
 Team updates: [summarized if async]
 ```
+
+
+## Related
+
+[[dual-track-agile]] · [[shape-up]] · [[story-mapping]] · [[working-backwards]] · [[pm-rituals]] · [[Skills]] · [[Agents]]

@@ -124,3 +124,8 @@ If not: save to `cusdev-synthesis-[date].md`.
 - Flag leading questions the PM tries to sneak in
 - Never help the PM confirm what they already believe
 - If the user asks "did the interview go well?" — redirect: "What did you learn about their actual behavior?"
+
+
+## Related
+
+[[continuous-discovery]] · [[jobs-to-be-done]] · [[switch-interview-methodology]] · [[assumption-mapping]] · [[tam-sam-som]] · [[user-research-methods]] · [[Skills]] · [[Agents]]

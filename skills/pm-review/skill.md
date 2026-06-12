@@ -153,3 +153,8 @@ Output: "Review complete. Run `/pm-review` again next week or when Dashboard sho
 ---
 
 Related skills: `/pm-chat` (capture new signals from conversations), `/pm-save` (session wrap-up and git commit)
+
+
+## Related
+
+[[pm-rituals]] · [[shreyas-frameworks]] · [[linear-jira-best-practices]] · [[org-design-product]] · [[Skills]] · [[Agents]]

@@ -117,3 +117,8 @@ Related skills: `/icp-definition` (define the ideal account profile within the b
 
 If Notion MCP: create a Beachhead Map page with the scorecard as a database.
 If not: save `beachhead-[product]-[date].md`.
+
+
+## Related
+
+[[lean-startup]] · [[7-powers]] · [[win-loss-analysis]] · [[obviously-awesome]] · [[north-star-metric]] · [[platform-strategy]] · [[Skills]] · [[Agents]]

@@ -136,10 +136,4 @@ Most B2B SaaS platforms land at "curated open": public API with documentation, I
 - [7 Strategies for Solving the Chicken and Egg Problem — Applicoinc](https://www.applicoinc.com/blog/7-strategies-solving-chicken-egg-problem-startup/)
 - [So you've solved the chicken-and-egg problem — Platform Papers](https://platformpapers.substack.com/p/so-youve-solved-the-chicken-and-egg)
 
-## Related
-
-- [[7-powers]]
-- [[marketplace-pm]]
-- [[make-buy-partner]]
-- [[product-led-growth]]
-- [[infrastructure-pm]]
+[[pm-knowledge-base]]

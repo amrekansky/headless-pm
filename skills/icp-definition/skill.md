@@ -131,3 +131,8 @@ Threshold: 7+ = high-priority prospect / 4-6 = qualify further / <4 = pass
 
 If Notion MCP: create an ICP page with scorecard database for account tracking.
 If not: save `icp-[product]-[date].md`.
+
+
+## Related
+
+[[porters-five-forces]] · [[user-research-methods]] · [[research-tools]] · [[design-sprint]] · [[Skills]] · [[Agents]]

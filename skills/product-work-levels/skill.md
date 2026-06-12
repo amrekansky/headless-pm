@@ -113,3 +113,8 @@ Related skills: `/pm-prioritize` (score and rank items once they are classified 
 
 If Notion MCP: create a Work Levels dashboard with classification database.
 If not: save `work-levels-[team]-[date].md`.
+
+
+## Related
+
+[[continuous-discovery]] · [[prioritization-frameworks]] · [[okr-implementation]] · [[impact-mapping]] · [[pm-writing]] · [[shreyas-frameworks]] · [[Skills]] · [[Agents]]

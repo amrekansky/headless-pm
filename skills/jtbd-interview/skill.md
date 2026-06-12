@@ -128,3 +128,8 @@ Willing to give up: [habit/old behavior]
 - `~/.headless/pm/knowledge/jobs-to-be-done.md` — JTBD theory; use the progress-making circuit and forces framework
 
 Related skills: `/cusdev` (Mom Test interview — complementary lens), `/switch-interview` (Bob Moesta demand-side sales timeline), `/pm-cluster` (cluster multiple interview outputs into themes), `/pm-segmentation-synthesis` (synthesize segments across sessions)
+
+
+## Related
+
+[[continuous-discovery]] · [[jobs-to-be-done]] · [[switch-interview-methodology]] · [[assumption-mapping]] · [[tam-sam-som]] · [[user-research-methods]] · [[Skills]] · [[Agents]]

@@ -128,3 +128,8 @@ Append to `.pm/orchestrator.log`:
 ```
 {ISO timestamp} pm-grooming completed → .pm/backlog.md ({N} items groomed)
 ```
+
+
+## Related
+
+[[continuous-discovery]] · [[prioritization-frameworks]] · [[okr-implementation]] · [[impact-mapping]] · [[pm-writing]] · [[shreyas-frameworks]] · [[Skills]] · [[Agents]]

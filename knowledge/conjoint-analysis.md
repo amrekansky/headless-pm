@@ -90,10 +90,4 @@ From utilities you can calculate:
 - [Driver Research: Choice-Based Conjoint Analysis Guide](https://www.driveresearch.com/market-research-company-blog/choice-based-conjoint-analysis/)
 - [HBS Online: What is Conjoint Analysis?](https://online.hbs.edu/blog/post/what-is-conjoint-analysis)
 
-## Related
-
-- [[user-research-methods]]
-- [[pricing-strategy-saas]]
-- [[obviously-awesome]]
-- [[jobs-to-be-done]]
-- [[assumption-mapping]]
+[[pm-knowledge-base]]

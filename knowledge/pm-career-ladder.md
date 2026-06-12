@@ -158,10 +158,4 @@ Promotion narrative must include:
 - [PM Levels by Company — Levels.fyi](https://www.levels.fyi/t/product-manager)
 - [IC vs Management — Will Larson (Irrational Exuberance)](https://lethain.com/career-path/)
 
-## Related
-
-- [[hiring-pms]]
-- [[org-design-product]]
-- [[shreyas-frameworks]]
-- [[difficult-conversations]]
-- [[pm-interview-prep]]
+[[pm-knowledge-base]]

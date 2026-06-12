@@ -367,3 +367,8 @@ Append to `.pm/orchestrator.log`:
 ```
 {ISO timestamp} pm-interviewer completed → .pm/artifacts/interview-{ID}.md
 ```
+
+
+## Related
+
+[[continuous-discovery]] · [[prioritization-frameworks]] · [[okr-implementation]] · [[impact-mapping]] · [[pm-writing]] · [[shreyas-frameworks]] · [[Skills]] · [[Agents]]

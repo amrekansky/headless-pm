@@ -74,3 +74,8 @@ Date: [YYYY-MM-DD]
 
 If Miro MCP: create dependency diagram with team nodes and arrows.
 If Notion: create table in project space.
+
+
+## Related
+
+[[continuous-discovery]] · [[prioritization-frameworks]] · [[okr-implementation]] · [[impact-mapping]] · [[pm-writing]] · [[shreyas-frameworks]] · [[Skills]] · [[Agents]]

@@ -74,3 +74,8 @@ Recommended story point target: [SP]
 
 ⚠ Buffer: leave [10-15]% unallocated for unplanned requests
 ```
+
+
+## Related
+
+[[dual-track-agile]] · [[shape-up]] · [[story-mapping]] · [[working-backwards]] · [[pm-rituals]] · [[Skills]] · [[Agents]]

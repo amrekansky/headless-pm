@@ -68,3 +68,8 @@ Progress tracker:
 ```
 
 Related skills: `/gtm` (stakeholder alignment for launch), `/execution` (stakeholder updates during delivery), `/pm-agents` (all 8 domains)
+
+
+## Related
+
+[[stakeholder-influence]] · [[pyramid-principle]] · [[difficult-conversations]] · [[Skills]] · [[Agents]]

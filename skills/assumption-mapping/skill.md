@@ -111,3 +111,8 @@ Low Priority: #[N]
 
 If Notion MCP: create a database with assumption cards, each with type, scores, and test plan columns.
 If not: save `assumption-map-[solution]-[date].md`.
+
+
+## Related
+
+[[continuous-discovery]] · [[jobs-to-be-done]] · [[switch-interview-methodology]] · [[assumption-mapping]] · [[tam-sam-som]] · [[user-research-methods]] · [[Skills]] · [[Agents]]

@@ -147,10 +147,4 @@ Calibration: independent scores before debrief
 - [The First 90 Days — Michael Watkins (2003)](https://www.amazon.com/First-90-Days-Strategies-Expanded/dp/1422188612)
 - [PM Hiring Best Practices — Gibson Biddle (Medium)](https://gibsonbiddle.medium.com/)
 
-## Related
-
-- [[pm-career-ladder]]
-- [[org-design-product]]
-- [[difficult-conversations]]
-- [[shreyas-frameworks]]
-- [[stakeholder-influence]]
+[[pm-knowledge-base]]

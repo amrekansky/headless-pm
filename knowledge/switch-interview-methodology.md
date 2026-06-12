@@ -125,10 +125,4 @@ Bob Moesta's 5-stage timeline interview reconstructs the customer's switch from 
 
 **Key technique:** Reconstruct chronologically. Always ask "what happened just before that?" to reach the real trigger.
 
-## Related
-
-- [[jobs-to-be-done]]
-- [[continuous-discovery]]
-- [[win-loss-analysis]]
-- [[user-research-methods]]
-- [[obviously-awesome]]
+[[pm-knowledge-base]]

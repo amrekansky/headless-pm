@@ -147,10 +147,4 @@ FHIR R4: current standard — use for all new integrations
 - [The Digital Doctor — Robert Wachter (2015)](https://www.amazon.com/Digital-Doctor-Hope-Peril-Medicine/dp/0071849467)
 - [IMDRF SaMD Risk Framework — imdrf.org](https://www.imdrf.org/documents/software-medical-device-samd-key-definitions)
 
-## Related
-
-- [[compliance-basics]]
-- [[fintech-pm]]
-- [[technical-concepts-for-pms]]
-- [[stakeholder-influence]]
-- [[difficult-conversations]]
+[[pm-knowledge-base]]

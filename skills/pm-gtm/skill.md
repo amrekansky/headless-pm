@@ -126,3 +126,8 @@ If Amplitude/Mixpanel MCP: query the metric, show current baseline.
 ## MCP Output
 Notion: create "Launch — [feature] — [date]" page in Product wiki.
 If not: save `gtm-[feature]-[date].md`.
+
+
+## Related
+
+[[crossing-the-chasm]] · [[pricing-strategy-saas]] · [[enterprise-b2b-motion]] · [[customer-success-pm]] · [[Skills]] · [[Agents]]

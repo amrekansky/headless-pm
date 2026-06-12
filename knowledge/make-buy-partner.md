@@ -144,10 +144,4 @@ Acquire = buy the company, right when team+IP is the asset
 - [Amazon's Approach to Technology Decisions — Werner Vogels](https://www.allthingsdistributed.com/)
 - [Stripe on buying infrastructure — Patrick Collison interviews](https://www.foundersatwork.com/)
 
-## Related
-
-- [[7-powers]]
-- [[platform-strategy]]
-- [[technical-concepts-for-pms]]
-- [[infrastructure-pm]]
-- [[compliance-basics]]
+[[pm-knowledge-base]]

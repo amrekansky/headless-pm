@@ -82,3 +82,8 @@ Progress tracker:
 ```
 
 Related skills: `/customer-research` (interview data feeds discovery), `/strategy` (discovery feeds strategy work), `/pm-agents` (all 8 domains)
+
+
+## Related
+
+[[continuous-discovery]] · [[jobs-to-be-done]] · [[switch-interview-methodology]] · [[assumption-mapping]] · [[tam-sam-som]] · [[user-research-methods]] · [[Skills]] · [[Agents]]

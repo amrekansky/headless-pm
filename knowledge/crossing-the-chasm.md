@@ -108,10 +108,4 @@ Moore's prescription: choose one specific, underserved niche in the Early Majori
 - [Geoffrey Moore Webinar Replay — Sendbird](https://sendbird.com/resources/geoffrey-moore-webinar-replay)
 - [Why Crossing the Chasm is a must-read — Greatness Substack](https://greatness.substack.com/p/why-geoffrey-moores-crossing-the)
 
-## Related
-
-- [[obviously-awesome]]
-- [[tam-sam-som]]
-- [[product-led-growth]]
-- [[enterprise-b2b-motion]]
-- [[7-powers]]
+[[pm-knowledge-base]]

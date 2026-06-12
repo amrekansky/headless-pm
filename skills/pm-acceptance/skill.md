@@ -127,3 +127,8 @@ Append to `.pm/orchestrator.log`:
 ```
 {ISO timestamp} pm-acceptance completed → .pm/artifacts/acceptance-{name}.md
 ```
+
+
+## Related
+
+[[continuous-discovery]] · [[prioritization-frameworks]] · [[okr-implementation]] · [[impact-mapping]] · [[pm-writing]] · [[shreyas-frameworks]] · [[Skills]] · [[Agents]]

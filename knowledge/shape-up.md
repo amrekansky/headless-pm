@@ -112,10 +112,4 @@ Repeat
 - [Shape Up overview — curiouslab.io](https://www.curiouslab.io/blog/what-is-basecamps-shape-up-method-a-complete-overview)
 - [5 key takeaways — prodify.group](https://www.prodify.group/blog/book-report-5-key-takeaways-from-shape-up-by-basecamps-ryan-singer)
 
-## Related
-
-- [[lean-startup]]
-- [[dual-track-agile]]
-- [[prioritization-frameworks]]
-- [[working-backwards]]
-- [[pm-rituals]]
+[[pm-knowledge-base]]

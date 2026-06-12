@@ -289,10 +289,4 @@ Use AppFollow or AppBot to aggregate and analyze at scale. Manual reading of raw
 - [Crunchbase employment signals](https://about.crunchbase.com/blog/new-crunchbase-employment-signals)
 - [Similarweb competitive intelligence guide](https://www.similarweb.com/blog/marketing/marketing-strategy/competitive-intelligence/)
 
-## Related
-
-- [[user-research-methods]]
-- [[data-literacy-for-pms]]
-- [[conjoint-analysis]]
-- [[win-loss-analysis]]
-- [[continuous-discovery]]
+[[pm-knowledge-base]]

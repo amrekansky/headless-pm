@@ -134,10 +134,4 @@ Deep links: universal links + deferred deep links for paid
 - [Best ASO Practices 2024–2025 — SplitMetrics](https://splitmetrics.com/blog/app-store-optimization-best-practices/)
 - [ASO 2.0 Advanced Strategies 2025 — Dogtown Media](https://www.dogtownmedia.com/aso-2-0-advanced-app-store-optimization-strategies-for-2025/)
 
-## Related
-
-- [[developer-experience]]
-- [[aarrr-pirate-metrics]]
-- [[heart-framework]]
-- [[technical-concepts-for-pms]]
-- [[product-led-growth]]
+[[pm-knowledge-base]]

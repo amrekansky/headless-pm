@@ -117,3 +117,8 @@ Related skills: `/pre-mortem` (surface risks before they require escalation), `/
 
 If Notion MCP: create a Risk Escalation page in the PM workspace with status tracking.
 If not: send via email/Slack; save `escalation-[risk]-[date].md` for records.
+
+
+## Related
+
+[[pm-rituals]] · [[shreyas-frameworks]] · [[linear-jira-best-practices]] · [[org-design-product]] · [[Skills]] · [[Agents]]

@@ -90,3 +90,8 @@ Decision rule: if p < 0.05 and primary metric ↑ and guardrails not hurt → sh
 
 If Notion: create test doc in Experiments log.
 If Amplitude/Mixpanel MCP: query baseline metric before launch.
+
+
+## Related
+
+[[metrics-taxonomy]] · [[heart-framework]] · [[aarrr-pirate-metrics]] · [[product-led-growth]] · [[bayesian-ab-testing]] · [[attribution-models]] · [[experimentation-maturity]] · [[Skills]] · [[Agents]]

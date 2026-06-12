@@ -124,10 +124,4 @@ BaaS: operate under sponsor bank charter — faster than own license
 - [Breaking Banks — Brett King (2014)](https://www.amazon.com/Breaking-Banks-Innovators-Hustlers-New/dp/1118900936)
 - [Stripe Treasury Docs (BaaS model example) — stripe.com](https://stripe.com/docs/treasury)
 
-## Related
-
-- [[compliance-basics]]
-- [[healthcare-pm]]
-- [[technical-concepts-for-pms]]
-- [[unit-economics]]
-- [[pricing-strategy-saas]]
+[[pm-knowledge-base]]

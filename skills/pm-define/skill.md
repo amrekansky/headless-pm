@@ -343,3 +343,8 @@ Append to `.pm/orchestrator.log`:
 ```
 {ISO timestamp} pm-define completed → .pm/artifacts/feature-{name}.md
 ```
+
+
+## Related
+
+[[continuous-discovery]] · [[prioritization-frameworks]] · [[okr-implementation]] · [[impact-mapping]] · [[pm-writing]] · [[shreyas-frameworks]] · [[Skills]] · [[Agents]]
