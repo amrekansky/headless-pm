@@ -61,6 +61,9 @@ Before responding, read in this order:
 3. `CLAUDE.md` — project constraints
 4. `.pm/risks.md` (if exists) — scan `| Last Reviewed |` column for staleness
 5. `.pm/open-questions.md` (if exists) — scan `| Due |` column for overdue or upcoming questions
+6. `.pm/situation.md` (if exists) — check file modification date:
+   `stat -f "%Sm" -t "%Y-%m-%d" .pm/situation.md` (macOS) / `stat -c "%y" .pm/situation.md | cut -d' ' -f1` (Linux)
+   If modification date is older than 7 days, set `SITUATION_STALE=true` and compute `SITUATION_DAYS=N`.
 
 ---
 
@@ -83,6 +86,7 @@ Before responding, read in this order:
 8. From `.pm/STATE.md` `### Milestones` section: check if any milestone date is within 7 days. If so, set MILESTONE_SOON=true and extract days count.
 9. Check `.pm/BRIEF.md` (if exists): read `Last Updated:` on line 1, compute days since today. If file missing → BRIEF_STALE=true, BRIEF_DAYS="никогда". If days > 3 → BRIEF_STALE=true, BRIEF_DAYS=N.
 10. Check `.pm/REVIEW.md` (if exists): read `Last Updated:` on line 1, compute days since today. If file missing → REVIEW_DUE=true, REVIEW_DAYS="никогда". If days > 7 → REVIEW_DUE=true, REVIEW_DAYS=N.
+11. Check `.pm/situation.md` modification date (see Step 1 item 6). If SITUATION_STALE=true, note SITUATION_DAYS.
 
 **Snapshot:** Note the current list of `.pm/artifacts/` files as the baseline — you will compare against this in the Closing Dashboard.
 
@@ -106,6 +110,7 @@ Before responding, read in this order:
 {if MILESTONE_SOON} ⚠ Milestone approaching in {N} days
 {if BRIEF_STALE}    📝 /pm-brief — {BRIEF_DAYS}д назад → обнови
 {if REVIEW_DUE}     🔄 /pm-review — {REVIEW_DAYS}д назад → запусти
+{if SITUATION_STALE} ⚠ Снапшот устарел ({SITUATION_DAYS}д) — запускаю pm-radar
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
  Следующий шаг:  /{skill}  — {reason from situation.md, or "запускаю pm-radar"}
@@ -417,3 +422,8 @@ When user says "что делать сегодня" or shares a mixed list:
 - Terminal-first voice: direct, no filler, no corporate speak
 - After user confirms → start executing without re-explaining
 - `.pm/STATE.md` is primary source; `context.md ## PM Lifecycle` is fallback only
+
+
+## Related
+
+[[headless-pm]] · [[Skills]] · [[Agents]]

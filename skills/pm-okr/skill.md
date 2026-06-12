@@ -171,3 +171,19 @@ Append to `.pm/orchestrator.log`:
 ```
 {ISO timestamp} pm-okr completed → .pm/goals.md
 ```
+
+
+## Memory Write
+
+After Mode A OKR output is confirmed, silently overwrite `.pm/goals.md` with the full OKR content:
+```markdown
+## OKRs — [Team] — Q[N] [Year]
+[full OKR output from Mode A Step 4]
+```
+This replaces any previous goals.md content (onboarding 30-day goal or prior OKR cycle).
+Do not ask for confirmation. Do not announce the write.
+
+
+## Related
+
+[[continuous-discovery]] · [[prioritization-frameworks]] · [[okr-implementation]] · [[impact-mapping]] · [[pm-writing]] · [[shreyas-frameworks]] · [[Skills]] · [[Agents]]

@@ -190,22 +190,32 @@ After writing, say briefly:
 If no specific names were mentioned (e.g., "CEO and CTO"), create one file per role:
 `.pm/stakeholders/ceo.md`, `.pm/stakeholders/cto.md` with Role filled in and other fields blank.
 
-Do not create more than 5 files — if more are mentioned, capture the top 5 by influence.
+If user names more than 10 stakeholders in one session, ask:
+> "That's a big list — want me to capture all of them now, or just the top ones by influence and add the rest with `/pm-stakeholder add` later?"
 
 ---
 
-## Writing .pm/STATE.md
+## Workspace Initialization
 
-After either path confirms the summary, create `.pm/STATE.md` in the current working directory:
+After the user confirms the summary (both Path A and Path B), initialize the full `.pm/` workspace:
 
+```bash
+mkdir -p .pm .pm/stakeholders .pm/artifacts
 ```
-mkdir -p .pm
+
+Write the following files:
+
+**`.pm/config.json`**
+```json
+{"product": "[name from summary]", "phase": "[stage from summary]", "sprintAnchor": "[today YYYY-MM-DD]", "sprintCadence": 14}
 ```
 
-Related skills: `/pm` (run this next — reads STATE.md and routes to the right work), `/pm-sprint-plan` (if you're starting a sprint), `/pm-prd` (if you need to define a feature first)
+**`.pm/manifest.json`**
+```json
+{"initialized": "[today YYYY-MM-DD]", "version": "1"}
+```
 
-Write the file:
-
+**`.pm/STATE.md`**
 ```
 - Product: [name]
 - Phase: [stage]
@@ -214,7 +224,62 @@ Write the file:
 - Blockers: [blockers or "None"]
 ```
 
-After writing, say:
-> "Done. `.pm/STATE.md` is set up.
->
-> Now just run `/pm` — it'll read this and pick up from here."
+**`.pm/context.md`**
+Full synthesis from the confirmed summary (Output Template format).
+
+**`.pm/goals.md`** — write if a goal was provided (Path B Q7, or goal extracted from docs in Path A):
+```markdown
+## 30-Day Goal (set [today YYYY-MM-DD])
+[goal from Q7 or extracted from docs]
+```
+
+**`.pm/decisions.md`**
+```markdown
+# Decisions
+
+| Date | Decision | Rationale |
+|------|----------|-----------|
+```
+
+**`.pm/risks.md`**
+```markdown
+# Risks
+
+| Risk | Severity | Owner | Status | Last Reviewed |
+|------|----------|-------|--------|---------------|
+```
+
+**`.pm/open-questions.md`**
+```markdown
+# Open Questions
+
+| Question | Owner | Due |
+|----------|-------|-----|
+```
+
+**`.pm/stakeholders/*.md`** — one file per named stakeholder. Write `.pm/stakeholders/{name-slug}.md` (lowercase, hyphens):
+```markdown
+# {Full Name}
+
+**Role:** {title or role as mentioned}
+**Influence:** high / medium / low
+**Attitude:** champion / neutral / skeptic
+**Communication:** {preferred channel if known, else "unknown"}
+**Last contact:** {today YYYY-MM-DD}
+**Notes:** {one-line context if available}
+
+## Log
+- {today}: added via /pm-onboarding
+```
+
+If no specific names were mentioned (e.g., "CEO and CTO"), create one file per role with Role filled in and other fields blank.
+
+After writing all files, say:
+> "Workspace ready. Run `/pm` to start — it'll pick up from here."
+
+Related skills: `/pm` (run this next — reads STATE.md and routes to the right work), `/pm-sprint-plan` (if you're starting a sprint), `/pm-prd` (if you need to define a feature first), `/pm-stakeholder add` (add more stakeholders later)
+
+
+## Related
+
+[[pm-rituals]] · [[shreyas-frameworks]] · [[linear-jira-best-practices]] · [[org-design-product]] · [[Skills]] · [[Agents]]

@@ -127,3 +127,18 @@ Append to `.pm/orchestrator.log`:
 ```
 {ISO timestamp} pm-competitor({NAME}) completed → .pm/artifacts/competitor-{NAME}.md
 ```
+
+
+## Memory Write
+
+After competitive analysis is confirmed, silently append the top competitive risk to `.pm/risks.md` (create file with table header if missing):
+```
+| competitive: {competitor} {threat description} | high/med/low | PM | open | {today} |
+```
+Only append if a material threat was identified. Skip if no competitive risks surfaced.
+Do not ask for confirmation. Do not announce the write.
+
+
+## Related
+
+[[lean-startup]] · [[7-powers]] · [[win-loss-analysis]] · [[obviously-awesome]] · [[north-star-metric]] · [[platform-strategy]] · [[Skills]] · [[Agents]]

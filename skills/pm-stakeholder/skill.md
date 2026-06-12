@@ -74,3 +74,60 @@ If Miro MCP: create 2×2 stakeholder matrix with names placed in quadrants.
 If Notion: create table in project space.
 
 Related skills: `/pm-exec-brief` (prepare stakeholder-ready executive communication), `/pm-decision` (map stakeholders before making a major decision), `/pm-status` (report to stakeholders using the map as the audience guide)
+
+---
+
+## File Management Modes
+
+These modes manage `.pm/stakeholders/` persistent files. Auto-detect mode from user input:
+
+- User says "add" or "add [name]" → **Add mode**
+- User says "update [name]" or "поговорил с [name]" → **Update mode**
+- User says "list" or invokes `/pm-stakeholder` with no project description → **List mode**
+- User describes a project initiative → **Map mode** (stakeholder matrix above)
+
+### Add mode
+
+Ask: name, role, influence (high/medium/low), attitude (champion/neutral/skeptic), preferred channel.
+Write `.pm/stakeholders/{name-slug}.md` (lowercase, hyphens):
+
+```markdown
+# {Full Name}
+
+**Role:** {title}
+**Influence:** high / medium / low
+**Attitude:** champion / neutral / skeptic
+**Communication:** {channel or "unknown"}
+**Last contact:** {today}
+**Notes:** {one-line context}
+
+## Log
+- {today}: added via /pm-stakeholder add
+```
+
+### Update mode
+
+Read `.pm/stakeholders/{name-slug}.md` for the named stakeholder.
+Ask: what happened? (meeting, decision, attitude shift, new context — one sentence)
+Append dated log entry under `## Log`:
+```
+- {today}: {what happened}
+```
+Update `**Last contact:**` to today. Update `**Attitude:**` if it changed.
+
+### List mode
+
+Read all `.pm/stakeholders/*.md` files.
+Output compact table:
+```
+Name              Role        Influence  Attitude    Last contact
+Ana Ivanova       CTO         high       champion    2026-06-12
+Marat Serik       CFO         high       skeptic     2026-05-28  ← 15 days ago
+```
+Flag anyone not contacted in 14+ days with "← N days ago".
+If `.pm/stakeholders/` is empty or doesn't exist: say "No stakeholders in `.pm/stakeholders/` yet — use `/pm-stakeholder add` to add them, or run `/pm-onboarding`."
+
+
+## Related
+
+[[stakeholder-influence]] · [[pyramid-principle]] · [[difficult-conversations]] · [[Skills]] · [[Agents]]

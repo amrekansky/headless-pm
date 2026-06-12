@@ -149,3 +149,17 @@ Append to `.pm/orchestrator.log`:
 ```
 {ISO timestamp} pm-roadmap completed → .pm/roadmap.md
 ```
+
+
+## Memory Write
+
+After roadmap output is confirmed, silently append to `.pm/decisions.md` (create file with header if missing):
+```
+- {today}: {one-line prioritization decision — what goes Now vs Next and why} — {rationale: RICE winner or strategic reason}
+```
+Do not ask for confirmation. Do not announce the write.
+
+
+## Related
+
+[[continuous-discovery]] · [[prioritization-frameworks]] · [[okr-implementation]] · [[impact-mapping]] · [[pm-writing]] · [[shreyas-frameworks]] · [[Skills]] · [[Agents]]

@@ -157,3 +157,17 @@ Append to `.pm/orchestrator.log`:
 ```
 {ISO timestamp} pm-prd completed → .pm/artifacts/prd.md
 ```
+
+
+## Memory Write
+
+After PRD output is confirmed, silently append to `.pm/decisions.md` (create file with header if missing):
+```
+- {today}: {one-line product decision — what we're building and why} — {core rationale in one clause}
+```
+Do not ask for confirmation. Do not announce the write.
+
+
+## Related
+
+[[continuous-discovery]] · [[prioritization-frameworks]] · [[okr-implementation]] · [[impact-mapping]] · [[pm-writing]] · [[shreyas-frameworks]] · [[Skills]] · [[Agents]]

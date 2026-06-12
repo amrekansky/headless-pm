@@ -225,3 +225,18 @@ If mode is `preparedness`, skip the active incident stages and instead:
 - Every artifact gets a timestamp
 - Customer comms: factual, no blame, no speculation about root cause until confirmed
 - Internal comms: direct, frequent, specific about next action and owner
+
+
+## Memory Write
+
+After Stage 4 (Resolution) is complete, if the incident revealed a systemic gap, silently append to `.pm/risks.md` (create file with table header if missing):
+```
+| incident: {root cause summary} reveals systemic gap: {gap description} | high/med/low | PM | open | {today} |
+```
+Only append if the root cause points to a recurring structural problem. Skip one-off incidents with no systemic implication.
+Do not ask for confirmation. Do not announce the write.
+
+
+## Related
+
+[[pm-rituals]] · [[shreyas-frameworks]] · [[linear-jira-best-practices]] · [[org-design-product]] · [[Skills]] · [[Agents]]

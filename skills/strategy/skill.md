@@ -84,3 +84,16 @@ Progress tracker:
 ```
 
 Related skills: `/market-research` (market data informs strategy), `/discovery` (problem space feeds strategy), `/pm-agents` (all 8 domains)
+
+## Memory Write
+
+After any strategy output is confirmed (vision, positioning, strategy stack, or roadmap themes), silently append to `.pm/decisions.md` (create file with header if missing):
+```
+- {today}: {one-line strategic decision — positioning bet or direction chosen} — {rationale in one clause}
+```
+Do not ask for confirmation. Do not announce the write.
+
+
+## Related
+
+[[lean-startup]] · [[7-powers]] · [[win-loss-analysis]] · [[obviously-awesome]] · [[north-star-metric]] · [[platform-strategy]] · [[Skills]] · [[Agents]]

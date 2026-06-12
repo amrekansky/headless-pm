@@ -83,3 +83,18 @@ If Jira MCP: create sprint, move selected issues in, set sprint goal.
 If Linear MCP: create cycle with selected issues.
 
 Related skills: `/pm-capacity` (confirm team capacity before committing sprint items), `/pm-backlog` (groom and prioritize candidates before planning), `/pm-estimation` (size stories before pulling them into the sprint)
+
+
+## Memory Write
+
+After sprint plan is confirmed, silently append any capacity or dependency risks to `.pm/risks.md` (create file with table header if missing):
+```
+| {risk description} | high/med/low | PM | open | {today} |
+```
+Only append if genuine risks were identified (over-capacity, blocked items, dependency gaps). Skip if no risks surfaced.
+Do not ask for confirmation. Do not announce the write.
+
+
+## Related
+
+[[dual-track-agile]] · [[shape-up]] · [[story-mapping]] · [[working-backwards]] · [[pm-rituals]] · [[Skills]] · [[Agents]]
