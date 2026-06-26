@@ -117,30 +117,7 @@ Five personas, one toolkit. Start with the skill that matches today's task.
 
 Open Claude Code (or Gemini CLI / Codex) in your project and let the hub route you:
 
-```
-$ claude
-> /pm-agents
-
-╔══════════════════════════════════════════════╗
-║        headless-pm — PM Subagent Hub         ║
-╠══════════════════════════════════════════════╣
-║  8 domain subagents ready                    ║
-╚══════════════════════════════════════════════╝
-
-What are you working on?
-
-  1  /pm-discovery      → problem framing, hypotheses, OST
-  2  /pm-customer-research → interviews, JTBD, segmentation
-  3  /pm-strategy       → vision, OKR, roadmap, prioritization
-  4  /pm-market-research → sizing, competitive, ICP, positioning
-  5  /pm-execution      → sprint, backlog, estimation, delivery
-  6  /pm-gtm            → launch, release lifecycle, feature flags
-  7  /pm-analytics      → metrics, North Star, funnel, A/B tests
-  8  /pm-stakeholder    → exec briefs, status, risk, influence
-
-Describe your task and I'll route you, or pick a number:
->
-```
+![/pm-agents hub — describe your task and headless-pm routes you to the right one of 8 PM domain subagents](docs/images/pm-agents.png)
 
 Common starters: `/pm-sprint-plan` · `/pm-prd` · `/pm-discovery` · `/cusdev` · `/pm-roadmap`. Skills work with or without a `.pm/STATE.md`.
 
