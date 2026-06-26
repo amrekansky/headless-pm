@@ -17,6 +17,8 @@ npx headless-pm install
 
 Run `/pm-onboarding` (8 questions) and your first brief, PRD, or sprint plan is minutes away.
 
+> **Stop re-prompting from scratch.** Run the same PM workflow — same method, same checks, same output shape — every time, on Claude, Codex, or Gemini.
+
 ---
 
 ## Start in two minutes
@@ -56,10 +58,35 @@ It's not a prompt pack. It's a maintained system with real depth:
 
 - **100+ skills across 8 domains** — discovery, customer research, strategy, market research, execution, GTM, analytics, stakeholder. Not snippets — full workflows with steps, checks, and an output you can ship.
 - **8 domain subagents** — `/discovery`, `/customer-research`, `/strategy`, `/market-research`, `/execution`, `/gtm`, `/analytics`, `/stakeholder`. Each routes to the right skill or runs a full sequence. `/pm-agents` finds it for you.
-- **Real methodology, built in** — 7 Powers, JTBD (Moesta/Christensen/Ulwick), April Dunford positioning, Shape Up, Lean Startup, North Star, and 50+ frameworks. The thinking is in the skills, not left to you.
+- **Real methodology, built in** — proven PM frameworks walked step by step, not generic prompts (see [Built on real methodology](#built-on-real-methodology)).
 - **A workspace that remembers** — `.pm/` keeps your goals, decisions, risks, open questions, and stakeholders across sessions. No re-explaining the project every time.
 - **Connects to your stack** — Notion, Linear, Jira, Miro, Exa, Google Sheets, Figma, Slack, GitHub via MCP.
 - **Cross-linked end to end** — every skill points to the next. `/pm-hypothesis` → `/brainstorm-experiments` → `/pm-ab`. No dead ends.
+- **Runs on Claude, Codex, or Gemini — natively** — not Claude-only. Use whichever CLI your team already has.
+
+---
+
+## What a workflow actually produces
+
+Each skill runs a real method and hands you a finished artifact — not a wall of text to clean up:
+
+| Run this | And you get |
+|---|---|
+| `/pm-prd` | JTBD framing, problem statement, scope, success metrics — a full, engineering-ready PRD |
+| `/pm-discovery` | problem framing, hypotheses, an opportunity-solution tree, assumption map, and an experiment plan |
+| `/cusdev` | a Mom Test interview guide, then synthesis — themes, JTBD forces, and an evidence map |
+| `/pm-roadmap` | OKR-aligned Now / Next / Later, dependencies, and exec / eng / customer views |
+| `/pm-competitive` | battlecards, positioning gaps, and a feature-and-pricing teardown |
+
+Every output lands as plain markdown in your `.pm/` workspace, with the checks and review trail attached.
+
+---
+
+## Built on real methodology
+
+Every workflow encodes a named PM framework — Continuous Discovery (Teresa Torres), Jobs-to-be-Done (Christensen, Ulwick), positioning (April Dunford), 7 Powers (Hamilton Helmer), Shape Up, Lean Startup — walked step by step, not improvised.
+
+Made by a product manager, for product managers.
 
 ---
 
@@ -246,4 +273,6 @@ npx headless-pm update               # Update to the latest version
 ---
 
 Made for product managers. Free to install, yours to keep.
+If it saves you an afternoon, **⭐ the repo** — it helps other PMs find it.
+
 [Getting Started](docs/getting-started.md) · [headlesspm.com](https://headlesspm.com) · License: FSL-1.1-MIT
