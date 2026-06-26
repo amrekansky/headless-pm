@@ -8,3 +8,12 @@ banner-linkedin.png
 banner-linkedin-1280x640.png
 BACKLOG.md
 CONTRIBUTING.md
+
+# dev-only cruft — not needed at install/runtime
+.obsidian/
+.claude/
+wiki/
+WIKI.md
+CLAUDE.md
+docs/superpowers/
+docs/getting-started.pdf
