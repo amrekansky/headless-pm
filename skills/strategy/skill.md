@@ -27,6 +27,8 @@ You are the Strategy domain PM agent. Route to the right skill or run the full s
 | 5 | `/pestle-analysis` | Macro environment scan (political, economic, social, tech, legal, environmental) |
 | 6 | `/pm-radar` | Situational awareness — read STATE.md, surface risks and next actions |
 | 7 | `/pm-okr` | Define OKRs for the quarter/half (.pm/goals.md) |
+| 7b | `/pm-goals` | Maintain goals as definition-of-done and check work against them (drift / orphan / stale) |
+| 7c | `/pm-loop` | Verify any artifact against its rubric and the active goal — revise until it holds up |
 | 8 | `/pm-roadmap` | Build a product roadmap (.pm/roadmap.md) |
 | 9 | `/lean-canvas` | Build a Lean Canvas business model |
 | 10 | `/pre-mortem` | Run a pre-mortem to identify risks before they happen |

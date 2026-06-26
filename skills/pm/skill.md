@@ -64,6 +64,7 @@ Before responding, read in this order:
 6. `.pm/situation.md` (if exists) — check file modification date:
    `stat -f "%Sm" -t "%Y-%m-%d" .pm/situation.md` (macOS) / `stat -c "%y" .pm/situation.md | cut -d' ' -f1` (Linux)
    If modification date is older than 7 days, set `SITUATION_STALE=true` and compute `SITUATION_DAYS=N`.
+7. `.pm/goals.md` (if exists) — extract active Objectives and their `status:` / `reviewed:` lines. If any Objective's `reviewed:` is older than 14 days, set `GOALS_STALE=true`.
 
 ---
 
@@ -87,6 +88,7 @@ Before responding, read in this order:
 9. Check `.pm/BRIEF.md` (if exists): read `Last Updated:` on line 1, compute days since today. If file missing → BRIEF_STALE=true, BRIEF_DAYS="никогда". If days > 3 → BRIEF_STALE=true, BRIEF_DAYS=N.
 10. Check `.pm/REVIEW.md` (if exists): read `Last Updated:` on line 1, compute days since today. If file missing → REVIEW_DUE=true, REVIEW_DAYS="никогда". If days > 7 → REVIEW_DUE=true, REVIEW_DAYS=N.
 11. Check `.pm/situation.md` modification date (see Step 1 item 6). If SITUATION_STALE=true, note SITUATION_DAYS.
+12. From `.pm/goals.md` (if exists): extract the top active Objective and its highest-signal KR (`metric baseline → target (now: current)`) for the Goals line. If GOALS_STALE=true (any Objective `reviewed:` > 14 days), note it.
 
 **Snapshot:** Note the current list of `.pm/artifacts/` files as the baseline — you will compare against this in the Closing Dashboard.
 
@@ -104,7 +106,9 @@ Before responding, read in this order:
 
  Блокеры: {from STATE.md, or "нет"}
  Фокус:   {from STATE.md, or "не задан"}
+ Цель:    {top Objective + KR from goals.md, or "не задана — /pm-goals set"}
 
+{if GOALS_STALE}    🎯 /pm-goals — цель не ревьюилась >14д → проверь
 {if RISKS_STALE}    ⚠ Risks need review (>7d since last review)
 {if QUESTIONS_DUE}  ⚠ Questions overdue or due within 7 days
 {if MILESTONE_SOON} ⚠ Milestone approaching in {N} days
@@ -148,7 +152,7 @@ After pm-radar completes, read `.pm/situation.md` to get the synthesized situati
 Read `.pm/situation.md`. Based on the Recommended Workflow and the user's goal:
 
 1. State the situation summary in 2-3 sentences
-2. Propose the workflow with the agents that will run, in order
+2. Propose the workflow with the agents that will run, in order. For each proposed sub-task, name the active Objective from `.pm/goals.md` it advances; flag any sub-task that advances no active goal (drift) so the user can confirm it is still worth doing.
 3. If `--supervised` mode (default): ask for confirmation before each agent spawn
 4. If `--auto` mode: spawn the full chain without pausing
 
@@ -166,7 +170,7 @@ gemini -p "$(cat ~/.headless/pm/agents/{AGENT-NAME}.md)" --yolo
 codex "$(cat ~/.headless/pm/agents/{AGENT-NAME}.md)"
 ```
 
-After each agent completes, read the artifact it wrote (listed in its `artifact_output` frontmatter) and summarize for the user before spawning the next agent.
+After each agent completes, read the artifact it wrote (listed in its `artifact_output` frontmatter). Run it through the `/pm-loop` quality-gate before presenting: verify it against its type rubric (and the active goal), revise what fails, repeat until it passes or hits the `maxIterations` cap (default 3), and append the review trail. Then summarize the verified artifact for the user before spawning the next agent.
 
 ### Workflow → Agent Chain
 
