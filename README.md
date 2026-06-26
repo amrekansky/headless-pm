@@ -70,6 +70,8 @@ It's not a prompt pack. It's a maintained system with real depth:
 
 Each skill runs a real method and hands you a finished artifact — not a wall of text to clean up:
 
+![/pm-prd running in the terminal — reads your workspace, runs the method with checks, writes a PRD to .pm/artifacts/, and points to the next workflow](docs/images/pm-prd.png)
+
 | Run this | And you get |
 |---|---|
 | `/pm-prd` | JTBD framing, problem statement, scope, success metrics — a full, engineering-ready PRD |
