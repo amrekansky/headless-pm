@@ -7,9 +7,9 @@
 [![License: FSL-1.1-MIT](https://img.shields.io/badge/License-FSL--1.1--MIT-blue.svg)](LICENSE)
 [![GitHub stars](https://img.shields.io/github/stars/amrekansky/headless-pm)](https://github.com/amrekansky/headless-pm)
 
-**The product-management workflow system behind [headlesspm.com](https://headlesspm.com).**
+**An AI workflow system for product managers — 100+ PM workflows in your terminal.**
 
-`headless-pm` installs 100+ PM workflows into your AI terminal — discovery, PRDs, roadmaps, sprints, GTM, analytics, stakeholder comms. They run on Claude, Codex, or Gemini, keep every output in your own files, and cost nothing to start.
+`headless-pm` installs discovery, PRDs, roadmaps, sprints, GTM, analytics, and stakeholder workflows into Claude, Codex, or Gemini. Every output lands in your own files. Free to install, yours to keep.
 
 ```bash
 npx headless-pm install
