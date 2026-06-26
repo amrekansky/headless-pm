@@ -7,108 +7,86 @@
 [![License: FSL-1.1-MIT](https://img.shields.io/badge/License-FSL--1.1--MIT-blue.svg)](LICENSE)
 [![GitHub stars](https://img.shields.io/github/stars/amrekansky/headless-pm)](https://github.com/amrekansky/headless-pm)
 
-**An AI workflow system for product managers.**
+**The product-management workflow system behind [headlesspm.com](https://headlesspm.com).**
 
-headless-pm turns messy product context into structured outputs — discovery synthesis, PRDs, backlog reviews, sprint briefs, launch checklists — with methods, checks, and a reviewable trail.
-
-100+ PM skills + a `/pm` orchestrator that routes them. Free, local-first, runs on Claude, Codex, or Gemini.
+`headless-pm` installs 100+ PM workflows into your AI terminal — discovery, PRDs, roadmaps, sprints, GTM, analytics, stakeholder comms. They run on Claude, Codex, or Gemini, keep every output in your own files, and cost nothing to start.
 
 ```bash
 npx headless-pm install
 ```
 
----
-
-## The shift
-
-Most PMs run their AI work as a copy-paste ritual: open a chat, paste the notes, re-explain the context, ask for a summary, fix the structure, and do it all again next week. The method lives in your head, so it resets every time.
-
-headless-pm runs that same recurring work as a repeatable workflow instead. Same context rules, same method, same checks, the same artifact shape — and a trail you can review at the end. The AI stops being a drafting toy and starts being workflow infrastructure.
+Run `/pm-onboarding` (8 questions) and your first brief, PRD, or sprint plan is minutes away.
 
 ---
 
-## The workflow shape
-
-Every skill runs the same shape, so the output holds up the same way every time:
-
-```
-  context  →  method  →  checks  →  loops  →  artifact  →  review trail
-```
-
-| Step | What it means |
-|------|----------------|
-| **context** | your project — notes, tickets, goals, decisions |
-| **method** | the workflow decides the steps, not the prompt |
-| **checks** | risks, gaps, assumptions, owners — surfaced, not skipped |
-| **loops** | rerun until the output actually holds up |
-| **artifact** | a brief, PRD, checklist, or decision — in your files |
-| **review trail** | what changed, why, and where it lives |
-
----
-
-## What you get
-
-Everything below installs free with `npx headless-pm install`:
-
-- **100+ PM skills** across 16 categories — discovery, JTBD, roadmapping, OKR, sprint, GTM, competitive, metrics, stakeholder comms, and more
-- **`/pm-onboarding`** — a wizard that sets up your `.pm/STATE.md` workspace in 8 questions
-- **8 PM domain subagents** — `/discovery`, `/customer-research`, `/strategy`, `/market-research`, `/execution`, `/gtm`, `/analytics`, `/stakeholder`, plus the `/pm-agents` hub to find the right one. Each routes to domain skills or runs a full auto-sequence.
-- **Deep methodology knowledge** — 7 Powers, JTBD, April Dunford positioning, Shape Up, Lean Startup, and 50+ PM frameworks built in
-- **Cross-linked workflows** — every skill points to the next one. `/pm-hypothesis` → `/brainstorm-experiments` → `/pm-ab`. No dead ends.
-- **Connects to your tools** — Notion, Linear, Jira, Miro, Exa, Google Sheets, Figma, Slack, GitHub via MCP
-- **Works with** Claude Code, Gemini CLI, and Codex CLI — all three, or just one
-
----
-
-## Install
+## Start in two minutes
 
 ```bash
-npx headless-pm install
+npx headless-pm install      # auto-detects Claude Code / Gemini CLI / Codex CLI
 ```
 
-Auto-detects which AI assistant you have, installs the skills into each one, and prompts to connect your tools (Notion, Linear, Jira, Miro).
+```
+/pm-onboarding               # 8 questions → your .pm/STATE.md workspace
+/pm-prd                      # ...then run any of 100+ skills
+```
 
-New to the terminal? → **[Getting Started Guide](docs/getting-started.md)** — step by step, from zero to your first run.
+No setup beyond your AI assistant. New to the terminal? → **[Getting Started](docs/getting-started.md)** walks you from zero to your first run.
 
 <details>
 <summary><b>No terminal? Install in Claude Cowork</b></summary>
 
 <br>
 
-Run headless-pm inside Claude Desktop — no command line required:
+Run headless-pm inside Claude Desktop — no command line:
 
 1. Open **Customize** (bottom-left in Claude Desktop)
-2. Go to **Browse plugins** → **Personal** → **+**
-3. Select **Add marketplace from GitHub**
+2. **Browse plugins** → **Personal** → **+**
+3. **Add marketplace from GitHub**
 4. Enter: `amrekansky/headless-pm`
 
-All 9 PM plugins install automatically. You get commands like `/pm-discovery`, `/pm-execution`, `/pm-customer-research`, and 6 more — directly in your Claude chat.
-
-> Skills work conversationally in Cowork — no memory between sessions. → [Getting Started in Cowork](COWORK.md)
+All 9 PM plugins install automatically — `/pm-discovery`, `/pm-execution`, `/pm-customer-research`, and 6 more, right in your chat. → [Getting Started in Cowork](COWORK.md)
 
 </details>
 
 ---
 
+## Why PMs keep it installed
+
+It's not a prompt pack. It's a maintained system with real depth:
+
+- **100+ skills across 8 domains** — discovery, customer research, strategy, market research, execution, GTM, analytics, stakeholder. Not snippets — full workflows with steps, checks, and an output you can ship.
+- **8 domain subagents** — `/discovery`, `/customer-research`, `/strategy`, `/market-research`, `/execution`, `/gtm`, `/analytics`, `/stakeholder`. Each routes to the right skill or runs a full sequence. `/pm-agents` finds it for you.
+- **Real methodology, built in** — 7 Powers, JTBD (Moesta/Christensen/Ulwick), April Dunford positioning, Shape Up, Lean Startup, North Star, and 50+ frameworks. The thinking is in the skills, not left to you.
+- **A workspace that remembers** — `.pm/` keeps your goals, decisions, risks, open questions, and stakeholders across sessions. No re-explaining the project every time.
+- **Connects to your stack** — Notion, Linear, Jira, Miro, Exa, Google Sheets, Figma, Slack, GitHub via MCP.
+- **Cross-linked end to end** — every skill points to the next. `/pm-hypothesis` → `/brainstorm-experiments` → `/pm-ab`. No dead ends.
+
+---
+
+## Safe to try
+
+- **Free** — every skill installs free. No card, no trial clock.
+- **Local-first** — it runs in your terminal and writes to your files. Nothing is uploaded to us.
+- **Bring your own AI** — your Claude, Codex, or Gemini, your tokens. We don't sit in the middle.
+- **No lock-in** — outputs are plain markdown in your repo, and the skills are open files you can read and edit.
+
+---
+
+## Built for your kind of PM
+
+- **OPS** — operations, delivery, process, incidents
+- **GRW** — growth, funnels, experiments, metrics
+- **PRD** — discovery, definition, roadmaps, specs
+- **TEC** — technical PM, platform, dependencies
+- **PLT** — platform and ecosystem strategy
+
+Five personas, one toolkit. Start with the skill that matches today's task.
+
+---
+
 ## First run
 
-Open Claude Code (or Gemini CLI / Codex) in your project directory and run the onboarding wizard:
-
-```
-/pm-onboarding
-```
-
-It asks 8 questions and creates `.pm/STATE.md` — your workspace context. Then use any skill directly:
-
-- `/pm-sprint-plan` — plan a sprint
-- `/pm-prd` — write a PRD
-- `/pm-discovery` — run a discovery session
-- `/cusdev` — customer interview (Mom Test)
-- `/pm-roadmap` — build a roadmap
-
-You can also skip onboarding and use any skill directly — no `STATE.md` required.
-
-Not sure where to start? Run the subagent hub:
+Open Claude Code (or Gemini CLI / Codex) in your project and let the hub route you:
 
 ```
 $ claude
@@ -135,17 +113,19 @@ Describe your task and I'll route you, or pick a number:
 >
 ```
 
+Common starters: `/pm-sprint-plan` · `/pm-prd` · `/pm-discovery` · `/cusdev` · `/pm-roadmap`. Skills work with or without a `.pm/STATE.md`.
+
 ---
 
-## The `/pm` orchestrator
+## When one command beats picking from a hundred → `/pm`
 
-The orchestrator reads your `.pm/STATE.md`, routes to the right skill automatically, and coordinates the subagents. No manual selection, no menus — just type `/pm` and it picks up where you left off.
+Once headless-pm is part of your week, the `/pm` orchestrator removes the last step of friction. It reads your `.pm/STATE.md`, routes to the right skill automatically, and coordinates the subagents — no menus, no manual selection. Just `/pm`, and it picks up where you left off.
 
 ```bash
 npx headless-pm setup --key=YOUR-KEY
 ```
 
-$60/yr. Get a license → **[headlesspm.com](https://headlesspm.com)**
+$60/yr. → **[headlesspm.com](https://headlesspm.com)**
 
 ---
 
@@ -265,5 +245,5 @@ npx headless-pm update               # Update to the latest version
 
 ---
 
-Built for product managers who'd rather run a workflow than feed a chat box.
+Made for product managers. Free to install, yours to keep.
 [Getting Started](docs/getting-started.md) · [headlesspm.com](https://headlesspm.com) · License: FSL-1.1-MIT
