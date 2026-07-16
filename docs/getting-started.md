@@ -137,7 +137,7 @@ What this does:
 - Installs the knowledge base to `~/.headless/pm/`
 - Asks about optional integrations (Notion, Linear, Miro) — press Enter to skip for now
 
-**License key for the `/pm` orchestrator:** Enter it when prompted, or press Enter to continue with the free tier.
+**No license key needed** — the full toolkit, including `/pm`, installs free.
 
 **Verify:** Open your CLI and run a skill:
 
@@ -251,9 +251,9 @@ Each skill reads your `.pm/STATE.md` for context. The more specific your workspa
 
 ---
 
-### 8. The /pm Orchestrator (Paid Tier)
+### 8. The /pm Orchestrator
 
-If you have a license key, the `/pm` orchestrator becomes your single entry point. One command instead of five.
+The `/pm` orchestrator is your single entry point. One command instead of five — installed free with everything else.
 
 Re-run install to enter your key:
 
@@ -271,7 +271,7 @@ Then open your CLI in your project folder and type:
 
 It reads your `STATE.md`, understands where you are in the PM workflow, and routes to the right skill automatically.
 
-Get a license key at [headlesspm.com](https://headlesspm.com).
+It is included free — nothing to buy. More at [headlesspm.com](https://headlesspm.com).
 
 ---
 
@@ -397,7 +397,7 @@ What this does:
 - Installs the knowledge base to `~/.headless/pm/`
 - Asks about optional integrations (Notion, Linear, Miro) — press Enter to skip for now
 
-**License key for the `/pm` orchestrator:** Enter it when prompted, or press Enter to continue with the free tier.
+**No license key needed** — the full toolkit, including `/pm`, installs free.
 
 **Verify:** Open your CLI and run a skill:
 
@@ -511,9 +511,9 @@ Each skill reads your `.pm/STATE.md` for context. The more specific your workspa
 
 ---
 
-### 8. The /pm Orchestrator (Paid Tier)
+### 8. The /pm Orchestrator
 
-If you have a license key, the `/pm` orchestrator becomes your single entry point. One command instead of five.
+The `/pm` orchestrator is your single entry point. One command instead of five — installed free with everything else.
 
 Re-run install to enter your key:
 
@@ -531,7 +531,7 @@ Then open your CLI in your project folder and type:
 
 It reads your `STATE.md`, understands where you are in the PM workflow, and routes to the right skill automatically.
 
-Get a license key at [headlesspm.com](https://headlesspm.com).
+It is included free — nothing to buy. More at [headlesspm.com](https://headlesspm.com).
 
 ---
 
@@ -672,7 +672,7 @@ What this does:
 - Installs the knowledge base to `~/.headless/pm/`
 - Asks about optional integrations (Notion, Linear, Miro) — press Enter to skip for now
 
-**License key for the `/pm` orchestrator:** Enter it when prompted, or press Enter to continue with the free tier.
+**No license key needed** — the full toolkit, including `/pm`, installs free.
 
 **Verify:** Open your CLI and run a skill:
 
@@ -787,9 +787,9 @@ Each skill reads your `.pm/STATE.md` for context. The more specific your workspa
 
 ---
 
-### 8. The /pm Orchestrator (Paid Tier)
+### 8. The /pm Orchestrator
 
-If you have a license key, the `/pm` orchestrator becomes your single entry point. One command instead of five.
+The `/pm` orchestrator is your single entry point. One command instead of five — installed free with everything else.
 
 Re-run install to enter your key:
 
@@ -807,7 +807,7 @@ Then open your CLI in your project folder and type:
 
 It reads your `STATE.md`, understands where you are in the PM workflow, and routes to the right skill automatically.
 
-Get a license key at [headlesspm.com](https://headlesspm.com).
+It is included free — nothing to buy. More at [headlesspm.com](https://headlesspm.com).
 
 ---
 

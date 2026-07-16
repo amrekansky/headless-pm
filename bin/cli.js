@@ -17,7 +17,6 @@ import {
   addCustomMcpServer,
   installStatusline,
 } from '../lib/installer.js'
-import { readConfig } from '../lib/config.js'
 import { readdir } from 'node:fs/promises'
 import { join } from 'node:path'
 import { homedir } from 'node:os'
@@ -58,7 +57,6 @@ program
   .action(async (opts) => {
     await checkForUpdates()
     console.log('Installing Headless PM...\n')
-    const cfg = await readConfig()
 
     const detectedCLIs = await detectCLIs()
     const cliLine = ['claude', 'gemini', 'codex']
@@ -72,10 +70,10 @@ program
         await installTools()
         console.log('  ✓ pm-interview-prep')
         console.log('  ✓ pm-sprint-brief')
-        console.log('  ✓ paid tools (stubs — license required)')
+        console.log('  ✓ pm-feedback-cluster')
       }
       if (!opts.toolsOnly) {
-        await installSkills(cfg.pmLicenseKey || null, detectedCLIs)
+        await installSkills(null, detectedCLIs)
         await installPrerequisiteSkills()
       }
       if (!opts.skillsOnly) {
@@ -87,50 +85,6 @@ program
       printInstallNextSteps()
     } catch (err) {
       console.error(`Install failed: ${err.message}`)
-      process.exit(1)
-    }
-  })
-
-program
-  .command('setup')
-  .description('Unlock full toolkit with license key')
-  .option('--key <key>', 'License key')
-  .action(async ({ key }) => {
-    if (!key) {
-      console.error('Usage: npx headless-pm setup --key=YOUR-LICENSE-KEY')
-      process.exit(1)
-    }
-    try {
-      const res = await fetch(`https://headless-license.onrender.com/validate?key=${key}`)
-      const data = await res.json()
-      if (data.valid) {
-        let expiryNote = ''
-        if (data.expires_at) {
-          const expiresDate = new Date(data.expires_at)
-          const now = new Date()
-          const daysLeft = Math.floor((expiresDate - now) / (1000 * 60 * 60 * 24))
-          const dateStr = expiresDate.toISOString().slice(0, 10)
-          if (daysLeft < 0) {
-            console.error(`License expired on ${dateStr}. Renew at headlesspm.com`)
-            process.exit(1)
-          } else if (daysLeft < 30) {
-            console.log(`⚠ License expires in ${daysLeft} days — headlesspm.com`)
-          }
-          expiryNote = ` (expires ${dateStr})`
-        }
-        const { writeConfig } = await import('../lib/config.js')
-        await writeConfig({ pmLicenseKey: key })
-        console.log(`✓ License valid${expiryNote}. Installing full toolkit...`)
-        await installTools()
-        await installSkills(key)
-        await promptMcpSetup()
-        console.log('\nFull Headless PM toolkit installed.')
-      } else {
-        console.error('Invalid license key.')
-        process.exit(1)
-      }
-    } catch {
-      console.error('Could not validate license. Check your connection.')
       process.exit(1)
     }
   })
@@ -165,12 +119,11 @@ program
   .command('update')
   .description('Update tools and skills to latest version')
   .action(async () => {
-    const cfg = await readConfig()
     const detectedCLIs = await detectCLIs()
     console.log('Updating Headless PM...\n')
     try {
       await installTools()
-      await installSkills(cfg.pmLicenseKey || null, detectedCLIs)
+      await installSkills(null, detectedCLIs)
       await cleanupRemovedSkills(detectedCLIs)
       await installPrerequisiteSkills()
       await installStatusline(detectedCLIs)

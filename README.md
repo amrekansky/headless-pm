@@ -125,13 +125,7 @@ Common starters: `/pm-sprint-plan` · `/pm-prd` · `/pm-discovery` · `/cusdev` 
 
 ## When one command beats picking from a hundred → `/pm`
 
-Once headless-pm is part of your week, the `/pm` orchestrator removes the last step of friction. It reads your `.pm/STATE.md`, routes to the right skill automatically, and coordinates the subagents — no menus, no manual selection. Just `/pm`, and it picks up where you left off.
-
-```bash
-npx headless-pm setup --key=YOUR-KEY
-```
-
-$60/yr. → **[headlesspm.com](https://headlesspm.com)**
+Once headless-pm is part of your week, the `/pm` orchestrator removes the last step of friction. It reads your `.pm/STATE.md`, routes to the right skill automatically, and coordinates the subagents — no menus, no manual selection. Just `/pm`, and it picks up where you left off. Installed free with everything else — no key, nothing to buy.
 
 ---
 
@@ -143,7 +137,7 @@ $60/yr. → **[headlesspm.com](https://headlesspm.com)**
 | Category | Skills |
 |---|---|
 | Domain Subagents | `/discovery`, `/customer-research`, `/strategy`, `/market-research`, `/execution`, `/gtm`, `/analytics`, `/stakeholder`, `/pm-agents` |
-| Orchestrator | `/pm` _(paid)_ |
+| Orchestrator | `/pm` |
 | Customer Development | `/cusdev`, `/switch-interview`, `/continuous-interview-synthesis` |
 | Discovery & Research | `/pm-discover`, `/pm-discovery`, `/pm-define`, `/pm-hypothesis`, `/pm-learn`, `/pm-market`, `/pm-cjm`, `/opportunity-solution-tree` |
 | JTBD & Segmentation | `/pm-jtbd`, `/pm-persona`, `/attitudinal-segmentation`, `/user-segmentation`, `/jtbd-interview`, `/pm-segmentation-synthesis` |
@@ -222,7 +216,6 @@ The `/pm` orchestrator reads this workspace on every invocation — no context r
 
 ```bash
 npx headless-pm install              # Install skills + tools + MCP setup
-npx headless-pm setup --key=YOUR-KEY # Unlock the /pm orchestrator with a license key
 npx headless-pm mcp                  # Re-run MCP setup
 npx headless-pm mcp --list           # List available MCP servers
 npx headless-pm list                 # List installed skills and tools
@@ -236,14 +229,18 @@ npx headless-pm update               # Update to the latest version
 
 <br>
 
-**Latest — PM workspace memory layer**
+**Latest — the whole toolkit is free**
+- The `/pm` orchestrator and every skill now install free — no license key, nothing to buy
+- One-step install: `npx headless-pm install` sets up the complete toolkit
+
+**PM workspace memory layer**
 - `/pm` opening dashboard shows staleness reminders for `/pm-brief` and `/pm-review`
 - `/pm-chat` — pour out meeting notes, decisions, and risks in one message; the right `.pm/` file gets updated for you
 - `/pm-review` — weekly workspace health sweep: stale risks, overdue questions, unimplemented decisions, stakeholders without recent contact
 - `.pm/` memory layer now created on install: `decisions.md`, `risks.md`, `open-questions.md`, `stakeholders/`
 
 **Earlier highlights**
-- All PM skills free — only the `/pm` orchestrator needs a license
+- Everything free — all PM skills, subagents, and the `/pm` orchestrator
 - 8 domain subagents + the `/pm-agents` hub
 - Full cross-link graph — every workflow chain is navigable end-to-end
 - Methodology knowledge base — 7 Powers, JTBD, Dunford positioning, North Star, and more

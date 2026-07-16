@@ -1,7 +1,7 @@
 {
   "name": "headless-pm",
-  "version": "0.11.1",
-  "description": "100+ PM skills, 8 domain subagents, Claude Cowork plugin — install in Claude chat or via terminal. Discovery, strategy, execution, GTM, analytics, stakeholder comms.",
+  "version": "0.12.0",
+  "description": "100+ free PM skills, 8 domain subagents, and the /pm orchestrator — all free, no license key. Install in Claude chat or any terminal. Discovery, strategy, execution, GTM, analytics, stakeholder comms.",
   "main": "lib/installer.js",
   "bin": {
     "headless-pm": "bin/cli.js"

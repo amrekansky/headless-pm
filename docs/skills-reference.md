@@ -8,7 +8,7 @@
 
 ## Navigation
 
-[Setup & Workspace](#setup--workspace) · [Discovery](#discovery) · [Customer Research](#customer-research) · [Strategy & Vision](#strategy--vision) · [Market & Competition](#market--competition) · [Execution & Delivery](#execution--delivery) · [GTM & Launch](#gtm--launch) · [Analytics](#analytics) · [Stakeholder & Communication](#stakeholder--communication) · [Orchestrator](#orchestrator-paid)
+[Setup & Workspace](#setup--workspace) · [Discovery](#discovery) · [Customer Research](#customer-research) · [Strategy & Vision](#strategy--vision) · [Market & Competition](#market--competition) · [Execution & Delivery](#execution--delivery) · [GTM & Launch](#gtm--launch) · [Analytics](#analytics) · [Stakeholder & Communication](#stakeholder--communication) · [Orchestrator](#orchestrator)
 
 ---
 
@@ -157,6 +157,15 @@
 
 ---
 
+## Financial Modeling
+
+| Skill | Description | When to use | Example prompt |
+|-------|-------------|-------------|----------------|
+| `/pm-pricing-design`<br>Codex: `$pm-pricing-design` | Greenfield pricing design for service businesses — cloud, infrastructure, and SaaS. Benchmarks competitors, designs a 3–4 tier structure (Entry / Growth / Business / Enterprise), calculates gross margin per tier, and outputs a ready-to-use pricing table in markdown. Uses Exa MCP or web search for competitive data. | When launching a new product and pricing from zero. When repositioning against competitors. When validating that current tiers cover costs. | `/pm-pricing-design I'm building a GPUaaS in Kazakhstan. RTX 4090 servers, 8 cards each. Power: $0.06/kWh. Competitors: SmartCloud, Nova Cloud.` |
+| `/pm-financial-model`<br>Codex: `$pm-financial-model` | Full financial model for service and cloud businesses. 5-phase workflow: business profiling → COGS collection → pricing validation → unit economics → Excel output. Generates a Python (openpyxl) script that builds a workbook with Revenue, COGS, P&L, and Scenarios (bear/base/bull) sheets. All sheets use in-cell formulas and conditional formatting — output is a proper editable Excel file. | When building a financial model for a new product or business line. When validating pricing against cost structure. When preparing investor or board materials with scenario analysis. | `/pm-financial-model Build a 12-month financial model for a KZ cloud provider. IaaS + GPUaaS. 12 IaaS customers, 3 GPU clusters. COGS: server depreciation + $0.06/kWh power + 2 ops staff.` |
+
+---
+
 ## Stakeholder & Communication
 
 | Skill | Description | When to use | Example prompt |
@@ -186,11 +195,11 @@
 
 ---
 
-## Orchestrator (Paid)
+## Orchestrator
 
 | Skill | Description | When to use | Example prompt |
 |-------|-------------|-------------|----------------|
-| `/pm`<br>Codex: `$pm` | Agentic PM orchestrator. Reads `.pm/STATE.md` for instant context, understands where you are in the PM cycle (discovery → definition → execution → launch → learn), spawns the right sub-agents in parallel, and lands artifacts in `.pm/`. One command replaces five. Requires a license key. | Any time you open Claude in your project folder and want AI to figure out what to do next based on your current state. | `/pm` |
+| `/pm`<br>Codex: `$pm` | Agentic PM orchestrator. Reads `.pm/STATE.md` for instant context, understands where you are in the PM cycle (discovery → definition → execution → launch → learn), spawns the right sub-agents in parallel, and lands artifacts in `.pm/`. One command replaces five. | Any time you open Claude in your project folder and want AI to figure out what to do next based on your current state. | `/pm` |
 
 ---
 
