@@ -190,13 +190,13 @@ git commit -m "docs: add OpenCode V2 installation guidance"
 - Consumes: All previous commits and the upstream issue `amrekansky/headless-pm#1`.
 - Produces: A verified feature branch ready for a pull request from `cosmosdesigner:feat/opencode-v2-install` to `amrekansky:main`.
 
-- [ ] **Step 1: Run the complete test suite**
+- [x] **Step 1: Run the complete test suite**
 
 Run: `npm test`
 
 Expected: PASS with zero failures.
 
-- [ ] **Step 2: Verify a clean working tree and inspect the final diff**
+- [x] **Step 2: Verify a clean working tree and inspect the final diff**
 
 Run: `git status --short && git diff upstream/main...HEAD --check && git diff --stat upstream/main...HEAD`
 
