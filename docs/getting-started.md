@@ -13,15 +13,16 @@
 
 ### 1. Prerequisites
 
-Before you start, make sure you have accounts on these three platforms. All of them offer free tiers that work with headless-pm.
+Before you start, make sure you have an account for at least one supported AI assistant. Claude, Gemini, and Codex offer browser login; OpenCode V2 connects to a model provider separately.
 
 | Account | What it's for | Sign up |
 |---|---|---|
 | **Anthropic** | Claude CLI — your main AI assistant | [claude.ai](https://claude.ai) |
 | **Google** | Gemini CLI — free unlimited tier, great for long documents | [gemini.google.com](https://gemini.google.com) |
 | **OpenAI** | Codex CLI — code generation and scripting | [platform.openai.com](https://platform.openai.com) |
+| **OpenCode** | OpenCode V2 — AI coding agent | [opencode.ai/v2](https://opencode.ai/v2) |
 
-You don't need to add a credit card or create API keys. headless-pm connects via browser login.
+For Claude, Gemini, and Codex, you don't need to add a credit card or create API keys. OpenCode V2 connects to a model provider from its CLI.
 
 ---
 
@@ -77,7 +78,7 @@ Expected output: `v20.x.x` or higher (any v18+ is fine).
 
 ### 4. Install AI CLIs
 
-Install all three CLIs with one command each. Each one opens your browser for login — no API keys needed.
+Install one or more of the supported CLIs below. Claude, Gemini, and Codex open a browser for sign-in; OpenCode V2 connects to a model provider from its CLI.
 
 **Claude CLI:**
 
@@ -121,7 +122,16 @@ Your browser opens → log in with your OpenAI account → close the browser tab
 codex --version
 ```
 
-All three commands should print a version number. If one fails, that's fine — headless-pm works with whichever CLIs you have installed.
+**OpenCode V2:**
+
+```bash
+npm install -g @opencode/cli
+opencode
+```
+
+**Verify:** `opencode --version`. To connect a model provider, run `opencode` and use `/connect`.
+
+All four commands should print a version number. If one fails, that's fine — headless-pm works with whichever CLIs you have installed.
 
 ---
 
@@ -132,8 +142,9 @@ npx headless-pm install
 ```
 
 What this does:
-- Detects which CLIs you installed (Claude, Gemini, Codex)
+- Detects which CLIs you installed (Claude, Gemini, Codex, OpenCode V2)
 - Installs all 101 PM skills into each one
+- For OpenCode V2, installs skills globally at `~/.config/opencode/skills/<skill-id>/SKILL.md`
 - Installs the knowledge base to `~/.headless/pm/`
 - Asks about optional integrations (Notion, Linear, Miro) — press Enter to skip for now
 
@@ -146,6 +157,7 @@ What this does:
 | Claude | `/pm-sprint-brief` |
 | Gemini | `/pm-sprint-brief` |
 | Codex | `$pm-sprint-brief` |
+| OpenCode V2 | `@pm-sprint-brief` (or let OpenCode auto-invoke it) |
 
 If the skill loads, you're all set.
 
@@ -179,12 +191,18 @@ markitdown your-roadmap.pdf > your-roadmap.md
 
 Run this for every document you want Claude to read.
 
-**Step 2 — Open Claude in your project folder:**
+**Step 2 — Open your chosen CLI in your project folder:**
 
 ```bash
 cd ~/projects/my-product
-claude
 ```
+
+| CLI | Launch command |
+|-----|----------------|
+| Claude | `claude` |
+| Gemini | `gemini` |
+| Codex | `codex` |
+| OpenCode V2 | `opencode` |
 
 **Step 3 — The first thing you type:**
 
@@ -193,6 +211,7 @@ claude
 | Claude | `/pm-onboarding` |
 | Gemini | `/pm-onboarding` |
 | Codex | `$pm-onboarding` |
+| OpenCode V2 | `@pm-onboarding` (or let OpenCode auto-invoke it) |
 
 The skill runs an 8-question interview and sets up your `.pm/` workspace. When it asks for context, paste content from your converted documents or describe your situation in your own words — no template needed. Treat it like onboarding a new colleague.
 
@@ -205,8 +224,16 @@ No existing docs. That's fine.
 ```bash
 mkdir -p ~/projects/my-product
 cd ~/projects/my-product
-claude
 ```
+
+Open the CLI you use:
+
+| CLI | Launch command |
+|-----|----------------|
+| Claude | `claude` |
+| Gemini | `gemini` |
+| Codex | `codex` |
+| OpenCode V2 | `opencode` |
 
 The first thing you type:
 
@@ -215,6 +242,7 @@ The first thing you type:
 | Claude | `/pm-onboarding` |
 | Gemini | `/pm-onboarding` |
 | Codex | `$pm-onboarding` |
+| OpenCode V2 | `@pm-onboarding` (or let OpenCode auto-invoke it) |
 
 The skill will ask you 8 questions about your product, team, and current focus. Answer in your own words — no template required.
 
@@ -268,6 +296,7 @@ Then open your CLI in your project folder and type:
 | Claude | `/pm` |
 | Gemini | `/pm` |
 | Codex | `$pm` |
+| OpenCode V2 | `@pm` (or let OpenCode auto-invoke it) |
 
 It reads your `STATE.md`, understands where you are in the PM workflow, and routes to the right skill automatically.
 
@@ -302,6 +331,7 @@ It is included free — nothing to buy. More at [headlesspm.com](https://headles
 | **Anthropic** | Claude CLI | [claude.ai](https://claude.ai) |
 | **Google** | Gemini CLI | [gemini.google.com](https://gemini.google.com) |
 | **OpenAI** | Codex CLI | [platform.openai.com](https://platform.openai.com) |
+| **OpenCode** | OpenCode V2 — AI coding agent | [opencode.ai/v2](https://opencode.ai/v2) |
 
 ---
 
@@ -381,6 +411,15 @@ Your browser opens → log in with OpenAI account → return to Terminal.
 
 **Verify:** `codex --version`
 
+**OpenCode V2:**
+
+```bash
+npm install -g @opencode/cli
+opencode
+```
+
+**Verify:** `opencode --version`. To connect a model provider, run `opencode` and use `/connect`.
+
 > **Note:** On some Linux systems, `npm install -g` requires sudo: `sudo npm install -g @anthropic-ai/claude-code`
 
 ---
@@ -392,8 +431,9 @@ npx headless-pm install
 ```
 
 What this does:
-- Detects which CLIs you installed (Claude, Gemini, Codex)
+- Detects which CLIs you installed (Claude, Gemini, Codex, OpenCode V2)
 - Installs all 101 PM skills into each one
+- For OpenCode V2, installs skills globally at `~/.config/opencode/skills/<skill-id>/SKILL.md`
 - Installs the knowledge base to `~/.headless/pm/`
 - Asks about optional integrations (Notion, Linear, Miro) — press Enter to skip for now
 
@@ -406,6 +446,7 @@ What this does:
 | Claude | `/pm-sprint-brief` |
 | Gemini | `/pm-sprint-brief` |
 | Codex | `$pm-sprint-brief` |
+| OpenCode V2 | `@pm-sprint-brief` (or let OpenCode auto-invoke it) |
 
 If the skill loads, you're all set.
 
@@ -439,12 +480,18 @@ markitdown your-roadmap.pdf > your-roadmap.md
 
 Run this for every document you want Claude to read.
 
-**Step 2 — Open Claude in your project folder:**
+**Step 2 — Open your chosen CLI in your project folder:**
 
 ```bash
 cd ~/projects/my-product
-claude
 ```
+
+| CLI | Launch command |
+|-----|----------------|
+| Claude | `claude` |
+| Gemini | `gemini` |
+| Codex | `codex` |
+| OpenCode V2 | `opencode` |
 
 **Step 3 — The first thing you type:**
 
@@ -453,6 +500,7 @@ claude
 | Claude | `/pm-onboarding` |
 | Gemini | `/pm-onboarding` |
 | Codex | `$pm-onboarding` |
+| OpenCode V2 | `@pm-onboarding` (or let OpenCode auto-invoke it) |
 
 The skill runs an 8-question interview and sets up your `.pm/` workspace. When it asks for context, paste content from your converted documents or describe your situation in your own words — no template needed. Treat it like onboarding a new colleague.
 
@@ -465,8 +513,16 @@ No existing docs. That's fine.
 ```bash
 mkdir -p ~/projects/my-product
 cd ~/projects/my-product
-claude
 ```
+
+Open the CLI you use:
+
+| CLI | Launch command |
+|-----|----------------|
+| Claude | `claude` |
+| Gemini | `gemini` |
+| Codex | `codex` |
+| OpenCode V2 | `opencode` |
 
 The first thing you type:
 
@@ -475,6 +531,7 @@ The first thing you type:
 | Claude | `/pm-onboarding` |
 | Gemini | `/pm-onboarding` |
 | Codex | `$pm-onboarding` |
+| OpenCode V2 | `@pm-onboarding` (or let OpenCode auto-invoke it) |
 
 The skill will ask you 8 questions about your product, team, and current focus. Answer in your own words — no template required.
 
@@ -528,6 +585,7 @@ Then open your CLI in your project folder and type:
 | Claude | `/pm` |
 | Gemini | `/pm` |
 | Codex | `$pm` |
+| OpenCode V2 | `@pm` (or let OpenCode auto-invoke it) |
 
 It reads your `STATE.md`, understands where you are in the PM workflow, and routes to the right skill automatically.
 
@@ -559,6 +617,7 @@ It is included free — nothing to buy. More at [headlesspm.com](https://headles
 | **Anthropic** | Claude CLI | [claude.ai](https://claude.ai) |
 | **Google** | Gemini CLI | [gemini.google.com](https://gemini.google.com) |
 | **OpenAI** | Codex CLI | [platform.openai.com](https://platform.openai.com) |
+| **OpenCode** | OpenCode V2 — AI coding agent | [opencode.ai/v2](https://opencode.ai/v2) |
 
 ---
 
@@ -656,6 +715,15 @@ Browser opens → log in with OpenAI account.
 
 **Verify:** `codex --version`
 
+**OpenCode V2:**
+
+```bash
+npm install -g @opencode/cli
+opencode
+```
+
+**Verify:** `opencode --version`. To connect a model provider, run `opencode` and use `/connect`.
+
 ---
 
 ### 5. Install headless-pm
@@ -667,8 +735,9 @@ npx headless-pm install
 ```
 
 What this does:
-- Detects which CLIs you installed (Claude, Gemini, Codex)
+- Detects which CLIs you installed (Claude, Gemini, Codex, OpenCode V2)
 - Installs all 101 PM skills into each one
+- For OpenCode V2, installs skills globally at `~/.config/opencode/skills/<skill-id>/SKILL.md`
 - Installs the knowledge base to `~/.headless/pm/`
 - Asks about optional integrations (Notion, Linear, Miro) — press Enter to skip for now
 
@@ -681,6 +750,7 @@ What this does:
 | Claude | `/pm-sprint-brief` |
 | Gemini | `/pm-sprint-brief` |
 | Codex | `$pm-sprint-brief` |
+| OpenCode V2 | `@pm-sprint-brief` (or let OpenCode auto-invoke it) |
 
 If the skill loads, you're all set.
 
@@ -713,12 +783,18 @@ markitdown /mnt/c/Users/yourname/Documents/your-prd.docx > your-prd.md
 
 Run this for every document you want Claude to read.
 
-**Step 2 — Open Claude in your project folder:**
+**Step 2 — Open your chosen CLI in your project folder:**
 
 ```bash
 cd ~/projects/my-product
-claude
 ```
+
+| CLI | Launch command |
+|-----|----------------|
+| Claude | `claude` |
+| Gemini | `gemini` |
+| Codex | `codex` |
+| OpenCode V2 | `opencode` |
 
 **Step 3 — The first thing you type:**
 
@@ -727,6 +803,7 @@ claude
 | Claude | `/pm-onboarding` |
 | Gemini | `/pm-onboarding` |
 | Codex | `$pm-onboarding` |
+| OpenCode V2 | `@pm-onboarding` (or let OpenCode auto-invoke it) |
 
 The skill runs an 8-question interview and sets up your `.pm/` workspace. When it asks for context, paste content from your converted documents or describe your situation in your own words — no template needed. Treat it like onboarding a new colleague.
 
@@ -739,8 +816,16 @@ No existing docs. That's fine.
 ```bash
 mkdir -p ~/projects/my-product
 cd ~/projects/my-product
-claude
 ```
+
+Open the CLI you use:
+
+| CLI | Launch command |
+|-----|----------------|
+| Claude | `claude` |
+| Gemini | `gemini` |
+| Codex | `codex` |
+| OpenCode V2 | `opencode` |
 
 The first thing you type:
 
@@ -749,6 +834,7 @@ The first thing you type:
 | Claude | `/pm-onboarding` |
 | Gemini | `/pm-onboarding` |
 | Codex | `$pm-onboarding` |
+| OpenCode V2 | `@pm-onboarding` (or let OpenCode auto-invoke it) |
 
 The skill will ask you 8 questions about your product, team, and current focus. Answer in your own words — no template required.
 
@@ -804,6 +890,7 @@ Then open your CLI in your project folder and type:
 | Claude | `/pm` |
 | Gemini | `/pm` |
 | Codex | `$pm` |
+| OpenCode V2 | `@pm` (or let OpenCode auto-invoke it) |
 
 It reads your `STATE.md`, understands where you are in the PM workflow, and routes to the right skill automatically.
 
