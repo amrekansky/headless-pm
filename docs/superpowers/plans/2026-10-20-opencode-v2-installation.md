@@ -202,13 +202,13 @@ Run: `git status --short && git diff upstream/main...HEAD --check && git diff --
 
 Expected: clean working tree, no whitespace errors, and changes limited to converter, installer, CLI, tests, and documentation.
 
-- [ ] **Step 3: Push the feature branch**
+- [x] **Step 3: Push the feature branch**
 
 Run: `git push`
 
 Expected: `origin/feat/opencode-v2-install` updated.
 
-- [ ] **Step 4: Create the pull request linked to the issue**
+- [x] **Step 4: Create the pull request linked to the issue**
 
 Run:
 
