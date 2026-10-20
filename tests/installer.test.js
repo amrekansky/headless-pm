@@ -242,11 +242,20 @@ test('installSkills writes .toml to ~/.gemini/commands/', async () => {
 })
 
 test('installSkills writes SKILL.md to ~/.codex/skills/', async () => {
-  await installSkills(null, ['codex'])
-  const skillPath = join(tmpHome, '.codex', 'skills', 'pm', 'SKILL.md')
-  await access(skillPath, constants.F_OK)
-  const content = await readFile(skillPath, 'utf8')
-  assert.ok(content.startsWith('---\n'))
+  const sourceSkillPath = new URL('../skills/pm/skill.md', import.meta.url)
+  const sourceContent = await readFile(sourceSkillPath, 'utf8')
+  await writeFile(sourceSkillPath, sourceContent.replace(/\r\n/g, '\n'), 'utf8')
+
+  try {
+    await installSkills(null, ['codex'])
+    const skillPath = join(tmpHome, '.codex', 'skills', 'pm', 'SKILL.md')
+    await access(skillPath, constants.F_OK)
+    const content = await readFile(skillPath, 'utf8')
+    assert.ok(content.startsWith('---\n'))
+    assert.ok(content.includes('name: "pm"'))
+  } finally {
+    await writeFile(sourceSkillPath, sourceContent, 'utf8')
+  }
 })
 
 test('installSkills writes to all CLIs when all provided', async () => {
