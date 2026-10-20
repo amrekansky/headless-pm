@@ -242,9 +242,9 @@ test('detectCLIs returns array', async () => {
   assert.ok(Array.isArray(clis))
 })
 
-test('detectCLIs only includes known cli names', async () => {
+test('detectCLIs only includes known cli names, including OpenCode', async () => {
   const clis = await detectCLIs()
-  const valid = new Set(['claude', 'gemini', 'codex'])
+  const valid = new Set(['claude', 'gemini', 'codex', 'opencode'])
   for (const cli of clis) {
     assert.ok(valid.has(cli), `unexpected cli: ${cli}`)
   }
@@ -284,11 +284,58 @@ test('installSkills writes SKILL.md to ~/.codex/skills/', async () => {
   }
 })
 
-test('installSkills writes to all CLIs when all provided', async () => {
-  await installSkills(null, ['claude', 'gemini', 'codex'])
+test('OpenCode install writes converted SKILL.md and ownership manifest', async () => {
+  const openCodeRoot = join(tmpHome, '.config', 'opencode', 'skills')
+  await rm(openCodeRoot, { recursive: true, force: true })
+
+  await installSkills(null, ['opencode'])
+
+  const content = await readFile(join(openCodeRoot, 'pm', 'SKILL.md'), 'utf8')
+  assert.ok(content.startsWith('---\nname: "pm"\ndescription: "'))
+  assert.ok(content.includes('AGENTS.md'))
+  assert.ok(!content.includes('CLAUDE.md'))
+  const manifest = JSON.parse(await readFile(join(openCodeRoot, '.headless-pm-installed-skills.json'), 'utf8'))
+  assert.ok(manifest.includes('pm'))
+})
+
+test('OpenCode install preserves an unowned same-ID skill', async () => {
+  const openCodeRoot = join(tmpHome, '.config', 'opencode', 'skills')
+  const skillDir = join(openCodeRoot, 'pm')
+  await rm(openCodeRoot, { recursive: true, force: true })
+  await mkdir(skillDir, { recursive: true })
+  await writeFile(join(skillDir, 'SKILL.md'), 'third-party skill\n', 'utf8')
+
+  await installSkills(null, ['opencode'])
+
+  assert.equal(await readFile(join(skillDir, 'SKILL.md'), 'utf8'), 'third-party skill\n')
+  const manifest = JSON.parse(await readFile(join(openCodeRoot, '.headless-pm-installed-skills.json'), 'utf8'))
+  assert.ok(!manifest.includes('pm'))
+})
+
+test('OpenCode repeat install updates a skill owned by its manifest', async () => {
+  const openCodeRoot = join(tmpHome, '.config', 'opencode', 'skills')
+  const skillPath = join(openCodeRoot, 'pm', 'SKILL.md')
+  await rm(openCodeRoot, { recursive: true, force: true })
+  await installSkills(null, ['opencode'])
+  await writeFile(skillPath, 'outdated owned skill\n', 'utf8')
+
+  await installSkills(null, ['opencode'])
+
+  const content = await readFile(skillPath, 'utf8')
+  assert.notEqual(content, 'outdated owned skill\n')
+  assert.ok(content.includes('name: "pm"'))
+})
+
+test('installSkills writes to all CLIs including OpenCode when all provided', async () => {
+  const openCodeRoot = join(tmpHome, '.config', 'opencode', 'skills')
+  await rm(openCodeRoot, { recursive: true, force: true })
+
+  await installSkills(null, ['claude', 'gemini', 'codex', 'opencode'])
+
   await access(join(tmpHome, '.claude', 'skills', 'pm', 'skill.md'), constants.F_OK)
   await access(join(tmpHome, '.gemini', 'commands', 'pm.toml'), constants.F_OK)
   await access(join(tmpHome, '.codex', 'skills', 'pm', 'SKILL.md'), constants.F_OK)
+  await access(join(openCodeRoot, 'pm', 'SKILL.md'), constants.F_OK)
 })
 
 // --- cross-CLI MCP ---

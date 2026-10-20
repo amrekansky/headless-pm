@@ -59,7 +59,7 @@ program
     console.log('Installing Headless PM...\n')
 
     const detectedCLIs = await detectCLIs()
-    const cliLine = ['claude', 'gemini', 'codex']
+    const cliLine = ['claude', 'gemini', 'codex', 'opencode']
       .map(c => `${c} ${detectedCLIs.includes(c) ? '✓' : '—'}`)
       .join('  ')
     console.log(`Detected CLIs: ${cliLine}\n`)
