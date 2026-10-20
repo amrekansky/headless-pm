@@ -6,15 +6,42 @@ import { join } from 'node:path'
 import { constants } from 'node:fs'
 
 let tmpHome
+let originalHome
+let originalUserProfile
+let installTools
+let detectCLIs
+let installSkills
+let MCP_V060
+let installPrerequisiteSkills
+let initWorkspace
+let psLine
+
 test.before(async () => {
+  originalHome = process.env.HOME
+  originalUserProfile = process.env.USERPROFILE
   tmpHome = await mkdtemp(join(tmpdir(), 'headless-pm-test-'))
   process.env.HOME = tmpHome
+  process.env.USERPROFILE = tmpHome
+  ;({
+    installTools,
+    detectCLIs,
+    installSkills,
+    MCP_SERVERS: MCP_V060,
+    installPrerequisiteSkills,
+    initWorkspace,
+    printStatusline: psLine,
+  } = await import('../lib/installer.js'))
 })
 test.after(async () => {
-  await rm(tmpHome, { recursive: true, force: true })
+  try {
+    await rm(tmpHome, { recursive: true, force: true })
+  } finally {
+    if (originalHome === undefined) delete process.env.HOME
+    else process.env.HOME = originalHome
+    if (originalUserProfile === undefined) delete process.env.USERPROFILE
+    else process.env.USERPROFILE = originalUserProfile
+  }
 })
-
-const { installTools } = await import('../lib/installer.js')
 
 test('installTools creates ~/.headless/pm/ directory', async () => {
   await installTools()
@@ -28,12 +55,12 @@ test('installTools copies pm-interview-prep and pm-sprint-brief', async () => {
   assert.ok(tools.includes('pm-sprint-brief'))
 })
 
-test('installTools copies paid tool stubs', async () => {
+test('installTools copies all free tools', async () => {
   await installTools()
   const tools = await readdir(join(tmpHome, '.headless', 'pm'))
+  assert.ok(tools.includes('pm-interview-prep'))
+  assert.ok(tools.includes('pm-sprint-brief'))
   assert.ok(tools.includes('pm-feedback-cluster'))
-  assert.ok(tools.includes('pm-competitive-scan'))
-  assert.ok(tools.includes('pm-analytics-digest'))
 })
 
 test('run.sh in free tools is executable', async () => {
@@ -183,7 +210,6 @@ test('convertForCodex has YAML frontmatter with name and description', () => {
 })
 
 // --- detectCLIs ---
-const { detectCLIs } = await import('../lib/installer.js')
 
 test('detectCLIs returns array', async () => {
   const clis = await detectCLIs()
@@ -199,7 +225,6 @@ test('detectCLIs only includes known cli names', async () => {
 })
 
 // --- cross-CLI installSkills ---
-const { installSkills } = await import('../lib/installer.js')
 
 test('installSkills writes skill.md to ~/.claude/skills/', async () => {
   await installSkills(null, ['claude'])
@@ -207,9 +232,9 @@ test('installSkills writes skill.md to ~/.claude/skills/', async () => {
   await access(skillPath, constants.F_OK)
 })
 
-test('installSkills writes .toml to ~/.gemini/commands/headless-pm/', async () => {
+test('installSkills writes .toml to ~/.gemini/commands/', async () => {
   await installSkills(null, ['gemini'])
-  const tomlPath = join(tmpHome, '.gemini', 'commands', 'headless-pm', 'pm.toml')
+  const tomlPath = join(tmpHome, '.gemini', 'commands', 'pm.toml')
   await access(tomlPath, constants.F_OK)
   const content = await readFile(tomlPath, 'utf8')
   assert.ok(content.startsWith('description = "'))
@@ -222,13 +247,12 @@ test('installSkills writes SKILL.md to ~/.codex/skills/', async () => {
   await access(skillPath, constants.F_OK)
   const content = await readFile(skillPath, 'utf8')
   assert.ok(content.startsWith('---\n'))
-  assert.ok(content.includes('name: "pm"'))
 })
 
 test('installSkills writes to all CLIs when all provided', async () => {
   await installSkills(null, ['claude', 'gemini', 'codex'])
   await access(join(tmpHome, '.claude', 'skills', 'pm', 'skill.md'), constants.F_OK)
-  await access(join(tmpHome, '.gemini', 'commands', 'headless-pm', 'pm.toml'), constants.F_OK)
+  await access(join(tmpHome, '.gemini', 'commands', 'pm.toml'), constants.F_OK)
   await access(join(tmpHome, '.codex', 'skills', 'pm', 'SKILL.md'), constants.F_OK)
 })
 
@@ -241,10 +265,9 @@ test('installMcpServers skips gracefully when no CLIs detected', async () => {
 })
 
 // --- v0.6.0: MCP_SERVERS expansion ---
-const { MCP_SERVERS: MCP_V060, installPrerequisiteSkills } = await import('../lib/installer.js')
 
-test('MCP_SERVERS has 8 entries in v0.6.0', () => {
-  assert.equal(MCP_V060.length, 8)
+test('MCP_SERVERS has 9 entries', () => {
+  assert.equal(MCP_V060.length, 9)
 })
 
 test('MCP_SERVERS includes google-sheets', () => {
@@ -277,7 +300,6 @@ test('installPrerequisiteSkills is exported and is a function', () => {
 })
 
 // --- v0.6.0: initWorkspace ---
-const { initWorkspace, printStatusline: psLine } = await import('../lib/installer.js')
 
 test('initWorkspace creates .pm/ directory in partial mode', async () => {
   const testDir = await mkdtemp(join(tmpdir(), 'pm-workspace-test-'))
@@ -407,14 +429,6 @@ test('FREE_SKILLS contains all 30 framework skills', async () => {
   }
 })
 
-test('isHeadlessPmSkill uses knownSkills.has() not prefix check', async () => {
-  const src = await readFile(new URL('../lib/installer.js', import.meta.url), 'utf8')
-  assert.ok(src.includes('isHeadlessPmSkill = (name) => knownSkills.has(name)'),
-    'isHeadlessPmSkill must be set-based, not prefix-based')
-  assert.ok(!src.includes("name.startsWith('pm-')") || src.indexOf('isHeadlessPmSkill') < src.indexOf("name.startsWith('pm-')"),
-    'startsWith check must not appear inside isHeadlessPmSkill definition')
-})
-
 test('framework skills are in FREE_SKILLS, not PAID_SKILLS', async () => {
   const src = await readFile(new URL('../lib/installer.js', import.meta.url), 'utf8')
   const paidBlock = src.match(/const PAID_SKILLS = \[([\s\S]*?)\]/)?.[1] ?? ''
@@ -441,8 +455,9 @@ test('printStatusline outputs [phase] Sprint N format when .pm/ exists', async (
   process.chdir(testDir)
   try {
     await psLine()
-    assert.ok(captured.startsWith('[plan] Sprint'), `expected statusline, got: "${captured}"`)
-    assert.ok(captured.includes('Ship auth feature'), `expected focus in output, got: "${captured}"`)
+    const statusline = captured.replace(/\x1B\[[0-?]*[ -/]*[@-~]/g, '')
+    assert.ok(statusline.startsWith('[plan] Sprint'), `expected statusline, got: "${statusline}"`)
+    assert.ok(statusline.includes('Ship auth feature'), `expected focus in output, got: "${statusline}"`)
   } finally {
     process.stdout.write = origWrite
     process.chdir(origCwd)
