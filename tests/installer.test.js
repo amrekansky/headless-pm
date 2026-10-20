@@ -11,6 +11,7 @@ let originalUserProfile
 let installTools
 let detectCLIs
 let installSkills
+let cleanupRemovedSkills
 let MCP_V060
 let installPrerequisiteSkills
 let initWorkspace
@@ -26,6 +27,7 @@ test.before(async () => {
     installTools,
     detectCLIs,
     installSkills,
+    cleanupRemovedSkills,
     MCP_SERVERS: MCP_V060,
     installPrerequisiteSkills,
     initWorkspace,
@@ -181,6 +183,19 @@ test('parseFrontmatter extracts name and description', () => {
   assert.ok(body.includes('# /pm-sprint'))
 })
 
+test('parseFrontmatter normalizes CRLF source for every converter', () => {
+  const crlfSource = SAMPLE_SKILL.replace(/\n/g, '\r\n')
+
+  const { meta, body } = parseFrontmatter(crlfSource)
+
+  assert.equal(meta.name, 'pm-sprint')
+  assert.equal(meta.description, 'Orchestrate a full sprint cycle — routes to pm-capacity, pm-backlog.')
+  assert.ok(body.includes('# /pm-sprint'))
+  assert.ok(convertForGemini(crlfSource).startsWith('description = "Orchestrate a full sprint cycle'))
+  assert.ok(convertForCodex(crlfSource).includes('name: "pm-sprint"'))
+  assert.ok(convertForOpenCode(crlfSource).includes('name: "pm-sprint"'))
+})
+
 test('convertForClaude returns content verbatim', () => {
   const result = convertForClaude(SAMPLE_SKILL)
   assert.equal(result, SAMPLE_SKILL)
@@ -224,8 +239,8 @@ Re-read CLAUDE.md before reporting results.
   const result = convertForOpenCode(openCodeSource)
 
   assert.equal(result, String.raw`---
-name: "\"pm-open\""
-description: "\"Plan \\\"quoted\\\" workflows with \\\\paths\""
+name: "pm-open"
+description: "Plan \"quoted\" workflows with \\paths"
 ---
 # /pm-open
 
@@ -252,6 +267,29 @@ test('detectCLIs only includes known cli names, including OpenCode', async () =>
 
 // --- cross-CLI installSkills ---
 
+test('OpenCode-only CLI install skips Claude prerequisites and MCP prompt without touching other targets or config', async () => {
+  const { runInstallFlow } = await import('../lib/install-flow.js')
+  const openCodeDir = join(tmpHome, '.config', 'opencode')
+  const unrelatedSkill = join(openCodeDir, 'skills', 'unrelated-skill')
+  const configPath = join(openCodeDir, 'opencode.jsonc')
+  await rm(join(tmpHome, '.claude'), { recursive: true, force: true })
+  await rm(join(tmpHome, '.gemini'), { recursive: true, force: true })
+  await rm(join(tmpHome, '.codex'), { recursive: true, force: true })
+  await rm(openCodeDir, { recursive: true, force: true })
+  await mkdir(unrelatedSkill, { recursive: true })
+  await writeFile(join(unrelatedSkill, 'SKILL.md'), 'unrelated OpenCode skill\n', 'utf8')
+  await writeFile(configPath, '{ // user configuration\n  "theme": "custom"\n}\n', 'utf8')
+
+  await runInstallFlow({ skillsOnly: true }, ['opencode'])
+
+  assert.equal(await readFile(configPath, 'utf8'), '{ // user configuration\n  "theme": "custom"\n}\n')
+  assert.equal(await readFile(join(unrelatedSkill, 'SKILL.md'), 'utf8'), 'unrelated OpenCode skill\n')
+  await access(join(openCodeDir, 'skills', 'pm', 'SKILL.md'), constants.F_OK)
+  await assert.rejects(access(join(tmpHome, '.claude'), constants.F_OK), { code: 'ENOENT' })
+  await assert.rejects(access(join(tmpHome, '.gemini'), constants.F_OK), { code: 'ENOENT' })
+  await assert.rejects(access(join(tmpHome, '.codex'), constants.F_OK), { code: 'ENOENT' })
+})
+
 test('installSkills writes skill.md to ~/.claude/skills/', async () => {
   await installSkills(null, ['claude'])
   const skillPath = join(tmpHome, '.claude', 'skills', 'pm', 'skill.md')
@@ -268,20 +306,12 @@ test('installSkills writes .toml to ~/.gemini/commands/', async () => {
 })
 
 test('installSkills writes SKILL.md to ~/.codex/skills/', async () => {
-  const sourceSkillPath = new URL('../skills/pm/skill.md', import.meta.url)
-  const sourceContent = await readFile(sourceSkillPath, 'utf8')
-  await writeFile(sourceSkillPath, sourceContent.replace(/\r\n/g, '\n'), 'utf8')
-
-  try {
-    await installSkills(null, ['codex'])
-    const skillPath = join(tmpHome, '.codex', 'skills', 'pm', 'SKILL.md')
-    await access(skillPath, constants.F_OK)
-    const content = await readFile(skillPath, 'utf8')
-    assert.ok(content.startsWith('---\n'))
-    assert.ok(content.includes('name: "pm"'))
-  } finally {
-    await writeFile(sourceSkillPath, sourceContent, 'utf8')
-  }
+  await installSkills(null, ['codex'])
+  const skillPath = join(tmpHome, '.codex', 'skills', 'pm', 'SKILL.md')
+  await access(skillPath, constants.F_OK)
+  const content = await readFile(skillPath, 'utf8')
+  assert.ok(content.startsWith('---\n'))
+  assert.ok(content.includes('name: "pm"'))
 })
 
 test('OpenCode install writes converted SKILL.md and ownership manifest', async () => {
@@ -296,6 +326,25 @@ test('OpenCode install writes converted SKILL.md and ownership manifest', async 
   assert.ok(!content.includes('CLAUDE.md'))
   const manifest = JSON.parse(await readFile(join(openCodeRoot, '.headless-pm-installed-skills.json'), 'utf8'))
   assert.ok(manifest.includes('pm'))
+})
+
+test('OpenCode install copies and refreshes supporting files in owned skill directories', async () => {
+  const openCodeRoot = join(tmpHome, '.config', 'opencode', 'skills')
+  const skillDir = join(openCodeRoot, 'cusdev')
+  await rm(openCodeRoot, { recursive: true, force: true })
+
+  await installSkills(null, ['opencode'])
+
+  const sourceTemplate = await readFile(new URL('../skills/cusdev/template.md', import.meta.url), 'utf8')
+  assert.equal(await readFile(join(skillDir, 'template.md'), 'utf8'), sourceTemplate)
+  await writeFile(join(skillDir, 'template.md'), 'outdated template\n', 'utf8')
+  await writeFile(join(skillDir, 'stale.md'), 'stale owned file\n', 'utf8')
+
+  await installSkills(null, ['opencode'])
+
+  assert.equal(await readFile(join(skillDir, 'template.md'), 'utf8'), sourceTemplate)
+  await assert.rejects(access(join(skillDir, 'stale.md'), constants.F_OK), { code: 'ENOENT' })
+  await access(join(skillDir, 'SKILL.md'), constants.F_OK)
 })
 
 test('OpenCode install preserves an unowned same-ID skill', async () => {
@@ -324,6 +373,32 @@ test('OpenCode repeat install updates a skill owned by its manifest', async () =
   const content = await readFile(skillPath, 'utf8')
   assert.notEqual(content, 'outdated owned skill\n')
   assert.ok(content.includes('name: "pm"'))
+})
+
+test('cleanupRemovedSkills removes only obsolete OpenCode-owned skills and prunes its manifest', async () => {
+  const openCodeRoot = join(tmpHome, '.config', 'opencode', 'skills')
+  const obsoleteOwned = join(openCodeRoot, 'removed-headless-skill')
+  const unrelated = join(openCodeRoot, 'third-party-skill')
+  await rm(openCodeRoot, { recursive: true, force: true })
+  await rm(join(tmpHome, '.headless', 'pm', 'installed-skills.json'), { force: true })
+  await mkdir(obsoleteOwned, { recursive: true })
+  await mkdir(unrelated, { recursive: true })
+  await writeFile(join(obsoleteOwned, 'SKILL.md'), 'obsolete owned skill\n', 'utf8')
+  await writeFile(join(unrelated, 'SKILL.md'), 'unowned skill\n', 'utf8')
+  await writeFile(
+    join(openCodeRoot, '.headless-pm-installed-skills.json'),
+    JSON.stringify(['removed-headless-skill', 'missing-owned-skill']),
+    'utf8',
+  )
+
+  await cleanupRemovedSkills(['opencode'])
+
+  await assert.rejects(access(obsoleteOwned, constants.F_OK), { code: 'ENOENT' })
+  assert.equal(await readFile(join(unrelated, 'SKILL.md'), 'utf8'), 'unowned skill\n')
+  assert.deepEqual(
+    JSON.parse(await readFile(join(openCodeRoot, '.headless-pm-installed-skills.json'), 'utf8')),
+    [],
+  )
 })
 
 test('installSkills writes to all CLIs including OpenCode when all provided', async () => {

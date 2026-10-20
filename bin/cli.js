@@ -4,16 +4,12 @@ import {
   installTools,
   installSkills,
   installMcpServers,
-  promptMcpSetup,
-  printToolSummary,
-  printPathInstructions,
   detectCLIs,
   MCP_SERVERS,
   installPrerequisiteSkills,
   cleanupRemovedSkills,
   initWorkspace,
   printStatusline,
-  printInstallNextSteps,
   addCustomMcpServer,
   installStatusline,
 } from '../lib/installer.js'
@@ -21,6 +17,7 @@ import { readdir } from 'node:fs/promises'
 import { join } from 'node:path'
 import { homedir } from 'node:os'
 import { createRequire } from 'node:module'
+import { runInstallFlow } from '../lib/install-flow.js'
 
 const require = createRequire(import.meta.url)
 const { version } = require('../package.json')
@@ -56,33 +53,10 @@ program
   .option('--skills-only', 'Install skills only, skip tools')
   .action(async (opts) => {
     await checkForUpdates()
-    console.log('Installing Headless PM...\n')
-
     const detectedCLIs = await detectCLIs()
-    const cliLine = ['claude', 'gemini', 'codex', 'opencode']
-      .map(c => `${c} ${detectedCLIs.includes(c) ? '✓' : '—'}`)
-      .join('  ')
-    console.log(`Detected CLIs: ${cliLine}\n`)
 
     try {
-      if (!opts.skillsOnly) {
-        console.log('Installing tools → ~/.headless/pm/')
-        await installTools()
-        console.log('  ✓ pm-interview-prep')
-        console.log('  ✓ pm-sprint-brief')
-        console.log('  ✓ pm-feedback-cluster')
-      }
-      if (!opts.toolsOnly) {
-        await installSkills(null, detectedCLIs)
-        await installPrerequisiteSkills()
-      }
-      if (!opts.skillsOnly) {
-        printToolSummary()
-        printPathInstructions()
-      }
-      await promptMcpSetup(detectedCLIs)
-      await installStatusline(detectedCLIs)
-      printInstallNextSteps()
+      await runInstallFlow(opts, detectedCLIs)
     } catch (err) {
       console.error(`Install failed: ${err.message}`)
       process.exit(1)
@@ -125,7 +99,7 @@ program
       await installTools()
       await installSkills(null, detectedCLIs)
       await cleanupRemovedSkills(detectedCLIs)
-      await installPrerequisiteSkills()
+      if (detectedCLIs.includes('claude')) await installPrerequisiteSkills()
       await installStatusline(detectedCLIs)
       console.log('\nHeadless PM updated.')
       console.log('Restart Claude Code to apply skill changes.')
