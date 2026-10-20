@@ -8,3 +8,10 @@ package-lock.json
 wiki/
 .raw/
 .claude/
+
+# Локальное и маркетинговые материалы — не в пакет
+.DS_Store
+.obsidian/
+banner-linkedin*
+linkedin-banner*
+linkedin-gif-frames*/
