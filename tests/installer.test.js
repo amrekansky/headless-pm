@@ -346,6 +346,14 @@ test('installMcpServers skips gracefully when no CLIs detected', async () => {
   })
 })
 
+test('installMcpServers treats OpenCode-only detection as no supported MCP client', async () => {
+  const { installMcpServers } = await import('../lib/installer.js')
+
+  const result = await installMcpServers(['linear'], ['opencode'])
+
+  assert.deepEqual(result, { skipped: true })
+})
+
 // --- v0.6.0: MCP_SERVERS expansion ---
 
 test('MCP_SERVERS has 9 entries', () => {
