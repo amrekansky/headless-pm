@@ -78,7 +78,7 @@ Expected output: `v20.x.x` or higher (any v18+ is fine).
 
 ### 4. Install AI CLIs
 
-Install all three CLIs with one command each. Each one opens your browser for login — no API keys needed.
+Install one or more of the supported CLIs below. Claude, Gemini, and Codex open a browser for sign-in; OpenCode V2 connects to a model provider from its CLI.
 
 **Claude CLI:**
 
@@ -191,12 +191,18 @@ markitdown your-roadmap.pdf > your-roadmap.md
 
 Run this for every document you want Claude to read.
 
-**Step 2 — Open Claude in your project folder:**
+**Step 2 — Open your chosen CLI in your project folder:**
 
 ```bash
 cd ~/projects/my-product
-claude
 ```
+
+| CLI | Launch command |
+|-----|----------------|
+| Claude | `claude` |
+| Gemini | `gemini` |
+| Codex | `codex` |
+| OpenCode V2 | `opencode` |
 
 **Step 3 — The first thing you type:**
 
@@ -218,8 +224,16 @@ No existing docs. That's fine.
 ```bash
 mkdir -p ~/projects/my-product
 cd ~/projects/my-product
-claude
 ```
+
+Open the CLI you use:
+
+| CLI | Launch command |
+|-----|----------------|
+| Claude | `claude` |
+| Gemini | `gemini` |
+| Codex | `codex` |
+| OpenCode V2 | `opencode` |
 
 The first thing you type:
 
@@ -466,12 +480,18 @@ markitdown your-roadmap.pdf > your-roadmap.md
 
 Run this for every document you want Claude to read.
 
-**Step 2 — Open Claude in your project folder:**
+**Step 2 — Open your chosen CLI in your project folder:**
 
 ```bash
 cd ~/projects/my-product
-claude
 ```
+
+| CLI | Launch command |
+|-----|----------------|
+| Claude | `claude` |
+| Gemini | `gemini` |
+| Codex | `codex` |
+| OpenCode V2 | `opencode` |
 
 **Step 3 — The first thing you type:**
 
@@ -493,8 +513,16 @@ No existing docs. That's fine.
 ```bash
 mkdir -p ~/projects/my-product
 cd ~/projects/my-product
-claude
 ```
+
+Open the CLI you use:
+
+| CLI | Launch command |
+|-----|----------------|
+| Claude | `claude` |
+| Gemini | `gemini` |
+| Codex | `codex` |
+| OpenCode V2 | `opencode` |
 
 The first thing you type:
 
@@ -755,12 +783,18 @@ markitdown /mnt/c/Users/yourname/Documents/your-prd.docx > your-prd.md
 
 Run this for every document you want Claude to read.
 
-**Step 2 — Open Claude in your project folder:**
+**Step 2 — Open your chosen CLI in your project folder:**
 
 ```bash
 cd ~/projects/my-product
-claude
 ```
+
+| CLI | Launch command |
+|-----|----------------|
+| Claude | `claude` |
+| Gemini | `gemini` |
+| Codex | `codex` |
+| OpenCode V2 | `opencode` |
 
 **Step 3 — The first thing you type:**
 
@@ -782,8 +816,16 @@ No existing docs. That's fine.
 ```bash
 mkdir -p ~/projects/my-product
 cd ~/projects/my-product
-claude
 ```
+
+Open the CLI you use:
+
+| CLI | Launch command |
+|-----|----------------|
+| Claude | `claude` |
+| Gemini | `gemini` |
+| Codex | `codex` |
+| OpenCode V2 | `opencode` |
 
 The first thing you type:
 
