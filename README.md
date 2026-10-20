@@ -9,22 +9,22 @@
 
 **An AI workflow system for product managers — 100+ PM workflows in your terminal.**
 
-`headless-pm` installs discovery, PRDs, roadmaps, sprints, GTM, analytics, and stakeholder workflows into Claude, Codex, or Gemini. Every output lands in your own files. Free to install, yours to keep.
+`headless-pm` installs discovery, PRDs, roadmaps, sprints, GTM, analytics, and stakeholder workflows into Claude, Codex, Gemini, or OpenCode V2. Every output lands in your own files. Free to install, yours to keep.
 
 ```bash
 npx headless-pm install
 ```
 
-Run `/pm-onboarding` (8 questions) and your first brief, PRD, or sprint plan is minutes away.
+Run `/pm-onboarding` (8 questions) and your first brief, PRD, or sprint plan is minutes away. In OpenCode V2, skills install globally at `~/.config/opencode/skills/<skill-id>/SKILL.md`; invoke one with `@pm-onboarding` or let OpenCode auto-invoke it.
 
-> **Stop re-prompting from scratch.** Run the same PM workflow — same method, same checks, same output shape — every time, on Claude, Codex, or Gemini.
+> **Stop re-prompting from scratch.** Run the same PM workflow — same method, same checks, same output shape — every time, on Claude, Codex, Gemini, or OpenCode V2.
 
 ---
 
 ## Start in two minutes
 
 ```bash
-npx headless-pm install      # auto-detects Claude Code / Gemini CLI / Codex CLI
+npx headless-pm install      # auto-detects Claude Code / Gemini CLI / Codex CLI / OpenCode V2
 ```
 
 ```
@@ -62,7 +62,7 @@ It's not a prompt pack. It's a maintained system with real depth:
 - **A workspace that remembers** — `.pm/` keeps your goals, decisions, risks, open questions, and stakeholders across sessions. No re-explaining the project every time.
 - **Connects to your stack** — Notion, Linear, Jira, Miro, Exa, Google Sheets, Figma, Slack, GitHub via MCP.
 - **Cross-linked end to end** — every skill points to the next. `/pm-hypothesis` → `/brainstorm-experiments` → `/pm-ab`. No dead ends.
-- **Runs on Claude, Codex, or Gemini — natively** — not Claude-only. Use whichever CLI your team already has.
+- **Runs on Claude, Codex, Gemini, or OpenCode V2 — natively** — not Claude-only. Use whichever CLI your team already has.
 
 ---
 
@@ -96,7 +96,7 @@ Made by a product manager, for product managers.
 
 - **Free** — every skill installs free. No card, no trial clock.
 - **Local-first** — it runs in your terminal and writes to your files. Nothing is uploaded to us.
-- **Bring your own AI** — your Claude, Codex, or Gemini, your tokens. We don't sit in the middle.
+- **Bring your own AI** — your Claude, Codex, Gemini, or OpenCode V2, your tokens. We don't sit in the middle.
 - **No lock-in** — outputs are plain markdown in your repo, and the skills are open files you can read and edit.
 
 ---
@@ -115,7 +115,7 @@ Five personas, one toolkit. Start with the skill that matches today's task.
 
 ## First run
 
-Open Claude Code (or Gemini CLI / Codex) in your project and let the hub route you:
+Open Claude Code (or Gemini CLI / Codex / OpenCode V2) in your project and let the hub route you. In OpenCode V2, use `@pm-agents` or describe your task and let OpenCode auto-invoke the appropriate skill.
 
 ![/pm-agents hub — describe your task and headless-pm routes you to the right one of 8 PM domain subagents](docs/images/pm-agents.png)
 
