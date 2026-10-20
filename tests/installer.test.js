@@ -34,7 +34,7 @@ test.before(async () => {
 })
 test.after(async () => {
   try {
-    await rm(tmpHome, { recursive: true, force: true })
+    if (tmpHome) await rm(tmpHome, { recursive: true, force: true })
   } finally {
     if (originalHome === undefined) delete process.env.HOME
     else process.env.HOME = originalHome
@@ -159,7 +159,7 @@ test('installTools removes stale tools not in known list', async () => {
 })
 
 // --- converters ---
-const { parseFrontmatter, convertForClaude, convertForGemini, convertForCodex } = await import('../lib/converters.js')
+const { parseFrontmatter, convertForClaude, convertForGemini, convertForCodex, convertForOpenCode } = await import('../lib/converters.js')
 
 const SAMPLE_SKILL = `---
 name: pm-sprint
@@ -207,6 +207,32 @@ test('convertForCodex has YAML frontmatter with name and description', () => {
   assert.ok(result.includes('description: "Orchestrate a full sprint cycle'))
   assert.ok(result.includes('metadata:'))
   assert.ok(result.includes('short-description:'))
+})
+
+test('convertForOpenCode escapes quoted metadata and adapts CLAUDE.md in the workflow body', () => {
+  const openCodeSource = String.raw`---
+name: "pm-open"
+description: "Plan \"quoted\" workflows with \\paths"
+---
+# /pm-open
+
+Read CLAUDE.md, then execute the workflow.
+
+Re-read CLAUDE.md before reporting results.
+`
+
+  const result = convertForOpenCode(openCodeSource)
+
+  assert.equal(result, String.raw`---
+name: "\"pm-open\""
+description: "\"Plan \\\"quoted\\\" workflows with \\\\paths\""
+---
+# /pm-open
+
+Read AGENTS.md, then execute the workflow.
+
+Re-read AGENTS.md before reporting results.
+`)
 })
 
 // --- detectCLIs ---
